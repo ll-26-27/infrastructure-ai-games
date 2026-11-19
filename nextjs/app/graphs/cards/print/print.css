@@ -1,0 +1,111 @@
+/* /graphs/cards/print: the cards as a 5.5-inch column, two columns side by side on an 11 x 17 portrait sheet, cut down
+   the middle. Each card is as tall as its text and never splits across columns or sheets. Tune the type here. */
+.cards-print {
+  --title-size: 16pt;
+  --title-weight: 900;
+  --desc-size: 11pt;
+  --desc-weight: 500;
+  --body-size: 10pt;
+  --body-weight: 400;
+  --body-leading: 1.38;
+  --meta-size: 7pt;
+  --column: 5.5in;          /* the cut column */
+  --sheet-w: 11in;          /* two columns */
+  --sheet-h: 17in;
+  /* One margin for all four sides of a cut card. A cut line is shared by two cards, so each card carries the full margin on its own side of the line:
+     the white between two cards' text is twice --pad, and the sheet adds nothing at its top or bottom edge. */
+  --pad: 0.45in;
+  --sheet-top: 0in;         /* top and bottom margin of each sheet (also in @page below); 0 so the sheet's edge is the card's edge */
+  --pad-x: var(--pad);      /* inside the column, left and right */
+  --pad-y: var(--pad);      /* above and below each card */
+  --rule: 0.75pt dashed #8a8e88;  /* the cut line between cards and down the middle */
+  --ink: #000;
+  --soft: #4a4d48;
+}
+/* ?paper=letter: the same type, a 4.25-inch column and a smaller margin, the same rule of one margin on all four sides
+   of a cut card. */
+.cards-print.is-letter {
+  --column: 4.25in;
+  --sheet-w: 8.5in;
+  --sheet-h: 11in;
+  --pad: 0.35in;
+}
+
+.cards-print { background: #e9e9e4; min-height: 100vh; font-family: "Inter Variable", Inter, system-ui, sans-serif; }
+
+/* --- the bar of filters (screen only) --- */
+.cards-print-bar { position: sticky; top: 0; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 10px 18px; background: #fff; border-bottom: 1px solid #d5d8d2; color: #333; font-size: 13px; }
+.cards-print-bar a { color: #111; border-bottom: 1px solid #c9ccc6; }
+.cards-print-bar form { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.cards-print-bar select, .cards-print-bar input, .cards-print-bar button { padding: 5px 8px; border: 1px solid #c9ccc6; border-radius: 6px; background: #fff; color: #111; font: inherit; font-size: 13px; }
+.cards-print-bar input[name="cards"] { width: 16em; }
+.cards-print-bar button { background: #111; color: #fff; border-color: #111; cursor: pointer; }
+.cards-print-count { color: #666; font-variant-numeric: tabular-nums; }
+.cards-print-hint { margin-left: auto; color: #666; }
+
+/* --- the sheet: on screen at its real width, two balanced columns --- */
+.cards-sheet { page: cards-11x17; box-sizing: border-box; width: var(--sheet-w); margin: 24px auto; padding: var(--sheet-top) 0; columns: 2 var(--column); column-gap: 0; column-rule: var(--rule); background: #fff; color: var(--ink); box-shadow: 0 1px 8px rgb(0 0 0 / .15); }
+.cards-print.is-letter .cards-sheet { page: cards-letter; }
+.cards-sheet.is-one { columns: auto; column-rule: none; }
+.cards-sheet.is-one .cards-card { width: var(--column); border-right: var(--rule); }
+
+/* --- the packed sheets (Sheets.jsx): once the cards are measured, each sheet is a box of the paper's size with two
+   columns filled in reading order, and the cut line drawn down its middle whether or not the right column is used --- */
+.cards-sheets-count { width: var(--sheet-w); margin: 18px auto -8px; color: #555; font-size: 13px; }
+.cards-page { page: cards-11x17; position: relative; box-sizing: border-box; display: flex; width: var(--sheet-w); height: var(--sheet-h); margin: 24px auto; overflow: hidden; background: #fff; color: var(--ink); box-shadow: 0 1px 8px rgb(0 0 0 / .15); }
+.cards-print.is-letter .cards-page { page: cards-letter; }
+.cards-page::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; border-left: var(--rule); }
+.cards-col { flex: none; width: var(--column); }
+/* a card taller than a column: alone on its sheet, running on from the left column into the right */
+.cards-page.is-long { display: block; columns: 2 var(--column); column-gap: 0; column-fill: auto; }
+
+/* --- one card --- */
+/* A card taller than a whole column (on Letter, cards over about 350 words) has to continue in the next column; clone
+   gives each part the full margin, so nothing starts at the paper's edge. */
+.cards-card { box-sizing: border-box; display: block; padding: var(--pad-y) var(--pad-x); border-bottom: var(--rule); break-inside: avoid; page-break-inside: avoid; -webkit-column-break-inside: avoid; box-decoration-break: clone; -webkit-box-decoration-break: clone; color: var(--ink); }
+.cards-card h2 { margin: 0; font-size: var(--title-size); font-weight: var(--title-weight); line-height: 1.08; letter-spacing: -.015em; text-wrap: balance; }
+.cards-card-desc { margin: .45em 0 0; font-size: var(--desc-size); font-weight: var(--desc-weight); line-height: 1.3; }
+.cards-card-body { margin: .7em 0 0; font-size: var(--body-size); font-weight: var(--body-weight); line-height: var(--body-leading); }
+.cards-card-body > :first-child { margin-top: 0; }
+.cards-card-body > :last-child { margin-bottom: 0; }
+.cards-card-body p, .cards-card-body ul, .cards-card-body ol { margin: 0 0 .55em; }
+.cards-card-body ul, .cards-card-body ol { padding-left: 1.2em; }
+.cards-card-body li { margin: 0 0 .15em; }
+.cards-card-body blockquote { margin: 0 0 .55em; padding-left: .8em; border-left: 1.5pt solid #000; }
+.cards-card-body h1, .cards-card-body h2, .cards-card-body h3, .cards-card-body h4 { margin: .8em 0 .3em; font-size: var(--body-size); font-weight: 800; letter-spacing: 0; line-height: 1.25; }
+.cards-card-body a { color: inherit; text-decoration: none; }
+.cards-card-body code { font-family: ui-monospace, monospace; font-size: .9em; }
+.cards-card-body strong { font-weight: 700; }
+.cards-card-body hr { border: 0; border-top: .5pt solid #999; margin: .8em 0; }
+.cards-card-body img { max-width: 100%; }
+/* The abstract (format 1.1) opens a full card at weight 500, closed by a short solid rule: never dashed, so it can't
+   be taken for a cut line. In the short form it stands alone, without the rule. */
+.cards-card-abstract { font-weight: 500; }
+.cards-card-abstract:not(.is-short)::after { content: ""; display: block; width: .6in; margin-top: .75em; border-top: 1pt solid #000; }
+.cards-card-foot { display: flex; flex-wrap: wrap; gap: 2px 10px; margin: .9em 0 0; color: var(--soft); font-size: var(--meta-size); font-weight: 500; letter-spacing: .06em; text-transform: uppercase; }
+.cards-card-foot .is-kind { font-weight: 800; color: var(--ink); }
+.cards-card-foot .is-tags { text-transform: none; letter-spacing: .02em; }
+.cards-card-foot .is-slug { margin-left: auto; text-transform: none; letter-spacing: 0; }
+
+.cards-print-empty { width: var(--sheet-w); margin: 24px auto; padding: 24px; background: #fff; color: #333; }
+
+/* @page can't read the variables above: keep its margin in step with --sheet-top by hand. */
+@page cards-11x17 { size: 11in 17in; margin: 0; }
+@page cards-letter { size: 8.5in 11in; margin: 0; }
+/* The site is dark; without this the sheet's margins print black. */
+:root:has(.cards-print), body:has(.cards-print) { color-scheme: light; background: #fff; }
+@media print {
+  .cards-print { background: #fff; min-height: 0; }
+  .cards-print-bar, .skip-link { display: none !important; }
+  .cards-sheet { margin: 0; padding: 0; box-shadow: none; column-fill: auto; }
+  .cards-sheets-count { display: none; }
+  .cards-page { margin: 0; box-shadow: none; break-after: page; }
+  .cards-page:last-child { break-after: auto; }
+  .cards-card { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* The quotation and its turn */
+.cards-card-body blockquote p { margin: 0; }
+.cards-card-body p:has(strong:first-child) { margin-top: .7em; }
+.cards-card-body blockquote em:only-child { color: var(--soft); }
+.cards-print .cards-card-body blockquote { font-weight: 500; }

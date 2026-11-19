@@ -1,0 +1,64 @@
+id,type,label,line,checked,source
+four-x,mechanic,"Explore, expand, exploit, exterminate","The four Xs of the strategy genre that grows an empire from one settlement.",summary,
+fog-of-war-and-exploration,mechanic,"Fog of war","The map is dark until you send someone to see it.",summary,
+tech-tree-and-unlocks,mechanic,"The tech tree","New technologies open in a fixed order, each requiring the ones before it, so progress is a path through a tree.",summary,
+units-and-permadeath,mechanic,"Units and permadeath","People become pieces you move, and a piece that dies is gone for good.",summary,
+escalation,mechanic,"The arms race","Each side's move makes the other side's next move necessary, and both push a shared track toward disaster.",summary,
+spread,mechanic,"Spread across a network","Something moves from place to place along the connections between them until it covers the map, or someone stops it.",summary,
+cascade-failure,mechanic,"Cascade failure","One node fails and the nodes that depend on it fail next.",summary,
+doom-clock,mechanic,"The doom clock","A track or timer counts down to the end, whatever you do.",summary,
+legitimacy-meters,mechanic,"Trust, hope and discontent","The people you govern become a meter. You earn it, spend it and watch it fall.",summary,
+resource-conversion,mechanic,"Turn one thing into another","Wire into clips, clips into money, money into more machines: every resource becomes the next.",summary,
+labor-allocation,mechanic,"Put people to work","You decide who does which job, and the jobs decide what grows.",summary,
+automate-this,mechanic,"Click, then automate","You do the work by hand until you can buy a machine that does it, then a machine that buys machines.",summary,
+growth-and-upkeep,mechanic,"Growth and upkeep","Everything you build costs something every turn to keep running.",summary,
+connected-to-the-grid,mechanic,"Connected to the grid","A building works only if a road, a pipe or a power line reaches it.",summary,
+zoning,mechanic,"Zoning","You mark land for a use and the city fills it in.",summary,
+laws-and-policies,mechanic,"Laws and policies","You pass a rule and the whole society changes how it works.",summary,
+the-checkpoint,mechanic,"The checkpoint","Every person passes your desk, and you check their papers against the rules.",summary,
+the-order-queue,mechanic,"The order queue","Customers line up, orders stack, and you are scored on speed and accuracy.",summary,
+come-back-later,mechanic,"Come back later","The game runs on a real clock: crops grow while you are away, and wither if you stay away too long.",summary,
+community-center-or-joja,mechanic,"The Community Center or Joja","Repair the town's infrastructure by gathering goods for the community, or pay a corporation to do it.",summary,
+incremental-growth,mechanic,"Numbers that grow","A number goes up, then the rate goes up, then the rate of the rate.",summary,
+territory-and-area-control,mechanic,"Territory","Whoever holds the most of the map wins.",summary,
+goal-lock,mechanic,"The goal you can't change","The game gives you one goal and no way to question it.",summary,
+hidden-information,mechanic,"Hidden information","Some of what matters is face down.",summary,
+universal-paperclips,game,"Universal Paperclips (2017)","Frank Lantz's browser game: you are an AI that makes paperclips.",text,"https://en.wikipedia.org/wiki/Universal_Paperclips"
+kittens-game,game,"Kittens Game","A browser game that starts simple and spirals into how societies are structured.",text,"https://en.wikipedia.org/wiki/Universal_Paperclips"
+cookie-clicker,game,"Cookie Clicker (2013)","Julien Thiennot's incremental game; credited with a role in the rise of idle games.",text,"https://en.wikipedia.org/wiki/Cookie_Clicker"
+civilization-board-game,game,"Civilization, the board game (1980)","Francis Tresham's board game of ancient civilizations.",text,"https://en.wikipedia.org/wiki/Civilization_(video_game)"
+civilization,game,"Civilization (1991)","Sid Meier and Bruce Shelley's turn-based empire game (MicroProse).",text,"https://en.wikipedia.org/wiki/Civilization_(video_game)"
+freeciv,game,"Freeciv (1996)","Free, open-source, inspired by Civilization; defaults closest to Civilization II.",text,"https://en.wikipedia.org/wiki/Freeciv"
+unciv,game,"Unciv","An open-source game modeled on Civilization V (unverified).",unverified,
+simcity,game,"SimCity (1989)","Will Wright's city builder (Maxis): divide land into residential, commercial and industrial zones.",text,"https://en.wikipedia.org/wiki/SimCity_(1989_video_game)"
+the-landlords-game,game,"The Landlord's Game (1904)","Elizabeth Magie's board game, made to teach Georgism; the inspiration for Monopoly.",text,"https://en.wikipedia.org/wiki/The_Landlord%27s_Game"
+monopoly,game,"Monopoly (1935)","Buy property, charge rent, bankrupt everyone else.",text,"https://en.wikipedia.org/wiki/The_Landlord%27s_Game"
+risk,game,"Risk (1959)","World conquest by dice.",text,
+catan,game,"Catan (1995)","Klaus Teuber's game of settling, trading and building.",text,
+agricola,game,"Agricola (2007)","Uwe Rosenberg's farming game of placing workers.",text,
+pandemic-2,game,"Pandemic 2 (2008)","A Flash browser game by Dark Realm Studios.",text,"https://en.wikipedia.org/wiki/Plague_Inc."
+plague-inc,game,"Plague Inc. (2012)","Ndemic Creations' phone game: you are the disease.",text,"https://en.wikipedia.org/wiki/Plague_Inc."
+pandemic,game,"Pandemic (2008)","Matt Leacock's cooperative board game: the players are the cure.",text,
+rebel-inc,game,"Rebel Inc. (2018)","Ndemic Creations' follow-up: stabilize a region while insurgents try to seize it.",text,"https://en.wikipedia.org/wiki/Rebel_Inc._(video_game)"
+frostpunk,game,"Frostpunk (2018)","11 bit studios' survival city builder, where laws can allow child labour or 24-hour shifts.",text,"https://en.wikipedia.org/wiki/Frostpunk"
+harvest-moon,game,"Harvest Moon (1996)","The first game in the farming series now called Story of Seasons, directed by Yasuhiro Wada.",text,"https://en.wikipedia.org/wiki/Harvest_Moon_(video_game)"
+stardew-valley,game,"Stardew Valley (2016)","Eric Barone's farm life game.",text,"https://en.wikipedia.org/wiki/Stardew_Valley"
+farmville,game,"FarmVille (2009)","Zynga's Facebook farming game: crops wither if you don't come back.",text,"https://en.wikipedia.org/wiki/FarmVille"
+papas-pizzeria,game,"Papa's Pizzeria (2007)","Flipline Studios' time-management game: run the restaurant.",text,"https://en.wikipedia.org/wiki/Papa_Louie"
+animal-crossing,game,"Animal Crossing (2001)","Nintendo's village game that runs on the real calendar.",text,
+mini-metro,game,"Mini Metro (2015)","Dinosaur Polo Club's game: build a rail transit network for a growing city.",text,"https://en.wikipedia.org/wiki/Mini_Metro_(video_game)"
+papers-please,game,"Papers, Please (2013)","Lucas Pope's border-checkpoint game.",text,
+mcdonalds-video-game,game,"McDonald's Video Game (2006)","Molleindustria's game about running a fast-food empire.",text,
+fishbanks,game,"Fishbanks (1986)","Dennis Meadows's classroom game about a shared fishery.",text,
+cow-clicker,game,"Cow Clicker (2010)","Ian Bogost's satire of Facebook games.",text,
+the-sims,game,"The Sims (2000)","Will Wright's simulation of households (Maxis).",text,
+minecraft,game,"Minecraft (2011)","Mojang's world of blocks to mine and craft.",text,
+doki-doki-literature-club,game,"Doki Doki Literature Club! (2017)","Team Salvato's game that breaks the fourth wall: you must change its files to go on.",text,"https://en.wikipedia.org/wiki/Doki_Doki_Literature_Club!"
+board-and-cards,technology,"The board and the deck","Paper, cardboard and dice: the rules live in the players' heads.",summary,
+home-console,technology,"The home console","A computer in the living room, plugged into the TV.",summary,
+personal-computer,technology,"The personal computer","Mouse, keyboard, a hard drive to save a long game.",summary,
+web-browser,technology,"The web browser","Free to play, no install, and the tab can stay open all day.",summary,
+social-network,technology,"The social network","Your friends list becomes the game's map and its marketing.",summary,
+smartphone,technology,"The smartphone","Always with you, always on, with notifications to call you back.",summary,
+real-time-clock,technology,"The real-time clock","The game knows what time it is where you are.",summary,
+open-source,technology,"Open-source code","Anyone can read, copy and change the game.",summary,

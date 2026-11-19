@@ -1,0 +1,111 @@
+from,relation,to,note
+the-landlords-game,inspired,monopoly,"""It is the inspiration for the 1935 board game Monopoly"" (Wikipedia, The Landlord's Game)."
+civilization-board-game,inspired,civilization,"Meier's ""prototype took elements from Empire, Railroad Tycoon, SimCity and the Civilization board game"" (Wikipedia, Civilization)."
+simcity,inspired,civilization,"The same sentence names SimCity (Wikipedia, Civilization)."
+civilization,inspired,freeciv,"""Inspired by the proprietary Sid Meier's Civilization series"" (Wikipedia, Freeciv)."
+civilization,inspired,unciv,"Unverified."
+harvest-moon,inspired,stardew-valley,"Barone ""was heavily inspired by the Harvest Moon series"" (Wikipedia, Stardew Valley)."
+pandemic-2,inspired,plague-inc,"""Inspired by the 2011 film Contagion and the 2008 browser game Pandemic 2"" (Wikipedia, Plague Inc.)."
+plague-inc,followed by,rebel-inc,"""A follow-up game with a political theme"" (Wikipedia, Plague Inc.)."
+kittens-game,inspired,universal-paperclips,"""Lantz was also inspired by Kittens Game"" (Wikipedia, Universal Paperclips)."
+plague-inc,plays the other side of,pandemic,"In one you are the disease; in the other the players are the cure."
+universal-paperclips,uses,automate-this,
+universal-paperclips,uses,resource-conversion,
+universal-paperclips,uses,incremental-growth,
+universal-paperclips,uses,tech-tree-and-unlocks,
+universal-paperclips,uses,goal-lock,
+universal-paperclips,uses,legitimacy-meters,"Trust is a resource you earn and spend."
+kittens-game,uses,labor-allocation,
+kittens-game,uses,incremental-growth,
+cookie-clicker,uses,automate-this,
+cookie-clicker,uses,incremental-growth,
+civilization,uses,four-x,
+civilization,uses,fog-of-war-and-exploration,
+civilization,uses,tech-tree-and-unlocks,
+civilization,uses,labor-allocation,
+civilization,uses,growth-and-upkeep,
+civilization,uses,laws-and-policies,
+civilization,uses,territory-and-area-control,
+freeciv,uses,four-x,
+unciv,uses,four-x,
+civilization-board-game,uses,tech-tree-and-unlocks,
+simcity,uses,zoning,
+simcity,uses,connected-to-the-grid,
+simcity,uses,growth-and-upkeep,
+the-landlords-game,uses,resource-conversion,
+monopoly,uses,territory-and-area-control,
+risk,uses,territory-and-area-control,
+risk,uses,units-and-permadeath,
+catan,uses,resource-conversion,
+agricola,uses,labor-allocation,
+pandemic-2,uses,spread,
+plague-inc,uses,spread,
+plague-inc,uses,escalation,
+plague-inc,uses,doom-clock,
+pandemic,uses,spread,
+pandemic,uses,cascade-failure,
+pandemic,uses,escalation,
+rebel-inc,uses,legitimacy-meters,
+rebel-inc,uses,spread,
+frostpunk,uses,laws-and-policies,
+frostpunk,uses,legitimacy-meters,
+frostpunk,uses,labor-allocation,
+frostpunk,uses,growth-and-upkeep,
+harvest-moon,uses,come-back-later,
+stardew-valley,uses,community-center-or-joja,
+stardew-valley,uses,come-back-later,
+farmville,uses,come-back-later,
+papas-pizzeria,uses,the-order-queue,
+animal-crossing,uses,come-back-later,
+mini-metro,uses,connected-to-the-grid,
+mini-metro,uses,growth-and-upkeep,
+papers-please,uses,the-checkpoint,
+papers-please,uses,laws-and-policies,
+mcdonalds-video-game,uses,resource-conversion,
+fishbanks,uses,resource-conversion,
+cow-clicker,uses,come-back-later,
+the-sims,uses,labor-allocation,
+minecraft,uses,resource-conversion,
+doki-doki-literature-club,uses,hidden-information,"The game's own files are part of the board."
+board-and-cards,runs,the-landlords-game,
+board-and-cards,runs,monopoly,
+board-and-cards,runs,risk,
+board-and-cards,runs,catan,
+board-and-cards,runs,agricola,
+board-and-cards,runs,pandemic,
+board-and-cards,runs,civilization-board-game,
+board-and-cards,runs,fishbanks,
+home-console,runs,harvest-moon,"Made for the Super Nintendo (Wikipedia, Harvest Moon)."
+home-console,runs,animal-crossing,
+personal-computer,runs,civilization,
+personal-computer,runs,simcity,
+personal-computer,runs,frostpunk,
+personal-computer,runs,stardew-valley,
+web-browser,runs,universal-paperclips,
+web-browser,runs,cookie-clicker,
+web-browser,runs,kittens-game,
+web-browser,runs,pandemic-2,"""A browser-based Flash game"" (Wikipedia, Plague Inc.)."
+web-browser,runs,papas-pizzeria,
+social-network,runs,farmville,"On Facebook (Wikipedia, FarmVille)."
+social-network,runs,cow-clicker,
+smartphone,runs,plague-inc,"First released on iOS (Wikipedia, Plague Inc.)."
+smartphone,runs,rebel-inc,"First released on iOS (Wikipedia, Rebel Inc.)."
+open-source,runs,freeciv,
+open-source,runs,unciv,
+real-time-clock,enables,come-back-later,
+web-browser,enables,automate-this,"A tab can stay open all day while the machines work."
+board-and-cards,enables,hidden-information,"A card face down."
+social-network,enables,spread,"A game that grows through your friends list."
+the-paperclip-maximizer,inspired,universal-paperclips,"""Both the title of the game and its overall concept draw from the paperclip maximizer thought experiment"" (Wikipedia, Universal Paperclips)."
+the-paperclip-maximizer,compare with,goal-lock,"One arbitrary goal, pursued without limit."
+colossus-novel,compare with,connected-to-the-grid,"A takeover through the systems everything is connected to."
+colossus-the-forbin-project,compare with,connected-to-the-grid,
+invasion-of-the-body-snatchers,compare with,spread,"Spread from person to person, unseen."
+the-thing,compare with,hidden-information,"Anyone at the table might already be taken."
+ai-2027,compare with,escalation,"Its ending is a choice between a race and a slowdown."
+situational-awareness,compare with,incremental-growth,"Counting orders of magnitude: a number that grows, then the rate."
+ai-2027,compare with,doom-clock,"Month by month toward an end date."
+gradual-disempowerment,compare with,automate-this,"Nobody decides to hand over control; it is handed over one task at a time."
+the-matrix,compare with,doki-doki-literature-club,"The world you are in turns out to be a program."
+ring,compare with,doki-doki-literature-club,"The story reaches out of its frame into the viewer's world."
+ring,compare with,spread,"It spreads because everyone who watches it has a good reason to pass it on."

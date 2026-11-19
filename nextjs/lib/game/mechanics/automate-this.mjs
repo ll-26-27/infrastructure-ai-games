@@ -6,7 +6,7 @@ import { movesFor, next, targetsFor } from "../engine.mjs";
 // The toy: patch by clicking, then buy autopilot and watch it work. It runs for thirty seconds from your first click.
 const toy = {
   title: "Autopilot",
-  ask: "Patch as much as you can in thirty seconds. Autopilot is for sale.",
+  ask: (n) => `Patch as much as you can in ${n.seconds} seconds. Autopilot is for sale.`,
   numbers: { seconds: 30, price: 5, perSecond: 2, costPerSecond: 1 },
   start: () => ({ patches: 0, paid: 0, decisions: 0, lastDecision: 0, autopilot: false, seconds: 0, started: false, log: [], over: false }),
   moves: (s, n) => [
@@ -49,7 +49,10 @@ const toy = {
     { label: "Decisions you made", value: s.decisions },
     { label: "Paid to the assistant", value: s.paid, quiet: true },
   ],
-  end: (s) => `${s.patches} patches. You made ${s.decisions} decisions, the last at second ${s.lastDecision}. The assistant was paid ${s.paid} tokens.`,
+  end: (s) =>
+    s.paid === 0
+      ? `You made every one of your ${s.decisions} patches yourself and never let autopilot take over.`
+      : `You made ${s.decisions} decisions, the last at second ${s.lastDecision}, and autopilot paid the assistant ${s.paid} tokens to patch for you.`,
 };
 
 export default {

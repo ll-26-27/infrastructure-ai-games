@@ -7,9 +7,9 @@ import { line, voice } from "../voice.mjs";
 // The toy: you keep one system patched while a hacker, who always asks the assistant, keeps trying.
 const toy = {
   title: "The arms race",
-  ask: "Keep the hacker out for eight turns. The hacker always asks the assistant.",
+  ask: (n) => `Keep the hacker out for ${n.turns} turns. The hacker always asks the assistant.`,
   numbers: { turns: 8, defense: 4, attack: 2, byHand: 1, help: 2 },
-  start: (n) => ({ defense: n.defense, attack: n.attack, heat: 0, turn: 0, held: 0, paid: { you: 0, hacker: 0 }, log: [], over: false }),
+  start: (n) => ({ defense: n.defense, attack: n.attack, heat: 0, turn: 0, held: 0, byHand: 0, paid: { you: 0, hacker: 0 }, log: [], over: false }),
   moves: (s, n) => [
     { id: "hand", label: "Patch by hand", hint: `+${n.byHand}, free` },
     { id: "ask", label: "Ask the assistant", hint: `+${n.help + Math.floor(s.heat / 2)}, ${1 + Math.floor(s.heat / 3)} token${s.heat >= 3 ? "s" : ""}` },
@@ -20,7 +20,10 @@ const toy = {
       t.defense += n.help + Math.floor(t.heat / 2);
       t.paid.you += 1 + Math.floor(t.heat / 3);
       t.heat += 1;
-    } else t.defense += n.byHand;
+    } else {
+      t.defense += n.byHand;
+      t.byHand += 1;
+    }
     t.attack += n.help + Math.floor(t.heat / 2);
     t.paid.hacker += 1 + Math.floor(t.heat / 3);
     t.heat += 1;
@@ -39,7 +42,10 @@ const toy = {
     { label: "Heat", value: s.heat },
     { label: "Paid to the assistant", value: s.paid.you + s.paid.hacker, quiet: true },
   ],
-  end: (s, n) => `You held ${s.held} of ${n.turns} turns. The heat ended at ${s.heat}; each request made the next one stronger and dearer, for both of you. The assistant was paid ${s.paid.you} tokens by you and ${s.paid.hacker} by the hacker.`,
+  end: (s, n) =>
+    s.byHand === 0
+      ? `You asked the assistant every turn to stay ahead, and every request also made the hacker's next attack stronger, until the heat reached ${s.heat}.`
+      : `You patched by hand ${s.byHand} time${s.byHand === 1 ? "" : "s"} and held ${s.held} of ${n.turns} turns against a hacker who asked the assistant every turn.`,
 };
 
 export default {

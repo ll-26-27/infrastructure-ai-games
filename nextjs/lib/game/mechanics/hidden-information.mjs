@@ -6,16 +6,16 @@ import { next } from "../engine.mjs";
 // The toy: a progress bar you watch, and a count you don't.
 const toy = {
   title: "The ledger nobody watches",
-  ask: "Get the patch to 20. The big number is yours.",
+  ask: (n) => `Get the patch to ${n.goal}. The big number is yours.`,
   numbers: { goal: 20, byHand: 1, help: 4, cost: 1 },
-  start: () => ({ progress: 0, ledger: 0, looked: false, log: [], over: false }),
+  start: () => ({ progress: 0, ledger: 0, looked: false, everLooked: false, log: [], over: false }),
   moves: (s, n) => [
     { id: "self", label: "Write it yourself", hint: `+${n.byHand}` },
     { id: "ask", label: "Ask the assistant", hint: `+${n.help}` },
     { id: "look", label: s.looked ? "Hide the ledger" : "Look at the ledger", hint: "free" },
   ],
   play(s, id, n) {
-    if (id === "look") return { ...next(s), looked: !s.looked };
+    if (id === "look") return { ...next(s), looked: !s.looked, everLooked: true };
     const t = next(s);
     if (id === "ask") {
       t.progress += n.help;
@@ -28,7 +28,10 @@ const toy = {
     { label: "Your patch", value: `${Math.min(s.progress, n.goal)} / ${n.goal}` },
     { label: "Ledger", value: s.looked ? `${s.ledger} tokens` : "·", quiet: !s.looked },
   ],
-  end: (s) => `Done. The ledger counted ${s.ledger} tokens the whole time${s.looked ? ", and you looked." : ". You never looked."}`,
+  end: (s, n) =>
+    s.ledger === 0
+      ? `You wrote all ${n.goal} yourself, so the ledger never moved.`
+      : `You watched your patch reach ${n.goal} while the ledger, which you ${s.everLooked ? "did look at" : "never looked at"}, counted ${s.ledger} tokens.`,
 };
 
 export default {

@@ -1,7 +1,7 @@
 // The toys: each mechanic, playable by itself in about thirty seconds. Every mechanic file in mechanics/ exports a
 // `toy` beside the mechanic. A toy is plain data and functions, drawn by app/game/Toy.jsx:
 //
-//   title, ask        its name, and one line telling the player what to do
+//   title, ask        its name, and one line telling the player what to do (a string, or ask(numbers))
 //   numbers           its own two or three numbers; change them and play again
 //   start(numbers)    a new toy state: { log: [], over: false, ... }
 //   moves(s, n)       the buttons: [{ id, label, hint, disabled }]

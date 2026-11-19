@@ -9,7 +9,12 @@ import "../game.css";
 
 export const dynamic = "force-dynamic";
 
-const mechanicPages = new Set(["escalation", "automate-this"]);
+// Where a mechanic has a page in content/mechanics/: the link, and how the page relates to the toy.
+const mechanicPages = {
+  escalation: { href: "/mechanics/escalation", text: "Read about the mechanic, and the games it comes from, on" },
+  "automate-this": { href: "/mechanics/automate-this", text: "Read about the mechanic, and the games it comes from, on" },
+  "hidden-information": { href: "/mechanics/fog-of-war-and-exploration", text: "Fog of war is a close cousin: hidden information spread across a map. Read about it on" },
+};
 
 export async function generateMetadata({ params }) {
   const { toy } = await params;
@@ -40,7 +45,7 @@ export default async function ToyPage({ params }) {
           <h2>Change it</h2>
           <p>
             This toy is in <code>nextjs/lib/game/mechanics/{mechanic.id}.mjs</code>, at the top of the file. Its numbers are in <code>numbers</code>: change one and play again. Further down the same file is the mechanic as it works inside <Link href="/game">Red Team, Blue Team</Link>.
-            {mechanicPages.has(mechanic.id) ? <> Read about the mechanic, and the games it comes from, on <Link href={`/mechanics/${mechanic.id}`}>its page</Link>.</> : null}
+            {mechanicPages[mechanic.id] ? <> {mechanicPages[mechanic.id].text} <Link href={mechanicPages[mechanic.id].href}>its page</Link>.</> : null}
           </p>
         </section>
       </main>

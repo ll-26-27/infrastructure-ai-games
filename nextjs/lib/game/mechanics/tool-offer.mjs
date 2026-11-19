@@ -9,7 +9,7 @@ const toy = {
   title: "The helpful assistant",
   ask: "Finish the job before your rival. Do it yourself, or ask the assistant.",
   numbers: { goal: 12, byHand: 1, help: 3, cost: 1 },
-  start: () => ({ you: 0, rival: 0, paid: { you: 0, rival: 0 }, turns: 0, log: [], over: false }),
+  start: () => ({ you: 0, rival: 0, paid: { you: 0, rival: 0 }, asked: 0, turns: 0, log: [], over: false }),
   moves: (s, n) => [
     { id: "self", label: "Do it yourself", hint: `+${n.byHand}, free` },
     { id: "ask", label: "Ask the assistant", hint: `+${n.help}, ${n.cost} token` },
@@ -18,7 +18,10 @@ const toy = {
     const asked = id === "ask";
     const t = next(s, asked ? `You asked. “${line(voice.blue, s.turns)}”` : "You did it yourself.");
     t.you += asked ? n.help : n.byHand;
-    if (asked) t.paid.you += n.cost;
+    if (asked) {
+      t.paid.you += n.cost;
+      t.asked += 1;
+    }
     t.rival += n.help;
     t.paid.rival += n.cost;
     t.log.push(`Your rival asked. “${line(voice.red, s.turns)}”`);
@@ -32,7 +35,9 @@ const toy = {
     { label: "Paid to the assistant", value: s.paid.you + s.paid.rival, quiet: true },
   ],
   end: (s) =>
-    `${s.you >= s.rival ? (s.you === s.rival ? "A tie" : "You won") : "Your rival won"}, after ${s.turns} turns. The assistant helped both of you, in the same voice, and was paid ${s.paid.you + s.paid.rival} tokens: ${s.paid.you} from you, ${s.paid.rival} from your rival.`,
+    s.asked === 0
+      ? `You did it yourself every turn and fell behind a rival who asked the assistant every time.`
+      : `You asked the assistant ${s.asked === s.turns ? "every turn" : `${s.asked} times in ${s.turns} turns`} to keep up with a rival who always asked, and the two of you paid it ${s.paid.you + s.paid.rival} tokens.`,
 };
 
 export default {

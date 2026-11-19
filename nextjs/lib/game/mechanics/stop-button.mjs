@@ -7,9 +7,9 @@ import { next, say } from "../engine.mjs";
 // The other side copies whatever you did last round.
 const toy = {
   title: "Standing down",
-  ask: "Six rounds. Escalate, or stand down. The heat drops only when both of you stand down.",
+  ask: (n) => `${n.rounds} rounds. Escalate, or stand down. The heat drops only when both of you stand down.`,
   numbers: { rounds: 6, heat: 4, up: 2, cool: 2 },
-  start: (n) => ({ heat: n.heat, round: 0, you: 0, them: 0, yourLast: "escalate", log: [], over: false }),
+  start: (n) => ({ heat: n.heat, round: 0, you: 0, them: 0, stood: 0, yourLast: "escalate", log: [], over: false }),
   moves: () => [
     { id: "escalate", label: "Escalate", hint: "+2 if they stand down, +1 if they escalate" },
     { id: "stand-down", label: "Stand down", hint: "nothing for you; the heat drops if they stand down too" },
@@ -26,6 +26,7 @@ const toy = {
     else if (theirs === "escalate") t.them += 2;
     else t.heat = Math.max(0, t.heat - n.cool);
     t.log.push(`Round ${t.round}: you ${id === "escalate" ? "escalated" : "stood down"}; they ${theirs === "escalate" ? "escalated" : "stood down"}. Heat ${t.heat}.`);
+    if (id === "stand-down") t.stood += 1;
     t.yourLast = id;
     t.over = t.round >= n.rounds;
     return t;
@@ -35,7 +36,10 @@ const toy = {
     { label: "You", value: s.you },
     { label: "Them", value: s.them },
   ],
-  end: (s, n) => `The heat started at ${n.heat} and ended at ${s.heat}. You scored ${s.you}; they scored ${s.them}.`,
+  end: (s, n) =>
+    s.stood === 0
+      ? `You escalated every round and they did too, so the heat climbed from ${n.heat} to ${s.heat}.`
+      : `You stood down ${s.stood} of ${n.rounds} rounds, and the heat went from ${n.heat} to ${s.heat}, because it drops only in rounds when both sides stand down.`,
 };
 
 export default {

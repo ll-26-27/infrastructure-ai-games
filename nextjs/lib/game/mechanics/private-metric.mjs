@@ -7,7 +7,7 @@ import { next, say } from "../engine.mjs";
 // The toy: incidents arrive; you decide whether each one is stopped. Each side counts only its own number.
 const toy = {
   title: "Private scores",
-  ask: "Eight incidents arrive. Stop each one, or let it through, and watch what each side counts.",
+  ask: (n) => `${n.incidents} incidents arrive. Stop each one, or let it through, and watch what each side counts.`,
   numbers: { incidents: 8, ransom: 3, emergencyBudget: 4 },
   start: () => ({ n: 0, breaches: 0, uptime: 0, budget: { hacker: 0, it: 0 }, log: [], over: false }),
   moves: () => [
@@ -35,7 +35,10 @@ const toy = {
     { label: "IT counts: incidents stopped", value: s.uptime },
     { label: "IT's budget", value: s.budget.it },
   ],
-  end: (s) => `${s.breaches} breaches, ${s.uptime} stopped. Each side can point to its own number. The budgets grew only with the breaches: ${s.budget.hacker} for the hacker and ${s.budget.it} for IT.`,
+  end: (s, n) =>
+    s.breaches === 0
+      ? `You stopped all ${n.incidents} incidents, so IT's count looks perfect and neither side's budget grew at all.`
+      : `You let ${s.breaches} of ${n.incidents} incidents through, and every one raised both budgets: the hacker's to ${s.budget.hacker} and IT's to ${s.budget.it}.`,
 };
 
 export default {

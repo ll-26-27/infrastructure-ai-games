@@ -18,7 +18,7 @@ export default function Toy({ id }) {
 
   return (
     <div className="ig-toy">
-      <p className="ig-toy-ask">{toy.ask}</p>
+      <p className="ig-toy-ask">{typeof toy.ask === "function" ? toy.ask(n) : toy.ask}</p>
       <dl className="ig-readout">
         {toy.show(state, n).map((item) => (
           <div key={item.label} className={item.quiet ? "ig-quiet-value" : ""}>

@@ -2,7 +2,7 @@
 
 A workshop kit for SOC-STD 98to, *Technologies, Operations, and Infrastructures* (Harvard, Fall 2026), made by the Learning Lab at the Bok Center for the class session on AI and games on Monday, November 23, 2026.
 
-The kit is for you to build with, not just to play. It brings two maps into contact: a map of the course's ideas and a map of game mechanics. The game is one way to make something where they meet.
+The kit is for you to build with, not just to play. It is a set of small collections (mechanics, games, novels and films, ideas from the course) and two maps that bring them into contact: a map of the course's ideas and a map of game mechanics. A game is one way to make something where they meet.
 
 ## What is in it
 
@@ -10,8 +10,9 @@ The kit is for you to build with, not just to play. It brings two maps into cont
 - **Reading the mechanics:** a game makes its argument through what it has you do, and how to read that.
 - **Mechanics:** the mechanics of war, conquest and management games, one page each.
 - **Gallery:** games to know before you build.
+- **Novels and films:** stories about a takeover, and how the takeover works in each.
 - **Graphs and cards:** the course as a map of ideas, games as a map of mechanics, and where the two touch.
-- **The game:** a kit for a game about AI and the people it works through.
+- **The game:** small playable mechanics about AI and the people it works through, for you to change and combine.
 - **Timeline:** a timeline that ends on the day of the workshop.
 
 ## Run it

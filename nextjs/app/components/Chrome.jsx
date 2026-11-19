@@ -10,8 +10,9 @@ export const sections = [
   { slug: "reading-mechanics", title: "Reading the mechanics", short: "Reading", copy: "A game makes its argument through what it has you do. How to read that." },
   { slug: "mechanics", title: "Mechanics", short: "Mechanics", copy: "The mechanics of war, conquest and management games, one page each." },
   { slug: "gallery", title: "Gallery", short: "Gallery", copy: "Games to know before you build, and what each one has you do." },
+  { slug: "stories", title: "Novels and films", short: "Stories", copy: "Stories about a takeover, and how the takeover works in each." },
   { slug: "graphs", title: "Graphs and cards", short: "Graphs", copy: "The course as a map of ideas, games as a map of mechanics, and where the two touch." },
-  { slug: "game", title: "The game", short: "Game", copy: "A kit for a game about AI and the people it works through. You build it." },
+  { slug: "game", title: "The game", short: "Game", copy: "Small playable mechanics about AI and the people it works through, for you to change and combine." },
   { slug: "timeline", title: "Timeline", short: "Timeline", copy: "A timeline that ends on the day of the workshop." },
 ];
 

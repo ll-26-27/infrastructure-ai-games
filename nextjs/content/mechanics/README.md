@@ -1,6 +1,6 @@
 ---
 title: Mechanics
-description: Twenty mechanics from war games, games of conquest and management games, each read as an argument about how the world works.
+description: Twenty-two mechanics from war games, games of conquest and management games, each read as an argument about how the world works.
 order: 30
 ---
 
@@ -8,7 +8,7 @@ A **mechanic** is a rule that makes something happen: a turn, a timer, a meter t
 
 Lev Manovich, in "Database as Symbolic Form" (your Sept 21 reading), puts it this way: "While computer games do not follow a database logic, they appear to be ruled by another logic - that of the algorithm. They demand that a player executes an algorithm in order to win." The game designer and critic Ian Bogost (not on your syllabus) calls this *procedural rhetoric*: persuading through processes rather than through words or images (*Persuasive Games*, MIT Press, 2007).
 
-So these twenty pages treat mechanics as infrastructure. Each one is a system that runs underneath the game, mostly unnoticed while it works. Susan Leigh Star (Sept 21) writes that "the normally invisible quality of working infrastructure becomes visible when it breaks." Each page tries to make one of these systems visible.
+So these pages treat mechanics as infrastructure. Each one is a system that runs underneath the game, mostly unnoticed while it works. Susan Leigh Star (Sept 21) writes that "the normally invisible quality of working infrastructure becomes visible when it breaks." Each page tries to make one of these systems visible.
 
 ## How to use a page
 
@@ -37,6 +37,8 @@ Every page ends with something for you to fill in. Fill it in, and argue with it
 | 7 | [Cascade failure](cascade-failure.md) | One failure sets off the next. | *Pandemic*, *They Are Billions* |
 | 8 | [The doom clock](doom-clock.md) | A bar fills toward your defeat while you work. | *Plague Inc.*, *XCOM 2*, *Frostpunk* |
 | 9 | [Trust, hope and discontent](legitimacy-meters.md) | The people you govern become a meter. | *Universal Paperclips*, *Frostpunk*, *Rebel Inc.* |
+| 21 | [Complicity](complicity.md) | Everyone follows their own interest, and the rules make that help the other side. | *Secret Hitler*, *The Resistance*, *Universal Paperclips* |
+| 22 | [It was already here](already-here.md) | Partway through, you learn the takeover started before you noticed. | *Battlestar Galactica: The Board Game*, *Inscryption* |
 
 ## Management
 
@@ -59,4 +61,4 @@ Every page ends with something for you to fill in. Fill it in, and argue with it
 | 19 | [Come back later](come-back-later.md) | The crops grow while you're away, and wither if you stay away too long. | *FarmVille*, *Stardew Valley* |
 | 20 | [The Community Center or Joja](community-center-or-joja.md) | Repair the town together, or pay a company to do it. | *Stardew Valley* |
 
-These twenty are a start, not a canon. If a mechanic you know well is missing, copy a page and write it.
+These are a start, not a canon. If a mechanic you know well is missing, copy a page and write it.

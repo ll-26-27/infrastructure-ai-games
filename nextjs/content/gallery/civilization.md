@@ -14,7 +14,7 @@ see: https://civilization.2k.com/
 
 You start with settlers on a map you can't see. They found a city; the city works the land around it for food, production and trade, grows, and builds more settlers, soldiers and buildings. You research technologies one at a time, each opening the next, from pottery and the wheel toward space flight. You win by conquering every rival or by being first to reach Alpha Centauri.
 
-It is the best-known 4X game: you explore, expand, exploit and exterminate. Few people have played it, but if you have ever assigned workers, upgraded a town hall or waited for a timer to unlock the next building, you have played some of it.
+It is the best-known 4X game: you explore, expand, exploit and exterminate. If you have never played it, you may have played some of it anyway: if you have ever assigned workers, upgraded a town hall or waited for a timer to unlock the next building, you have used its machinery.
 
 **Look for:** what the tech tree says history is. Every civilization climbs the same tree, in roughly the same order, toward the same end.
 

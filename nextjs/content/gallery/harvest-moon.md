@@ -14,12 +14,12 @@ see: https://en.wikipedia.org/wiki/Harvest_Moon_(video_game)
 
 You arrive at a farm that has gone to weeds and rocks. Each day you clear land, plant, water, harvest and ship, tend cows and chickens, and spend the little energy you have before the day ends. The seasons decide what can grow, and the town decides whether you belong.
 
-It started a whole kind of game: Stardew Valley began as its designer's attempt to make his own Harvest Moon. The series was later renamed Story of Seasons in the West.
+Its director, Yasuhiro Wada, drew on the countryside he grew up in before moving to Tokyo. It started a whole kind of game: Stardew Valley's designer has said he "decided to start with the basic Harvest Moon 'formula' and then expand on it in my own way." The series was later renamed Story of Seasons in the West.
 
 **Look for:** the calendar as the real boss. Nothing here fights you; the work is that crops, animals and days all run on a clock you can't stop.
 
 ## Sources
 
 - [Harvest Moon (video game), Wikipedia](https://en.wikipedia.org/wiki/Harvest_Moon_(video_game))
-- [Stardew Valley, Wikipedia](https://en.wikipedia.org/wiki/Stardew_Valley) (on Harvest Moon as its inspiration)
+- Eric Barone, interviewed in Game Developer, February 24, 2017, on Harvest Moon as Stardew Valley's starting point
 - [Four more retro games added to Nintendo Switch Online, including Harvest Moon, VGC, 2023](https://videogameschronicle.com/news/four-more-retro-games-have-been-added-to-nintendo-switch-online-including-harvest-moon)

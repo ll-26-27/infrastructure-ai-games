@@ -25,11 +25,13 @@ Langdon Winner's *Autonomous Technology* (your reading for today, Nov 23) asks w
 
 **Through its lineage.** *Progress Quest* (2002) was a parody role-playing game that played itself entirely; you only watched your character level up. [4] Ian Bogost's *Cow Clicker* (2010) mocked social games by reducing them to a click every six hours, and many people played it in earnest. [5] Idle games grew out of both the joke and the earnest players.
 
+**In a story:** [Gradual Disempowerment](../stories/gradual-disempowerment.md), on losing control to AI one sensible substitution at a time.
+
 ## Your turn
 
+- You can play this one and change it: [click, then automate, playable](/game/automate-this).
 - A game you know that does this: ___
 - In that game, what is the last thing you still do by hand? Why did the designers leave you that one?
-- The game in this kit uses this mechanic: [the game](../game/README.md). Find where autopilot lives in its code and change what it takes over.
 
 ## Sources
 

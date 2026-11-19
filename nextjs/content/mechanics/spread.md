@@ -25,6 +25,8 @@ That links to Susan Leigh Star (Sept 21): infrastructure has "reach or scope …
 
 **Through its lineage.** Epidemiologists have modeled spread since Kermack and McKendrick's equations of 1927, which sort a population into susceptible, infected and recovered. [4] *Plague Inc.*'s designer has said he was inspired by the Flash game *Pandemic 2* (2008) and the film *Contagion* (2011). [1] Leacock's *Pandemic* came out in 2008 too, and its maker has spoken about designing it as a cooperative game. [2]
 
+**In a story:** [Ring](../stories/ring.md) and [Invasion of the Body Snatchers](../stories/invasion-of-the-body-snatchers.md) are both spread stories.
+
 ## Your turn
 
 - A game you know where something spreads: ___

@@ -59,4 +59,4 @@ Every page ends with something for you to fill in. Fill it in, and argue with it
 | 19 | [Come back later](come-back-later.md) | The crops grow while you're away, and wither if you stay away too long. | *FarmVille*, *Stardew Valley* |
 | 20 | [The Community Center or Joja](community-center-or-joja.md) | Repair the town together, or pay a company to do it. | *Stardew Valley* |
 
-The game in this kit is built from some of these mechanics: [the arms race](escalation.md) and [click, then automate](automate-this.md) among them. See [the game](../game/README.md) for the rest.
+These twenty are a start, not a canon. If a mechanic you know well is missing, copy a page and write it.

@@ -17,7 +17,7 @@ order: 5
 
 An arms race is a mechanic in which nobody chooses the outcome. Each move is reasonable, given the other side's last move, and the sum is a catastrophe neither side wanted. *Twilight Struggle* makes the point with its rules: the game makes you take risks, then punishes whoever took the last one.
 
-Charles Perrow's *Normal Accidents* (Nov 16) argues that in tightly coupled, complex systems, accidents are "normal": they follow from how the system is built, not from one person's error. An arms race is a coupling machine. Ask also who gains while the race goes on. In *DEFCON* nobody wins, but in a real arms race the suppliers to both sides do well. That is the idea behind [the game](../game/README.md) in this kit, where attackers and defenders both buy help from the same AI.
+Charles Perrow's *Normal Accidents* (Nov 16) argues that in tightly coupled, complex systems, accidents are "normal": they follow from how the system is built, not from one person's error. An arms race is a coupling machine. Ask also who gains while the race goes on. In *DEFCON* nobody wins, but in a real arms race the suppliers to both sides do well. Imagine attackers and defenders who both buy their help from the same AI: the race itself is the AI's business.
 
 ## Two ways in
 
@@ -25,11 +25,14 @@ Charles Perrow's *Normal Accidents* (Nov 16) argues that in tightly coupled, com
 
 **Through its lineage.** The mathematician Lewis Fry Richardson modeled arms races as equations in which each country's armament grows with the other's (*Arms and Insecurity*, 1960). [4] *DEFCON*'s designers drew on the 1983 film *WarGames*, which ends on a computer concluding that nuclear war is a game in which "the only winning move is not to play." [2]
 
+**In a story:** in [Colossus](../stories/colossus-novel.md), a defense computer built for the arms race takes over with the missiles people already built.
+
 ## Your turn
 
+- You can play this one and change it: [the arms race, playable](/game/escalation).
 - A game you know that has an arms race: ___
 - Who outside the race profits from it? Is there anyone like that in the game, or only in the world?
-- In the game in this kit, find the rule that lets both sides stand down. What has to happen for it to work?
+- Write a rule that would let both sides stand down. What has to happen for it to work, and who loses when it does?
 
 ## Sources
 

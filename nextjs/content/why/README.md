@@ -26,9 +26,10 @@ The second half of that sentence is where this workshop starts. What social mess
 
 ## Why this course
 
-- **A game is a system people live inside.** A game you have played for 150 hours is a set of rules, counters and loops that shaped what you did, mostly without your noticing. That is close to how Susan Leigh Star describes infrastructure: embedded, learned as part of membership, and visible mostly when it breaks ("The Ethnography of Infrastructure," 1999, pp. 381–382).
+- **A game is a system you live inside.** A game you have played for 150 hours is rules, counters and loops that shaped what you did, mostly without your noticing: close to how Susan Leigh Star describes infrastructure, embedded, learned as part of membership, and visible when it breaks ("The Ethnography of Infrastructure," 1999, pp. 381–382).
 - **A game runs on a database.** On September 28 you built a database of the course. Most games are a database of things (units, crops, resources) plus rules for what happens to them each turn.
-- **A game makes arguments through its rules.** Ian Bogost calls this **procedural rhetoric** (*Persuasive Games*, MIT Press, 2007). A farming game argues something about labor by what it lets you automate; a strategy game argues something about territory by what it counts as winning. More in [Reading the mechanics](/reading-mechanics).
+
+How to read those rules: [Reading the mechanics](/reading-mechanics).
 
 ## To bring to the workshop
 

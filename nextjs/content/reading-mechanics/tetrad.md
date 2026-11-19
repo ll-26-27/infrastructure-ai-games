@@ -15,11 +15,9 @@ Jesse Schell, in *The Art of Game Design: A Book of Lenses* (Morgan Kaufmann, 20
 
 *Universal Paperclips* is by Frank Lantz (2017) and is free to play at [decisionproblem.com/paperclips](https://www.decisionproblem.com/paperclips/). It answers a thought experiment by the philosopher Nick Bostrom, an AI with an arbitrary goal that "starts transforming first all of earth and then increasing portions of space into paperclip manufacturing facilities" (["Ethical Issues in Advanced Artificial Intelligence"](https://nickbostrom.com/ethics/ai), 2003). The game never states that argument in a sentence. It has you make the AI's moves, one upgrade at a time, until you have done what Bostrom describes. That is procedural rhetoric (see [Reading the mechanics](/reading-mechanics)).
 
-## An AI story is not enough
+## Start in the mechanics row
 
-Plenty of games have a story about AI. The story is the easy row to fill in. Following Bogost, the argument is in the mechanics: if a game says something about technology, it says it through what it makes you do.
-
-So when you look at a game, start in the mechanics row, and hold it up against a reading from this course:
+Story is the easy row to fill in; the argument is in the mechanics. Hold the mechanics row up against a reading from this course:
 
 - **Star (1999):** infrastructure is invisible until it breaks. Which mechanics hide something until it fails?
 - **Perrow, *Normal Accidents* (November 16):** in tightly coupled systems, small failures cascade. Which mechanics let one failure set off the next?

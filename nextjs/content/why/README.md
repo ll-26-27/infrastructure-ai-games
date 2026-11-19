@@ -6,7 +6,7 @@ order: 1
 
 ## This week: *Grand Theft Auto VI*
 
-Rockstar set the release of *Grand Theft Auto VI* for **Thursday, November 19, 2026**, on PlayStation 5 and Xbox Series X|S ([Rockstar Newswire](https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026)). The week before it went on sale:
+Rockstar set the release of *Grand Theft Auto VI* for **Thursday, November 19, 2026**, on PlayStation 5 and Xbox Series X|S ([Rockstar Newswire](https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026)). In the week before that date:
 
 - **It was reviewed as art.** *The New York Times* made it a Critic's Pick. Its critic, Yussef Cole: "This is a game about love and relationships, their joy and heartache, and the work required to make them successful" ([nytimes.com, November 18](https://www.nytimes.com/2026/11/18/arts/grand-theft-auto-vi-review.html), as quoted by [PC Gamer](https://www.pcgamer.com/games/grand-theft-auto/grand-theft-auto-6-review-roundup-rockstars-magnum-opus-a-great-love-story-and-a-new-bar-for-open-worlds/)). It scores 99 on [Metacritic](https://www.metacritic.com/game/grand-theft-auto-vi/).
 - **It moved money and labor.** Sensor Tower estimated more than $1.65 billion in pre-orders before launch, an estimate, not Rockstar's figure ([Yahoo Finance, November 18](https://finance.yahoo.com/technology/article/grand-theft-auto-vi-could-be-the-biggest-entertainment-launch-in-history-123431121.html)). Employers reported time-off requests for launch day running about 20% above normal, according to the Washington Post ([via Yahoo](https://www.yahoo.com/entertainment/music/articles/grand-theft-auto-vi-cultural-100000808.html)). Rockstar's UK workers are voting from November 12 to 26 on recognizing a union ([The Register](https://www.theregister.com/software/2026/11/12/rockstar-workers-vote-on-union-recognition-as-gta-vi-launch-looms/5309319)).
@@ -32,4 +32,4 @@ The second half of that sentence is where this workshop starts. What social mess
 
 ## To bring to the workshop
 
-Think of one game you have played a lot, on any device, at any age. On Monday you will read its [mechanics](/mechanics), find its relatives in the [gallery](/gallery), and add what's missing.
+Think of one game you have played a lot, on any device, at any age. On Monday you will read its [mechanics](/mechanics), find its relatives in the [gallery](/gallery) and in the [novels and films](/stories) that tell stories about AI, and add what's missing.

@@ -3,7 +3,7 @@ title: "INFRASTRUCTURAL AWARENESS: The Week Ahead"
 description: A parody timeline of this week's breakdowns, ending on the day of the workshop
 ---
 
-**This page is a parody.** It imitates Leopold Aschenbrenner's essay [*Situational Awareness: The Decade Ahead*](https://situational-awareness.ai/) (June 2024), which counts "orders of magnitude" of computing power, extends the trendlines, and predicts artificial general intelligence by 2027. The parody keeps the essay's numbered parts, its trendline chart and its insider voice, and points them at one week of broken infrastructure.
+**This page is a parody.** It imitates Leopold Aschenbrenner's essay [*Situational Awareness: The Decade Ahead*](https://situational-awareness.ai/) (June 2024), which counts "orders of magnitude" of computing power, extends the trendlines, and predicts artificial general intelligence by 2027. The parody keeps the essay's numbered parts, its trendline chart and its insider voice, borrows the running dashboard from [*AI 2027*](/stories/ai-2027), and points them at one week of broken infrastructure. More on the essay itself in [its card](/stories/situational-awareness).
 
 How to tell the two apart:
 

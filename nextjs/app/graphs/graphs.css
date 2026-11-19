@@ -25,7 +25,7 @@
 @media (max-width: 900px) { .graph-body.has-panel { grid-template-columns: minmax(0, 1fr); } }
 .graph-main { min-width: 0; }
 
-.graph-svg { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--wash); }
+.graph-svg { display: block; overflow: hidden; max-width: 100%; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--wash); }
 .graph-svg line { stroke: var(--line); stroke-width: 1.2; }
 .graph-svg line.is-lit { stroke: var(--accent); stroke-width: 2; }
 .graph-svg line.is-dim { opacity: .35; }

@@ -29,10 +29,10 @@ cookie-clicker,game,"Cookie Clicker (2013)","Julien Thiennot's incremental game;
 civilization-board-game,game,"Civilization, the board game (1980)","Francis Tresham's board game of ancient civilizations.",text,"https://en.wikipedia.org/wiki/Civilization_(video_game)"
 civilization,game,"Civilization (1991)","Sid Meier and Bruce Shelley's turn-based empire game (MicroProse).",text,"https://en.wikipedia.org/wiki/Civilization_(video_game)"
 freeciv,game,"Freeciv (1996)","Free, open-source, inspired by Civilization; defaults closest to Civilization II.",text,"https://en.wikipedia.org/wiki/Freeciv"
-unciv,game,"Unciv","An open-source game modeled on Civilization V (unverified).",unverified,
+unciv,game,"Unciv (2017)","A free, open-source remake of Civilization V for phones and computers.",text,"https://github.com/yairm210/Unciv"
 simcity,game,"SimCity (1989)","Will Wright's city builder (Maxis): divide land into residential, commercial and industrial zones.",text,"https://en.wikipedia.org/wiki/SimCity_(1989_video_game)"
 the-landlords-game,game,"The Landlord's Game (1904)","Elizabeth Magie's board game, made to teach Georgism; the inspiration for Monopoly.",text,"https://en.wikipedia.org/wiki/The_Landlord%27s_Game"
-monopoly,game,"Monopoly (1935)","Buy property, charge rent, bankrupt everyone else.",text,"https://en.wikipedia.org/wiki/The_Landlord%27s_Game"
+monopoly,game,"Monopoly (1935)","Published by Parker Brothers in 1935; it grew out of homemade versions of The Landlord's Game.",text,"/gallery/the-landlords-game"
 risk,game,"Risk (1959)","World conquest by dice.",text,
 catan,game,"Catan (1995)","Klaus Teuber's game of settling, trading and building.",text,
 agricola,game,"Agricola (2007)","Uwe Rosenberg's farming game of placing workers.",text,

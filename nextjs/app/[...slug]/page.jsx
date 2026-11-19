@@ -28,7 +28,8 @@ function Breadcrumbs({ trail, title }) {
 
 function FolderList({ folder }) {
   const items = [...folder.folders, ...folder.docs];
-  if (!items.length) return <p className="empty-state">Nothing here yet.</p>;
+  // A folder that is only its README is a page like any other.
+  if (!items.length) return folder.content.trim() ? null : <p className="empty-state">Nothing here yet.</p>;
   return (
     <nav className="document-list" aria-label={`In ${folder.title}`}>
       {items.map((item, index) => (

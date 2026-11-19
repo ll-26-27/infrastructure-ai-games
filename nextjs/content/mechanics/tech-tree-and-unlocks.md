@@ -23,7 +23,7 @@ Your readings argue the opposite. Amit Prasad (*Imperial Technoscience*, Sept 14
 
 **From a game you know.** Skill trees, crafting recipes and upgrade paths are tech trees too. Pick one you know by heart. Is there a branch everyone takes? What would the game be like if the order were shuffled?
 
-**Through its lineage.** Francis Tresham's board game *Civilization* (1980) had "civilization advances" that unlocked one another. Sid Meier's 1991 game borrowed that name, and its tree took a similar shape. [1] [4] Read it as one influence among several, not as the origin.
+**Through its lineage.** Francis Tresham's board game *Civilization* (1980) had "civilization advances" that made later advances cheaper. MicroProse licensed that name for Sid Meier's 1991 game, which shared its theme, including a tree of advances; Meier himself counted the older computer games *Empire* and *SimCity* as bigger influences. [1] [4] Read it as one influence among several, not as the origin.
 
 ## Your turn
 

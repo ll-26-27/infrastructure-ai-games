@@ -11,7 +11,7 @@ order: 6
 
 - **[Plague Inc.](../gallery/plague-inc.md)** (Ndemic Creations, 2012). You *are* the disease. You choose where to start, then spend "DNA points" to evolve ways of spreading (by air, water, insects) and symptoms. Ports and airports carry you between countries, and they close as the world notices. You win by infecting and killing everyone before humanity finishes a cure. [1]
 - **[Pandemic](../gallery/pandemic.md)** (Matt Leacock, Z-Man Games, 2008). The same story from the other side: a cooperative board game in which two to four players, as a medic, a scientist and other specialists, fly between connected cities to treat disease and find cures. Each turn, infection cards add disease cubes to cities, and the infection spreads along the lines on the board. [2]
-- **[They Are Billions](../gallery/they-are-billions.md)** (Numantian Games, 2019). You build a colony while hordes of the infected wander outside. If they get in, the people they reach become infected too, and one breach can turn a whole district. [3]
+- **[They Are Billions](../gallery/they-are-billions.md)** (Numantian Games, 2017 in early access, 2019 in full). You build a colony while hordes of the infected wander outside. If they get in, the people they reach become infected too, and one breach can turn a whole district. [3]
 
 ## What it argues
 

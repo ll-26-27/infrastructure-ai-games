@@ -10,7 +10,7 @@ order: 20
 ## How it plays
 
 - **[Stardew Valley](../gallery/stardew-valley.md)** (Eric Barone, 2016). The town of Pelican Town has a run-down Community Center. Its rooms hold "bundles", lists of things to bring: spring crops, fish from the lake, minerals from the mine. Finishing a room repairs part of the town: the bridge to the quarry, the minecarts, the greenhouse, the bus to the desert. [1]
-- **The other route.** At the JojaMart, the big store that is putting the town's general store out of business, you can buy a Joja membership. Then each repair is bought outright with gold through the "Joja Community Development Form", and the Community Center becomes a Joja warehouse. [2]
+- **The other route.** At the JojaMart, the big chain store competing with the town's general store, you can buy a Joja membership. Then each repair is bought outright with gold through the "Joja Community Development Form", and the Community Center becomes a Joja warehouse. [2]
 - **[Harvest Moon](../gallery/harvest-moon.md)** (1996), the farming game *Stardew Valley*'s creator has named as its inspiration, also asks you to restore a farm; *Stardew* adds the choice of who restores the town. [3]
 
 ## What it argues

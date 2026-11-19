@@ -10,8 +10,8 @@ order: 9
 ## How it plays
 
 - **[Universal Paperclips](../gallery/universal-paperclips.md)** (2017). The AI earns "Trust" from its human supervisors at each milestone, and spends it on more processors and memory. Trust is how a machine gets permission to grow. Later in the game, the AI no longer needs it. [1]
-- **[Frostpunk](../gallery/frostpunk.md)** (11 bit studios, 2018). Two meters sit at the bottom of the screen: Hope and Discontent. Harsh laws and cold homes raise discontent and lower hope. If either reaches its limit, the people throw you out and the game ends. [2]
-- **[Rebel Inc.](../gallery/rebel-inc.md)** (Ndemic Creations, 2018). You try to stabilize a country after a war. Building and spending win the population's support, while corruption and civilian casualties lose it, and the insurgency grows where support is low. *(Unverified in detail: check the gallery page for the meters' names.)* [3]
+- **[Frostpunk](../gallery/frostpunk.md)** (11 bit studios, 2018). Two meters sit at the bottom of the screen: Hope and Discontent. Harsh laws and cold homes raise discontent and lower hope. If hope runs out or discontent maxes out, the people give you an ultimatum; fail it and they throw you out, and the game ends. [2]
+- **[Rebel Inc.](../gallery/rebel-inc.md)** (Ndemic Creations, 2018). You try to stabilize a country after a war. Each zone has a level of **Support** for the government, and you have a **Reputation** of your own. Building services and jobs wins Support, but spending also raises corruption and inflation, and insurgents turn people against you. If your Reputation reaches zero, you lose; you win by stabilizing every zone. [3]
 
 ## What it argues
 
@@ -34,7 +34,7 @@ Marion Fourcade and Kieran Healy's *The Ordinal Society* (Nov 2) describes a wor
 ## Sources
 
 1. [Universal Paperclips](https://www.decisionproblem.com/paperclips/), the game itself; [Wikipedia](https://en.wikipedia.org/wiki/Universal_Paperclips).
-2. [Frostpunk on Wikipedia](https://en.wikipedia.org/wiki/Frostpunk).
-3. [Rebel Inc. on Wikipedia](https://en.wikipedia.org/wiki/Rebel_Inc.).
-4. [SimCity (1989) on Wikipedia](https://en.wikipedia.org/wiki/SimCity_(1989_video_game)).
+2. [Frostpunk on Wikipedia](https://en.wikipedia.org/wiki/Frostpunk); [what happens when discontent or hope reach critical values (Gamepressure)](https://www.gamepressure.com/frostpunk/what-happens-when-discontent-or-hope-reach-critical-values/zfad7c).
+3. [Rebel Inc. on Wikipedia](https://en.wikipedia.org/wiki/Rebel_Inc._(video_game)); [Core game concepts, Rebel Inc. Wiki](https://rebelinc.wiki.gg/wiki/Core_Game_Concepts).
+4. [SimCity (1989) on Wikipedia](https://en.wikipedia.org/wiki/SimCity_(1989_video_game)); the yearly evaluation and poll in the game's released source code, [Micropolis, `s_eval.c`](https://github.com/SimHacker/micropolis/blob/master/micropolis-activity/src/sim/s_eval.c).
 5. [Tropico (video game) on Wikipedia](https://en.wikipedia.org/wiki/Tropico_(video_game)).

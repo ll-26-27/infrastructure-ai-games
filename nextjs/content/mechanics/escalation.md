@@ -23,7 +23,7 @@ Charles Perrow's *Normal Accidents* (Nov 16) argues that in tightly coupled, com
 
 **From a game you know.** Competitive multiplayer games often have one: two players upgrading in turn, a ranked season where everyone grinds because everyone else is grinding, an escalation in a strategy game neither of you can stop. Where did it come from? Could you have stopped?
 
-**Through its lineage.** The mathematician Lewis Fry Richardson modeled arms races as equations in which each country's armament grows with the other's (*Arms and Insecurity*, 1960). [4] *DEFCON*'s designers drew on the 1983 film *WarGames*, which ends on a computer concluding that nuclear war is a game in which "the only winning move is not to play." [2]
+**Through its lineage.** The mathematician Lewis Fry Richardson modeled arms races as equations in which each country's armament grows with the other's (*Arms and Insecurity*, written in the 1940s and published in 1960, after his death). [4] *DEFCON*'s publisher calls it "inspired by" the 1983 film *WarGames*, which ends on a computer concluding that nuclear war is a game in which "the only winning move is not to play." [2]
 
 **In a story:** in [Colossus](../stories/colossus-novel.md), a defense computer built for the arms race takes over with the missiles people already built.
 
@@ -37,6 +37,6 @@ Charles Perrow's *Normal Accidents* (Nov 16) argues that in tightly coupled, com
 ## Sources
 
 1. [Twilight Struggle on Wikipedia](https://en.wikipedia.org/wiki/Twilight_Struggle); rules at [GMT Games](https://www.gmtgames.com/living_rules/TS_Rules_Deluxe.pdf).
-2. [DEFCON (video game) on Wikipedia](https://en.wikipedia.org/wiki/DEFCON_(video_game)).
-3. [Nuclear weapons in Civilization VI, Civilization Wiki](https://civilization.fandom.com/wiki/Nuclear_Device_(Civ6)).
-4. [Lewis Fry Richardson on Wikipedia](https://en.wikipedia.org/wiki/Lewis_Fry_Richardson).
+2. [DEFCON (video game) on Wikipedia](https://en.wikipedia.org/wiki/DEFCON_(video_game)); [DEFCON on Steam](https://store.steampowered.com/app/1520/DEFCON/).
+3. [Nuclear weapons in Civilization VI, Civilization Wiki](https://civilization.fandom.com/wiki/Nuclear_weapons_(Civ6)).
+4. [Lewis Fry Richardson on Wikipedia](https://en.wikipedia.org/wiki/Lewis_Fry_Richardson); [on *Arms and Insecurity* (Springer)](https://link.springer.com/chapter/10.1007/978-3-030-31589-4_4).

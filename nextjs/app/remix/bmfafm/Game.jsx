@@ -6,6 +6,7 @@ import {
   PLAYERS, RENT, RING_NAMES, ROUND_CALM, SAFETY_COST, SIZES, SPY_BONUS, START_BAG, SYSTEMS, TAKEOVER, TREATY_CALM, TREATY_CAP, TREATY_ROUNDS,
   WAR, WILDS, WILD_HAND, spaceType,
 } from "../../../lib/remix/bmfafm/rules.mjs";
+import { writeNews } from "../../../lib/remix/bmfafm/news.mjs";
 
 const N = PLAYERS.length;
 const die = () => 1 + Math.floor(Math.random() * 6);
@@ -14,6 +15,7 @@ const shuffle = (list) => {
   for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
   return a;
 };
+// The wildcard deck is face down, from the CNA game: you hold three without knowing which are good.
 const dealWilds = () => shuffle(WILDS.map((w) => w.id)).slice(0, WILD_HAND);
 const wildOf = (id) => WILDS.find((w) => w.id === id);
 
@@ -26,6 +28,7 @@ function newGame() {
     owners: {}, ai: { ring: 0, pos: SIZES[0] / 2 }, doom: 0, tension: 0, turn: 0, round: 1,
     phase: "roll", remaining: 0, roll: null, treaty: null, vote: null, queue: [], deck: [], lastOp: null,
     marketBlock: null, shortage: null, usedPower: false, usedOp: false, usedWild: false, ended: null,
+    events: [], paper: null, lastWild: null,
     log: [`Round 1. ${PLAYERS[0].name} to roll.`],
   };
 }
@@ -33,6 +36,7 @@ function newGame() {
 // ---- The rules, as changes to a copy of the game -------------------------------------------------------------
 
 const say = (g, text) => { g.log.unshift(text); g.log.length = Math.min(g.log.length, 80); };
+const ev = (g, e) => { g.events.push(e); }; // for the front page
 const key = (ring, pos) => `${ring}-${pos}`;
 const gateCost = (p, ring) => GATE_COST[ring] - (p === 4 ? 1 : 0);
 const owned = (g, p) => Object.values(g.owners).filter((o) => o === p).length;
@@ -53,6 +57,15 @@ function finish(g, kind, winner = null) {
   if (kind === "takeover") say(g, `The doom track reached ${TAKEOVER}. The AI takes over. Everyone loses.`);
   if (kind === "war") say(g, `World tension reached ${WAR}. World war. Nobody wins a world war.`);
   if (kind === "shared") say(g, `The treaty held for ${TREATY_ROUNDS} rounds. Everyone shares the win.`);
+  const end = {
+    win: [false, `${PLAYERS[winner]?.name} reaches superintelligence, safely`, "It drew white from its bag. It wins the race, and everything else."],
+    doom: [true, `${PLAYERS[winner]?.name} reaches superintelligence, and it goes wrong`, "It drew black from its bag. The machine does not do what anyone wanted. Everyone loses."],
+    takeover: [true, "The AI takes over", `The doom track reached ${TAKEOVER}. Nobody reached the center first.`],
+    war: [true, "World war", `World tension reached ${WAR}. Nobody wins a world war.`],
+    shared: [false, "The pause holds", `The treaty held for ${TREATY_ROUNDS} rounds. Everyone shares the win.`],
+  }[kind];
+  g.paper = writeNews(g, [...g.events, { type: "end", lose: end[0], title: end[1], text: end[2] }], g.round);
+  g.events = [];
 }
 
 function addBlack(g, p, count) {
@@ -60,7 +73,7 @@ function addBlack(g, p, count) {
   g.players[p].black += count;
   g.doom += count;
   const ring = g.doom >= AI_INNER ? 2 : g.doom >= AI_MIDDLE ? 1 : 0;
-  if (ring > g.ai.ring) { g.ai = { ring, pos: SIZES[ring] / 2 }; say(g, `The AI moves to the ${RING_NAMES[ring].split(":")[0].toLowerCase()}.`); }
+  if (ring > g.ai.ring) { g.ai = { ring, pos: SIZES[ring] / 2 }; say(g, `The AI moves to the ${RING_NAMES[ring].split(":")[0].toLowerCase()}.`); ev(g, { type: "ai", ring, doom: g.doom }); }
   if (g.doom >= TAKEOVER) finish(g, "takeover");
 }
 
@@ -98,7 +111,7 @@ function land(g) {
     }
   }
   if (type === "incident") draw(g, p);
-  if (type === "summit" && !g.treaty) { startVote(g); say(g, `${PLAYERS[p].name} calls a summit. Everyone votes on a pause treaty, in secret.`); }
+  if (type === "summit" && !g.treaty) { startVote(g); say(g, `${PLAYERS[p].name} calls a summit. Everyone votes on a pause treaty.`); }
   if (g.ai.ring === pl.ring && g.ai.pos === pl.pos) { say(g, `${PLAYERS[p].name} stops on the AI's space.`); draw(g, p); }
 }
 
@@ -117,7 +130,7 @@ function move(g, steps) {
 function stepIn(g) {
   const p = g.turn, pl = g.players[p];
   pl.compute -= gateCost(p, pl.ring);
-  if (g.treaty) { say(g, `${PLAYERS[p].name} breaks the treaty.`); g.treaty = null; }
+  if (g.treaty) { say(g, `${PLAYERS[p].name} breaks the treaty.`); g.treaty = null; ev(g, { type: "broke", who: p }); }
   addBlack(g, p, GATE_BLACK[pl.ring]);
   if (g.ended) return;
   if (pl.ring === 2) {
@@ -130,6 +143,7 @@ function stepIn(g) {
   pl.ring += 1; pl.pos = 0; g.remaining = 0;
   pl.wilds = dealWilds();
   say(g, `${PLAYERS[p].name} steps into the ${RING_NAMES[pl.ring].split(":")[0].toLowerCase()} and is dealt three new wildcards.`);
+  ev(g, { type: "step", who: p, ring: pl.ring, black: pl.black });
   g.phase = canStep(g, p) ? "gate" : "act";
 }
 
@@ -142,6 +156,7 @@ function keepMoving(g) {
 function resolveCard(g, accept) {
   const { id, p } = g.queue.shift();
   const pl = g.players[p], name = PLAYERS[p].name;
+  ev(g, { type: "incident", who: p, card: id, accept });
   if (id === "deal") {
     if (accept) { pl.compute += 3; addBlack(g, p, 2); say(g, `${name} takes the AI's deal: +3 compute, 2 black tokens.`); }
     else say(g, `${name} refuses the AI's deal.`);
@@ -177,7 +192,7 @@ function runOp(g, id, t) {
   const bonus = (PLAYERS[p].system === "authoritarian" ? 1 : 0) + pl.spies * SPY_BONUS;
   const roll = die();
   const total = id === "ceo" ? roll : roll + bonus;
-  const works = id === "ceo" || total >= OP_SUCCESS;
+  const works = id === "ceo" || total >= (op.success || OP_SUCCESS);
   if (id !== "ceo") pl.spies = 0;
   g.lastOp = { id, p, t, roll, bonus: id === "ceo" ? 0 : bonus, works };
   const failed = (pay) => {
@@ -217,8 +232,20 @@ function runOp(g, id, t) {
       addTension(g, 1);
     } else say(g, `${them}'s CEO leaks to ${me}'s spy (${rolled}): ${take} compute changes hands, and nobody finds out.`);
   }
+  if (id === "laws") {
+    if (g.treaty) { g.treaty = null; say(g, `${me} breaks the treaty with lethal autonomous weapons.`); ev(g, { type: "broke", who: p }); }
+    if (works) {
+      const take = Math.min(2, tg.compute);
+      tg.compute -= take;
+      const k = Object.keys(g.owners).find((x) => g.owners[x] === t);
+      if (k) delete g.owners[k];
+      tg.stunned = true;
+      say(g, `${me} sends lethal autonomous weapons against ${them} (${rolled}): ${them} loses ${take} compute${k ? " and a data center" : ""}, and their next turn. ${me} adds 1 black token.`);
+    } else say(g, `${me}'s lethal autonomous weapons misfire over ${them} (${rolled}). ${me} adds 1 black token.${failed(0)}`);
+    addBlack(g, p, 1);
+  }
   if (id === "strike") {
-    if (g.treaty) { g.treaty = null; say(g, `${me} breaks the treaty with a military strike.`); }
+    if (g.treaty) { g.treaty = null; say(g, `${me} breaks the treaty with a military strike.`); ev(g, { type: "broke", who: p }); }
     if (works) {
       const k = Object.keys(g.owners).find((x) => g.owners[x] === t);
       if (k) delete g.owners[k];
@@ -226,30 +253,33 @@ function runOp(g, id, t) {
       say(g, `${me} strikes ${them} (${rolled}): a data center is destroyed, and ${them} loses their next turn.`);
     } else say(g, `${me}'s strike on ${them} is beaten back (${rolled}).${failed(0)}`);
   }
+  ev(g, { type: id, who: p, target: t, ok: works, exposed: id === "ceo" && roll <= 2 });
   addTension(g, op.tension);
 }
 
-// Wildcards, from the CNA game: real events.
-function playWild(g, id) {
+// Wildcards, from the CNA game: a face-down gamble on a real event, half good and half bad.
+function playWild(g, index) {
   const p = g.turn, pl = g.players[p], name = PLAYERS[p].name;
-  const rivals = PLAYERS.map((x, i) => i).filter((i) => i !== p);
-  g.usedWild = true;
-  pl.wilds = [];
+  const id = pl.wilds[index];
   const w = wildOf(id);
-  say(g, `${name} sets off a wildcard: ${w.title}.`);
-  if (id === "shortage") rivals.forEach((i) => { g.players[i].compute = Math.max(0, g.players[i].compute - 1); });
-  if (id === "export") {
-    const top = g.players.reduce((best, x, i) => (x.compute > g.players[best].compute ? i : best), 0);
-    g.players[top].compute = Math.max(0, g.players[top].compute - 2);
-    say(g, `${PLAYERS[top].name} holds the most compute and loses 2.`);
-  }
-  if (id === "quake") { g.players.forEach((x) => { x.compute = Math.max(0, x.compute - 1); }); g.shortage = { until: p }; }
+  g.usedWild = true;
+  pl.wilds.splice(index, 1);
+  g.lastWild = { id, p };
+  say(g, `${name} turns over a wildcard, ${w.good ? "good news" : "bad news"}: ${w.title.replace(/\byour\b/gi, "its").replace(/\byou\b/gi, "it")}.`);
+  const lose = (x, n) => { x.compute = Math.max(0, x.compute - n); };
   if (id === "subsidy") { pl.capital += 3; pl.compute += 1; }
-  if (id === "leak") { g.players.forEach((x) => { x.compute += 1; }); addBlack(g, p, 1); }
   if (id === "summit") { addTension(g, -3); if (!g.treaty) startVote(g); }
-  if (id === "drought") rivals.forEach((i) => { const x = g.players[i]; x.capital = Math.max(0, x.capital - owned(g, i)); });
-  if (id === "outage") rivals.forEach((i) => { if (owned(g, i)) g.players[i].skipIncome = true; });
-  if (id === "killswitch") { pl.compute = Math.max(0, pl.compute - 3); pl.white += 2; }
+  if (id === "breakthrough") pl.compute += 2;
+  if (id === "defector") { pl.compute += 1; pl.white += 1; }
+  if (id === "fab") { pl.capital += 2; pl.compute += 1; }
+  if (id === "shortage") g.players.forEach((x, i) => { if (i !== p) lose(x, 1); });
+  if (id === "leak") { lose(pl, 2); addBlack(g, p, 1); }
+  if (id === "drought") pl.capital = Math.max(0, pl.capital - Math.max(1, owned(g, p)));
+  if (id === "outage") pl.skipIncome = true;
+  if (id === "quake") lose(pl, 2);
+  if (id === "lawsuit") pl.capital = Math.max(0, pl.capital - 3);
+  if (id === "export") { lose(pl, 1); g.marketBlock = { target: p, until: p }; }
+  ev(g, { type: "wild", who: p, wild: id, good: w.good });
 }
 
 function roundEnd(g) {
@@ -264,6 +294,7 @@ function roundEnd(g) {
     g.treaty.rounds += 1;
     if (g.treaty.rounds >= TREATY_ROUNDS) finish(g, "shared");
   }
+  if (!g.ended) { g.paper = writeNews(g, g.events, g.round - 1); g.events = []; }
 }
 
 function advance(g) {
@@ -277,6 +308,7 @@ function advance(g) {
   if (g.players[next].stunned) {
     g.players[next].stunned = false;
     say(g, `${PLAYERS[next].name} is recovering and loses this turn.`);
+    ev(g, { type: "stunned", who: next });
     advance(g);
   }
 }
@@ -286,7 +318,7 @@ function endTurn(g) {
   if (g.treaty && pl.compute > TREATY_CAP) { say(g, `${PLAYERS[p].name} returns ${pl.compute - TREATY_CAP} compute over the treaty cap.`); pl.compute = TREATY_CAP; }
   advance(g);
   if (g.ended) return;
-  g.phase = "roll"; g.roll = null; g.usedPower = false; g.usedOp = false; g.usedWild = false; g.lastOp = null;
+  g.phase = "roll"; g.roll = null; g.usedPower = false; g.usedOp = false; g.usedWild = false; g.lastOp = null; g.lastWild = null;
   say(g, `${PLAYERS[g.turn].name} to roll.`);
 }
 
@@ -295,6 +327,7 @@ function startTreaty(g) {
   g.treaty = { rounds: 0 };
   g.vote = null;
   addTension(g, -TREATY_CALM);
+  ev(g, { type: "treaty" });
   say(g, `Everyone signed. The pause treaty is in force. Everyone's compute is capped at ${TREATY_CAP}, and world tension falls ${TREATY_CALM}.`);
 }
 
@@ -438,7 +471,7 @@ function PlayerScreen({ g, p }) {
       </div>
       <p className="rx-power">{info.power}</p>
       <p className="rx-power">{SYSTEMS[info.system].text}</p>
-      <p className="rx-wildcount">{pl.wilds.length ? `${pl.wilds.length} wildcards in hand` : "Wildcard played: three more at the next gate inward"}</p>
+      <p className="rx-wildcount">{pl.wilds.length ? `${pl.wilds.length} face-down wildcard${pl.wilds.length > 1 ? "s" : ""}` : "No wildcards: three more at the next gate inward"}</p>
       {flags.map((f) => <p key={f} className="rx-flag">{f}</p>)}
     </section>
   );
@@ -486,7 +519,7 @@ function Vote({ g, act }) {
       <ul className="rx-votes">{PLAYERS.map((x, i) => <li key={x.name} style={{ "--pc": x.color }} className={v.votes[i] ? "rx-vy" : "rx-vn"}><span className="rx-dot" />{x.name}: {v.votes[i] ? "yes" : "no"}</li>)}</ul>
       {yes
         ? <button type="button" className="rx-primary" onClick={() => act(startTreaty)}>Sign the treaty</button>
-        : <button type="button" className="rx-primary" onClick={() => act((n) => { n.vote = null; say(n, "The vote fails. No treaty."); })}>No treaty: carry on</button>}
+        : <button type="button" className="rx-primary" onClick={() => act((n) => { ev(n, { type: "novote", no: n.vote.votes.filter((x) => !x).length }); n.vote = null; say(n, "The vote fails. No treaty."); })}>No treaty: carry on</button>}
     </div>
   );
 }
@@ -555,9 +588,9 @@ function Controls({ g, act }) {
       {!blocked && g.phase === "act" && (
         <>
           <div className="rx-actions">
-            {canBuy && <button type="button" onClick={() => act((n) => { n.players[n.turn].capital -= DC_PRICE[pl.ring]; n.owners[k] = n.turn; say(n, `${info.name} buys a data center for ${DC_PRICE[pl.ring]} capital.`); })}>Buy this data center ({DC_PRICE[pl.ring]} capital)</button>}
+            {canBuy && <button type="button" onClick={() => act((n) => { n.players[n.turn].capital -= DC_PRICE[pl.ring]; n.owners[k] = n.turn; say(n, `${info.name} buys a data center for ${DC_PRICE[pl.ring]} capital.`); ev(n, { type: "buy", who: n.turn, ring: pl.ring }); })}>Buy this data center ({DC_PRICE[pl.ring]} capital)</button>}
             <button type="button" disabled={!marketOpen(g, p) || pl.capital < MARKET_PRICE} onClick={() => act((n) => { n.players[n.turn].capital -= MARKET_PRICE; n.players[n.turn].compute += 1; say(n, `${info.name} buys 1 compute.`); })}>Buy compute ({MARKET_PRICE} capital)</button>
-            <button type="button" disabled={pl.compute < safety} onClick={() => act((n) => { n.players[n.turn].compute -= safety; n.players[n.turn].white += 1; say(n, `${info.name} spends ${safety} compute on safety: 1 white token.`); })}>Safety: 1 white ({safety} compute)</button>
+            <button type="button" disabled={pl.compute < safety} onClick={() => act((n) => { n.players[n.turn].compute -= safety; n.players[n.turn].white += 1; say(n, `${info.name} spends ${safety} compute on safety: 1 white token.`); ev(n, { type: "safety", who: n.turn }); })}>Safety: 1 white ({safety} compute)</button>
           </div>
 
           <div className="rx-target">
@@ -567,8 +600,8 @@ function Controls({ g, act }) {
               </select>
             </label>
             {(isState || myLabs.includes(t)) && <div className="rx-actions">
-              {p === 0 && <button type="button" disabled={g.usedPower} onClick={() => act((n) => { n.marketBlock = { target: t, until: 0 }; n.usedPower = true; say(n, `Export controls: ${PLAYERS[t].name} is blocked from the market.`); })}>Export controls</button>}
-              {p === 1 && <button type="button" disabled={g.usedPower || g.players[t].compute < 1} onClick={() => act((n) => { n.players[t].compute -= 1; n.players[1].compute += 1; n.usedPower = true; say(n, `Espionage: China takes 1 compute from ${PLAYERS[t].name}.`); })}>Espionage</button>}
+              {p === 0 && <button type="button" disabled={g.usedPower} onClick={() => act((n) => { n.marketBlock = { target: t, until: 0 }; n.usedPower = true; say(n, `Export controls: ${PLAYERS[t].name} is blocked from the market.`); ev(n, { type: "power", text: `The United States blocks ${PLAYERS[t].name} from the chip market.` }); })}>Export controls</button>}
+              {p === 1 && <button type="button" disabled={g.usedPower || g.players[t].compute < 1} onClick={() => act((n) => { n.players[t].compute -= 1; n.players[1].compute += 1; n.usedPower = true; say(n, `Espionage: China takes 1 compute from ${PLAYERS[t].name}.`); ev(n, { type: "power", text: `China's spies quietly take compute from ${PLAYERS[t].name}.` }); })}>Espionage</button>}
               {isState && myLabs.includes(t) && <button type="button" disabled={pl.usedRegulate} onClick={() => act((n) => { n.players[t].regulatedBy = n.turn; n.players[n.turn].usedRegulate = true; say(n, `${info.name} regulates ${PLAYERS[t].name}: no stepping inward until ${info.name}'s next turn.`); })}>Regulate (once per game)</button>}
             </div>}
           </div>
@@ -577,7 +610,7 @@ function Controls({ g, act }) {
             <p className="rx-label k-attack">Covert ops · one per turn, on {PLAYERS[t].name} · tension {g.tension} / {WAR}</p>
             <div className="rx-cards">
               {Object.entries(OPS).map(([id, op]) => {
-                const off = g.usedOp || pl.capital < op.cost || (op.labsOnly && !isLab(t)) || (op.needsDC && !owned(g, t));
+                const off = g.usedOp || pl.capital < op.cost || (op.labsOnly && !isLab(t)) || (op.needsDC && !owned(g, t)) || (op.statesOnly && isLab(p));
                 return (
                   <button type="button" key={id} className="rx-op k-attack" disabled={off} onClick={() => act((n) => runOp(n, id, t))}>
                     <b>{op.title}</b><span className="rx-cost">{op.cost} capital · tension +{op.tension}</span>
@@ -590,22 +623,62 @@ function Controls({ g, act }) {
           </div>
 
           <div className="rx-hand">
-            <p className="rx-label k-wild">Wildcards · real events · choose one, once per turn</p>
-            {pl.wilds.length ? (
-              <div className="rx-cards">
-                {pl.wilds.map((id) => { const w = wildOf(id); return (
-                  <button type="button" key={id} className="rx-op k-wild" disabled={g.usedWild} onClick={() => act((n) => playWild(n, id))}>
-                    <b>{w.title}</b><span>{w.text}</span>
-                  </button>
-                ); })}
+            <p className="rx-label k-wild">Wildcards · face down · half good, half bad · one per turn</p>
+            {g.lastWild && g.lastWild.p === p && (() => { const w = wildOf(g.lastWild.id); return (
+              <div className={`rx-op rx-turned k-wild ${w.good ? "good" : "bad"}`}>
+                <span className="rx-cost">{w.good ? "Good news" : "Bad news"}</span><b>{w.title}</b><span>{w.text}</span>
               </div>
-            ) : <p className="rx-muted">You have played your wildcard. Step inward to be dealt three more.</p>}
+            ); })()}
+            {pl.wilds.length ? (
+              <div className="rx-cards rx-facedown">
+                {pl.wilds.map((id, i) => (
+                  <button type="button" key={`${id}-${i}`} className="rx-op rx-back k-wild" disabled={g.usedWild} onClick={() => act((n) => playWild(n, i))} aria-label={`Turn over face-down wildcard ${i + 1}`}>
+                    <b>?</b><span>A real event</span>
+                  </button>
+                ))}
+              </div>
+            ) : <p className="rx-muted">No wildcards left. Step inward to be dealt three more.</p>}
           </div>
 
           <button type="button" className="rx-primary" onClick={() => act(endTurn)}>End turn</button>
         </>
       )}
     </div>
+  );
+}
+
+// The front page after every round, from the CNA game.
+function Paper({ paper }) {
+  if (!paper) return null;
+  const { lead, stories, brief } = paper;
+  return (
+    <article className="rx-paper" aria-label="The front page">
+      <header className="rx-masthead">
+        <span>Round {paper.edition}</span>
+        <h2>{paper.paper}</h2>
+        <span>All the news from the race</span>
+      </header>
+      <div className="rx-paper-body">
+        <section className={`rx-lead ${lead.tone}`}>
+          <p className="rx-kicker">{lead.kicker}</p>
+          <h3>{lead.title}</h3>
+          <p>{lead.body}</p>
+        </section>
+        {stories.length > 0 && (
+          <div className="rx-stories">
+            {stories.map((st, i) => (
+              <section key={i} className={`rx-story ${st.tone}`}>
+                <p className="rx-kicker">{st.kicker}</p>
+                <h4>{st.title}</h4>
+                <p>{st.body}</p>
+              </section>
+            ))}
+          </div>
+        )}
+        {brief.length > 0 && <ul className="rx-brief">{brief.map((b, i) => <li key={i}>{b}</li>)}</ul>}
+      </div>
+      <p className="rx-fiction">Everyone named in The Daily Compute is made up.</p>
+    </article>
   );
 }
 
@@ -639,6 +712,7 @@ export default function Game() {
           <ol className="rx-log" aria-label="What happened">{g.log.map((line, i) => <li key={g.log.length - i}>{line}</li>)}</ol>
         </div>
       </div>
+      <Paper paper={g.paper} />
       <div className="rx-screens">{PLAYERS.map((x, p) => <PlayerScreen key={x.name} g={g} p={p} />)}</div>
     </div>
   );

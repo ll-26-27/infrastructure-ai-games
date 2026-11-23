@@ -24,7 +24,7 @@ export const ROUND_CALM = 1; // tension falls this much at the end of every roun
 export const TREATY_CALM = 2; // tension falls this much when a treaty is signed
 export const OP_SUCCESS = 4; // a covert op works on a die roll of this or more
 export const SPY_BONUS = 1; // each spy you have in place adds this to your next op's roll
-export const WILD_HAND = 3; // real events you choose from, dealt at the start and each time you step inward
+export const WILD_HAND = 3; // face-down wildcards you hold, dealt at the start and again each time you step inward
 
 // Political systems, from the CNA game: the same move does different things in a democracy and an autocracy.
 export const SYSTEMS = {
@@ -64,20 +64,25 @@ export const OPS = {
   hack: { title: "Hack", cost: 2, tension: 1, text: "Roll 4 or more: they lose 2 compute, you take 1 of it, and they lose their next turn. Fail: you pay them 2 capital.", record: ["risks", "a-hack"] },
   spies: { title: "Send spies", cost: 1, tension: 1, text: "Roll 4 or more: steal 1 compute, and your spy adds 1 to your next op. Fail: your spy is caught and you pay them 2 capital.", record: ["risks", "model-weights-leak"] },
   ceo: { title: "Honey trap their lab's CEO", cost: 2, tension: 1, labsOnly: true, text: "Only against a lab. It always works: they lose 2 compute and you gain 2. Roll 1 or 2 and the scandal breaks: you pay 3 capital and tension rises 1 more.", record: ["labs", null] },
+  laws: { title: "Lethal autonomous weapons", cost: 4, tension: 4, statesOnly: true, success: 3, text: "States only. Machines that choose their own targets: roll 3 or more and they lose 2 compute, a data center if they have one, and their next turn. Win or lose, tension rises 4, you add 1 black token to your bag, and any treaty ends.", record: null },
   strike: { title: "Military strike", cost: 3, tension: 3, needsDC: true, text: "Only against a player who owns a data center. Roll 4 or more: they lose a data center and their next turn. Win or lose, tension rises 3, and any treaty ends.", record: ["governments", "taiwan"] },
 };
 
-// Wildcards, from the CNA game: real events from the world database. You choose one of three; playing one is an action.
+// Wildcards, from the CNA game: a face-down deck of real events from the world database, half good and half bad.
+// You hold three face down and don't know which is which: playing one is a gamble.
 export const WILDS = [
-  { id: "shortage", title: "A chip shortage", text: "Every rival loses 1 compute.", record: ["compute", "a-chip-shortage"] },
-  { id: "export", title: "Export controls", text: "Whoever holds the most compute loses 2 (even if it's you).", record: ["governments", "export-controls"] },
-  { id: "quake", title: "An earthquake in Taiwan", text: "The chip supply shakes: everyone loses 1 compute and the market closes until your next turn.", record: ["risks", "an-earthquake-in-taiwan"] },
-  { id: "subsidy", title: "A chips subsidy", text: "You gain 3 capital and 1 compute.", record: ["governments", "chips-act"] },
-  { id: "leak", title: "A model's weights leak", text: "Everyone gains 1 compute. You add 1 black token to your bag.", record: ["risks", "model-weights-leak"] },
-  { id: "summit", title: "A peace summit", text: "World tension falls 3, and everyone votes on a pause treaty.", record: null },
-  { id: "drought", title: "A drought", text: "Data centers run short of water: every rival pays 1 capital for each data center they own.", record: ["risks", "a-drought"] },
-  { id: "outage", title: "An outage", text: "Every rival who owns a data center skips their next income.", record: ["risks", "an-outage"] },
-  { id: "killswitch", title: "A safety incident: pull the killswitch", text: "Shut your models down: lose 3 compute, add 2 white tokens to your bag.", record: ["risks", "a-safety-incident"] },
+  { id: "subsidy", good: true, title: "A chips subsidy", text: "You gain 3 capital and 1 compute.", record: ["governments", "chips-act"] },
+  { id: "summit", good: true, title: "A peace summit", text: "World tension falls 3, and everyone votes on a pause treaty.", record: null },
+  { id: "breakthrough", good: true, title: "A research breakthrough", text: "You gain 2 compute.", record: null },
+  { id: "defector", good: true, title: "A star researcher defects to you", text: "You gain 1 compute and add 1 white token to your bag.", record: null },
+  { id: "fab", good: true, title: "A new chip fab opens at home", text: "You gain 2 capital and 1 compute.", record: ["compute", "fab"] },
+  { id: "shortage", good: true, title: "A chip shortage hits your rivals", text: "Every rival loses 1 compute.", record: ["compute", "a-chip-shortage"] },
+  { id: "leak", good: false, title: "Your model's weights leak", text: "You lose 2 compute and add 1 black token to your bag.", record: ["risks", "model-weights-leak"] },
+  { id: "drought", good: false, title: "A drought hits your data centers", text: "Pay 1 capital for each data center you own (at least 1).", record: ["risks", "a-drought"] },
+  { id: "outage", good: false, title: "A national outage", text: "You skip your next income.", record: ["risks", "an-outage"] },
+  { id: "quake", good: false, title: "An earthquake in Taiwan cuts your chip supply", text: "You lose 2 compute.", record: ["risks", "an-earthquake-in-taiwan"] },
+  { id: "lawsuit", good: false, title: "A lawsuit against your lab", text: "You pay 3 capital.", record: ["risks", "a-lawsuit"] },
+  { id: "export", good: false, title: "Export controls cut you off", text: "You lose 1 compute and can't use the market until your next turn.", record: ["governments", "export-controls"] },
 ];
 
 export function spaceType(ring, i) {

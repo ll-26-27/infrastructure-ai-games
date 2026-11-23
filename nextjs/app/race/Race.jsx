@@ -324,7 +324,7 @@ function Controls({ g, act }) {
 
   if (g.ended) {
     const { kind, winner } = g.ended;
-    const head = { win: `${PLAYERS[winner].name} wins everything`, doom: "Everyone dies", takeover: "The AI takes over", shared: "Everyone shares the win" }[kind];
+    const head = { win: `${PLAYERS[winner]?.name} wins everything`, doom: "Everyone dies", takeover: "The AI takes over", shared: "Everyone shares the win" }[kind];
     return (
       <div className="rc-controls">
         <p className="rc-turn">Game over</p>

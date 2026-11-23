@@ -8,480 +8,916 @@ A **mechanic** is a rule that makes something happen in a game: a roll, a turn, 
 
 ## Schell Mechanic Elements
 
-**Chance Elements.** Where randomness enters the system: dice, shuffles, spinners, hidden draws, and the uncertainty they inject. Schell treats chance as the final essential mechanic because it governs all the others, randomizing spaces, objects, actions, and outcomes, and because uncertainty is where risk, surprise, and drama live. Designed chance is probability put to expressive use: equalizing skill gaps, forcing adaptation, manufacturing hope. The analytical habit it teaches is asking of any system: what here is truly uncertain, and who benefits from that?
+#### Chance Elements
 
-**Divided Spaces.** Space carved into irregular sections, each with its own character: Risk's continents, a house's rooms, districts of unequal size and value. Division by meaning rather than measure makes some regions rich, some defensible, some merely in the way, so geography itself allocates advantage. Irregularity is the point, as uneven spaces create uneven stakes. Most political and narrative maps are divided spaces, and reading one well means asking who drew the borders and what the drawing rewards.
+Where randomness enters the system: dice, shuffles, spinners, hidden draws, and the uncertainty they inject. Schell treats chance as the final essential mechanic because it governs all the others, randomizing spaces, objects, actions, and outcomes, and because uncertainty is where risk, surprise, and drama live. Designed chance is probability put to expressive use: equalizing skill gaps, forcing adaptation, manufacturing hope. The analytical habit it teaches is asking of any system: what here is truly uncertain, and who benefits from that?
 
-**Goal Structures.** The objectives that motivate and guide play: what players are trying to do, by when, and for what. Schell's criteria for good goals are concrete, achievable, and rewarding, and the structure includes their arrangement in time, short-term goals nested inside long-term ones, so the player always has a next thing and a horizon. Goal structure is where games and instructional design meet most directly, and the workshop move on win conditions is this element turned into a tabletop exercise.
+#### Divided Spaces
 
-**Grid Spaces.** Space divided into uniform adjacent cells, square or hex: the chessboard, the Go board, the tiled dungeon. Grids make position exact and distance countable, which enables tactics, and their uniformity declares all ground equal until pieces differentiate it. The choice of tiling is consequential, as squares create the diagonal ambiguity hexes were adopted to solve. In Schell's terms the grid is one answer to space construction, the most mathematically tractable one, which is why strategy lives there.
+Space carved into irregular sections, each with its own character: Risk's continents, a house's rooms, districts of unequal size and value. Division by meaning rather than measure makes some regions rich, some defensible, some merely in the way, so geography itself allocates advantage. Irregularity is the point, as uneven spaces create uneven stakes. Most political and narrative maps are divided spaces, and reading one well means asking who drew the borders and what the drawing rewards.
 
-**Linear Spaces.** A space that is simply a sequence: positions arranged in a line, play moving forward and back along it. Candy Land, racetracks, and progress bars are all linear spaces, and their strategic poverty is informative, since a line offers position but not route. Linearity is also a storytelling choice: a line implies a journey with a before and after. When analyzing any game, or syllabus, asking whether its space is genuinely a line, and what that forecloses, is a sharp first question.
+#### Goal Structures
 
-**Mental Skills.** The demands on the mind: memory, observation, puzzle-solving, strategic planning. Most of what this mechanics table catalogs exercises some mental skill, and Schell's point in naming the category is diagnostic, since a designer should know which minds their game is testing and how hard. Games are, among other things, voluntary cognitive workouts, and the mental-skills lens asks of any design, or lesson, the same question: what exactly is the mind being asked to do here?
+The objectives that motivate and guide play: what players are trying to do, by when, and for what. Schell's criteria for good goals are concrete, achievable, and rewarding, and the structure includes their arrangement in time, short-term goals nested inside long-term ones, so the player always has a next thing and a horizon. Goal structure is where games and instructional design meet most directly, and the workshop move on win conditions is this element turned into a tabletop exercise.
 
-**Objects, Attributes, and States.** Schell's inventory of a game's nouns: the objects in it (pieces, characters, currencies), the attributes they carry (speed, color, value), and the states those attributes take (healthy or poisoned, tapped or ready). The framework is a database view of play, and it is precise: a mechanic changes some object's state, or it changes nothing. Asking students to inventory a familiar game this way is a quiet introduction to systems modeling, and to the discipline of saying exactly what can vary.
+#### Grid Spaces
 
-**Operative Actions.** The basic verbs players can actually perform: move, draw, bid, place, say. Schell distinguishes these direct actions from everything players accomplish through them, and the operative list is always surprisingly short, since even sprawling games rest on a handful of verbs. Listing a game's operative actions is the fastest way to grasp its real texture, and the exercise pairs directly with the workshop move that asks students to card the verbs of games and of their own courses.
+Space divided into uniform adjacent cells, square or hex: the chessboard, the Go board, the tiled dungeon. Grids make position exact and distance countable, which enables tactics, and their uniformity declares all ground equal until pieces differentiate it. The choice of tiling is consequential, as squares create the diagonal ambiguity hexes were adopted to solve. In Schell's terms the grid is one answer to space construction, the most mathematically tractable one, which is why strategy lives there.
 
-**Physical Skills.** The demands a game makes on the body: strength, coordination, reflexes, endurance. Schell's skill taxonomy begins here, with the skills sport runs on and that video games echo in miniature through controller dexterity. Physical demands shape who can play and who excels, which makes them an accessibility question as much as a design one. Noting a game's physical skills, and who they favor, is a first step in reading any activity's hidden assumptions about its players.
+#### Linear Spaces
 
-**Points in Space.** Discrete locations with no predefined paths between them: landmarks scattered in openness, reachable in any order. Points-in-space construction suits games of positioning and assignment, since what matters is being at a location, not traveling the route, and it models venues like a room of stations or a city of destinations. It is the loosest discrete space, one step from no map at all, and choosing it says movement is trivial but presence is everything.
+A space that is simply a sequence: positions arranged in a line, play moving forward and back along it. Candy Land, racetracks, and progress bars are all linear spaces, and their strategic poverty is informative, since a line offers position but not route. Linearity is also a storytelling choice: a line implies a journey with a before and after. When analyzing any game, or syllabus, asking whether its space is genuinely a line, and what that forecloses, is a sharp first question.
 
-**Real vs. Virtual Skills.** Schell's distinction between what the player can actually do and what the game pretends their character can do: the RPG hero's swordsmanship is virtual, the player's planning is real. Virtual skills let anyone inhabit mastery, which is much of games' appeal, and the design question is the mix, since a game of pure virtual skill is a slot machine wearing armor. The distinction cuts cleanly in education too: which competencies does an activity actually exercise, and which does it merely simulate?
+#### Mental Skills
 
-**Resultant Actions.** The strategic verbs that emerge from combining operative ones: nothing in chess's rules says fork, pin, or sacrifice, yet those are the game's real vocabulary. Resultant actions are where depth lives, since a design is rich when few operative verbs generate many resultant ones, and mastery is largely learning to see and name them. The concept hands analysts a precise question for any system, including a classroom: what maneuvers do the basic moves make possible that no rule mentions?
+The demands on the mind: memory, observation, puzzle-solving, strategic planning. Most of what this mechanics table catalogs exercises some mental skill, and Schell's point in naming the category is diagnostic, since a designer should know which minds their game is testing and how hard. Games are, among other things, voluntary cognitive workouts, and the mental-skills lens asks of any design, or lesson, the same question: what exactly is the mind being asked to do here?
 
-**Rule Systems.** The framework that defines everything else: what the space is, what objects exist, which actions are legal, what outcomes follow, and what winning means. Schell treats rules as the most fundamental mechanic, the one that constitutes the others, and distinguishes their layers, written rules, house rules, official rules, and the unwritten ones about sportsmanship that every table enforces. Games are constitutions you can play, and reading a rulebook as a legal document is an exercise with reach far beyond games.
+#### Objects, Attributes, and States
 
-**Social Skills.** The demands on players as social beings: reading opponents, predicting choices, persuading, cooperating, bluffing. Schell counts these as skills in their own right, not decoration, and whole genres, negotiation, social deduction, team play, are built to exercise them. Social skill demands shape a table's dynamics more than any component, deciding whose strengths the evening rewards. The category is a reminder that every multiplayer game is also a social event with a tested curriculum of its own.
+Schell's inventory of a game's nouns: the objects in it (pieces, characters, currencies), the attributes they carry (speed, color, value), and the states those attributes take (healthy or poisoned, tapped or ready). The framework is a database view of play, and it is precise: a mechanic changes some object's state, or it changes nothing. Asking students to inventory a familiar game this way is a quiet introduction to systems modeling, and to the discipline of saying exactly what can vary.
 
-**Space Construction.** The first of the Schell-derived elements: every game constructs a space, discrete or continuous, two-dimensional or three, nested or flat, and that construction shapes all interaction inside it. Schell's functional analysis strips the art away and asks what the space really is, since Monopoly's board, functionally, is forty points in a loop. Teaching the habit of seeing through theme to underlying space is one of the most transferable skills game analysis offers, and it applies to classrooms, essays, and interfaces alike.
+#### Operative Actions
 
-**Web Spaces.** A network of points connected by paths: the subway map, Pandemic's cities, any space where position means which node and movement means which edge. Web spaces make connectivity the terrain, so centrality and chokepoints matter more than distance, and they free designers from geometry, since any two places can be adjacent if a line is drawn. The web is the space of relationships rather than of area, which makes it the natural map for social, logistical, and conceptual territories.
+The basic verbs players can actually perform: move, draw, bid, place, say. Schell distinguishes these direct actions from everything players accomplish through them, and the operative list is always surprisingly short, since even sprawling games rest on a handful of verbs. Listing a game's operative actions is the fastest way to grasp its real texture, and the exercise pairs directly with the workshop move that asks students to card the verbs of games and of their own courses.
+
+#### Physical Skills
+
+The demands a game makes on the body: strength, coordination, reflexes, endurance. Schell's skill taxonomy begins here, with the skills sport runs on and that video games echo in miniature through controller dexterity. Physical demands shape who can play and who excels, which makes them an accessibility question as much as a design one. Noting a game's physical skills, and who they favor, is a first step in reading any activity's hidden assumptions about its players.
+
+#### Points in Space
+
+Discrete locations with no predefined paths between them: landmarks scattered in openness, reachable in any order. Points-in-space construction suits games of positioning and assignment, since what matters is being at a location, not traveling the route, and it models venues like a room of stations or a city of destinations. It is the loosest discrete space, one step from no map at all, and choosing it says movement is trivial but presence is everything.
+
+#### Real vs. Virtual Skills
+
+Schell's distinction between what the player can actually do and what the game pretends their character can do: the RPG hero's swordsmanship is virtual, the player's planning is real. Virtual skills let anyone inhabit mastery, which is much of games' appeal, and the design question is the mix, since a game of pure virtual skill is a slot machine wearing armor. The distinction cuts cleanly in education too: which competencies does an activity actually exercise, and which does it merely simulate?
+
+#### Resultant Actions
+
+The strategic verbs that emerge from combining operative ones: nothing in chess's rules says fork, pin, or sacrifice, yet those are the game's real vocabulary. Resultant actions are where depth lives, since a design is rich when few operative verbs generate many resultant ones, and mastery is largely learning to see and name them. The concept hands analysts a precise question for any system, including a classroom: what maneuvers do the basic moves make possible that no rule mentions?
+
+#### Rule Systems
+
+The framework that defines everything else: what the space is, what objects exist, which actions are legal, what outcomes follow, and what winning means. Schell treats rules as the most fundamental mechanic, the one that constitutes the others, and distinguishes their layers, written rules, house rules, official rules, and the unwritten ones about sportsmanship that every table enforces. Games are constitutions you can play, and reading a rulebook as a legal document is an exercise with reach far beyond games.
+
+#### Social Skills
+
+The demands on players as social beings: reading opponents, predicting choices, persuading, cooperating, bluffing. Schell counts these as skills in their own right, not decoration, and whole genres, negotiation, social deduction, team play, are built to exercise them. Social skill demands shape a table's dynamics more than any component, deciding whose strengths the evening rewards. The category is a reminder that every multiplayer game is also a social event with a tested curriculum of its own.
+
+#### Space Construction
+
+The first of the Schell-derived elements: every game constructs a space, discrete or continuous, two-dimensional or three, nested or flat, and that construction shapes all interaction inside it. Schell's functional analysis strips the art away and asks what the space really is, since Monopoly's board, functionally, is forty points in a loop. Teaching the habit of seeing through theme to underlying space is one of the most transferable skills game analysis offers, and it applies to classrooms, essays, and interfaces alike.
+
+#### Web Spaces
+
+A network of points connected by paths: the subway map, Pandemic's cities, any space where position means which node and movement means which edge. Web spaces make connectivity the terrain, so centrality and chokepoints matter more than distance, and they free designers from geometry, since any two places can be adjacent if a line is drawn. The web is the space of relationships rather than of area, which makes it the natural map for social, logistical, and conceptual territories.
 
 ## Goals & Win Conditions
 
-**Catch-Up (Rubber-Banding).** The 2019 categories doc describes mechanisms that make progress harder the closer a player gets to victory, so trailing players can still win: Catan's robber parked on the leader's best tile, the exact-roll finish that stalls the front-runner in Chutes and Ladders, Mario Kart's items that arm the back of the pack. Catch-up keeps a fixed finish line from deciding the race at the halfway mark. The doc also notes the reverse design, as in Monopoly, where the leader accelerates so the game ends sooner. See also Sympathy Benefits, the gentler cousin.
+#### Catch-Up (Rubber-Banding)
 
-**Competitive Game.** One or two winners and everyone else loses: the default frame competitive play inherits from sport. Naming it as a mechanic is useful precisely because it is usually invisible, a game's competitiveness is a design choice, with alternatives like cooperation, teams, and personal bests, and the choice shapes the table's whole social contract. The 2019-era lists include it as a reminder: before any mechanic is picked, a designer has already decided what kind of social event the game will be.
+The 2019 categories doc describes mechanisms that make progress harder the closer a player gets to victory, so trailing players can still win: Catan's robber parked on the leader's best tile, the exact-roll finish that stalls the front-runner in Chutes and Ladders, Mario Kart's items that arm the back of the pack. Catch-up keeps a fixed finish line from deciding the race at the halfway mark. The doc also notes the reverse design, as in Monopoly, where the leader accelerates so the game ends sooner. See also Sympathy Benefits, the gentler cousin.
 
-**Compound Goal.** Victory requires meeting several criteria at once: the win needs the castle and the crown and the coin. Compound goals resist specialization, forcing breadth across the game's systems, and they create distinctive endgames where a player complete in two dimensions hunts desperately for the third. The mechanic rewards balanced development and punishes the brilliant one-trick strategy, a design stance with an obvious pedagogical echo: competence, it insists, is conjunctive.
+#### Competitive Game
 
-**Differing Player Goals.** Each player chases a different objective, dealt or chosen: your secret mission is not mine. Differing goals turn the table asymmetric even when powers are identical, since reading what others are trying to do becomes as valuable as pursuing your own aim, and apparent cooperation may be two agendas briefly aligned. The mechanic generates intrigue cheaply, one card each, and it models a truth negotiation courses teach at length: parties at the same table rarely want the same thing.
+One or two winners and everyone else loses: the default frame competitive play inherits from sport. Naming it as a mechanic is useful precisely because it is usually invisible, a game's competitiveness is a design choice, with alternatives like cooperation, teams, and personal bests, and the choice shapes the table's whole social contract. The 2019-era lists include it as a reminder: before any mechanic is picked, a designer has already decided what kind of social event the game will be.
 
-**Multiple Goals.** More than one road to victory: win by conquest, by wealth, or by wonder. Multiple goals diversify strategy, players chase different ends in the same system, and they force rivals to track several threats at once. The design risk is imbalance, since one road quietly better than the rest collapses the choice, and the richness, when it works, is that the same board is several different games depending on which victory you are building toward.
+#### Compound Goal
 
-**Multiple Loss Conditions.** Several different events cause instant defeat: Pandemic ends by outbreaks, by depleted cards, or by the clock, whichever arrives first. Multiple loss conditions besiege players from several directions, so defense must be allocated, not just mounted, and the question each turn is which doom is nearest. The structure suits cooperative design, where the game needs many ways to win against a coordinating team. It is threat modeling as gameplay: you are always losing on some axis, and triage is the skill.
+Victory requires meeting several criteria at once: the win needs the castle and the crown and the coin. Compound goals resist specialization, forcing breadth across the game's systems, and they create distinctive endgames where a player complete in two dimensions hunts desperately for the third. The mechanic rewards balanced development and punishes the brilliant one-trick strategy, a design stance with an obvious pedagogical echo: competence, it insists, is conjunctive.
 
-**Player Elimination.** Players can be knocked out before the end: Monopoly's slow bankruptcies, poker's busted stacks. Elimination raises stakes magnificently, survival is the first victory, and creates the social problem the mechanic is famous for: the eliminated friend watching from the couch. Modern design mostly avoids it or shortens the game to match, and the exceptions calibrate carefully. It also marks a genre boundary, since battle royales are elimination embraced at scale, with spectating built in.
+#### Differing Player Goals
 
-**Point Salad.** Points flow from almost everything, and players choose their own scoring mix: a little from birds, a little from eggs, a little from food in the larder. Point-salad design lets every player feel productive on every turn, since nothing is worthless, and shifts skill toward efficiency, which combination of small scores compounds best. Critics say it blurs focus; admirers call it freedom. Either way it is the clearest case of a scoring structure, not a board, being the real game.
+Each player chases a different objective, dealt or chosen: your secret mission is not mine. Differing goals turn the table asymmetric even when powers are identical, since reading what others are trying to do becomes as valuable as pursuing your own aim, and apparent cooperation may be two agendas briefly aligned. The mechanic generates intrigue cheaply, one card each, and it models a truth negotiation courses teach at length: parties at the same table rarely want the same thing.
 
-**Sudden Death.** The game can end abruptly when a condition trips: the golden goal, the drawn card that ends the round, the overtime that finishes on the next score. Sudden death compresses stakes into every moment of its window, since any action might be the last, and it resolves deadlocks with drama rather than arithmetic. The mechanic's tension is its honesty about endings: they do not always arrive on schedule, and the possibility that this turn decides everything changes how this turn is played.
+#### Multiple Goals
 
-**Sympathy Benefits.** The player doing worst gets a boost: the bonus for last place, the subsidy for the shortest stack. Where catch-up throttles the leader, sympathy benefits lift the trailer, keeping everyone mathematically and emotionally in the game. The mechanic trades a little meritocracy for a lot of table morale, and its tuning is delicate, since too strong and losing becomes a strategy. It is a small welfare state in cardboard, and players debate it with exactly the vocabulary you would expect.
+More than one road to victory: win by conquest, by wealth, or by wonder. Multiple goals diversify strategy, players chase different ends in the same system, and they force rivals to track several threats at once. The design risk is imbalance, since one road quietly better than the rest collapses the choice, and the richness, when it works, is that the same board is several different games depending on which victory you are building toward.
 
-**Variable Objectives / Win Conditions.** The goal itself shifts, between games or during one: this session scores temples, the next scores roads; the condition that ends the game moves. Variable objectives keep strategies from fossilizing, since players must evaluate the current rules of success before optimizing for them, and mid-game shifts test adaptability above all. Sources list the family as Variable Objectives, Variable Win Condition, and Variable End Game Conditions. The mechanic's quiet lesson: knowing what counts as winning is itself knowledge.
+#### Multiple Loss Conditions
 
-**Victory Points.** Points accumulate from many sources and the most points wins: the Eurogame's universal currency. Victory points let designers price wildly different activities, buildings, routes, sets, favors, in one unit, so strategy becomes comparative valuation across the whole menu. Hidden or public, steady or spiky, the scoring structure is the game's real constitution. Sources also list it as Point Acquisition, and note the inversion where points are penalties; either way, what earns points is what the game believes in.
+Several different events cause instant defeat: Pandemic ends by outbreaks, by depleted cards, or by the clock, whichever arrives first. Multiple loss conditions besiege players from several directions, so defense must be allocated, not just mounted, and the question each turn is which doom is nearest. The structure suits cooperative design, where the game needs many ways to win against a coordinating team. It is threat modeling as gameplay: you are always losing on some axis, and triage is the skill.
+
+#### Player Elimination
+
+Players can be knocked out before the end: Monopoly's slow bankruptcies, poker's busted stacks. Elimination raises stakes magnificently, survival is the first victory, and creates the social problem the mechanic is famous for: the eliminated friend watching from the couch. Modern design mostly avoids it or shortens the game to match, and the exceptions calibrate carefully. It also marks a genre boundary, since battle royales are elimination embraced at scale, with spectating built in.
+
+#### Point Salad
+
+Points flow from almost everything, and players choose their own scoring mix: a little from birds, a little from eggs, a little from food in the larder. Point-salad design lets every player feel productive on every turn, since nothing is worthless, and shifts skill toward efficiency, which combination of small scores compounds best. Critics say it blurs focus; admirers call it freedom. Either way it is the clearest case of a scoring structure, not a board, being the real game.
+
+#### Sudden Death
+
+The game can end abruptly when a condition trips: the golden goal, the drawn card that ends the round, the overtime that finishes on the next score. Sudden death compresses stakes into every moment of its window, since any action might be the last, and it resolves deadlocks with drama rather than arithmetic. The mechanic's tension is its honesty about endings: they do not always arrive on schedule, and the possibility that this turn decides everything changes how this turn is played.
+
+#### Sympathy Benefits
+
+The player doing worst gets a boost: the bonus for last place, the subsidy for the shortest stack. Where catch-up throttles the leader, sympathy benefits lift the trailer, keeping everyone mathematically and emotionally in the game. The mechanic trades a little meritocracy for a lot of table morale, and its tuning is delicate, since too strong and losing becomes a strategy. It is a small welfare state in cardboard, and players debate it with exactly the vocabulary you would expect.
+
+#### Variable Objectives / Win Conditions
+
+The goal itself shifts, between games or during one: this session scores temples, the next scores roads; the condition that ends the game moves. Variable objectives keep strategies from fossilizing, since players must evaluate the current rules of success before optimizing for them, and mid-game shifts test adaptability above all. Sources list the family as Variable Objectives, Variable Win Condition, and Variable End Game Conditions. The mechanic's quiet lesson: knowing what counts as winning is itself knowledge.
+
+#### Victory Points
+
+Points accumulate from many sources and the most points wins: the Eurogame's universal currency. Victory points let designers price wildly different activities, buildings, routes, sets, favors, in one unit, so strategy becomes comparative valuation across the whole menu. Hidden or public, steady or spiky, the scoring structure is the game's real constitution. Sources also list it as Point Acquisition, and note the inversion where points are penalties; either way, what earns points is what the game believes in.
 
 ## Turns & Time
 
-**Area-Impulse.** A wargame refinement of the turn: instead of moving an entire army at once, the turn breaks into impulses in which one area or formation activates at a time, with players alternating impulses and reacting between them. The result is a rhythm closer to actual command, where no plan unfolds uninterrupted and anticipating the opponent's next activation matters as much as your own. Area-impulse systems reward reading the whole board's tempo, and they show how much strategic texture lives in the simple question of how finely a turn is sliced.
+#### Area-Impulse
 
-**Contingency.** The goal must be completed before an event whose timing is unpredictable: the storm arrives, the market crashes, the deck runs out, but nobody knows exactly when. Unlike a deadline, a contingency cannot be scheduled against; it forces players to weigh plans by robustness rather than by optimal length. The tension it produces is distinctive: every safe turn spent preparing might have been the last turn available. It is the mechanic closest to how real risk actually feels.
+A wargame refinement of the turn: instead of moving an entire army at once, the turn breaks into impulses in which one area or formation activates at a time, with players alternating impulses and reacting between them. The result is a rhythm closer to actual command, where no plan unfolds uninterrupted and anticipating the opponent's next activation matters as much as your own. Area-impulse systems reward reading the whole board's tempo, and they show how much strategic texture lives in the simple question of how finely a turn is sliced.
 
-**Deadline.** The goal must be met within a set number of turns or minutes, known from the start. A visible deadline reshapes every decision before it: early turns are for building, late turns for spending, and the midgame is the argument between them. Deadlines create endgame pressure without needing an opponent, which is why cooperative and solitaire designs lean on them. They also make pacing legible: players can always say how much runway remains, and plan, or panic, accordingly.
+#### Contingency
 
-**Real-Time / No Turns.** Remove turns and everything happens at once: players grab, shout, play, and react with no one waiting for permission. Speed games like Spit and Dutch Blitz run on this, as do most physical and party games. Real-time play generates adrenaline and laughter, rewards reflexes and parallel attention, and flattens deliberation, which is exactly why strategy-heavy designs avoid it and party designs embrace it. A useful classroom contrast: give one group a turn-based activity and another the same activity in real time, and watch how the social dynamics change.
+The goal must be completed before an event whose timing is unpredictable: the storm arrives, the market crashes, the deck runs out, but nobody knows exactly when. Unlike a deadline, a contingency cannot be scheduled against; it forces players to weigh plans by robustness rather than by optimal length. The tension it produces is distinctive: every safe turn spent preparing might have been the last turn available. It is the mechanic closest to how real risk actually feels.
 
-**Real-Time Strategy.** The video-game genre built on refusing turns: players gather resources, build bases, and command armies continuously, so thinking time is itself a spent resource. StarCraft is the canonical example, where a plan executed slowly loses to a worse plan executed fast. RTS design is a study in attention as the true currency: the interface, the mini-map, and unit AI all exist to let one mind be in five places at once. The genre shows what happens to strategy when deliberation has a clock on it.
+#### Deadline
 
-**Sequential Turns / Actions.** Actions resolve strictly in order, and each resolution changes the world the next player acts in. The late player sees more information but finds the best options taken; the early player moves blind but moves first. Draft orders, snake drafts, and turn-order auctions all exist to price this asymmetry. Any time students argue about who benefits from going first, they are doing real analysis of this mechanic, and it maps neatly onto questions of queueing, precedence, and fairness outside games.
+The goal must be met within a set number of turns or minutes, known from the start. A visible deadline reshapes every decision before it: early turns are for building, late turns for spending, and the midgame is the argument between them. Deadlines create endgame pressure without needing an opponent, which is why cooperative and solitaire designs lean on them. They also make pacing legible: players can always say how much runway remains, and plan, or panic, accordingly.
 
-**Simultaneous Action Selection.** Everyone chooses secretly, then all choices are revealed at once: rock-paper-scissors is the atom of it, and games like 7 Wonders build whole economies on simultaneous picks. The mechanic kills downtime, since nobody waits on anyone, and replaces turn-order advantage with prediction: the question is not what is my best move but what will they think my best move is. It produces the distinctive double-guessing spiral that game theorists love and that students can feel in their first round of play.
+#### Real-Time / No Turns
 
-**Time Bomb.** At some unknown moment a disruptive but non-fatal event will fire: the hot potato goes off, the pot is taken, the penalty lands on whoever is holding it. Time bombs keep a game lively by making possession and timing dangerous, and they redistribute fortunes without ending anyone's game. The design trick is that the bomb punishes a state (holding the thing) rather than an action, so players spend the whole round maneuvering to be elsewhere when it goes off.
+Remove turns and everything happens at once: players grab, shout, play, and react with no one waiting for permission. Speed games like Spit and Dutch Blitz run on this, as do most physical and party games. Real-time play generates adrenaline and laughter, rewards reflexes and parallel attention, and flattens deliberation, which is exactly why strategy-heavy designs avoid it and party designs embrace it. A useful classroom contrast: give one group a turn-based activity and another the same activity in real time, and watch how the social dynamics change.
 
-**Time Management.** Time itself is the resource to budget: tasks compete for a limited supply of it, and the skill is scheduling, sequencing, and knowing what to let slip. Where a timer merely pressures, time management makes the allocation of attention the actual game. Restaurant games, farming games, and many simulation designs run on it. It is also the mechanic most honest about ordinary life, which may be why games built on it feel alternately soothing and horribly familiar.
+#### Real-Time Strategy
 
-**Time Track.** A track on the board marks the passage of in-game time, and actions cost time on it rather than fitting into fixed turns: spend three hours traveling and the player behind you on the track acts until they pass you. Time-track systems make cost and turn order the same thing, so a slow, powerful action literally hands tempo to opponents. It is one of the most elegant ways games model opportunity cost, and it makes a vivid demonstration that time can be a currency with an exchange rate.
+The video-game genre built on refusing turns: players gather resources, build bases, and command armies continuously, so thinking time is itself a spent resource. StarCraft is the canonical example, where a plan executed slowly loses to a worse plan executed fast. RTS design is a study in attention as the true currency: the interface, the mini-map, and unit AI all exist to let one mind be in five places at once. The genre shows what happens to strategy when deliberation has a clock on it.
 
-**Timed.** A clock bounds the task: finish the level, the lap, or the puzzle before time expires, with power-ups sometimes buying more. Timers convert leisurely optimization into triage, forcing players to choose what not to attempt. In video games the ticking clock is often the sole source of difficulty in otherwise simple tasks. The mechanic transfers directly to classroom design, where a two-minute limit can turn a flat exercise into a sprint, though at the predictable cost of depth and care.
+#### Sequential Turns / Actions
 
-**Timed Rounds.** Play happens in rounds bounded by a timer, and the goal is to do as much as possible before it runs out: Boggle's three minutes of word-hunting is the model. Unlike a single deadline, repeated timed rounds let players feel themselves improving against the same constraint, which is a tight learning loop. The sand timer is also a social device: it gives permission for frantic, imperfect work, and it ends arguments, because the round is simply over.
+Actions resolve strictly in order, and each resolution changes the world the next player acts in. The late player sees more information but finds the best options taken; the early player moves blind but moves first. Draft orders, snake drafts, and turn-order auctions all exist to price this asymmetry. Any time students argue about who benefits from going first, they are doing real analysis of this mechanic, and it maps neatly onto questions of queueing, precedence, and fairness outside games.
 
-**Turns.** The turn is the quietest mechanic in games and one of the deepest: a segment of time set aside for certain actions before play passes on. Player turns alternate (chess, Monopoly); game turns bundle everyone's choices into one resolution (football simulations); semi-simultaneous and impulse systems split turns so players can react mid-stream; some games give every third turn a special phase, like taxation or night. Turn structure decides the game's rhythm, its downtime, and how much players can plan versus react. Even real-time video games keep vestigial turns as periodic ticks, like health regenerating per tick in World of Warcraft.
+#### Simultaneous Action Selection
 
-**Variable Phase Order.** The phases of a round, produce, build, trade, score, do not come in a fixed sequence; player choices or events reorder them. Puerto Rico made this famous: the role a player picks becomes the phase everyone performs, with the picker getting a bonus. The mechanic makes the very structure of the turn a contested resource, so players fight over tempo itself, not just over pieces and points. It rewards thinking one level up: not what do I do this phase, but which phase should exist next.
+Everyone chooses secretly, then all choices are revealed at once: rock-paper-scissors is the atom of it, and games like 7 Wonders build whole economies on simultaneous picks. The mechanic kills downtime, since nobody waits on anyone, and replaces turn-order advantage with prediction: the question is not what is my best move but what will they think my best move is. It produces the distinctive double-guessing spiral that game theorists love and that students can feel in their first round of play.
+
+#### Time Bomb
+
+At some unknown moment a disruptive but non-fatal event will fire: the hot potato goes off, the pot is taken, the penalty lands on whoever is holding it. Time bombs keep a game lively by making possession and timing dangerous, and they redistribute fortunes without ending anyone's game. The design trick is that the bomb punishes a state (holding the thing) rather than an action, so players spend the whole round maneuvering to be elsewhere when it goes off.
+
+#### Time Management
+
+Time itself is the resource to budget: tasks compete for a limited supply of it, and the skill is scheduling, sequencing, and knowing what to let slip. Where a timer merely pressures, time management makes the allocation of attention the actual game. Restaurant games, farming games, and many simulation designs run on it. It is also the mechanic most honest about ordinary life, which may be why games built on it feel alternately soothing and horribly familiar.
+
+#### Time Track
+
+A track on the board marks the passage of in-game time, and actions cost time on it rather than fitting into fixed turns: spend three hours traveling and the player behind you on the track acts until they pass you. Time-track systems make cost and turn order the same thing, so a slow, powerful action literally hands tempo to opponents. It is one of the most elegant ways games model opportunity cost, and it makes a vivid demonstration that time can be a currency with an exchange rate.
+
+#### Timed
+
+A clock bounds the task: finish the level, the lap, or the puzzle before time expires, with power-ups sometimes buying more. Timers convert leisurely optimization into triage, forcing players to choose what not to attempt. In video games the ticking clock is often the sole source of difficulty in otherwise simple tasks. The mechanic transfers directly to classroom design, where a two-minute limit can turn a flat exercise into a sprint, though at the predictable cost of depth and care.
+
+#### Timed Rounds
+
+Play happens in rounds bounded by a timer, and the goal is to do as much as possible before it runs out: Boggle's three minutes of word-hunting is the model. Unlike a single deadline, repeated timed rounds let players feel themselves improving against the same constraint, which is a tight learning loop. The sand timer is also a social device: it gives permission for frantic, imperfect work, and it ends arguments, because the round is simply over.
+
+#### Turns
+
+The turn is the quietest mechanic in games and one of the deepest: a segment of time set aside for certain actions before play passes on. Player turns alternate (chess, Monopoly); game turns bundle everyone's choices into one resolution (football simulations); semi-simultaneous and impulse systems split turns so players can react mid-stream; some games give every third turn a special phase, like taxation or night. Turn structure decides the game's rhythm, its downtime, and how much players can plan versus react. Even real-time video games keep vestigial turns as periodic ticks, like health regenerating per tick in World of Warcraft.
+
+#### Variable Phase Order
+
+The phases of a round, produce, build, trade, score, do not come in a fixed sequence; player choices or events reorder them. Puerto Rico made this famous: the role a player picks becomes the phase everyone performs, with the picker getting a bonus. The mechanic makes the very structure of the turn a contested resource, so players fight over tempo itself, not just over pieces and points. It rewards thinking one level up: not what do I do this phase, but which phase should exist next.
 
 ## Action Selection
 
-**Action / Movement Programming.** Players plan a sequence of actions in advance, lock it in, then watch the plans execute in order, colliding with everyone else's. RoboRally is the classic: your five programmed moves were perfect until another robot shoved you one square left. Programming separates decision from resolution, which produces both deep foresight and slapstick disaster, often in the same turn. It teaches a real lesson about plans meeting reality, and about how small early errors compound. Sources also list it as Action Programming, Movement Programming, and Programmed Movement.
+#### Action / Movement Programming
 
-**Action Points.** Each turn the player receives a budget of points and spends them freely across a menu of actions: move two, draw one, build one. Unlike fixed action slots, point budgets let players specialize wildly, spending everything on one lunge or spreading across upkeep. The design question is the exchange rate: when every action has a price in the same currency, players are really comparing values, and the game becomes an exercise in marginal thinking. Common in German-style board games, and listed in sources as the Action Point Allowance System.
+Players plan a sequence of actions in advance, lock it in, then watch the plans execute in order, colliding with everyone else's. RoboRally is the classic: your five programmed moves were perfect until another robot shoved you one square left. Programming separates decision from resolution, which produces both deep foresight and slapstick disaster, often in the same turn. It teaches a real lesson about plans meeting reality, and about how small early errors compound. Sources also list it as Action Programming, Movement Programming, and Programmed Movement.
 
-**Card Drafting.** Take a hand of cards, keep one, pass the rest: 7 Wonders runs entire civilizations through this loop. Drafting forces a double valuation, since every card you keep is also every card you deny the neighbor you passed to, and the hand that returns to you tells you what everyone else valued. It distributes resources with almost no downtime and converts hidden preferences into visible strategy. Drafting is also a beautiful classroom structure for distributing topics or sources: everyone chooses, everyone passes, nobody waits.
+#### Action Points
 
-**Dice Drafting.** A pool of dice is rolled, and players take turns claiming them, with each die powering an action, a resource, or a placement. Sagrada drafts dice as stained glass; many roll-and-writes draft from a shared roll. The mechanic blends luck and choice cleanly: the roll decides what exists this round, the draft decides who gets it. Watching the pool shrink, and knowing which die your rival needs, turns a random handful into a tense little market.
+Each turn the player receives a budget of points and spends them freely across a menu of actions: move two, draw one, build one. Unlike fixed action slots, point budgets let players specialize wildly, spending everything on one lunge or spreading across upkeep. The design question is the exchange rate: when every action has a price in the same currency, players are really comparing values, and the game becomes an exercise in marginal thinking. Common in German-style board games, and listed in sources as the Action Point Allowance System.
 
-**Role Selection.** Each round, players choose roles with special powers, the merchant, the builder, the assassin, and the choice shapes what everyone may do. Citadels hides the roles and makes guessing who took what a game in itself; Puerto Rico announces them and shares their effects. Role selection makes identity temporary and tactical: you are not playing a fixed character but renting the right power at the right moment. Sources also list the assigned-role variant as Role Assignment.
+#### Card Drafting
 
-**Tile Drafting.** Players draft tiles from a shared supply, then use what they took to build a personal board, area, or pattern. Azul is the modern touchstone: the tiles you grab must fit the pattern you are building, and overdrafting spills into penalties. Tile drafting marries the market logic of drafting to the spatial logic of placement, so each pick is judged twice, once against the opponents and once against your own half-finished design.
+Take a hand of cards, keep one, pass the rest: 7 Wonders runs entire civilizations through this loop. Drafting forces a double valuation, since every card you keep is also every card you deny the neighbor you passed to, and the hand that returns to you tells you what everyone else valued. It distributes resources with almost no downtime and converts hidden preferences into visible strategy. Drafting is also a beautiful classroom structure for distributing topics or sources: everyone chooses, everyone passes, nobody waits.
 
-**Worker Placement.** Each player has a handful of workers and places them, one by one, onto action spaces: the mill, the market, the quarry. A claimed space is usually blocked, so every placement both takes an action and denies it to everyone else. The agony is sequencing: the action you need most is the one your rival will take first. Keydom (1998) is credited as the origin, Caylus (2005) popularized it, and Stone Age and Agricola made it a staple of the Eurogame; analysts have even described assigning StarCraft's worker units as the same mechanic. It is the cleanest teaching example of scarcity plus turn order producing strategy.
+#### Dice Drafting
+
+A pool of dice is rolled, and players take turns claiming them, with each die powering an action, a resource, or a placement. Sagrada drafts dice as stained glass; many roll-and-writes draft from a shared roll. The mechanic blends luck and choice cleanly: the roll decides what exists this round, the draft decides who gets it. Watching the pool shrink, and knowing which die your rival needs, turns a random handful into a tense little market.
+
+#### Role Selection
+
+Each round, players choose roles with special powers, the merchant, the builder, the assassin, and the choice shapes what everyone may do. Citadels hides the roles and makes guessing who took what a game in itself; Puerto Rico announces them and shares their effects. Role selection makes identity temporary and tactical: you are not playing a fixed character but renting the right power at the right moment. Sources also list the assigned-role variant as Role Assignment.
+
+#### Tile Drafting
+
+Players draft tiles from a shared supply, then use what they took to build a personal board, area, or pattern. Azul is the modern touchstone: the tiles you grab must fit the pattern you are building, and overdrafting spills into penalties. Tile drafting marries the market logic of drafting to the spatial logic of placement, so each pick is judged twice, once against the opponents and once against your own half-finished design.
+
+#### Worker Placement
+
+Each player has a handful of workers and places them, one by one, onto action spaces: the mill, the market, the quarry. A claimed space is usually blocked, so every placement both takes an action and denies it to everyone else. The agony is sequencing: the action you need most is the one your rival will take first. Keydom (1998) is credited as the origin, Caylus (2005) popularized it, and Stone Age and Agricola made it a staple of the Eurogame; analysts have even described assigning StarCraft's worker units as the same mechanic. It is the cleanest teaching example of scarcity plus turn order producing strategy.
 
 ## Resources & Economy
 
-**Buy Low, Sell High.** Item values fluctuate, and profit lies in timing: acquire when plentiful and cheap, sell when scarce and dear. The video-game form of speculation, it powers trading routes in space sims and auction houses in online worlds. The mechanic teaches market intuition through repetition, and it creates play even without combat, since risk lives in the price curve. Every player who has hauled cargo between ports has run this loop.
+#### Buy Low, Sell High
 
-**Commodity Speculation.** Players buy and sell goods whose values swing with the market and with player actions, profiting on the difference. Speculation adds a second game above the first: not using resources but predicting their future worth, and sometimes moving the market yourself. Fortunes hinge on timing, and the crash is always collective. Sources also list the generic prediction form as Speculation; either way, it is a working model of a market, bubbles included.
+Item values fluctuate, and profit lies in timing: acquire when plentiful and cheap, sell when scarce and dear. The video-game form of speculation, it powers trading routes in space sims and auction houses in online worlds. The mechanic teaches market intuition through repetition, and it creates play even without combat, since risk lives in the price curve. Every player who has hauled cargo between ports has run this loop.
 
-**One Man's Trash.** What a player discards is up for grabs: the castoff card, the rejected tile, the unwanted good can be claimed by rivals. The mechanic prices your garbage, since every discard is also a gift to whoever wants it most, and it forces players to think about value from other seats at the table. Gin rummy's open discard and draft leavings both carry the lesson: in an interactive system, nothing you release is ever neutral.
+#### Commodity Speculation
 
-**Player-Driven Economy.** Prices, supply, and demand emerge from player behavior rather than fixed rules: EVE Online's markets are run, cornered, and crashed entirely by its players. The designer builds the plumbing, sources, sinks, and transaction costs, and the players build the economy, complete with speculation, cartels, and fraud. It is the strongest demonstration in games that an economy is a crowd phenomenon, and that a system's most interesting behavior can be the part nobody authored.
+Players buy and sell goods whose values swing with the market and with player actions, profiting on the difference. Speculation adds a second game above the first: not using resources but predicting their future worth, and sometimes moving the market yourself. Fortunes hinge on timing, and the crash is always collective. Sources also list the generic prediction form as Speculation; either way, it is a working model of a market, bubbles included.
 
-**Resource Budget.** A finite stock, spent down and never refilled: once it is gone, it is gone. Unlike renewable economies, a hard budget makes every expenditure a permanent subtraction, so play becomes rationing under uncertainty: spend early for position or hold reserves for the crisis you cannot yet see. The mechanic produces a distinctive late-game poverty where plans must finish on fumes. It is the purest game expression of nonrenewable resources, with all the dread that implies.
+#### One Man's Trash
 
-**Resource Management.** The 2019 categories doc calls this the heart of many games: players grow, spend, exchange, and above all value resources, tokens, money, land, people, points, whose relative worth shifts with the game state and the player's goals. The rules say how resources increase and convert; the skill is the exchange rate in your head, knowing when wood is worth more than gold. Sources also list it as Economy Management and Resource Allocation. It is the mechanic that makes scarcity playable, and it transfers to any domain where budgets meet ambitions.
+What a player discards is up for grabs: the castoff card, the rejected tile, the unwanted good can be claimed by rivals. The mechanic prices your garbage, since every discard is also a gift to whoever wants it most, and it forces players to think about value from other seats at the table. Gin rummy's open discard and draft leavings both carry the lesson: in an interactive system, nothing you release is ever neutral.
 
-**Scarce Resource.** There is a powerful option, the bomb, the ammunition, the fuel, but it is rationed, and the game is deciding when to spend it. Lunar Lander's fuel and the shotgun shells of every zombie game teach the same lesson: hoarded power helps nobody, spent power cannot be recalled. The mechanic generates a specific emotion, miserly suspense, and its climax is the moment of release. Scarcity, not strength, is what makes the powerful thing feel powerful.
+#### Player-Driven Economy
 
-**Stock Holding.** Players invest in companies or ventures whose value moves with play, and wealth comes from holdings rather than deeds: Acquire is the classic. Stock mechanics detach success from direct action, since you can win by owning the winner, and they create delicious conflicts of interest where helping a rival's company helps your shares. The mechanic imports the logic of equity into games, portfolios, mergers, majority control, and makes ownership itself the battlefield.
+Prices, supply, and demand emerge from player behavior rather than fixed rules: EVE Online's markets are run, cornered, and crashed entirely by its players. The designer builds the plumbing, sources, sinks, and transaction costs, and the players build the economy, complete with speculation, cartels, and fraud. It is the strongest demonstration in games that an economy is a crowd phenomenon, and that a system's most interesting behavior can be the part nobody authored.
 
-**Trading.** Players exchange resources with each other, and negotiation sets the price: Catan's sheep-for-wheat marketplace, Pit's shouting floor. Trading converts a multiplayer game into an economy, where value is whatever another player will pay and every deal changes the standings. It rewards social reading as much as calculation, since the best traders know what rivals need before they say it. No mechanic produces more table talk, or more post-game accusations.
+#### Resource Budget
+
+A finite stock, spent down and never refilled: once it is gone, it is gone. Unlike renewable economies, a hard budget makes every expenditure a permanent subtraction, so play becomes rationing under uncertainty: spend early for position or hold reserves for the crisis you cannot yet see. The mechanic produces a distinctive late-game poverty where plans must finish on fumes. It is the purest game expression of nonrenewable resources, with all the dread that implies.
+
+#### Resource Management
+
+The 2019 categories doc calls this the heart of many games: players grow, spend, exchange, and above all value resources, tokens, money, land, people, points, whose relative worth shifts with the game state and the player's goals. The rules say how resources increase and convert; the skill is the exchange rate in your head, knowing when wood is worth more than gold. Sources also list it as Economy Management and Resource Allocation. It is the mechanic that makes scarcity playable, and it transfers to any domain where budgets meet ambitions.
+
+#### Scarce Resource
+
+There is a powerful option, the bomb, the ammunition, the fuel, but it is rationed, and the game is deciding when to spend it. Lunar Lander's fuel and the shotgun shells of every zombie game teach the same lesson: hoarded power helps nobody, spent power cannot be recalled. The mechanic generates a specific emotion, miserly suspense, and its climax is the moment of release. Scarcity, not strength, is what makes the powerful thing feel powerful.
+
+#### Stock Holding
+
+Players invest in companies or ventures whose value moves with play, and wealth comes from holdings rather than deeds: Acquire is the classic. Stock mechanics detach success from direct action, since you can win by owning the winner, and they create delicious conflicts of interest where helping a rival's company helps your shares. The mechanic imports the logic of equity into games, portfolios, mergers, majority control, and makes ownership itself the battlefield.
+
+#### Trading
+
+Players exchange resources with each other, and negotiation sets the price: Catan's sheep-for-wheat marketplace, Pit's shouting floor. Trading converts a multiplayer game into an economy, where value is whatever another player will pay and every deal changes the standings. It rewards social reading as much as calculation, since the best traders know what rivals need before they say it. No mechanic produces more table talk, or more post-game accusations.
 
 ## Collection & Building
 
-**Building.** Place blocks freely in the world and construct: Minecraft's architecture, SimCity's zoning, Rampart's frantic walls. Building mechanics hand players the designer's own tools, making creation the core verb rather than conquest, and they generate attachment like nothing else, since players defend what they built with their own hands. The mechanic spans pure sandbox to constrained engineering, and it is the natural bridge between games and the maker side of any classroom.
+#### Building
 
-**Collect 'Em All.** Completing the whole collection is the quest: every monster, every badge, every sticker in the album, the drive Pokemon turned into a worldwide slogan. Completionism is motivation by checklist, where the gap in the collection nags harder than any score, and designers exploit it with rarity tiers and visible progress bars. The mechanic borders on the compulsive, which makes it worth examining honestly: the same loop that delights collectors also sells loot boxes.
+Place blocks freely in the world and construct: Minecraft's architecture, SimCity's zoning, Rampart's frantic walls. Building mechanics hand players the designer's own tools, making creation the core verb rather than conquest, and they generate attachment like nothing else, since players defend what they built with their own hands. The mechanic spans pure sandbox to constrained engineering, and it is the natural bridge between games and the maker side of any classroom.
 
-**Combo / Synergy Systems.** Specific combinations multiply their parts: this card doubles that one, those two abilities chain into a third. Synergy systems reward system mastery over piece strength, since the discovery that two modest components are devastating together is the game's real treasure hunt. Designers seed combos deliberately and brace for the ones players find anyway. Sources also list it as Combo Making; it is the mechanic that makes deck builders sing and balance teams lose sleep.
+#### Collect 'Em All
 
-**Pattern Building.** Arrange pieces into target configurations for scoring or effect: Azul's wall of tiles, filled row by careful row. Pattern building is construction toward a known blueprint, so the skill is efficient sequencing, getting the right pieces in the right order while rivals draft from the same supply. The mechanic offers the deep satisfaction of completion, the row finished, the shape closed, and the equally deep sting of the piece that never came. Sources also list it as Pattern Laying.
+Completing the whole collection is the quest: every monster, every badge, every sticker in the album, the drive Pokemon turned into a worldwide slogan. Completionism is motivation by checklist, where the gap in the collection nags harder than any score, and designers exploit it with rarity tiers and visible progress bars. The mechanic borders on the compulsive, which makes it worth examining honestly: the same loop that delights collectors also sells loot boxes.
 
-**Route / Network Building.** Connect locations into routes and networks, rail lines, roads, power grids, as in Ticket to Ride and Power Grid. Network builders fight over scarce connections, since the best path between two cities can be claimed only once, and value compounds as isolated segments join into systems. The mechanic quietly teaches graph thinking: hubs, redundancy, cut points, and the premium on whatever everyone else will need. Infrastructure, it turns out, is a competitive sport.
+#### Combo / Synergy Systems
 
-**Sequence Making.** Ordering matters: cards or tiles arranged in runs, chains, or significant order score or trigger effects. Sequence mechanics reward holding a picture of the in-progress order and hunting its missing links, and they punish the premature commitment that blocks a longer chain. From rummy runs to domino lines, the pattern is the same: value lives not in the pieces but in their arrangement, which is as compact a definition of structure as games offer.
+Specific combinations multiply their parts: this card doubles that one, those two abilities chain into a third. Synergy systems reward system mastery over piece strength, since the discovery that two modest components are devastating together is the game's real treasure hunt. Designers seed combos deliberately and brace for the ones players find anyway. Sources also list it as Combo Making; it is the mechanic that makes deck builders sing and balance teams lose sleep.
 
-**Set Collection.** Gather matching or complementary items, three of a kind, a run, one of each color, and convert the completed set into points or powers: the rummy family and Ticket to Ride's ticket-matching run on it. Set collection creates value through combination, since each card is worth little until its siblings arrive, and it makes players value the same objects differently depending on what they already hold. It is the mechanic of curation, and the reason discards are read like tea leaves.
+#### Pattern Building
 
-**Tableau Building.** Grow a personal array of cards whose powers compound: Wingspan's rows of birds, each new card landing in an engine the player has been assembling all game. Tableau builders are gardens, visible, personal, and increasingly alive, and the skill is synergy, choosing cards for how they multiply what is already planted. The endgame tableau is a portrait of its player's strategy, which makes these games unusually satisfying to compare and debrief afterward.
+Arrange pieces into target configurations for scoring or effect: Azul's wall of tiles, filled row by careful row. Pattern building is construction toward a known blueprint, so the skill is efficient sequencing, getting the right pieces in the right order while rivals draft from the same supply. The mechanic offers the deep satisfaction of completion, the row finished, the shape closed, and the equally deep sting of the piece that never came. Sources also list it as Pattern Laying.
 
-**Tile Placement.** Lay a tile, grow the world, score the pattern: the 2019 categories doc traces both modes, tiles whose placement scores directly, as in Scrabble, where letter tiles tessellate into words, and tiles that build terrain other tokens then use, as in Tikal's jungle or Carcassonne's countryside. Tiles are usually drawn at random, so each turn asks where this piece fits best in a board that did not expect it. Placement is permanent, public, and shared, which makes every tile both a move and a gift of structure to opponents. Sources also list it as Tile-Laying.
+#### Route / Network Building
+
+Connect locations into routes and networks, rail lines, roads, power grids, as in Ticket to Ride and Power Grid. Network builders fight over scarce connections, since the best path between two cities can be claimed only once, and value compounds as isolated segments join into systems. The mechanic quietly teaches graph thinking: hubs, redundancy, cut points, and the premium on whatever everyone else will need. Infrastructure, it turns out, is a competitive sport.
+
+#### Sequence Making
+
+Ordering matters: cards or tiles arranged in runs, chains, or significant order score or trigger effects. Sequence mechanics reward holding a picture of the in-progress order and hunting its missing links, and they punish the premature commitment that blocks a longer chain. From rummy runs to domino lines, the pattern is the same: value lives not in the pieces but in their arrangement, which is as compact a definition of structure as games offer.
+
+#### Set Collection
+
+Gather matching or complementary items, three of a kind, a run, one of each color, and convert the completed set into points or powers: the rummy family and Ticket to Ride's ticket-matching run on it. Set collection creates value through combination, since each card is worth little until its siblings arrive, and it makes players value the same objects differently depending on what they already hold. It is the mechanic of curation, and the reason discards are read like tea leaves.
+
+#### Tableau Building
+
+Grow a personal array of cards whose powers compound: Wingspan's rows of birds, each new card landing in an engine the player has been assembling all game. Tableau builders are gardens, visible, personal, and increasingly alive, and the skill is synergy, choosing cards for how they multiply what is already planted. The endgame tableau is a portrait of its player's strategy, which makes these games unusually satisfying to compare and debrief afterward.
+
+#### Tile Placement
+
+Lay a tile, grow the world, score the pattern: the 2019 categories doc traces both modes, tiles whose placement scores directly, as in Scrabble, where letter tiles tessellate into words, and tiles that build terrain other tokens then use, as in Tikal's jungle or Carcassonne's countryside. Tiles are usually drawn at random, so each turn asks where this piece fits best in a board that did not expect it. Placement is permanent, public, and shared, which makes every tile both a move and a gift of structure to opponents. Sources also list it as Tile-Laying.
 
 ## Progression & Upgrades
 
-**Engine Building.** Build an infrastructure of effects that compounds: each acquisition makes future turns more productive, as in Splendor's permanent gem discounts. Engine games begin sluggish and end explosive, and the skill is patience against the clock, investing long enough that compounding tells, cashing out before the game ends with your engine still warming. The mechanic is compound interest made playable, and watching a well-built engine finally turn over is one of gaming's most instructive pleasures.
+#### Engine Building
 
-**Incremental / Idle.** Progress accrues even while you are away: Cookie Clicker's cookies bake on through the night. Idle games strip play down to growth curves and check-ins, numbers rising, upgrades purchased, exponents compounding, and their pull is surprisingly strong for systems that barely need the player. The genre is a live experiment in motivation: how little interaction can still feel like agency? Designers study idles the way nutritionists study candy, with respect and alarm.
+Build an infrastructure of effects that compounds: each acquisition makes future turns more productive, as in Splendor's permanent gem discounts. Engine games begin sluggish and end explosive, and the skill is patience against the clock, investing long enough that compounding tells, cashing out before the game ends with your engine still warming. The mechanic is compound interest made playable, and watching a well-built engine finally turn over is one of gaming's most instructive pleasures.
 
-**Leveling Up.** Experience accumulates and abilities improve: the RPG's ding, the stat that climbs, the spell that unlocks. Leveling makes time investment legible as power, rewarding persistence with capability, and it gently retunes challenge by letting yesterday's monster become today's pushover. The mechanic is motivation engineering at its most refined, visible progress toward the next threshold, and its classroom analogue is obvious enough that a generation of gamified syllabi has tried to borrow it.
+#### Incremental / Idle
 
-**Skill Tree / Tech Tree.** Unlocks branch: each advance opens some options and forecloses others, as in Civilization's technologies or any RPG's specializations. Trees force identity through investment, the build is the character, and they convert progression from a ladder into a landscape of paths, where players plan several unlocks ahead and argue about optimal routes. The mechanic visualizes how knowledge compounds and how choices cascade, which is why pedagogy keeps rediscovering it as a map of curriculum.
+Progress accrues even while you are away: Cookie Clicker's cookies bake on through the night. Idle games strip play down to growth curves and check-ins, numbers rising, upgrades purchased, exponents compounding, and their pull is surprisingly strong for systems that barely need the player. The genre is a live experiment in motivation: how little interaction can still feel like agency? Designers study idles the way nutritionists study candy, with respect and alarm.
 
-**Unit Upgrading.** Swap units for stronger versions by completing tasks: the pawn promoted, the settlement become a city, the recruit become a veteran. Upgrading makes improvement discrete and earned, a threshold crossed rather than a meter filled, and it layers tempo decisions over growth, since upgrading now usually costs an action that fighting now would use. The mechanic encodes investment logic: present sacrifice for future capability, with the ever-present risk of upgrading what the game is about to make irrelevant.
+#### Leveling Up
+
+Experience accumulates and abilities improve: the RPG's ding, the stat that climbs, the spell that unlocks. Leveling makes time investment legible as power, rewarding persistence with capability, and it gently retunes challenge by letting yesterday's monster become today's pushover. The mechanic is motivation engineering at its most refined, visible progress toward the next threshold, and its classroom analogue is obvious enough that a generation of gamified syllabi has tried to borrow it.
+
+#### Skill Tree / Tech Tree
+
+Unlocks branch: each advance opens some options and forecloses others, as in Civilization's technologies or any RPG's specializations. Trees force identity through investment, the build is the character, and they convert progression from a ladder into a landscape of paths, where players plan several unlocks ahead and argue about optimal routes. The mechanic visualizes how knowledge compounds and how choices cascade, which is why pedagogy keeps rediscovering it as a map of curriculum.
+
+#### Unit Upgrading
+
+Swap units for stronger versions by completing tasks: the pawn promoted, the settlement become a city, the recruit become a veteran. Upgrading makes improvement discrete and earned, a threshold crossed rather than a meter filled, and it layers tempo decisions over growth, since upgrading now usually costs an action that fighting now would use. The mechanic encodes investment logic: present sacrifice for future capability, with the ever-present risk of upgrading what the game is about to make irrelevant.
 
 ## Space & Movement
 
-**Area Movement.** Pieces move between irregular named regions, provinces, rooms, seas, rather than along uniform spaces: Risk's continents are the familiar example. Area movement trades geometric precision for geographic meaning: borders matter because the map's history drew them, and chokepoints arise from shape rather than from rules. It is the natural mechanic for any game about territory, logistics, or spheres of influence, and it quietly teaches map-reading as strategy.
+#### Area Movement
 
-**Block Path.** You do not destroy your enemies; you wall them in. Tron's light cycles, Quoridor's fences, and Abalone's shoves all win by making the opponent's movement impossible rather than by removing them. Blocking play is spatial strategy at its most elegant: every wall that constrains them constrains you too, and victory goes to whoever reads the shrinking geometry better. Even chess ends this way, with a king that cannot move.
+Pieces move between irregular named regions, provinces, rooms, seas, rather than along uniform spaces: Risk's continents are the familiar example. Area movement trades geometric precision for geographic meaning: borders matter because the map's history drew them, and chokepoints arise from shape rather than from rules. It is the natural mechanic for any game about territory, logistics, or spheres of influence, and it quietly teaches map-reading as strategy.
 
-**Board Shortcuts.** Certain spaces link distant parts of the track: ladders up, chutes down, a tunnel across the board. Shortcuts add variance and drama to path movement, letting trailing players lunge ahead and leaders collapse, as every Chutes and Ladders player learns young. They also create landmark geography on an otherwise uniform path: spaces worth aiming for and spaces to dread, which gives even a pure luck game a sense of place.
+#### Block Path
 
-**Bouncing Object.** You cannot steer the object directly; you can only arrange the world, or your paddle, so the environment redirects it. Pong and Arkanoid are the archetypes: all skill lives in angles and anticipation. Indirect control of this kind produces a distinctive pleasure, the feeling of coaxing physics rather than commanding it. It is a miniature lesson in systems thinking: you act on the conditions, and the conditions act on the ball.
+You do not destroy your enemies; you wall them in. Tron's light cycles, Quoridor's fences, and Abalone's shoves all win by making the opponent's movement impossible rather than by removing them. Blocking play is spatial strategy at its most elegant: every wall that constrains them constrains you too, and victory goes to whoever reads the shrinking geometry better. Even chess ends this way, with a king that cannot move.
 
-**Exploration.** Uncovering new territory, resources, and story is itself the reward: the mechanic that makes maps worth having. Exploration games meter out the unknown, revealing just enough to make the next hidden thing irresistible. In tabletop form it appears as face-down tiles and sealed envelopes; in video games as the unlit map edge. It runs on curiosity, the cheapest and most renewable of player motivations, and it pairs with almost every other mechanic.
+#### Board Shortcuts
 
-**Forced Constant Movement.** The player can never stand still: the snake keeps slithering, the asteroids keep drifting, the rail shooter keeps scrolling. Removing the option to stop converts space into time, since every moment of not-crashing must be actively earned. The mechanic produces flow-state play at its best and panic at its worst, and it strips planning down to continuous steering. Nibbles, Asteroids, and endless runners all run on this engine.
+Certain spaces link distant parts of the track: ladders up, chutes down, a tunnel across the board. Shortcuts add variance and drama to path movement, letting trailing players lunge ahead and leaders collapse, as every Chutes and Ladders player learns young. They also create landmark geography on an otherwise uniform path: spaces worth aiming for and spaces to dread, which gives even a pure luck game a sense of place.
 
-**Gravity.** Objects are pulled in a direction, or simply fall: in video games a force that shapes every jump and drop, in tabletop play the literal physics of pieces dropping, as in Connect Four. Designers treat gravity as a free rule everyone already knows, then vary it: zero gravity, reversed gravity, gravity that switches on command. It is a reminder that games can recruit the body's intuitions as rules, which is why gravity variants feel delightfully wrong before they feel learnable.
+#### Bouncing Object
 
-**Grid Movement.** Pieces move cell by cell across a grid of squares or hexes: the chessboard is the canonical case. Grids make distance countable and position precise, which is why tactics flourish on them; a knight's move is only meaningful because the grid defines it. Square grids create the diagonal problem (is corner-to-corner one step or 1.4?), which hex grids were adopted to solve. The grid is also a worldview: it says space is uniform, discrete, and fair.
+You cannot steer the object directly; you can only arrange the world, or your paddle, so the environment redirects it. Pong and Arkanoid are the archetypes: all skill lives in angles and anticipation. Indirect control of this kind produces a distinctive pleasure, the feeling of coaxing physics rather than commanding it. It is a miniature lesson in systems thinking: you act on the conditions, and the conditions act on the ball.
 
-**Jumping.** Almost always paired with gravity: the player leaps between platforms and must not fall. Super Mario Bros. built a genre on the arc of a jump, where distance, timing, and mid-air control turn simple traversal into continuous skill expression. A jump is a commitment, since once airborne you own the outcome, and good platformers tune that arc until players feel the physics in their hands. It is the purest video-game verb: one button, infinite nuance.
+#### Exploration
 
-**Maze.** The player navigates a labyrinth, searching for items, exits, or the route itself, often under time pressure or among hazards; Pac-Man turned maze-running into a reflex sport. Mazes separate knowing from reaching: the goal may be visible long before it is attainable. They reward spatial memory and systematic exploration, and they are among the oldest figures for difficulty itself, which is why so many games, and so many syllabi, are secretly maze-shaped.
+Uncovering new territory, resources, and story is itself the reward: the mechanic that makes maps worth having. Exploration games meter out the unknown, revealing just enough to make the next hidden thing irresistible. In tabletop form it appears as face-down tiles and sealed envelopes; in video games as the unlit map edge. It runs on curiosity, the cheapest and most renewable of player motivations, and it pairs with almost every other mechanic.
 
-**Movement.** The umbrella rules for how and when tokens move: which spaces are adjacent, who may enter where, what movement costs, and what triggers it. Board games usually divide the surface into areas with adjacency rules; miniatures games dispense with spaces entirely and measure distances with rulers, sometimes constraining direction with turning keys. Movement rules are the physics of a game world, and students comparing two movement systems are really comparing two theories of space.
+#### Forced Constant Movement
 
-**Movement Patterns.** Different pieces move in different ways: the chess rook slides, the knight leaps, the pawn creeps forward and captures sideways. Giving each unit type its own movement grammar creates a vocabulary of threats, and mastery means reading the board in all of those grammars at once. The mechanic encodes character through capability, since what a piece may do is who it is, a principle that extends to any system where roles are defined by their legal moves.
+The player can never stand still: the snake keeps slithering, the asteroids keep drifting, the rail shooter keeps scrolling. Removing the option to stop converts space into time, since every moment of not-crashing must be actively earned. The mechanic produces flow-state play at its best and panic at its worst, and it strips planning down to continuous steering. Nibbles, Asteroids, and endless runners all run on this engine.
 
-**Open World.** A vast free-roaming environment where players set their own agenda: go anywhere, pick your own goals, let the story wait. Grand Theft Auto and Breath of the Wild are the landmarks. Open worlds trade authored pacing for player authorship, betting that freedom plus density of interesting things beats a fixed sequence. The design burden shifts to making every direction rewarding, because in an open world the player's attention is the scarcest resource on the map.
+#### Gravity
 
-**Path Movement.** Pieces advance along one linear track from start to finish: Candy Land and The Game of Life are pure examples. The path is the simplest possible spatial structure, a sequence, which makes it the natural home of race games and of designs for young players. Its strength is legibility: everyone can see exactly who is ahead. Its weakness is agency, since a single road offers few decisions, which is why path games so often add shortcuts, branches, and hazards.
+Objects are pulled in a direction, or simply fall: in video games a force that shapes every jump and drop, in tabletop play the literal physics of pieces dropping, as in Connect Four. Designers treat gravity as a free rule everyone already knows, then vary it: zero gravity, reversed gravity, gravity that switches on command. It is a reminder that games can recruit the body's intuitions as rules, which is why gravity variants feel delightfully wrong before they feel learnable.
 
-**Pick-Up and Deliver.** Collect something in one place and transport it to another for a reward: goods to market, passengers to stations, medicine to outbreaks. The mechanic makes geography economic, since the money is in the distance between supply and demand, and routing becomes the skill. It layers naturally onto network and movement systems, and it is the board-game ancestor of every courier quest in video games. Logistics, it turns out, is inherently playable.
+#### Grid Movement
 
-**Point-to-Point Movement.** Movement runs along drawn connections between locations, like beads on a string: Pandemic's cities and routes are the clean modern case. Unlike open areas, point-to-point maps make the network itself the terrain, so centrality, hubs, and dead ends become strategic facts. It is the mechanic that smuggles graph theory into play: players learn to see a map as nodes and edges, and to fight over the edges.
+Pieces move cell by cell across a grid of squares or hexes: the chessboard is the canonical case. Grids make distance countable and position precise, which is why tactics flourish on them; a knight's move is only meaningful because the grid defines it. Square grids create the diagonal problem (is corner-to-corner one step or 1.4?), which hex grids were adopted to solve. The grid is also a worldview: it says space is uniform, discrete, and fair.
 
-**Race.** Reach the goal before the opponent does: the timer is a rival you can sometimes slow down. Racing reframes speed as the only score, and everything else, resources, position, luck, matters only as it converts to progress. Unlike a fixed clock, a racing opponent is interactive: you can block, drain, or distract them, which is what separates a race from a mere deadline. Sources also list the board-game form as Race to the End.
+#### Jumping
 
-**Teleports.** Rather than crossing the space between, the player jumps point to point: warp zones, portals, teleporter pads. Teleportation breaks the map's continuity, which is exactly its power: it creates shortcuts, surprises, and non-obvious adjacencies, and Portal built an entire grammar of puzzles from placing the two ends yourself. Whether the destination is chosen or random changes the mechanic's whole character, from strategic repositioning to desperate gamble.
+Almost always paired with gravity: the player leaps between platforms and must not fall. Super Mario Bros. built a genre on the arc of a jump, where distance, timing, and mid-air control turn simple traversal into continuous skill expression. A jump is a commitment, since once airborne you own the outcome, and good platformers tune that arc until players feel the physics in their hands. It is the purest video-game verb: one button, infinite nuance.
 
-**Undirected Exploration.** The player wanders a large map freely, finding items and clues that open new areas, backtracking through familiar ground with new powers: Metroid, Castlevania, and Cave Story define the pattern. The world is the puzzle, and the map in the player's head is the real progress bar. The mechanic rewards curiosity and tolerates being lost, trusting players to assemble understanding from fragments, which makes it the game structure most like genuine research.
+#### Maze
+
+The player navigates a labyrinth, searching for items, exits, or the route itself, often under time pressure or among hazards; Pac-Man turned maze-running into a reflex sport. Mazes separate knowing from reaching: the goal may be visible long before it is attainable. They reward spatial memory and systematic exploration, and they are among the oldest figures for difficulty itself, which is why so many games, and so many syllabi, are secretly maze-shaped.
+
+#### Movement
+
+The umbrella rules for how and when tokens move: which spaces are adjacent, who may enter where, what movement costs, and what triggers it. Board games usually divide the surface into areas with adjacency rules; miniatures games dispense with spaces entirely and measure distances with rulers, sometimes constraining direction with turning keys. Movement rules are the physics of a game world, and students comparing two movement systems are really comparing two theories of space.
+
+#### Movement Patterns
+
+Different pieces move in different ways: the chess rook slides, the knight leaps, the pawn creeps forward and captures sideways. Giving each unit type its own movement grammar creates a vocabulary of threats, and mastery means reading the board in all of those grammars at once. The mechanic encodes character through capability, since what a piece may do is who it is, a principle that extends to any system where roles are defined by their legal moves.
+
+#### Open World
+
+A vast free-roaming environment where players set their own agenda: go anywhere, pick your own goals, let the story wait. Grand Theft Auto and Breath of the Wild are the landmarks. Open worlds trade authored pacing for player authorship, betting that freedom plus density of interesting things beats a fixed sequence. The design burden shifts to making every direction rewarding, because in an open world the player's attention is the scarcest resource on the map.
+
+#### Path Movement
+
+Pieces advance along one linear track from start to finish: Candy Land and The Game of Life are pure examples. The path is the simplest possible spatial structure, a sequence, which makes it the natural home of race games and of designs for young players. Its strength is legibility: everyone can see exactly who is ahead. Its weakness is agency, since a single road offers few decisions, which is why path games so often add shortcuts, branches, and hazards.
+
+#### Pick-Up and Deliver
+
+Collect something in one place and transport it to another for a reward: goods to market, passengers to stations, medicine to outbreaks. The mechanic makes geography economic, since the money is in the distance between supply and demand, and routing becomes the skill. It layers naturally onto network and movement systems, and it is the board-game ancestor of every courier quest in video games. Logistics, it turns out, is inherently playable.
+
+#### Point-to-Point Movement
+
+Movement runs along drawn connections between locations, like beads on a string: Pandemic's cities and routes are the clean modern case. Unlike open areas, point-to-point maps make the network itself the terrain, so centrality, hubs, and dead ends become strategic facts. It is the mechanic that smuggles graph theory into play: players learn to see a map as nodes and edges, and to fight over the edges.
+
+#### Race
+
+Reach the goal before the opponent does: the timer is a rival you can sometimes slow down. Racing reframes speed as the only score, and everything else, resources, position, luck, matters only as it converts to progress. Unlike a fixed clock, a racing opponent is interactive: you can block, drain, or distract them, which is what separates a race from a mere deadline. Sources also list the board-game form as Race to the End.
+
+#### Teleports
+
+Rather than crossing the space between, the player jumps point to point: warp zones, portals, teleporter pads. Teleportation breaks the map's continuity, which is exactly its power: it creates shortcuts, surprises, and non-obvious adjacencies, and Portal built an entire grammar of puzzles from placing the two ends yourself. Whether the destination is chosen or random changes the mechanic's whole character, from strategic repositioning to desperate gamble.
+
+#### Undirected Exploration
+
+The player wanders a large map freely, finding items and clues that open new areas, backtracking through familiar ground with new powers: Metroid, Castlevania, and Cave Story define the pattern. The world is the puzzle, and the map in the player's head is the real progress bar. The mechanic rewards curiosity and tolerates being lost, trusting players to assemble understanding from fragments, which makes it the game structure most like genuine research.
 
 ## Board & Components
 
-**Board Space Abilities.** Landing on certain spaces triggers effects: collect as you pass Go, draw a card, pay the tax, take the shortcut. Space abilities turn the board into a landscape of value, where movement choices are really destination choices, and they can carry a game's whole economy, as Monopoly's rent squares do. The mechanic is also a quiet authoring tool: what the spaces reward and punish tells players what the game's world cares about.
+#### Board Space Abilities
 
-**Changing / Dynamic Board.** The board itself changes during play: tiles rotate, corridors shift, floods spread, sections flip or disappear, through player action or game-triggered events. A dynamic board makes position provisional, since the geography under your feet may not survive the round, and it forces plans that hedge against the map itself. It is a vivid way to model unstable environments, and sources list it under several names: Changing Board, Dynamic Board, and Variable Game Board.
+Landing on certain spaces triggers effects: collect as you pass Go, draw a card, pay the tax, take the shortcut. Space abilities turn the board into a landscape of value, where movement choices are really destination choices, and they can carry a game's whole economy, as Monopoly's rent squares do. The mechanic is also a quiet authoring tool: what the spaces reward and punish tells players what the game's world cares about.
 
-**Crayon Rail System.** Players draw their routes directly on the board, usually in erasable crayon, building rail networks mile by mile across a map: Empire Builder is the standard-bearer. Drawing makes infrastructure feel authored rather than claimed, and the accumulating web of lines becomes a visible history of every player's ambitions. The mechanic sits between route-building and paper-and-pencil play, and nothing else produces quite the same pleasure of watching a continent fill with your own handwriting.
+#### Changing / Dynamic Board
 
-**Flipping and Writing.** A card flips, and everyone writes or draws the result onto their own sheet: the flip-and-write pattern, a cousin of roll-and-write, with Welcome To as a well-known example. All players consume the same public randomness but make private choices about where it lands, so games stay simultaneous, downtime-free, and endlessly comparable afterward, when sheets are laid side by side. The mechanic is a ready-made classroom structure: one shared prompt, many individual responses, instant gallery.
+The board itself changes during play: tiles rotate, corridors shift, floods spread, sections flip or disappear, through player action or game-triggered events. A dynamic board makes position provisional, since the geography under your feet may not survive the round, and it forces plans that hedge against the map itself. It is a vivid way to model unstable environments, and sources list it under several names: Changing Board, Dynamic Board, and Variable Game Board.
 
-**Hex-and-Counter.** The classical wargame format: a map overlaid with hexes, cardboard counters for units, and rules that convert terrain, stacking, and adjacency into simulation. Hexes solve the diagonal problem of square grids, so distance is honest in six directions, and counters carry whole data tables on their half-inch faces. Hex-and-counter design treats the game as a working model of a battle, and its dense rulebooks are the price of that ambition. Much of modern strategy gaming is this tradition, simplified.
+#### Crayon Rail System
 
-**Immovable Pieces.** Once placed, a piece never moves: Go is the monument, every stone a permanent fact. Immovability makes placement irreversible and therefore weighty, since each move is an argument the board will remember all game. Position accumulates like sediment, and reading the future of a static pattern becomes the entire skill. The mechanic demonstrates that commitment, not motion, can be the deepest source of strategy, a lesson Go has been teaching for millennia.
+Players draw their routes directly on the board, usually in erasable crayon, building rail networks mile by mile across a map: Empire Builder is the standard-bearer. Drawing makes infrastructure feel authored rather than claimed, and the accumulating web of lines becomes a visible history of every player's ambitions. The mechanic sits between route-building and paper-and-pencil play, and nothing else produces quite the same pleasure of watching a continent fill with your own handwriting.
 
-**Integrated Digital Apps.** A companion app runs what cardboard cannot: hidden information without a game master, soundtracks, branching scenarios, bookkeeping, and secrets revealed at exactly the right moment. Mansions of Madness uses an app as its dungeon master; others use apps as timers, narrators, or hidden-movement trackers. The design question is what the app should own and what must stay on the table, since the tabletop's social physics, everyone seeing the same objects, is precisely what the screen endangers.
+#### Flipping and Writing
 
-**Line Drawing.** Drawing lines is the move: connect points, close boxes, extend routes, or wall off territory. The mechanic makes geometry itself the contested resource, as in dots-and-boxes, where every line you draw hands your opponent information and opportunity. Line drawing games are easy to start and surprisingly deep, because each stroke is permanent and public. They are also the most whiteboard-friendly of all mechanics, playable anywhere a marker exists.
+A card flips, and everyone writes or draws the result onto their own sheet: the flip-and-write pattern, a cousin of roll-and-write, with Welcome To as a well-known example. All players consume the same public randomness but make private choices about where it lands, so games stay simultaneous, downtime-free, and endlessly comparable afterward, when sheets are laid side by side. The mechanic is a ready-made classroom structure: one shared prompt, many individual responses, instant gallery.
 
-**Mixed Reality.** Physical components blend with augmented or virtual layers: a real board the phone's camera animates, cards that unlock digital scenes, VR play anchored to tabletop pieces. Mixed reality promises the best of both worlds, tangible objects plus impossible effects, and risks the worst, where neither layer feels primary. The experiments matter because they probe exactly where a game lives: in the pieces, in the screen, or in the players' shared agreement about what is happening.
+#### Hex-and-Counter
 
-**Modular Board.** The board arrives in pieces, hex tiles, map sections, room cards, and is assembled differently each game: Catan's shuffled island is the famous case. Modularity buys replayability at the cost of balance, since some layouts will simply be better for some seats, and many designs add setup rules to tame the variance. It also moves part of the game before the game: reading the freshly built map and revaluing every strategy accordingly is the real first turn. Sources also list the shuffled-setup variant as Randomized Board.
+The classical wargame format: a map overlaid with hexes, cardboard counters for units, and rules that convert terrain, stacking, and adjacency into simulation. Hexes solve the diagonal problem of square grids, so distance is honest in six directions, and counters carry whole data tables on their half-inch faces. Hex-and-counter design treats the game as a working model of a battle, and its dense rulebooks are the price of that ambition. Much of modern strategy gaming is this tradition, simplified.
 
-**Paper-and-Pencil.** The game lives on paper: players write, draw, or mark as the core act of play, from dots-and-boxes to the modern roll-and-write boom. Paper is the cheapest possible component and among the most flexible, since a sheet can be a map, a ledger, a battleship grid, or a bingo card. Each player's sheet also becomes a private record of their whole game, which makes paper designs unusually good at letting players see their own decision history, a property classrooms can borrow directly.
+#### Immovable Pieces
 
-**Shrinking Board.** The playing field keeps losing spaces, and the survivors are squeezed into ever-closer quarters. Shrinkage guarantees escalation: early sprawl gives way to forced confrontation, and stalling becomes impossible because the world itself is running out. Battle-royale video games rediscovered this with their closing zones, but the tabletop version is older and purer, a timer made of geography. It answers one of design's hardest questions, how to make a game end, with elegant brutality.
+Once placed, a piece never moves: Go is the monument, every stone a permanent fact. Immovability makes placement irreversible and therefore weighty, since each move is an argument the board will remember all game. Position accumulates like sediment, and reading the future of a static pattern becomes the entire skill. The mechanic demonstrates that commitment, not motion, can be the deepest source of strategy, a lesson Go has been teaching for millennia.
+
+#### Integrated Digital Apps
+
+A companion app runs what cardboard cannot: hidden information without a game master, soundtracks, branching scenarios, bookkeeping, and secrets revealed at exactly the right moment. Mansions of Madness uses an app as its dungeon master; others use apps as timers, narrators, or hidden-movement trackers. The design question is what the app should own and what must stay on the table, since the tabletop's social physics, everyone seeing the same objects, is precisely what the screen endangers.
+
+#### Line Drawing
+
+Drawing lines is the move: connect points, close boxes, extend routes, or wall off territory. The mechanic makes geometry itself the contested resource, as in dots-and-boxes, where every line you draw hands your opponent information and opportunity. Line drawing games are easy to start and surprisingly deep, because each stroke is permanent and public. They are also the most whiteboard-friendly of all mechanics, playable anywhere a marker exists.
+
+#### Mixed Reality
+
+Physical components blend with augmented or virtual layers: a real board the phone's camera animates, cards that unlock digital scenes, VR play anchored to tabletop pieces. Mixed reality promises the best of both worlds, tangible objects plus impossible effects, and risks the worst, where neither layer feels primary. The experiments matter because they probe exactly where a game lives: in the pieces, in the screen, or in the players' shared agreement about what is happening.
+
+#### Modular Board
+
+The board arrives in pieces, hex tiles, map sections, room cards, and is assembled differently each game: Catan's shuffled island is the famous case. Modularity buys replayability at the cost of balance, since some layouts will simply be better for some seats, and many designs add setup rules to tame the variance. It also moves part of the game before the game: reading the freshly built map and revaluing every strategy accordingly is the real first turn. Sources also list the shuffled-setup variant as Randomized Board.
+
+#### Paper-and-Pencil
+
+The game lives on paper: players write, draw, or mark as the core act of play, from dots-and-boxes to the modern roll-and-write boom. Paper is the cheapest possible component and among the most flexible, since a sheet can be a map, a ledger, a battleship grid, or a bingo card. Each player's sheet also becomes a private record of their whole game, which makes paper designs unusually good at letting players see their own decision history, a property classrooms can borrow directly.
+
+#### Shrinking Board
+
+The playing field keeps losing spaces, and the survivors are squeezed into ever-closer quarters. Shrinkage guarantees escalation: early sprawl gives way to forced confrontation, and stalling becomes impossible because the world itself is running out. Battle-royale video games rediscovered this with their closing zones, but the tabletop version is older and purer, a timer made of geography. It answers one of design's hardest questions, how to make a game end, with elegant brutality.
 
 ## Cards & Hands
 
-**Bigger the Better.** Components carry numerical values and victory goes to whoever meets the criterion, usually simply the larger number: the children's game War is the degenerate case, every battle a bare comparison. On its own the mechanic offers no decisions, which is precisely its diagnostic value: it isolates what comparison contributes to a game when everything else is stripped away. Layered with hidden information or resource costs, bare comparison becomes bidding, bluffing, and brinkmanship.
+#### Bigger the Better
 
-**Campaign / Battle Card Driven.** A wargame tradition in which cards drive the campaign: each card can be played as an event, as operations points, or to fuel a battle, and the scenario advances card by card. The genre's signature agony is that every card has more uses than you can take, so history's great events sit in your hand priced against mundane logistics. It demonstrates how a deck can carry narrative and strategy in one component, each play a paragraph of the unfolding story.
+Components carry numerical values and victory goes to whoever meets the criterion, usually simply the larger number: the children's game War is the degenerate case, every battle a bare comparison. On its own the mechanic offers no decisions, which is precisely its diagnostic value: it isolates what comparison contributes to a game when everything else is stripped away. Layered with hidden information or resource costs, bare comparison becomes bidding, bluffing, and brinkmanship.
 
-**Card Driven.** Cards determine what actions, events, or outcomes are available: your hand is your menu of possible turns. Card-driven designs ration agency through the draw, so planning means playing the hand you have while imagining the hands to come. The pattern spans from simple action-card games to grand strategy, and it tightly couples luck and choice: the cards decide what is possible, the player decides what is wise.
+#### Campaign / Battle Card Driven
 
-**Cards as Randomizer and Resource.** The 2019 categories doc singles out the two great lives of the playing card. Face down in a shuffled deck, cards are a randomizer: draw one and the printed result decides the outcome, with the deck's fixed composition making the odds countable in a way dice never are. Held in a hidden hand, cards become resources: options banked for later, invisible to rivals, spent at the moment of your choosing. Most card games run both lives at once, which is why the deck remains the most versatile component in all of game design.
+A wargame tradition in which cards drive the campaign: each card can be played as an event, as operations points, or to fuel a battle, and the scenario advances card by card. The genre's signature agony is that every card has more uses than you can take, so history's great events sit in your hand priced against mundane logistics. It demonstrates how a deck can carry narrative and strategy in one component, each play a paragraph of the unfolding story.
 
-**Deck / Pool Building.** Start with a feeble starter deck and buy better cards into it as you play, shuffling your purchases back in so the deck itself becomes your engine: Dominion invented the modern form. Every acquisition is a bet on your deck's future composition, and the skill is curation, keeping the engine lean enough that its best turns come up often. The mechanic made the market a core game verb and spawned a genre; pool building extends the same logic to dice and other components.
+#### Card Driven
 
-**Deck Construction.** The deck is built before play begins, assembled from a personal collection against expected opponents: Magic: The Gathering is the defining case. Construction splits the game in two, a slow thoughtful metagame of building and a fast one of playing, and mastery of the first can dwarf the second. It raises real questions about fairness when collections differ, which the trading-card industry converted into a business model. Distinct from in-game deck building, where the engine grows during play.
+Cards determine what actions, events, or outcomes are available: your hand is your menu of possible turns. Card-driven designs ration agency through the draw, so planning means playing the hand you have while imagining the hands to come. The pattern spans from simple action-card games to grand strategy, and it tightly couples luck and choice: the cards decide what is possible, the player decides what is wise.
 
-**Dice Building.** Deck building with dice: players acquire dice with better faces over the course of play, assembling a personal pool that they roll each turn, as in Quarriors. The mechanic layers probability management onto the acquisition game, since buying a die means buying its whole distribution, good faces and bad. It makes a nice study in expected value: your bag of dice is literally a portfolio, and every roll is a dividend.
+#### Cards as Randomizer and Resource
 
-**Discard Pile.** The shared heap where spent cards go, and often a second resource in disguise: visible history, countable odds, sometimes a pile that can be raided or must be taken. The discard pile makes a card game's past public, and players who read it know what remains in the deck. Designs differ sharply on whether the pile is dead storage or live material, and that single choice changes how much memory the game rewards.
+The 2019 categories doc singles out the two great lives of the playing card. Face down in a shuffled deck, cards are a randomizer: draw one and the printed result decides the outcome, with the deck's fixed composition making the odds countable in a way dice never are. Held in a hidden hand, cards become resources: options banked for later, invisible to rivals, spent at the moment of your choosing. Most card games run both lives at once, which is why the deck remains the most versatile component in all of game design.
 
-**Hand Limit.** A ceiling (or floor) on how many cards you may hold. The limit turns abundance into a problem: hoarding has a hard stop, and every draw past the cap forces a discard, which is a decision. Hand limits exist to keep options legible and to prevent the player who saves everything from exploding in one turn. A small rule with large consequences, it is the mechanic to point at when discussing how constraints create choices.
+#### Deck / Pool Building
 
-**Hand Management.** The craft of deciding what to play, what to hold, and what to throw away, now versus later made physical. A hand is a private budget of options, and managing it means reading tempo: the card that is merely good now may be devastating in two turns. Games deepen the problem with hand limits, combo rewards, and cards that are stronger in company. It is the mechanic that most directly exercises deferred gratification, and every rummy player has felt its central ache.
+Start with a feeble starter deck and buy better cards into it as you play, shuffling your purchases back in so the deck itself becomes your engine: Dominion invented the modern form. Every acquisition is a bet on your deck's future composition, and the skill is curation, keeping the engine lean enough that its best turns come up often. The mechanic made the market a core game verb and spawned a genre; pool building extends the same logic to dice and other components.
 
-**Hand Ranks.** Certain card combinations have names and a pecking order: pair, straight, flush, full house. Ranked hands turn a random deal into a ladder of aspiration, and poker's entire economy of betting and bluffing stands on everyone knowing the ladder cold. The mechanic shows how shared vocabulary creates value: a flush is only worth something because every player agrees on what beats what, an agreement older than any rulebook at the table.
+#### Deck Construction
 
-**Hand Refinement.** Draw a card, discard a card, inch the hand toward perfection: gin rummy's quiet engine. Refinement games are about trajectory rather than windfall, each exchange a small edit toward a finished composition. The discard is the confession, since every card you release tells observant rivals what you are not collecting. The loop is meditative and tense at once, and it models revision itself, which may be why it feels so much like editing a draft.
+The deck is built before play begins, assembled from a personal collection against expected opponents: Magic: The Gathering is the defining case. Construction splits the game in two, a slow thoughtful metagame of building and a fast one of playing, and mastery of the first can dwarf the second. It raises real questions about fairness when collections differ, which the trading-card industry converted into a business model. Distinct from in-game deck building, where the engine grows during play.
 
-**Individual Decks.** Each player draws from a personal deck, as in collectible card games and many asymmetric designs. Private decks let players bring different identities, strategies, and probabilities to the same table, which is the foundation of constructed-deck play. They also privatize luck: your draws are your own fortune, built from your own earlier choices. The mechanic trades the shared world of a common deck for the expressive range of many parallel ones.
+#### Dice Building
 
-**Multiple-Use Cards.** Every card can be used several ways, as an action, a resource, a building, a point, and choosing its use is the decision that matters. Multi-use cards make every draw a fork and every play a sacrifice of the uses not chosen, which concentrates enormous decision density into few components. Sources also list the pattern as Dual-Use Cards. It is the designer's favorite trick for making a small deck feel like a large game.
+Deck building with dice: players acquire dice with better faces over the course of play, assembling a personal pool that they roll each turn, as in Quarriors. The mechanic layers probability management onto the acquisition game, since buying a die means buying its whole distribution, good faces and bad. It makes a nice study in expected value: your bag of dice is literally a portfolio, and every roll is a dividend.
 
-**Renewable Deck.** When the deck runs out, it returns: discards are reshuffled and the supply continues, often with the game subtly changed by what entered or left the pile along the way. Renewal keeps long games from starving, and in deck-builders the reshuffle is the heartbeat, since every purchase comes back around. Knowing a reshuffle is near is itself information: the odds reset, and what was played recently will soon be drawable again.
+#### Discard Pile
 
-**Shared Deck.** All players draw from one deck, subject to the same luck and the same depletion. A shared deck makes the game's randomness communal: nobody owns better odds, and every draw changes what remains for everyone. It also creates subtle interaction in otherwise parallel games, since your draw was almost someone else's. The commons is small, visible, and shrinking, which is a familiar shape from well outside games.
+The shared heap where spent cards go, and often a second resource in disguise: visible history, countable odds, sometimes a pile that can be raided or must be taken. The discard pile makes a card game's past public, and players who read it know what remains in the deck. Designs differ sharply on whether the pile is dead storage or live material, and that single choice changes how much memory the game rewards.
 
-**Take the Pile.** Cards accumulate in a growing shared pile, and under the right condition a player must, or may, take the whole thing, for better or worse. The pile is a swinging pendulum of value: in some games it is treasure, in others a penalty avalanche. Watching it grow while maneuvering not to be the one holding the condition when it lands is the core tension. It is the card-game cousin of the time bomb, with the fuse made of accumulation.
+#### Hand Limit
 
-**Trick-Taking.** Everyone plays one card to the trick; the best card wins it, usually under a duty to follow suit; bids may promise how many tricks you will take, with penalties for falling short. Bridge, hearts, and euchre are built on this skeleton, and whole family traditions run on its variants. Trick-taking packs counting, inference, partnership signaling, and promise-keeping into the fastest possible loop, one card each. Sources also list it as Trick-Winning; the bid-as-promise form is the auction mechanic wearing a card game's clothes.
+A ceiling (or floor) on how many cards you may hold. The limit turns abundance into a problem: hoarding has a hard stop, and every draw past the cap forces a discard, which is a decision. Hand limits exist to keep options legible and to prevent the player who saves everything from exploding in one turn. A small rule with large consequences, it is the mechanic to point at when discussing how constraints create choices.
 
-**Trump Suit.** One suit outranks all others: the humblest trump beats the proudest card of any plain suit. Trump concentrates power and upends the deck's normal hierarchy, so hands are valued not just by their high cards but by their shape. Declaring or discovering what is trump becomes a dramatic hinge of play, as in euchre and spades. It is a compact lesson in how a single rule can revalue every object in a system.
+#### Hand Management
+
+The craft of deciding what to play, what to hold, and what to throw away, now versus later made physical. A hand is a private budget of options, and managing it means reading tempo: the card that is merely good now may be devastating in two turns. Games deepen the problem with hand limits, combo rewards, and cards that are stronger in company. It is the mechanic that most directly exercises deferred gratification, and every rummy player has felt its central ache.
+
+#### Hand Ranks
+
+Certain card combinations have names and a pecking order: pair, straight, flush, full house. Ranked hands turn a random deal into a ladder of aspiration, and poker's entire economy of betting and bluffing stands on everyone knowing the ladder cold. The mechanic shows how shared vocabulary creates value: a flush is only worth something because every player agrees on what beats what, an agreement older than any rulebook at the table.
+
+#### Hand Refinement
+
+Draw a card, discard a card, inch the hand toward perfection: gin rummy's quiet engine. Refinement games are about trajectory rather than windfall, each exchange a small edit toward a finished composition. The discard is the confession, since every card you release tells observant rivals what you are not collecting. The loop is meditative and tense at once, and it models revision itself, which may be why it feels so much like editing a draft.
+
+#### Individual Decks
+
+Each player draws from a personal deck, as in collectible card games and many asymmetric designs. Private decks let players bring different identities, strategies, and probabilities to the same table, which is the foundation of constructed-deck play. They also privatize luck: your draws are your own fortune, built from your own earlier choices. The mechanic trades the shared world of a common deck for the expressive range of many parallel ones.
+
+#### Multiple-Use Cards
+
+Every card can be used several ways, as an action, a resource, a building, a point, and choosing its use is the decision that matters. Multi-use cards make every draw a fork and every play a sacrifice of the uses not chosen, which concentrates enormous decision density into few components. Sources also list the pattern as Dual-Use Cards. It is the designer's favorite trick for making a small deck feel like a large game.
+
+#### Renewable Deck
+
+When the deck runs out, it returns: discards are reshuffled and the supply continues, often with the game subtly changed by what entered or left the pile along the way. Renewal keeps long games from starving, and in deck-builders the reshuffle is the heartbeat, since every purchase comes back around. Knowing a reshuffle is near is itself information: the odds reset, and what was played recently will soon be drawable again.
+
+#### Shared Deck
+
+All players draw from one deck, subject to the same luck and the same depletion. A shared deck makes the game's randomness communal: nobody owns better odds, and every draw changes what remains for everyone. It also creates subtle interaction in otherwise parallel games, since your draw was almost someone else's. The commons is small, visible, and shrinking, which is a familiar shape from well outside games.
+
+#### Take the Pile
+
+Cards accumulate in a growing shared pile, and under the right condition a player must, or may, take the whole thing, for better or worse. The pile is a swinging pendulum of value: in some games it is treasure, in others a penalty avalanche. Watching it grow while maneuvering not to be the one holding the condition when it lands is the core tension. It is the card-game cousin of the time bomb, with the fuse made of accumulation.
+
+#### Trick-Taking
+
+Everyone plays one card to the trick; the best card wins it, usually under a duty to follow suit; bids may promise how many tricks you will take, with penalties for falling short. Bridge, hearts, and euchre are built on this skeleton, and whole family traditions run on its variants. Trick-taking packs counting, inference, partnership signaling, and promise-keeping into the fastest possible loop, one card each. Sources also list it as Trick-Winning; the bid-as-promise form is the auction mechanic wearing a card game's clothes.
+
+#### Trump Suit
+
+One suit outranks all others: the humblest trump beats the proudest card of any plain suit. Trump concentrates power and upends the deck's normal hierarchy, so hands are valued not just by their high cards but by their shape. Declaring or discovering what is trump becomes a dramatic hinge of play, as in euchre and spades. It is a compact lesson in how a single rule can revalue every object in a system.
 
 ## Chance & Randomness
 
-**Chit-Pull System.** Instead of dice, the randomizer is a cup or bag of chits: small counters drawn blind to decide what activates, what happens next, or who goes first. Because the pool is finite and visible beforehand, players can count what remains and reason about what is likely still in the bag, which makes chit-pull feel more knowable than dice. Wargames use it to model the fog of command, where you never quite choose which of your units gets to act. The composition of the pool is itself a design dial: seed it and you have tuned the game's luck.
+#### Chit-Pull System
 
-**Dice Rolling.** The oldest randomizer in games: dice turn an uncertain future into a single, public, physical event. A roll can drive movement, settle combat, generate resources, or decide ties, and the shape of the dice (how many, how many sides, added or compared) tunes the probability curve from wild swings to near-certainty. Because everyone sees the roll and nobody controls it, dice carry a feeling of fairness even when the odds are lopsided. Designers lean on them to inject drama, to equalize skill gaps, and to make players plan around probability rather than certainty.
+Instead of dice, the randomizer is a cup or bag of chits: small counters drawn blind to decide what activates, what happens next, or who goes first. Because the pool is finite and visible beforehand, players can count what remains and reason about what is likely still in the bag, which makes chit-pull feel more knowable than dice. Wargames use it to model the fog of command, where you never quite choose which of your units gets to act. The composition of the pool is itself a design dial: seed it and you have tuned the game's luck.
 
-**Roll / Spin and Move.** Roll a die or spin a spinner, move that many spaces: the classic engine of childhood board games like Monopoly, Candy Land, and The Game of Life. It is easy to learn and keeps everyone's fate visibly in motion, but it gives players little to decide, which is why modern designs often replace or supplement it. As a teaching object it is useful precisely for that weakness: comparing roll-and-move to games with real movement choices shows students quickly what agency in a system feels like, and what its absence does to engagement.
+#### Dice Rolling
 
-**Wild Card.** A small number of cards or tiles can stand in for anything: the Uno wild, the blank Scrabble tile, the joker. Wilds inject flexibility and relief into systems that would otherwise punish bad draws, and deciding when to spend one is a real decision, since a wild used early is a wild unavailable later. They also concentrate excitement: a single component that breaks the rules everyone else must follow. Tuning how many wilds exist, and what they may imitate, is a quiet but powerful balance lever.
+The oldest randomizer in games: dice turn an uncertain future into a single, public, physical event. A roll can drive movement, settle combat, generate resources, or decide ties, and the shape of the dice (how many, how many sides, added or compared) tunes the probability curve from wild swings to near-certainty. Because everyone sees the roll and nobody controls it, dice carry a feeling of fairness even when the odds are lopsided. Designers lean on them to inject drama, to equalize skill gaps, and to make players plan around probability rather than certainty.
+
+#### Roll / Spin and Move
+
+Roll a die or spin a spinner, move that many spaces: the classic engine of childhood board games like Monopoly, Candy Land, and The Game of Life. It is easy to learn and keeps everyone's fate visibly in motion, but it gives players little to decide, which is why modern designs often replace or supplement it. As a teaching object it is useful precisely for that weakness: comparing roll-and-move to games with real movement choices shows students quickly what agency in a system feels like, and what its absence does to engagement.
+
+#### Wild Card
+
+A small number of cards or tiles can stand in for anything: the Uno wild, the blank Scrabble tile, the joker. Wilds inject flexibility and relief into systems that would otherwise punish bad draws, and deciding when to spend one is a real decision, since a wild used early is a wild unavailable later. They also concentrate excitement: a single component that breaks the rules everyone else must follow. Tuning how many wilds exist, and what they may imitate, is a quiet but powerful balance lever.
 
 ## Risk & Betting
 
-**Betting / Wagering.** Players stake something they own, points, money, position, on an outcome they believe in, and the stake transforms belief into commitment. Betting makes confidence costly: a bluffable claim in poker, a wager on your own performance in a trivia game, a side bet on another player's race. It layers risk management and opponent-reading onto whatever system it touches, because the question is never just what will happen but what everyone else thinks will happen. The size and timing of allowable bets controls how swingy the whole game becomes.
+#### Betting / Wagering
 
-**Press Your Luck.** The player keeps choosing between banking what they have and risking it for more, with a bust that wipes out the round's gains. One more card, one more roll, one more room: the mechanic turns probability into felt temptation, and the best versions make the odds legible enough that players blame themselves, not the dice. Blackjack is the purest form; Can't Stop and Beowulf: The Legend build whole games on it. It also appears in sources under the names Push-Your-Luck and Risk and Reward, and it pairs naturally with betting mechanics.
+Players stake something they own, points, money, position, on an outcome they believe in, and the stake transforms belief into commitment. Betting makes confidence costly: a bluffable claim in poker, a wager on your own performance in a trivia game, a side bet on another player's race. It layers risk management and opponent-reading onto whatever system it touches, because the question is never just what will happen but what everyone else thinks will happen. The size and timing of allowable bets controls how swingy the whole game becomes.
+
+#### Press Your Luck
+
+The player keeps choosing between banking what they have and risking it for more, with a bust that wipes out the round's gains. One more card, one more roll, one more room: the mechanic turns probability into felt temptation, and the best versions make the odds legible enough that players blame themselves, not the dice. Blackjack is the purest form; Can't Stop and Beowulf: The Legend build whole games on it. It also appears in sources under the names Push-Your-Luck and Risk and Reward, and it pairs naturally with betting mechanics.
 
 ## Hidden Info & Deduction
 
-**Bluffing.** Convince rivals you are stronger or weaker than you are: poker's raised eyebrow, Stratego's bold march of a weak piece. Bluffing exists wherever hidden information meets stakes, and it converts acting ability and nerve into game resources. The deeper structure is recursive: you model what they believe about what you believe, and the game is played in that hall of mirrors. Sources also list it as Disinformation; by either name, it is the mechanic that makes deception a legal, even celebrated, skill.
+#### Bluffing
 
-**Deduction.** Use clues and logic to uncover what is hidden: Clue's who, where, and with what. Deduction games distribute a truth among cards, answers, and behaviors, then reward whoever reconstructs it first from fragments. Play alternates between gathering evidence and risking a conclusion, and the accusation that is one clue too early loses everything. It is the scientific method as a race, and the rare mechanic where note-taking is a competitive advantage.
+Convince rivals you are stronger or weaker than you are: poker's raised eyebrow, Stratego's bold march of a weak piece. Bluffing exists wherever hidden information meets stakes, and it converts acting ability and nerve into game resources. The deeper structure is recursive: you model what they believe about what you believe, and the game is played in that hall of mirrors. Sources also list it as Disinformation; by either name, it is the mechanic that makes deception a legal, even celebrated, skill.
 
-**Fog of War.** Parts of the map stay dark until scouted, and what you cannot see can still act: StarCraft made the term standard in games. Fog of war prices information like any other resource, scouting costs units and time, and it makes memory of what was seen a strategic asset, since the fog closes behind your patrols. Every plan becomes a bet about the darkness. The mechanic is the clearest game expression of decision-making under incomplete information, which is to say, of decision-making.
+#### Deduction
 
-**Hidden Image / Where's Waldo.** Search a busy scene for the one thing that matters: the striped shirt, the missing clue, the pixel-wide lever, a staple of point-and-click adventures. Hidden-image mechanics are information overload localized in space, rewarding systematic scanning and knowledge of where designers like to hide things. The pleasure is the pop-out moment when the sought thing snaps into visibility, a small perceptual epiphany that the best puzzle and museum designers engineer deliberately.
+Use clues and logic to uncover what is hidden: Clue's who, where, and with what. Deduction games distribute a truth among cards, answers, and behaviors, then reward whoever reconstructs it first from fragments. Play alternates between gathering evidence and risking a conclusion, and the accusation that is one clue too early loses everything. It is the scientific method as a race, and the rare mechanic where note-taking is a competitive advantage.
 
-**Hidden Movement.** One player moves invisibly across the map while the rest hunt: Scotland Yard's Mr. X surfaces only at intervals, leaving a trail of inferences. Hidden movement is asymmetry at its most theatrical, one mind against many, terror against method, and the hunted player experiences the board as claustrophobia while the hunters experience it as triangulation. Companion apps now track the hidden mover without a game master. It is pursuit mathematics wearing a trench coat.
+#### Fog of War
 
-**Information Overload.** The game shows you everything, and that is the problem: too many variables at once, with pattern-finding as the only way through, as in Set, Quarto, and Bejeweled. Overload mechanics test perception and chunking rather than secrecy, the information is public but unprocessed, and skill is learning to see structure where novices see noise. The mechanic demonstrates that attention, not information, is the scarce resource, a lesson with obvious life outside games.
+Parts of the map stay dark until scouted, and what you cannot see can still act: StarCraft made the term standard in games. Fog of war prices information like any other resource, scouting costs units and time, and it makes memory of what was seen a strategic asset, since the fog closes behind your patrols. Every plan becomes a bet about the darkness. The mechanic is the clearest game expression of decision-making under incomplete information, which is to say, of decision-making.
 
-**Memory.** Recall what was shown and hidden again: the matched pairs of Concentration, the counted cards of any serious card player. Memory mechanics make attention retroactively valuable, since what you noticed three turns ago is now a resource, and they reward players who build systems for remembering rather than trusting raw recall. Designers use memory demands as a difficulty dial, and classrooms should note the converse: whatever a game makes worth remembering, players remember.
+#### Hidden Image / Where's Waldo
 
-**Remember an Increasing Number of Things.** The sequence to recall keeps growing: Simon adds one light per round until the player breaks. The escalating-memory mechanic is a staircase with no landing, a pure test of short-term capacity under pressure, and its genius is that difficulty is generated by the player's own success. Everyone fails eventually, which makes the mechanic a clean measure of limits, and a humbling demonstration that working memory is finite and precious.
+Search a busy scene for the one thing that matters: the striped shirt, the missing clue, the pixel-wide lever, a staple of point-and-click adventures. Hidden-image mechanics are information overload localized in space, rewarding systematic scanning and knowledge of where designers like to hide things. The pleasure is the pop-out moment when the sought thing snaps into visibility, a small perceptual epiphany that the best puzzle and museum designers engineer deliberately.
 
-**Secret / Hidden Roles.** Players receive hidden identities with private agendas: the werewolf among villagers, the spy among agents. Hidden roles split the table into information haves and have-nots and make every public action double-coded, both a move and a performance. The mechanic manufactures suspicion from nothing but a dealt card, which is its power and its danger in social settings. Sources list it as both Secret Roles and Hidden Roles; it is the foundation the social-deduction genre is built on.
+#### Hidden Movement
 
-**Secret Traitor.** The team works together, but one member secretly works against them: Betrayal at House on the Hill springs its traitor mid-game. The traitor mechanic poisons cooperation with doubt, every helpful act might be cover, and converts the co-op game's warmth into thriller tension. Its sharpest design question is when the betrayal is revealed, since hidden traitors corrode trust while revealed ones focus rage. It is the mechanic that best dramatizes how fragile collective action is.
+One player moves invisibly across the map while the rest hunt: Scotland Yard's Mr. X surfaces only at intervals, leaving a trail of inferences. Hidden movement is asymmetry at its most theatrical, one mind against many, terror against method, and the hunted player experiences the board as claustrophobia while the hunters experience it as triangulation. Companion apps now track the hidden mover without a game master. It is pursuit mathematics wearing a trench coat.
 
-**Secret Unit Deployment.** Forces are placed or moved in secret and revealed at the worst possible moment: Stratego's forty hidden ranks facing yours. Secret deployment front-loads the game with authorship, your initial arrangement is a theory of the whole battle, and makes early play about probing rather than striking. Information is spent the instant a piece acts, so reticence is armor. The mechanic models intelligence warfare on a kitchen table: what you know, what they know, and what each knows the other knows.
+#### Information Overload
 
-**Social Deduction.** Talk, read behavior, and vote to unmask the hidden roles: Werewolf and Among Us are the famous cases. The evidence is almost entirely human, hesitations, overclaims, voting patterns, so the game is applied psychology with a body count. Social deduction creates the strange pleasure of lying to friends and the stranger pleasure of catching them, and it surfaces group dynamics, who is believed, who is scapegoated, faster than any seminar exercise yet devised.
+The game shows you everything, and that is the problem: too many variables at once, with pattern-finding as the only way through, as in Set, Quarto, and Bejeweled. Overload mechanics test perception and chunking rather than secrecy, the information is public but unprocessed, and skill is learning to see structure where novices see noise. The mechanic demonstrates that attention, not information, is the scarce resource, a lesson with obvious life outside games.
+
+#### Memory
+
+Recall what was shown and hidden again: the matched pairs of Concentration, the counted cards of any serious card player. Memory mechanics make attention retroactively valuable, since what you noticed three turns ago is now a resource, and they reward players who build systems for remembering rather than trusting raw recall. Designers use memory demands as a difficulty dial, and classrooms should note the converse: whatever a game makes worth remembering, players remember.
+
+#### Remember an Increasing Number of Things
+
+The sequence to recall keeps growing: Simon adds one light per round until the player breaks. The escalating-memory mechanic is a staircase with no landing, a pure test of short-term capacity under pressure, and its genius is that difficulty is generated by the player's own success. Everyone fails eventually, which makes the mechanic a clean measure of limits, and a humbling demonstration that working memory is finite and precious.
+
+#### Secret / Hidden Roles
+
+Players receive hidden identities with private agendas: the werewolf among villagers, the spy among agents. Hidden roles split the table into information haves and have-nots and make every public action double-coded, both a move and a performance. The mechanic manufactures suspicion from nothing but a dealt card, which is its power and its danger in social settings. Sources list it as both Secret Roles and Hidden Roles; it is the foundation the social-deduction genre is built on.
+
+#### Secret Traitor
+
+The team works together, but one member secretly works against them: Betrayal at House on the Hill springs its traitor mid-game. The traitor mechanic poisons cooperation with doubt, every helpful act might be cover, and converts the co-op game's warmth into thriller tension. Its sharpest design question is when the betrayal is revealed, since hidden traitors corrode trust while revealed ones focus rage. It is the mechanic that best dramatizes how fragile collective action is.
+
+#### Secret Unit Deployment
+
+Forces are placed or moved in secret and revealed at the worst possible moment: Stratego's forty hidden ranks facing yours. Secret deployment front-loads the game with authorship, your initial arrangement is a theory of the whole battle, and makes early play about probing rather than striking. Information is spent the instant a piece acts, so reticence is armor. The mechanic models intelligence warfare on a kitchen table: what you know, what they know, and what each knows the other knows.
+
+#### Social Deduction
+
+Talk, read behavior, and vote to unmask the hidden roles: Werewolf and Among Us are the famous cases. The evidence is almost entirely human, hesitations, overclaims, voting patterns, so the game is applied psychology with a body count. Social deduction creates the strange pleasure of lying to friends and the stranger pleasure of catching them, and it surfaces group dynamics, who is believed, who is scapegoated, faster than any seminar exercise yet devised.
 
 ## Conflict & Capture
 
-**Area Control / Majority.** Dominate regions of the board: whoever holds the majority of presence in an area rules it, scores it, or taxes it, as in Risk's continents and El Grande's provinces. Area majority turns position into an election, where every cube is a vote and every region a contested district. The agony is allocation, since strength concentrated in one area is strength absent from another. Sources also list it as Area Influence, Territory Control, and Territory Building; in every form it is the mechanic of maps, borders, and spheres of influence.
+#### Area Control / Majority
 
-**Area Enclosure.** Surround territory to claim it: Go's stones live and die by the spaces they enclose. Enclosure differs from occupation, since you win not by standing on ground but by walling it, so empty space becomes the most valuable thing on the board. Judging whether a half-built enclosure will survive is among the deepest evaluations in games. The mechanic rewards patience and shape-reading, and it offers a striking inversion for discussion: power as perimeter rather than presence.
+Dominate regions of the board: whoever holds the majority of presence in an area rules it, scores it, or taxes it, as in Risk's continents and El Grande's provinces. Area majority turns position into an election, where every cube is a vote and every region a contested district. The agony is allocation, since strength concentrated in one area is strength absent from another. Sources also list it as Area Influence, Territory Control, and Territory Building; in every form it is the mechanic of maps, borders, and spheres of influence.
 
-**Big Gains for You, Big Gains for Enemy.** The easy points come at a price: the move that profits you most also strengthens your opponent, as in Othello, where greedy captures hand back the corners, or Risk, where expansion stretches the borders you must then defend. The mechanic punishes naive maximization and rewards thinking a move past the reward. It is a built-in lesson in externalities: in a coupled system, there is no such thing as a gain that touches only you.
+#### Area Enclosure
 
-**Brawling.** Melee combat with a repertoire: punches, throws, combos, and specials against one opponent or a street full of them, as in Street Fighter II and Double Dragon. Brawling games are rhythm and spacing dressed as violence, since victory lives in frame timing, reach, and reading the opponent's habits. The repertoire matters: a brawler with one attack is a button test, while a brawler with twelve is a conversation. The genre is where video games think hardest about the grammar of physical confrontation.
+Surround territory to claim it: Go's stones live and die by the spaces they enclose. Enclosure differs from occupation, since you win not by standing on ground but by walling it, so empty space becomes the most valuable thing on the board. Judging whether a half-built enclosure will survive is among the deepest evaluations in games. The mechanic rewards patience and shape-reading, and it offers a striking inversion for discussion: power as perimeter rather than presence.
 
-**Capture / Eliminate.** When tokens on the board are strength, taking the opponent's off it is the goal, and the 2019 categories doc catalogs the ways: move onto an occupied space (chess, pachisi), jump over it (draughts), declare an attack resolved by rule or by dice (Stratego, Illuminati), surround it (Go), or play a card that permits the capture. What happens next is its own design choice: captured pieces may leave the game for good (chess), return later (backgammon), or defect to the captor (shogi, Reversi). Video games express the same mechanic as the kill count or frag. Capture is the grammar of board-game conflict, and every variant encodes a different theory of what losing a piece means.
+#### Big Gains for You, Big Gains for Enemy
 
-**Hit-or-Miss.** Attacks land or whiff, and the answer is information: Battleship's every splash narrows where the fleet can be. Hit-or-miss systems braid combat with deduction, since each shot is simultaneously an attempt and an experiment, and good players treat the miss as data rather than failure. The mechanic turns attacking into hypothesis testing, which makes it one of games' tidiest demonstrations of inference under uncertainty, playable with paper and a pencil.
+The easy points come at a price: the move that profits you most also strengthens your opponent, as in Othello, where greedy captures hand back the corners, or Risk, where expansion stretches the borders you must then defend. The mechanic punishes naive maximization and rewards thinking a move past the reward. It is a built-in lesson in externalities: in a coupled system, there is no such thing as a gain that touches only you.
 
-**Move-and-Capture.** Capture at its most immediate: move your piece onto theirs and the deed is done, no arithmetic, no dice, as in chess and checkers. The purity matters: because capture is certain, all the game's uncertainty lives in reading intentions and calculating sequences, not in luck. Threats become geometry, visible on the board for anyone skilled enough to see them. It is the mechanic that makes perfect-information strategy possible, and the one most video-game combat quietly abandoned.
+#### Brawling
 
-**Rock-Paper-Scissors.** Options defeat each other in a cycle, no choice is best, each beats one and loses to another, so every decision is a prediction of the opponent's. The playground game is the pure case, and designers embed the same triangle in combat systems to prevent any single strategy from dominating. Cyclical advantage guarantees perpetual tension: mastery means reading people, not solving the system. It is the smallest possible game that cannot be solved, which makes it a perfect first object for studying strategic choice.
+Melee combat with a repertoire: punches, throws, combos, and specials against one opponent or a street full of them, as in Street Fighter II and Double Dragon. Brawling games are rhythm and spacing dressed as violence, since victory lives in frame timing, reach, and reading the opponent's habits. The repertoire matters: a brawler with one attack is a button test, while a brawler with twelve is a conversation. The genre is where video games think hardest about the grammar of physical confrontation.
 
-**Take That.** Direct sabotage as a game verb: steal the resource, force the discard, skip their turn, undo their progress, as Uno and Munchkin cheerfully allow. Take-that mechanics make interaction unmistakable, every attack has an author and a target, which generates table drama, grudges, and alliances of revenge. Designers ration them carefully, since too much turns strategy into mutual demolition. They raise a useful question for any group: how much direct conflict does an activity need to feel alive, and how much can it bear?
+#### Capture / Eliminate
 
-**Tower Defense.** Attackers come in waves along predictable paths; the player places defensive structures to stop them, as in Plants vs. Zombies. Tower defense inverts the usual action game: the player authors a system, then watches it perform, tuning placements between waves. It is engineering as gameplay, complete with budgets, coverage, and bottleneck analysis, and its pleasure is watching a well-designed machine handle load. The mechanic is a ready metaphor for any design-then-test cycle.
+When tokens on the board are strength, taking the opponent's off it is the goal, and the 2019 categories doc catalogs the ways: move onto an occupied space (chess, pachisi), jump over it (draughts), declare an attack resolved by rule or by dice (Stratego, Illuminati), surround it (Go), or play a card that permits the capture. What happens next is its own design choice: captured pieces may leave the game for good (chess), return later (backgammon), or defect to the captor (shogi, Reversi). Video games express the same mechanic as the kill count or frag. Capture is the grammar of board-game conflict, and every variant encodes a different theory of what losing a piece means.
+
+#### Hit-or-Miss
+
+Attacks land or whiff, and the answer is information: Battleship's every splash narrows where the fleet can be. Hit-or-miss systems braid combat with deduction, since each shot is simultaneously an attempt and an experiment, and good players treat the miss as data rather than failure. The mechanic turns attacking into hypothesis testing, which makes it one of games' tidiest demonstrations of inference under uncertainty, playable with paper and a pencil.
+
+#### Move-and-Capture
+
+Capture at its most immediate: move your piece onto theirs and the deed is done, no arithmetic, no dice, as in chess and checkers. The purity matters: because capture is certain, all the game's uncertainty lives in reading intentions and calculating sequences, not in luck. Threats become geometry, visible on the board for anyone skilled enough to see them. It is the mechanic that makes perfect-information strategy possible, and the one most video-game combat quietly abandoned.
+
+#### Rock-Paper-Scissors
+
+Options defeat each other in a cycle, no choice is best, each beats one and loses to another, so every decision is a prediction of the opponent's. The playground game is the pure case, and designers embed the same triangle in combat systems to prevent any single strategy from dominating. Cyclical advantage guarantees perpetual tension: mastery means reading people, not solving the system. It is the smallest possible game that cannot be solved, which makes it a perfect first object for studying strategic choice.
+
+#### Take That
+
+Direct sabotage as a game verb: steal the resource, force the discard, skip their turn, undo their progress, as Uno and Munchkin cheerfully allow. Take-that mechanics make interaction unmistakable, every attack has an author and a target, which generates table drama, grudges, and alliances of revenge. Designers ration them carefully, since too much turns strategy into mutual demolition. They raise a useful question for any group: how much direct conflict does an activity need to feel alive, and how much can it bear?
+
+#### Tower Defense
+
+Attackers come in waves along predictable paths; the player places defensive structures to stop them, as in Plants vs. Zombies. Tower defense inverts the usual action game: the player authors a system, then watches it perform, tuning placements between waves. It is engineering as gameplay, complete with budgets, coverage, and bottleneck analysis, and its pleasure is watching a well-designed machine handle load. The mechanic is a ready metaphor for any design-then-test cycle.
 
 ## Units & Characters
 
-**King Piece.** Lose one special unit and lose the game: the chess king, the flag in Stratego. A king piece concentrates the win condition into a single vulnerable object, which organizes everything else around protection and threat, whole armies become bodyguards and assassins. The mechanic creates built-in drama (check is a sentence everyone understands) and built-in asymmetry of value among otherwise similar pieces. It is the structural heart of chess, and of every game where something must survive.
+#### King Piece
 
-**Multiple Player Pieces.** Many pieces per player, their fates bound together: backgammon's fifteen checkers racing home. Having a population rather than an avatar makes risk distributable, since one piece's capture is a setback, not an ending, and turns each turn into an allocation problem: which of my pieces moves, and which waits? The mechanic introduces portfolio thinking at the board's scale, and it is the structural opposite of the single hero's journey.
+Lose one special unit and lose the game: the chess king, the flag in Stratego. A king piece concentrates the win condition into a single vulnerable object, which organizes everything else around protection and threat, whole armies become bodyguards and assassins. The mechanic creates built-in drama (check is a sentence everyone understands) and built-in asymmetry of value among otherwise similar pieces. It is the structural heart of chess, and of every game where something must survive.
 
-**Non-Player Characters.** Characters the game controls rather than any player: quest-givers, shopkeepers, villains, bystanders. NPCs populate worlds and carry their stories, giving players someone to talk to, work for, and fight against when no human fills the role. Their craft is believability on a budget, a few lines and routines that suggest a life, and their limits (the looped greeting, the forgotten promise) define the uncanny edge of game worlds. Tabletop play solves NPCs with its oldest technology: the game master's voice.
+#### Multiple Player Pieces
 
-**Permadeath.** The dead stay dead: no reload, no respawn, the roguelike's iron law. Permadeath makes every decision carry its full weight, since consequences cannot be undone, and it transforms caution, preparation, and retreat from cowardice into craft. Runs become stories precisely because they can end, and the genre's players grieve characters the way other players grieve save files. The mechanic is games' most serious statement about irreversibility, which is to say, about time.
+Many pieces per player, their fates bound together: backgammon's fifteen checkers racing home. Having a population rather than an avatar makes risk distributable, since one piece's capture is a setback, not an ending, and turns each turn into an allocation problem: which of my pieces moves, and which waits? The mechanic introduces portfolio thinking at the board's scale, and it is the structural opposite of the single hero's journey.
 
-**Protect a Target.** Stay alive and keep something else alive too: Missile Command's cities, the escort mission's fragile charge. Protection mechanics split attention between self and ward, and they make the player's performance legible in someone else's survival, which is both their emotional power and their notorious frustration when the ward is foolish. The design question is the target's agency: a static city, a wandering NPC, or another player each produce a different game. Care, it turns out, is a mechanic.
+#### Non-Player Characters
 
-**Singular Player Piece.** One piece carries all your hopes, usually along a path: the Candy Land gingerbread figure, the pawn that is simply you. A single piece gives the game total identification, the token's fortunes are the player's, undiluted, which is why children's games prefer it. Strategically it is the thinnest possible position, with no coverage, no sacrifice, no reserves. The mechanic is identity at its purest and options at their fewest, a trade every design about one protagonist makes.
+Characters the game controls rather than any player: quest-givers, shopkeepers, villains, bystanders. NPCs populate worlds and carry their stories, giving players someone to talk to, work for, and fight against when no human fills the role. Their craft is believability on a budget, a few lines and routines that suggest a life, and their limits (the looped greeting, the forgotten promise) define the uncanny edge of game worlds. Tabletop play solves NPCs with its oldest technology: the game master's voice.
 
-**Squad.** The player controls several characters who must work together: Syndicate's four agents moving as one mind. Squad mechanics multiply presence, you are in four places, with four specializations, and make positioning and division of labor the core skill. The emotional register changes too, since losses are felt as casualties rather than as a death. The mechanic is management made tactile: one intention distributed across many bodies, with all the coordination costs that implies.
+#### Permadeath
 
-**Unit Protection.** Guard key units through positioning and threat: the screen of pawns, the anti-air umbrella, the bodyguard's interposed body. Protection play is geometry in the service of insurance, since a protected unit is one whose capture costs more than it gains, and it creates layered battle lines where value hides behind expendability. The mechanic rewards thinking in formations rather than pieces, and it encodes a grim arithmetic: protection is always purchased with something cheaper.
+The dead stay dead: no reload, no respawn, the roguelike's iron law. Permadeath makes every decision carry its full weight, since consequences cannot be undone, and it transforms caution, preparation, and retreat from cowardice into craft. Runs become stories precisely because they can end, and the genre's players grieve characters the way other players grieve save files. The mechanic is games' most serious statement about irreversibility, which is to say, about time.
 
-**Unit Stats.** Numbers define each unit: strength, speed, health, range, as in every RPG character sheet and wargame counter. Stats make capability explicit and comparable, so combat becomes calculable and growth becomes visible, the sword that adds two is a legible promise. Statistical units invite optimization, min-maxing is reading the numbers more honestly than the fiction, and they let designers tune balance by decimal. The character sheet is the spreadsheet games taught a generation to love.
+#### Protect a Target
+
+Stay alive and keep something else alive too: Missile Command's cities, the escort mission's fragile charge. Protection mechanics split attention between self and ward, and they make the player's performance legible in someone else's survival, which is both their emotional power and their notorious frustration when the ward is foolish. The design question is the target's agency: a static city, a wandering NPC, or another player each produce a different game. Care, it turns out, is a mechanic.
+
+#### Singular Player Piece
+
+One piece carries all your hopes, usually along a path: the Candy Land gingerbread figure, the pawn that is simply you. A single piece gives the game total identification, the token's fortunes are the player's, undiluted, which is why children's games prefer it. Strategically it is the thinnest possible position, with no coverage, no sacrifice, no reserves. The mechanic is identity at its purest and options at their fewest, a trade every design about one protagonist makes.
+
+#### Squad
+
+The player controls several characters who must work together: Syndicate's four agents moving as one mind. Squad mechanics multiply presence, you are in four places, with four specializations, and make positioning and division of labor the core skill. The emotional register changes too, since losses are felt as casualties rather than as a death. The mechanic is management made tactile: one intention distributed across many bodies, with all the coordination costs that implies.
+
+#### Unit Protection
+
+Guard key units through positioning and threat: the screen of pawns, the anti-air umbrella, the bodyguard's interposed body. Protection play is geometry in the service of insurance, since a protected unit is one whose capture costs more than it gains, and it creates layered battle lines where value hides behind expendability. The mechanic rewards thinking in formations rather than pieces, and it encodes a grim arithmetic: protection is always purchased with something cheaper.
+
+#### Unit Stats
+
+Numbers define each unit: strength, speed, health, range, as in every RPG character sheet and wargame counter. Stats make capability explicit and comparable, so combat becomes calculable and growth becomes visible, the sword that adds two is a legible promise. Statistical units invite optimization, min-maxing is reading the numbers more honestly than the fiction, and they let designers tune balance by decimal. The character sheet is the spreadsheet games taught a generation to love.
 
 ## Player Powers & Asymmetry
 
-**Asymmetric Gameplay.** Different players have different rules, objectives, or capabilities, past the point of mere powers: one side is many and weak, the other one and strong; one builds while the other hunts. Asymmetry abandons the fairness of mirrored sides for the drama of mismatched ones, balancing experiences rather than pieces, and Root is the modern showcase. It demands more learning (each side is its own game) and repays it with situations symmetry cannot produce. Most real conflicts, students will notice, are asymmetric.
+#### Asymmetric Gameplay
 
-**Trait Selection.** Players choose traits that define strengths, weaknesses, and options: the background, the flaw, the specialization picked at creation. Trait selection front-loads identity, since the choices made before play shape every decision after, and it invites players to build toward intended styles, the tank, the diplomat, the gambler. Flaws chosen deliberately are the interesting half, as constraints players elect tend to generate the best stories. Character creation, every RPG player knows, is a game in itself.
+Different players have different rules, objectives, or capabilities, past the point of mere powers: one side is many and weak, the other one and strong; one builds while the other hunts. Asymmetry abandons the fairness of mirrored sides for the drama of mismatched ones, balancing experiences rather than pieces, and Root is the modern showcase. It demands more learning (each side is its own game) and repays it with situations symmetry cannot produce. Most real conflicts, students will notice, are asymmetric.
 
-**Variable Player Powers.** Every player gets a unique ability that bends the rules for them alone: Cosmic Encounter's aliens each break a different law of the game, and Root's factions barely play the same game at all. Variable powers make each seat a different puzzle and each matchup a fresh negotiation of strengths, multiplying replayability combinatorially. The cost is balance, since every power pair must be tested, and the reward is identity: players do not just have strategies, they have characters. Sources also list it as Player Powers.
+#### Trait Selection
+
+Players choose traits that define strengths, weaknesses, and options: the background, the flaw, the specialization picked at creation. Trait selection front-loads identity, since the choices made before play shape every decision after, and it invites players to build toward intended styles, the tank, the diplomat, the gambler. Flaws chosen deliberately are the interesting half, as constraints players elect tend to generate the best stories. Character creation, every RPG player knows, is a game in itself.
+
+#### Variable Player Powers
+
+Every player gets a unique ability that bends the rules for them alone: Cosmic Encounter's aliens each break a different law of the game, and Root's factions barely play the same game at all. Variable powers make each seat a different puzzle and each matchup a fresh negotiation of strengths, multiplying replayability combinatorially. The cost is balance, since every power pair must be tested, and the reward is identity: players do not just have strategies, they have characters. Sources also list it as Player Powers.
 
 ## Social & Negotiation
 
-**Acting.** Players perform: mime the clue, voice the character, act out the behavior, as charades has demanded for centuries. Acting mechanics trade precision for expressiveness, since a performance carries meaning no token can, and they redistribute status at the table, rewarding boldness over calculation. The embarrassment is the point: pushing players past self-consciousness is what welds a group together, which is why acting games open so many parties and workshops.
+#### Acting
 
-**Auction / Bidding.** Competitive bids decide who gets the action, item, or privilege, and the 2019 categories doc notes the two main currencies: pay-what-you-bid in game resources, as in Ra, or bid-as-promise, where the winner must deliver an outcome or suffer a penalty, as in contract bridge. Auctions can crown one winner or order all players into a sequence, often the round's turn order. The auction's genius is that players, not designers, set every price, so valuation itself becomes the skill being tested.
+Players perform: mime the clue, voice the character, act out the behavior, as charades has demanded for centuries. Acting mechanics trade precision for expressiveness, since a performance carries meaning no token can, and they redistribute status at the table, rewarding boldness over calculation. The embarrassment is the point: pushing players past self-consciousness is what welds a group together, which is why acting games open so many parties and workshops.
 
-**Best Fit.** A prompt is laid down and players compete to supply the best answer, with a judge, usually rotating, deciding what best means: Apples to Apples is the template. The mechanic has no objective scoring at all; it is calibrated entirely to the judge's taste, so the skill is modeling another person's sense of humor or judgment. That makes it a disguised empathy exercise, and the party-game industry's most reliable engine of laughter.
+#### Auction / Bidding
 
-**Cooperative Play.** Everyone wins or loses together against the game itself: Pandemic's outbreaks do not care whose turn it is. Co-ops convert competition into coordination, and their characteristic failure mode, the loudest player steering everyone, is itself a lesson in group dynamics. The design must be its own opponent, with escalating systems that press harder as players improve. Sources also list it as Cooperative Game; it is the mechanic classrooms borrow most readily, since a shared enemy builds a team faster than any icebreaker.
+Competitive bids decide who gets the action, item, or privilege, and the 2019 categories doc notes the two main currencies: pay-what-you-bid in game resources, as in Ra, or bid-as-promise, where the winner must deliver an outcome or suffer a penalty, as in contract bridge. Auctions can crown one winner or order all players into a sequence, often the round's turn order. The auction's genius is that players, not designers, set every price, so valuation itself becomes the skill being tested.
 
-**Negotiation.** Deals, alliances, threats, and promises, binding or not, are moves in the game: Diplomacy made betrayal a mechanic, and Catan made haggling one. Negotiation games outsource their action space to language, so anything sayable is playable, and table presence becomes as real a resource as cards or cash. Whether the game enforces promises is the pivotal design choice: enforceable deals create contracts, unenforceable ones create trust, and trust is the most breakable component ever shipped.
+#### Best Fit
 
-**Partnerships.** Fixed teams share a fate: bridge and euchre pair players whose cards and fortunes are bound together. Partnership play adds a channel of constrained communication, conventions, signals, table legal and otherwise, since partners must coordinate without simply telling. Reading your partner becomes as important as reading opponents, and letting a partner down stings worse than losing. It is the mechanic that makes games about the relationship as much as the cards.
+A prompt is laid down and players compete to supply the best answer, with a judge, usually rotating, deciding what best means: Apples to Apples is the template. The mechanic has no objective scoring at all; it is calibrated entirely to the judge's taste, so the skill is modeling another person's sense of humor or judgment. That makes it a disguised empathy exercise, and the party-game industry's most reliable engine of laughter.
 
-**Singing.** A rare mechanic in which players must sing, hum, or perform vocally to meet objectives, found in music party games and the occasional forfeit. Singing raises the social stakes of acting another notch, since the voice feels more exposed than the body. Games that use it buy enormous memorability at the price of excluding the shy, a trade worth noticing in any activity design: the bigger the vulnerability demanded, the stronger the bond and the higher the barrier.
+#### Cooperative Play
 
-**Social Interaction Mechanics.** Rules engineered specifically to force talk, teamwork, or negotiation, beyond what trading or alliances alone produce: mandatory table talk, structured questions, communication limits, shared secrets. The category names a design intention, making the interaction itself the game, rather than any single device. It is the part of game design closest to facilitation, and the mechanics filed here are effectively lesson plans: structures that make a particular kind of conversation unavoidable.
+Everyone wins or loses together against the game itself: Pandemic's outbreaks do not care whose turn it is. Co-ops convert competition into coordination, and their characteristic failure mode, the loudest player steering everyone, is itself a lesson in group dynamics. The design must be its own opponent, with escalating systems that press harder as players improve. Sources also list it as Cooperative Game; it is the mechanic classrooms borrow most readily, since a shared enemy builds a team faster than any icebreaker.
 
-**Team-Based Play.** Teams compete against teams, pooling information, dividing labor, and coordinating strategy against an organized opposition. Team play scales the social texture of games: within the team, cooperation; across teams, rivalry; and at the boundary, questions of role, trust, and sacrifice. It differs from fixed partnerships mainly in scale and structure, and it is the natural container for classroom play, since a team gives every student a stake and a seat.
+#### Negotiation
 
-**Voting.** The group decides by ballot: which rule changes, who is accused, where the expedition goes. Voting converts private judgment into collective action and makes persuasion a mechanic, since the campaign before the vote is the real game, as The Resistance demonstrates nightly. Designs vary the franchise, open or secret ballots, weighted votes, vetoes, and each variation is a small constitution. No other mechanic puts political philosophy on the table so directly.
+Deals, alliances, threats, and promises, binding or not, are moves in the game: Diplomacy made betrayal a mechanic, and Catan made haggling one. Negotiation games outsource their action space to language, so anything sayable is playable, and table presence becomes as real a resource as cards or cash. Whether the game enforces promises is the pivotal design choice: enforceable deals create contracts, unenforceable ones create trust, and trust is the most breakable component ever shipped.
+
+#### Partnerships
+
+Fixed teams share a fate: bridge and euchre pair players whose cards and fortunes are bound together. Partnership play adds a channel of constrained communication, conventions, signals, table legal and otherwise, since partners must coordinate without simply telling. Reading your partner becomes as important as reading opponents, and letting a partner down stings worse than losing. It is the mechanic that makes games about the relationship as much as the cards.
+
+#### Singing
+
+A rare mechanic in which players must sing, hum, or perform vocally to meet objectives, found in music party games and the occasional forfeit. Singing raises the social stakes of acting another notch, since the voice feels more exposed than the body. Games that use it buy enormous memorability at the price of excluding the shy, a trade worth noticing in any activity design: the bigger the vulnerability demanded, the stronger the bond and the higher the barrier.
+
+#### Social Interaction Mechanics
+
+Rules engineered specifically to force talk, teamwork, or negotiation, beyond what trading or alliances alone produce: mandatory table talk, structured questions, communication limits, shared secrets. The category names a design intention, making the interaction itself the game, rather than any single device. It is the part of game design closest to facilitation, and the mechanics filed here are effectively lesson plans: structures that make a particular kind of conversation unavoidable.
+
+#### Team-Based Play
+
+Teams compete against teams, pooling information, dividing labor, and coordinating strategy against an organized opposition. Team play scales the social texture of games: within the team, cooperation; across teams, rivalry; and at the boundary, questions of role, trust, and sacrifice. It differs from fixed partnerships mainly in scale and structure, and it is the natural container for classroom play, since a team gives every student a stake and a seat.
+
+#### Voting
+
+The group decides by ballot: which rule changes, who is accused, where the expedition goes. Voting converts private judgment into collective action and makes persuasion a mechanic, since the campaign before the vote is the real game, as The Resistance demonstrates nightly. Designs vary the franchise, open or secret ballots, weighted votes, vetoes, and each variation is a small constitution. No other mechanic puts political philosophy on the table so directly.
 
 ## Narrative & Role-Play
 
-**Dialogue Tree.** Talking is choosing: conversation offers branching options, and the player picks what to say, as RPGs have done for decades. Dialogue trees make social interaction legible and consequential, each reply a door, and their limits are famous, since the three offered sentences never include the one you meant. The mechanic quietly models rhetoric: tone, information, and relationship managed through discrete choices. It is also a ready classroom form, as any debate scenario can be built as a tree.
+#### Dialogue Tree
 
-**Environmental Storytelling.** The world tells the story without narration: the overturned chair, the child's drawing in the ruin, Gone Home's whole house of inference. Environmental storytelling trusts players to read space as evidence, assembling what happened from what remains, which makes exploration itself an act of interpretation. The craft is arrangement, every object placed is a sentence, and the player's reconstruction is the plot. It is close reading taught through architecture, and museums have been doing it longer than games.
+Talking is choosing: conversation offers branching options, and the player picks what to say, as RPGs have done for decades. Dialogue trees make social interaction legible and consequential, each reply a door, and their limits are famous, since the three offered sentences never include the one you meant. The mechanic quietly models rhetoric: tone, information, and relationship managed through discrete choices. It is also a ready classroom form, as any debate scenario can be built as a tree.
 
-**Modular Narrative.** Story modules recombine for different experiences and endings: scenario decks, branching chapters, encounter sets shuffled into new orders. Modular narrative treats story as a kit of parts, gaining replayability and surprise at the price of a single authored arc, and its craft lies in making any assembly order feel intentional. It is the narrative cousin of the modular board, and a practical model for curriculum design, where units too must land in whatever order the term deals them.
+#### Environmental Storytelling
 
-**Moral Decisions.** Choices carry ethical weight that echoes through story and outcome: save the village or the hostage, take the bribe, report the friend. Moral mechanics work when the dilemma costs something either way and the game remembers, and they fail when goodness is just the better-paying button. At their best they put players inside problems ethics classes can only describe, and the debrief afterward, why did you choose that?, is where the mechanic earns its place in a curriculum.
+The world tells the story without narration: the overturned chair, the child's drawing in the ruin, Gone Home's whole house of inference. Environmental storytelling trusts players to read space as evidence, assembling what happened from what remains, which makes exploration itself an act of interpretation. The craft is arrangement, every object placed is a sentence, and the player's reconstruction is the plot. It is close reading taught through architecture, and museums have been doing it longer than games.
 
-**Narrative Choice & Consequence.** Decisions branch the story with lasting effects and multiple endings: the spared enemy returns, the lie compounds, chapter ten remembers chapter one. Choice-and-consequence design makes players authors of their own throughline and makes replay a question, what would the other path have held? Its craft is making consequences feel caused rather than arbitrary. Sources also list it as Narrative Gameplay and Narrative Choice; in any dress, it is the mechanic that lets games mean what novels mean, differently.
+#### Modular Narrative
 
-**Player-Driven World Building.** Players shape the setting and its history: naming the towns, founding the factions, leaving monuments later players inherit. World-building mechanics distribute authorship, so the fiction belongs to the table rather than to a designer, and persistent multiplayer versions let worlds accrete real histories with real authors. The mechanic trades coherence for ownership, players care fiercely about what they made, which is a bargain teachers will recognize from every successful collaborative project.
+Story modules recombine for different experiences and endings: scenario decks, branching chapters, encounter sets shuffled into new orders. Modular narrative treats story as a kit of parts, gaining replayability and surprise at the price of a single authored arc, and its craft lies in making any assembly order feel intentional. It is the narrative cousin of the modular board, and a practical model for curriculum design, where units too must land in whatever order the term deals them.
 
-**Role-Playing.** Act as a character, and let the performance shape outcomes: the 2019 categories doc traces the arc from early Dungeons and Dragons, where group consensus, a game master's judgment, or dice decided what acting achieved, to later narrativist designs with structured systems that let role-play directly steer the story. The mechanic's radical move is making imagination procedurally consequential, who you pretend to be changes what happens. It is the branch of games closest to theater and to the classroom's own oldest technology, the exercise that begins: suppose you are someone else.
+#### Moral Decisions
 
-**Storytelling.** Players create or carry narrative as part of play: completing tales from prompt cards, narrating their character's choices, improvising the next chapter. Storytelling mechanics make narration a move, judged or scored or simply witnessed, and they shift the game's center of gravity from winning toward authorship. The design challenge is structure, since pure freedom stalls most tables, so good storytelling games ration constraints: a prompt, a timer, a required word. Creativity, they demonstrate, runs best on rails it can leave.
+Choices carry ethical weight that echoes through story and outcome: save the village or the hostage, take the bribe, report the friend. Moral mechanics work when the dilemma costs something either way and the game remembers, and they fail when goodness is just the better-paying button. At their best they put players inside problems ethics classes can only describe, and the debrief afterward, why did you choose that?, is where the mechanic earns its place in a curriculum.
 
-**Time Loop.** The same stretch of time repeats, and knowledge is the only thing that carries across: Outer Wilds and Majora's Mask built masterpieces on the premise. Loop mechanics make the player's understanding the real save file, since the world resets but the mind does not, and they transform failure into research, every doomed run another experiment. The structure is the scientific method as narrative, and its lesson is quietly profound: progress can be entirely a change in the knower.
+#### Narrative Choice & Consequence
+
+Decisions branch the story with lasting effects and multiple endings: the spared enemy returns, the lie compounds, chapter ten remembers chapter one. Choice-and-consequence design makes players authors of their own throughline and makes replay a question, what would the other path have held? Its craft is making consequences feel caused rather than arbitrary. Sources also list it as Narrative Gameplay and Narrative Choice; in any dress, it is the mechanic that lets games mean what novels mean, differently.
+
+#### Player-Driven World Building
+
+Players shape the setting and its history: naming the towns, founding the factions, leaving monuments later players inherit. World-building mechanics distribute authorship, so the fiction belongs to the table rather than to a designer, and persistent multiplayer versions let worlds accrete real histories with real authors. The mechanic trades coherence for ownership, players care fiercely about what they made, which is a bargain teachers will recognize from every successful collaborative project.
+
+#### Role-Playing
+
+Act as a character, and let the performance shape outcomes: the 2019 categories doc traces the arc from early Dungeons and Dragons, where group consensus, a game master's judgment, or dice decided what acting achieved, to later narrativist designs with structured systems that let role-play directly steer the story. The mechanic's radical move is making imagination procedurally consequential, who you pretend to be changes what happens. It is the branch of games closest to theater and to the classroom's own oldest technology, the exercise that begins: suppose you are someone else.
+
+#### Storytelling
+
+Players create or carry narrative as part of play: completing tales from prompt cards, narrating their character's choices, improvising the next chapter. Storytelling mechanics make narration a move, judged or scored or simply witnessed, and they shift the game's center of gravity from winning toward authorship. The design challenge is structure, since pure freedom stalls most tables, so good storytelling games ration constraints: a prompt, a timer, a required word. Creativity, they demonstrate, runs best on rails it can leave.
+
+#### Time Loop
+
+The same stretch of time repeats, and knowledge is the only thing that carries across: Outer Wilds and Majora's Mask built masterpieces on the premise. Loop mechanics make the player's understanding the real save file, since the world resets but the mind does not, and they transform failure into research, every doomed run another experiment. The structure is the scientific method as narrative, and its lesson is quietly profound: progress can be entirely a change in the knower.
 
 ## Puzzle & Pattern
 
-**Block Puzzles.** Standard-size pieces must be arranged or moved just so: Tetris's falling tetrominoes, Sokoban's stubborn crates, Dr. Mario's pills, Connect Four's columns. Block puzzles are geometry under constraint, the pieces are simple, the space is tight, and the order of operations is everything. They produce some of games' purest flow states, since the next move is always visible and the consequences always arrive. The falling-block variant adds time pressure; the pushing variant adds irreversibility and regret.
+#### Block Puzzles
 
-**Escape Room Mechanics.** Chained puzzles under time pressure, solved as a team: the Exit series boxes the experience for tabletops. Escape-room structure sequences discovery, each solution unlocks the next puzzle's components, so progress is narrative and momentum is tangible. The team element is load-bearing: puzzles are sized for parallel work, and the hardest skill is sharing information fast. Educators have noticed, since the format is a lesson plan with a lock on it, and debriefs practically run themselves.
+Standard-size pieces must be arranged or moved just so: Tetris's falling tetrominoes, Sokoban's stubborn crates, Dr. Mario's pills, Connect Four's columns. Block puzzles are geometry under constraint, the pieces are simple, the space is tight, and the order of operations is everything. They produce some of games' purest flow states, since the next move is always visible and the consequences always arrive. The falling-block variant adds time pressure; the pushing variant adds irreversibility and regret.
 
-**Mathematic Calculation.** Arithmetic is part of play: compute the score, the odds, the resource conversion, the damage. Calculation mechanics make number sense a competitive advantage, and they range from gentle (summing dice) to brutal (optimizing exchange rates across five currencies). Games sweeten computation with stakes, players who refuse worksheets happily calculate expected values when treasure depends on it, which is the oldest open secret in mathematics pedagogy.
+#### Escape Room Mechanics
 
-**Pattern Recognition.** Spot the configuration that matters, fast: Set's table of cards hides every valid trio in plain sight. Recognition mechanics reward perceptual learning, the practiced eye literally sees differently, and they level the field between ages and backgrounds in ways calculation games do not. The skill transfers: noticing structure quickly is as useful in a dataset or a text as on a card table, which makes these games honest training disguised as speed contests.
+Chained puzzles under time pressure, solved as a team: the Exit series boxes the experience for tabletops. Escape-room structure sequences discovery, each solution unlocks the next puzzle's components, so progress is narrative and momentum is tangible. The team element is load-bearing: puzzles are sized for parallel work, and the hardest skill is sharing information fast. Educators have noticed, since the format is a lesson plan with a lock on it, and debriefs practically run themselves.
 
-**Push Mole Down, Mole Pops Up.** Every fix creates a new problem: the slide puzzle's freed tile blocks another, Lights Out's toggles relight what you darkened. Whack-a-mole structure makes moves interdependent, so the skill is finding the sequence without side effects, or accepting the side effects in the right order. The mechanic is a working model of constrained systems everywhere, budgets, schedules, codebases, in which local improvement and global progress are different things, and the difference is the whole game.
+#### Mathematic Calculation
 
-**Puzzle Solving.** Puzzles gate progress or grant advantage: solve the riddle, open the door. Embedded puzzles change a game's tempo, pausing action for thought, and they test insight rather than optimization, since a puzzle is solved once where a strategy is executed forever. The designer's bargain is that the stuck player is the engaged player, up to the moment they quit, so hint systems and multiple solutions are the craft. Puzzles are the schoolwork games smuggle in and players thank them for.
+Arithmetic is part of play: compute the score, the odds, the resource conversion, the damage. Calculation mechanics make number sense a competitive advantage, and they range from gentle (summing dice) to brutal (optimizing exchange rates across five currencies). Games sweeten computation with stakes, players who refuse worksheets happily calculate expected values when treasure depends on it, which is the oldest open secret in mathematics pedagogy.
 
-**Repeat Pattern.** Echo the demonstrated sequence exactly: Simon's lights, Dance Dance Revolution's arrows. Repetition mechanics test encoding and reproduction under pressure, and they escalate beautifully, since the game can always add one more step. Mastery looks like effortlessness, the pattern flowing through hands or feet without conscious translation, which makes these games visible demonstrations of how practice converts attention into automaticity. Every music teacher already knows this mechanic by heart.
+#### Pattern Recognition
 
-**Sequence Finding.** Hidden orders and patterns reward the player who notices them: the repeating cycle in the deck, the rhythm in the opponent's choices, the sequence the game never announces. Unlike pattern recognition's visible configurations, sequence finding is detection over time, building a hypothesis from instances and betting on its continuation. It is inductive reasoning as play, and the delight it produces, the moment the pattern clicks, is the same delight research runs on.
+Spot the configuration that matters, fast: Set's table of cards hides every valid trio in plain sight. Recognition mechanics reward perceptual learning, the practiced eye literally sees differently, and they level the field between ages and backgrounds in ways calculation games do not. The skill transfers: noticing structure quickly is as useful in a dataset or a text as on a card table, which makes these games honest training disguised as speed contests.
 
-**Spatial Alignment.** Lining pieces up in space scores or wins: tic-tac-toe's three in a row, Connect Four's gravity-fed diagonals. Alignment games are races to complete a configuration while denying the opponent theirs, so every move is both construction and blockade. The pattern is simple enough for children and deep enough for solved-game theory, which makes alignment the standard first example in any study of strategy: minimal rules, genuine foresight, visible threats.
+#### Push Mole Down, Mole Pops Up
 
-**Spatial Reasoning.** Think and build in two or three dimensions: rotate the piece mentally before placing it, see the shape hiding in the gap, visualize the structure before it exists. Spatial reasoning mechanics make geometry the skill itself rather than the setting, from packing puzzles to 3D construction. They exercise a form of intelligence school often underserves, and they are the games where the quiet student suddenly dominates, a reminder that aptitude has more axes than one.
+Every fix creates a new problem: the slide puzzle's freed tile blocks another, Lights Out's toggles relight what you darkened. Whack-a-mole structure makes moves interdependent, so the skill is finding the sequence without side effects, or accepting the side effects in the right order. The mechanic is a working model of constrained systems everywhere, budgets, schedules, codebases, in which local improvement and global progress are different things, and the difference is the whole game.
 
-**Trivia.** Real-world knowledge wins: the capital, the batting average, the one-hit wonder, as Trivial Pursuit institutionalized. Trivia mechanics import the world into the game wholesale, so the designer's craft lives in category balance and question difficulty rather than systems. They flatter memory and breadth, create instant team roles (the sports one, the history one), and demonstrate a truth worth discussing: what a trivia game counts as common knowledge is a portrait of who it imagines playing.
+#### Puzzle Solving
 
-**Uncountable Number of Possible Paths.** Most games offer a few obvious options; these offer thousands, and the best ordering is never apparent: Sokoban's push sequences, Flood It's cascades, the traveling salesman's routes. The mechanic makes combinatorial explosion playable, since players feel the search space widen with every choice, and it teaches heuristics by necessity, because brute force is hopeless. It is the game form of every real planning problem, where the enemy is not an opponent but the sheer number of ways to proceed.
+Puzzles gate progress or grant advantage: solve the riddle, open the door. Embedded puzzles change a game's tempo, pausing action for thought, and they test insight rather than optimization, since a puzzle is solved once where a strategy is executed forever. The designer's bargain is that the stuck player is the engaged player, up to the moment they quit, so hint systems and multiple solutions are the craft. Puzzles are the schoolwork games smuggle in and players thank them for.
 
-**Word Game.** Build, find, or guess words: Scrabble's tiles, Wordle's daily grid, the whole crossword tradition. Word games make vocabulary a playing field and spelling a strategy, and the best of them, like Scrabble, braid language with spatial scoring so the lexicon meets the board. They are the most widely accepted of all games, played by people who insist they do not play games, which makes them the gentlest possible gateway into thinking about mechanics at all.
+#### Repeat Pattern
+
+Echo the demonstrated sequence exactly: Simon's lights, Dance Dance Revolution's arrows. Repetition mechanics test encoding and reproduction under pressure, and they escalate beautifully, since the game can always add one more step. Mastery looks like effortlessness, the pattern flowing through hands or feet without conscious translation, which makes these games visible demonstrations of how practice converts attention into automaticity. Every music teacher already knows this mechanic by heart.
+
+#### Sequence Finding
+
+Hidden orders and patterns reward the player who notices them: the repeating cycle in the deck, the rhythm in the opponent's choices, the sequence the game never announces. Unlike pattern recognition's visible configurations, sequence finding is detection over time, building a hypothesis from instances and betting on its continuation. It is inductive reasoning as play, and the delight it produces, the moment the pattern clicks, is the same delight research runs on.
+
+#### Spatial Alignment
+
+Lining pieces up in space scores or wins: tic-tac-toe's three in a row, Connect Four's gravity-fed diagonals. Alignment games are races to complete a configuration while denying the opponent theirs, so every move is both construction and blockade. The pattern is simple enough for children and deep enough for solved-game theory, which makes alignment the standard first example in any study of strategy: minimal rules, genuine foresight, visible threats.
+
+#### Spatial Reasoning
+
+Think and build in two or three dimensions: rotate the piece mentally before placing it, see the shape hiding in the gap, visualize the structure before it exists. Spatial reasoning mechanics make geometry the skill itself rather than the setting, from packing puzzles to 3D construction. They exercise a form of intelligence school often underserves, and they are the games where the quiet student suddenly dominates, a reminder that aptitude has more axes than one.
+
+#### Trivia
+
+Real-world knowledge wins: the capital, the batting average, the one-hit wonder, as Trivial Pursuit institutionalized. Trivia mechanics import the world into the game wholesale, so the designer's craft lives in category balance and question difficulty rather than systems. They flatter memory and breadth, create instant team roles (the sports one, the history one), and demonstrate a truth worth discussing: what a trivia game counts as common knowledge is a portrait of who it imagines playing.
+
+#### Uncountable Number of Possible Paths
+
+Most games offer a few obvious options; these offer thousands, and the best ordering is never apparent: Sokoban's push sequences, Flood It's cascades, the traveling salesman's routes. The mechanic makes combinatorial explosion playable, since players feel the search space widen with every choice, and it teaches heuristics by necessity, because brute force is hopeless. It is the game form of every real planning problem, where the enemy is not an opponent but the sheer number of ways to proceed.
+
+#### Word Game
+
+Build, find, or guess words: Scrabble's tiles, Wordle's daily grid, the whole crossword tradition. Word games make vocabulary a playing field and spelling a strategy, and the best of them, like Scrabble, braid language with spatial scoring so the lexicon meets the board. They are the most widely accepted of all games, played by people who insist they do not play games, which makes them the gentlest possible gateway into thinking about mechanics at all.
 
 ## Challenge & Difficulty
 
-**Avoiding Unkillable Objects.** Some hazards cannot be destroyed or moved, only dodged: the spinning blade, the patrolling flame, the wall of spikes. Unlike enemies, unkillable objects admit no counterplay except positioning, so they function as moving architecture, and the player's relationship to them is pure navigation. Designers use them to choreograph movement, forcing routes and rhythms the player must learn. They are the video-game descendant of the obstacle course, and the honest name for every problem that must be routed around rather than solved.
+#### Avoiding Unkillable Objects
 
-**Back and Forth.** The same task passes between players until someone cracks: return the volley, top the word, match the bid, with a penalty for the one who fails. The rally structure builds tension through pure repetition, each successful return raising the stakes of the next, and it needs no board, no components, and no explanation. From tennis to rap battles to classroom vocabulary duels, it is the oldest competitive structure there is: take turns until someone cannot.
+Some hazards cannot be destroyed or moved, only dodged: the spinning blade, the patrolling flame, the wall of spikes. Unlike enemies, unkillable objects admit no counterplay except positioning, so they function as moving architecture, and the player's relationship to them is pure navigation. Designers use them to choreograph movement, forcing routes and rhythms the player must learn. They are the video-game descendant of the obstacle course, and the honest name for every problem that must be routed around rather than solved.
 
-**Bullet Hell.** Threats that are trivial one at a time arrive in overwhelming numbers: the screen fills with patterned fire, and survival means finding the moving gap. Bullet hell converts combat into choreography, since the patterns are authored and learnable, and mastery looks like dancing through the impossible. The genre demonstrates a deep design truth: quantity is its own quality, and difficulty can be built from ease multiplied. Zombie hordes run on the same arithmetic at lower speed.
+#### Back and Forth
 
-**Cut Off One Head, Two Grow Back.** Necessary progress makes things harder: shooting the asteroid splits it into more asteroids. The hydra mechanic punishes the only path forward, so players must manage the consequences of success itself, choosing when and where to create the problems progress requires. It differs from whack-a-mole structure in that the cost is unavoidable, built into advancement. It is games' sharpest comment on unintended consequences: sometimes the mess is not a mistake but the price of the deed.
+The same task passes between players until someone cracks: return the volley, top the word, match the bid, with a penalty for the one who fails. The rally structure builds tension through pure repetition, each successful return raising the stakes of the next, and it needs no board, no components, and no explanation. From tennis to rap battles to classroom vocabulary duels, it is the oldest competitive structure there is: take turns until someone cannot.
 
-**Difficulty Settings.** Players choose how hard or long the game will be: easy, normal, brutal, or dials finer than that. Difficulty settings admit that one calibration cannot fit all players, and they hand the flow channel's controls to the player, trading designer authority for accessibility. Cooperative games use them to let the same box challenge novices and veterans. The mechanic's classroom translation is differentiation, and its design debates (does easy mode cheapen mastery?) echo education's own.
+#### Bullet Hell
 
-**Game Keeps Getting Harder Until You Die.** Endless play with rising difficulty: Tetris speeds up until no reflex can keep pace. The escalating version of the no-win-state game guarantees not just an end but an overwhelming one, and the design's elegance is that challenge is calibrated automatically, every player, whatever their skill, ends at their own limit. The mechanic produces a pure measure of mastery (how far before the inevitable) and a strangely honest dramatic arc: things get harder until they get you.
+Threats that are trivial one at a time arrive in overwhelming numbers: the screen fills with patterned fire, and survival means finding the moving gap. Bullet hell converts combat into choreography, since the patterns are authored and learnable, and mastery looks like dancing through the impossible. The genre demonstrates a deep design truth: quantity is its own quality, and difficulty can be built from ease multiplied. Zombie hordes run on the same arithmetic at lower speed.
 
-**Game Repeats Until You Die.** No victory condition exists: the game continues, or repeats, until the player falls, as in Nibbles, Minesweeper streaks, and endless solitaire. Removing the win state changes the question from can you finish to how long can you last, making every run a high-score attempt and every end a death. The structure is ancient arcade economics, one more quarter, reborn as the endless runner. It reframes success as persistence, which is worth noticing: some systems are designed so that everyone loses eventually.
+#### Cut Off One Head, Two Grow Back
 
-**Instant Death.** One touch kills: spikes, bottomless pits, the laser grid. Instant death makes the stakes of a mistake absolute, which concentrates attention wonderfully and punishes it brutally, and its fairness depends entirely on legibility, players accept dying to what they could see coming. Paired with quick restarts it produces the learn-by-dying loop of hard platformers; paired with slow ones it produces rage. It is difficulty at its most honest: the rule is visible, the consequence immediate.
+Necessary progress makes things harder: shooting the asteroid splits it into more asteroids. The hydra mechanic punishes the only path forward, so players must manage the consequences of success itself, choosing when and where to create the problems progress requires. It differs from whack-a-mole structure in that the cost is unavoidable, built into advancement. It is games' sharpest comment on unintended consequences: sometimes the mess is not a mistake but the price of the deed.
 
-**Spinning Plates.** Attention must be split across simultaneous objectives that deplete at different rates: Diner Dash's tables, Rampart's walls and cannons. Plate-spinning mechanics test scheduling under pressure, the skill is the scan-and-triage loop, always serving the neediest plate, and failure cascades, since each neglected objective steals time from the rest. It is the mechanic that most resembles a working day, which is either why it is compelling or why it is exhausting, depending on the player.
+#### Difficulty Settings
 
-**Switch Modes.** Survival requires constantly toggling between states: Ikaruga's black and white polarity, Pac-Man's hunted-then-hunter rhythm after a power pellet. Mode-switching mechanics demand cognitive flexibility, the rules invert and the player's reading of the whole screen must invert with them, and they punish the inertia of staying in yesterday's mode. The design lesson is that a single binary switch can double a game's depth, and the human lesson is how expensive task-switching actually is.
+Players choose how hard or long the game will be: easy, normal, brutal, or dials finer than that. Difficulty settings admit that one calibration cannot fit all players, and they hand the flow channel's controls to the player, trading designer authority for accessibility. Cooperative games use them to let the same box challenge novices and veterans. The mechanic's classroom translation is differentiation, and its design debates (does easy mode cheapen mastery?) echo education's own.
 
-**Three Strikes.** A budget of lives: mistakes spend them, and the last one ends the game, as every arcade cabinet taught. Lives convert failure from verdict into expenditure, so players can gamble, experiment, and recover, and the shrinking stock gives the whole session a visible arc of mortality. The mechanic is forgiveness with a meter on it, and its calibration, how many strikes, what restores one, is one of the quietest ways a design tells players how kind it intends to be.
+#### Game Keeps Getting Harder Until You Die
+
+Endless play with rising difficulty: Tetris speeds up until no reflex can keep pace. The escalating version of the no-win-state game guarantees not just an end but an overwhelming one, and the design's elegance is that challenge is calibrated automatically, every player, whatever their skill, ends at their own limit. The mechanic produces a pure measure of mastery (how far before the inevitable) and a strangely honest dramatic arc: things get harder until they get you.
+
+#### Game Repeats Until You Die
+
+No victory condition exists: the game continues, or repeats, until the player falls, as in Nibbles, Minesweeper streaks, and endless solitaire. Removing the win state changes the question from can you finish to how long can you last, making every run a high-score attempt and every end a death. The structure is ancient arcade economics, one more quarter, reborn as the endless runner. It reframes success as persistence, which is worth noticing: some systems are designed so that everyone loses eventually.
+
+#### Instant Death
+
+One touch kills: spikes, bottomless pits, the laser grid. Instant death makes the stakes of a mistake absolute, which concentrates attention wonderfully and punishes it brutally, and its fairness depends entirely on legibility, players accept dying to what they could see coming. Paired with quick restarts it produces the learn-by-dying loop of hard platformers; paired with slow ones it produces rage. It is difficulty at its most honest: the rule is visible, the consequence immediate.
+
+#### Spinning Plates
+
+Attention must be split across simultaneous objectives that deplete at different rates: Diner Dash's tables, Rampart's walls and cannons. Plate-spinning mechanics test scheduling under pressure, the skill is the scan-and-triage loop, always serving the neediest plate, and failure cascades, since each neglected objective steals time from the rest. It is the mechanic that most resembles a working day, which is either why it is compelling or why it is exhausting, depending on the player.
+
+#### Switch Modes
+
+Survival requires constantly toggling between states: Ikaruga's black and white polarity, Pac-Man's hunted-then-hunter rhythm after a power pellet. Mode-switching mechanics demand cognitive flexibility, the rules invert and the player's reading of the whole screen must invert with them, and they punish the inertia of staying in yesterday's mode. The design lesson is that a single binary switch can double a game's depth, and the human lesson is how expensive task-switching actually is.
+
+#### Three Strikes
+
+A budget of lives: mistakes spend them, and the last one ends the game, as every arcade cabinet taught. Lives convert failure from verdict into expenditure, so players can gamble, experiment, and recover, and the shrinking stock gives the whole session a visible arc of mortality. The mechanic is forgiveness with a meter on it, and its calibration, how many strikes, what restores one, is one of the quietest ways a design tells players how kind it intends to be.
 
 ## Physical & Dexterity
 
-**Dexterity.** Flick, stack, balance, or aim: the body is the controller, as in Jenga's trembling tower and Operation's buzzing tweezers. Dexterity mechanics make physical skill the resource, immune to calculation and visible to everyone watching, which is why these games draw crowds. They level intellectual hierarchies instantly, the strategist's plans mean nothing with shaky hands, and create their drama in real space rather than on any board. Sources also list the family as Physical Feats and Physical Dexterity Challenges.
+#### Dexterity
 
-**Mouse Dexterity.** Precise pointer movement under pressure: trace the path, slice the fruit, thread the gap without a wobble. The mechanic is notable because the mouse is usually exempt from skill demands, reserved for menus and aiming, so games like Fruit Ninja's desktop cousins repurpose an everyday tool as a test of motor control. It often combines with forced movement or unkillable hazards. The broader lesson is that any input device hides a dexterity game if a designer chooses to find it.
+Flick, stack, balance, or aim: the body is the controller, as in Jenga's trembling tower and Operation's buzzing tweezers. Dexterity mechanics make physical skill the resource, immune to calculation and visible to everyone watching, which is why these games draw crowds. They level intellectual hierarchies instantly, the strategist's plans mean nothing with shaky hands, and create their drama in real space rather than on any board. Sources also list the family as Physical Feats and Physical Dexterity Challenges.
 
-**Reflexes.** First to react wins: the slap on the jack, the grab for the last spoon. Reflex mechanics compress competition into milliseconds, testing recognition speed rather than deliberation, and they produce the table's loudest moments, since everyone sees the same trigger and lunges. The design is all in the trigger's legibility, a fair reflex game shows everyone the same signal at the same instant. Spoons and Slapjack remain the undefeated classics of the form.
+#### Mouse Dexterity
 
-**Stacking and Balancing.** Precarious construction punishes shaky hands: Jenga's whole game is a tower daring you to touch it. Stacking mechanics put physics in charge of judgment, since the tower does not negotiate, and they build tension mechanically, as every removed block makes the structure objectively worse. The collapse is the only scoring anyone needs. As a design lesson it is perfect economy: one rule, one component set, and gravity does all the rest of the work.
+Precise pointer movement under pressure: trace the path, slice the fruit, thread the gap without a wobble. The mechanic is notable because the mouse is usually exempt from skill demands, reserved for menus and aiming, so games like Fruit Ninja's desktop cousins repurpose an everyday tool as a test of motor control. It often combines with forced movement or unkillable hazards. The broader lesson is that any input device hides a dexterity game if a designer chooses to find it.
+
+#### Reflexes
+
+First to react wins: the slap on the jack, the grab for the last spoon. Reflex mechanics compress competition into milliseconds, testing recognition speed rather than deliberation, and they produce the table's loudest moments, since everyone sees the same trigger and lunges. The design is all in the trigger's legibility, a fair reflex game shows everyone the same signal at the same instant. Spoons and Slapjack remain the undefeated classics of the form.
+
+#### Stacking and Balancing
+
+Precarious construction punishes shaky hands: Jenga's whole game is a tower daring you to touch it. Stacking mechanics put physics in charge of judgment, since the tower does not negotiate, and they build tension mechanically, as every removed block makes the structure objectively worse. The collapse is the only scoring anyone needs. As a design lesson it is perfect economy: one rule, one component set, and gravity does all the rest of the work.
 
 ## Meta & Structure
 
-**Cross-Platform Play.** One game world across consoles, PCs, and phones: Fortnite made it an expectation. Cross-platform play is infrastructure rather than rules, but it reshapes the social fact of a game, since friends play together regardless of hardware, and it forces design questions about fairness between control schemes. Its inclusion in mechanic lists is a useful provocation: the boundaries of a game include its access conditions, and who can join is as designed as what they do after joining.
+#### Cross-Platform Play
 
-**Crowdfunding.** Backers unlock content through funding milestones: stretch goals add miniatures, modes, and whole expansions before the game exists. The source list itself flags this as a meta-game element rather than a mechanic per se, and that is why it earns its row: the campaign is a designed, playable system with progress bars, collective goals, and rewards, played by the audience about the game. It marks how far design thinking now extends past the box, into the funding, the community, and the wait.
+One game world across consoles, PCs, and phones: Fortnite made it an expectation. Cross-platform play is infrastructure rather than rules, but it reshapes the social fact of a game, since friends play together regardless of hardware, and it forces design questions about fairness between control schemes. Its inclusion in mechanic lists is a useful provocation: the boundaries of a game include its access conditions, and who can join is as designed as what they do after joining.
 
-**Legacy.** The game permanently changes across sessions: stickers alter the board, cards are torn, rules accrete, as Pandemic Legacy and Risk Legacy pioneered. Legacy design gives a game a biography, since this copy is now yours alone, marked by your group's choices, and it borrows serialized television's engine: consequences that persist and a story that cannot be rewound. Sources also list it as Legacy Game and Legacy Mechanic. The box becomes a campaign diary, and finishing one is strangely moving.
+#### Crowdfunding
 
-**Multi-Layered Interaction.** Several interlocking systems demand balanced attention at once: the economy feeds the military that guards the economy, while diplomacy taxes both. Multi-layer design produces the grand-strategy feeling of never having enough attention for every front, and its skill is prioritization across systems rather than mastery of one. The layers must genuinely touch, since parallel mini-games do not count. It is the mechanic that models complexity honestly: everything connected, nothing optional, trade-offs all the way down.
+Backers unlock content through funding milestones: stretch goals add miniatures, modes, and whole expansions before the game exists. The source list itself flags this as a meta-game element rather than a mechanic per se, and that is why it earns its row: the campaign is a designed, playable system with progress bars, collective goals, and rewards, played by the audience about the game. It marks how far design thinking now extends past the box, into the funding, the community, and the wait.
 
-**Procedural Generation.** Levels, maps, or challenges are generated fresh by rules each run: Minecraft's endless terrain, the roguelike's never-repeated dungeon. Procedural generation trades authored moments for infinite variety, betting that rules can manufacture surprise reliably, and its craft is constraining randomness until output feels designed. For players it means no walkthrough can save you, only understanding. The mechanic is also a standing demonstration that systems can be authors, a thought worth sitting with in any creative discipline.
+#### Legacy
 
-**Simulation.** The game mirrors a real activity or system to be lived in, managed, or examined: the flight simulator, the farm, the city budget. Simulations promise insight through inhabitation, since playing a system teaches its pressures faster than reading about it, and their craft is choosing what to model faithfully and what to compress. Every simulation is an argument about how its subject works, which makes the genre pedagogically potent and ideologically interesting: the model's assumptions are the lesson, visible or not.
+The game permanently changes across sessions: stickers alter the board, cards are torn, rules accrete, as Pandemic Legacy and Risk Legacy pioneered. Legacy design gives a game a biography, since this copy is now yours alone, marked by your group's choices, and it borrows serialized television's engine: consequences that persist and a story that cannot be rewound. Sources also list it as Legacy Game and Legacy Mechanic. The box becomes a campaign diary, and finishing one is strangely moving.
 
-**Solitaire.** Playable by one: the patience games, the solo modes, the puzzle-like designs that need no opponent. Solitaire mechanics replace the rival with the system itself, so the game must generate its own resistance through randomness, efficiency puzzles, or automated opponents. Solo play reframes what games are for, less contest than practice, meditation, or problem set, and the pandemic-era boom in solo modes made the once-apologetic single-player rulebook page a standard feature.
+#### Multi-Layered Interaction
 
-**Spin-Off Game.** A reskin or rule-tweak of an existing game: the licensed Monopoly, the themed Uno, the house variant grown respectable. Spin-offs demonstrate how separable a game's mechanics are from its dressing, since the same engine wears a hundred movie posters, and comparing versions is a ready-made exercise in distinguishing structure from theme. The category also includes genuine evolution, as small rule changes can produce meaningfully new games, which is how most of game history actually happened.
+Several interlocking systems demand balanced attention at once: the economy feeds the military that guards the economy, while diplomacy taxes both. Multi-layer design produces the grand-strategy feeling of never having enough attention for every front, and its skill is prioritization across systems rather than mastery of one. The layers must genuinely touch, since parallel mini-games do not count. It is the mechanic that models complexity honestly: everything connected, nothing optional, trade-offs all the way down.
 
-**Strategy.** Planning, tactics, and long-horizon thinking: less a discrete mechanic than the quality other mechanics produce, and the source lists include it as such. Keeping the row is useful for exactly that conversation: strategy emerges where choices interlock over time, where information rewards study, and where present sacrifice buys future position. Asking which mechanics on this table generate strategy, and which merely decorate it, is one of the better discussion prompts this whole collection affords.
+#### Procedural Generation
+
+Levels, maps, or challenges are generated fresh by rules each run: Minecraft's endless terrain, the roguelike's never-repeated dungeon. Procedural generation trades authored moments for infinite variety, betting that rules can manufacture surprise reliably, and its craft is constraining randomness until output feels designed. For players it means no walkthrough can save you, only understanding. The mechanic is also a standing demonstration that systems can be authors, a thought worth sitting with in any creative discipline.
+
+#### Simulation
+
+The game mirrors a real activity or system to be lived in, managed, or examined: the flight simulator, the farm, the city budget. Simulations promise insight through inhabitation, since playing a system teaches its pressures faster than reading about it, and their craft is choosing what to model faithfully and what to compress. Every simulation is an argument about how its subject works, which makes the genre pedagogically potent and ideologically interesting: the model's assumptions are the lesson, visible or not.
+
+#### Solitaire
+
+Playable by one: the patience games, the solo modes, the puzzle-like designs that need no opponent. Solitaire mechanics replace the rival with the system itself, so the game must generate its own resistance through randomness, efficiency puzzles, or automated opponents. Solo play reframes what games are for, less contest than practice, meditation, or problem set, and the pandemic-era boom in solo modes made the once-apologetic single-player rulebook page a standard feature.
+
+#### Spin-Off Game
+
+A reskin or rule-tweak of an existing game: the licensed Monopoly, the themed Uno, the house variant grown respectable. Spin-offs demonstrate how separable a game's mechanics are from its dressing, since the same engine wears a hundred movie posters, and comparing versions is a ready-made exercise in distinguishing structure from theme. The category also includes genuine evolution, as small rule changes can produce meaningfully new games, which is how most of game history actually happened.
+
+#### Strategy
+
+Planning, tactics, and long-horizon thinking: less a discrete mechanic than the quality other mechanics produce, and the source lists include it as such. Keeping the row is useful for exactly that conversation: strategy emerges where choices interlock over time, where information rewards study, and where present sacrifice buys future position. Asking which mechanics on this table generate strategy, and which merely decorate it, is one of the better discussion prompts this whole collection affords.

@@ -67,7 +67,7 @@ a.tile:hover strong { color: var(--accent); }
 .prose h1, .prose h2, .prose h3, .prose h4 { line-height: 1.2; letter-spacing: -.035em; scroll-margin-top: 30px; }
 .prose h2 { margin: 2em 0 .7em; font-size: 28px; }
 .prose h3 { margin: 1.7em 0 .6em; font-size: 21px; }
-.prose h4 { margin: 1.5em 0 .5em; font-size: 17px; }
+.prose h4 { margin: 1.4em 0 .3em; font-size: 17px; font-weight: 900; }
 .prose a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .prose a:hover { text-decoration-thickness: 2px; }
 .prose ul, .prose ol { padding-left: 1.4em; }

@@ -10,4 +10,4 @@ order: 25
 
 Nick Dyer-Witheford and Greig de Peuter, "Empire@Play: Virtual Games and Global Capitalism," *CTheory* (2009).
 
-**Turn it.** What does a 4X game train you to be good at? Where could a game offer the "exodus"?
+Dyer-Witheford and de Peuter argue that video games are the signature media of global capitalism. They are made by its industries and train players in its habits: competition, accumulation, management. Games can also imagine ways out of that system, which they call exodus.

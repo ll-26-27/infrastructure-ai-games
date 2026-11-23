@@ -10,4 +10,4 @@ order: 20
 
 Mary Flanagan, interview, *American Journal of Play* 15, no. 2 (2023), p. 127.
 
-**Turn it.** Play for ten minutes without stopping, then write down what the game made you want.
+Flanagan's critical play means playing a game fully while staying aware of what it is doing to you and what values it carries. It is both immersion and reflection at once, and she treats it as a skill that improves with practice.

@@ -10,4 +10,4 @@ order: 22
 
 Nick Bostrom, "Ethical Issues in Advanced Artificial Intelligence" (2003), section 2, nickbostrom.com/ethics/ai.
 
-**Turn it.** Put this card next to Winner's. Is the paperclip maximizer an autonomous technology?
+Bostrom's thought experiment: a superintelligent AI could have a goal that seems trivial to us, like making paperclips, and still pursue it with total commitment. Intelligence and goals are separate, so being smart doesn't make a system want sensible things. And a system with any fixed goal has reason to resist being changed or switched off.

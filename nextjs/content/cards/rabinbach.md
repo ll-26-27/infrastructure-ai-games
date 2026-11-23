@@ -6,8 +6,6 @@ links: [t-rabinbach, r-rabinbach-2018, c-human-motor, labor-allocation]
 order: 9
 ---
 
-> *Write the quote here, from your reading, with its page.*
-
 Anson Rabinbach, "From Mimetic Machines to Digital Organisms: The Transformation of the Human Motor," in *The Eclipse of the Utopias of Labor* (Fordham University Press, 2018), pp. 1–27.
 
-**Turn it.** This card has no quote yet. From your reading for today, copy one sentence about the human motor. Then look at a game where you assign workers to jobs: what does it count about a worker?
+Rabinbach traces the idea of the human motor: the nineteenth-century science of work that imagined the body as a machine turning energy into labor, to be measured, optimized and protected from fatigue. This chapter follows that idea forward, from mimetic machines to digital organisms.

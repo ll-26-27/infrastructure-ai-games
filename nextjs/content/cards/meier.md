@@ -10,4 +10,4 @@ order: 23
 
 Sid Meier, GDC 2012, as reported by Leigh Alexander, *Game Developer*, March 7, 2012.
 
-**Turn it.** What makes a decision interesting? Find one decision in an infrastructure from the course that would be interesting in a game, and one that never could be.
+Meier, the designer of Civilization, defines a good game as a series of interesting decisions. A decision is interesting when there's no obvious right answer and the choice matters for what happens next.

@@ -10,4 +10,4 @@ order: 4
 
 Nafis Hasan, "'Slow Violence' and Vacant Citizenship: The Excesses of India's Digital Governance," in *Overload, Creep, Excess: An Internet From India* (Institute of Network Cultures, 2022), p. 153.
 
-**Turn it.** Games are built on things happening. How would you make a mechanic out of waiting, out of limbo, without making it exciting?
+Hasan studies people in India whose official records (identity cards, welfare databases) are wrong. Fixing the record doesn't happen as a dramatic crisis. It happens as long periods of waiting and limbo, during which people are cut off from benefits and relationships. The harm is slow and quiet, which is why he calls it slow violence.

@@ -12,6 +12,7 @@ export const sections = [
   { slug: "gallery", title: "Gallery", short: "Gallery", copy: "Games to know before you build, and what each one has you do." },
   { slug: "stories", title: "Novels and films", short: "Stories", copy: "Stories about a takeover, and how the takeover works in each." },
   { slug: "graphs", title: "Graphs and cards", short: "Graphs", copy: "The course as a map of ideas, games as a map of mechanics, and where the two touch." },
+  { slug: "cards", title: "Ideas", short: "Ideas", copy: "Thinkers from the course and from game studies: a quotation and a short summary of each idea." },
   { slug: "game", title: "The game", short: "Game", copy: "Small playable mechanics about AI and the people it works through, for you to change and combine." },
   { slug: "timeline", title: "Timeline", short: "Timeline", copy: "A timeline that ends on the day of the workshop." },
 ];

@@ -10,4 +10,4 @@ order: 18
 
 McKenzie Wark, *GAM3R 7H30RY*, version 1.1 (Institute for the Future of the Book, 2006), card 068, on *Civilization III*.
 
-**Turn it.** Wark's next line is about the database: "Gamespace turns descriptions into a database, and storyline into navigation" (card 069). Put this card next to Manovich's.
+Wark argues that a game like Civilization is not a story about history (an allegory) but a set of rules about how the world can be gamed, which Wark calls an allegorithm. Playing it teaches the logic of gamespace, a world turned into a database of resources to be optimized.

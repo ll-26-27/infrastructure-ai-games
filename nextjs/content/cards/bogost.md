@@ -10,4 +10,4 @@ order: 10
 
 Ian Bogost, "The Rhetoric of Video Games," in Katie Salen, ed., *The Ecology of Games* (MIT Press, 2008), p. 125.
 
-**Turn it.** Describe a game you know without its story or its graphics, only what it makes you do. What argument is left?
+Bogost argues that games persuade through their rules and processes, not only through words or pictures. What a game makes you do over and over is itself an argument about how the world works. He calls this procedural rhetoric.

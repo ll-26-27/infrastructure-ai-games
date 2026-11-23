@@ -10,4 +10,4 @@ order: 11
 
 Jesse Schell, "The Lens of The Elemental Tetrad," Lens #7 in *The Art of Game Design* (2008), from his Deck of Lenses (deck.artofgamedesign.com).
 
-**Turn it.** Story and aesthetics are what we usually talk about. Pick a game and spend five minutes talking only about its mechanics.
+Schell's elemental tetrad says every game is made of four kinds of element: mechanics (the rules), story (the events), aesthetics (how it looks, sounds and feels) and technology (what makes it possible). A designer should use all four and make them support each other.

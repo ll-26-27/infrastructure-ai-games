@@ -10,4 +10,4 @@ order: 5
 
 Graham M. Jones, "Categorize, Recategorize, Repeat," in *Experimenting with Ethnography* (Duke University Press, 2021), p. 152.
 
-**Turn it.** Sort the mechanics in this site into your own categories, not the ones you were given. What new game does your filing suggest?
+Jones argues that how researchers sort their material (notes, clippings, data) is not just tidying. The categories we file things under reflect what we think matters now, and they steer what we will be able to think and write later. Recategorizing is itself a way of thinking.

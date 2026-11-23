@@ -10,4 +10,4 @@ order: 14
 
 Bernard Suits, "The Elements of Sport" (1973), in William J. Morgan, ed., *Ethics in Sport* (Human Kinetics, 2007), pp. 13–14.
 
-**Turn it.** Suits sets games apart from "bureaucratic practice," which also adds unnecessary obstacles (pp. 12–13). What makes one obstacle a game and another a form you have to fill in?
+Suits defines playing a game as the voluntary attempt to overcome unnecessary obstacles. Golfers could just drop the ball in the hole, but the rules forbid the easy way, and accepting those rules for the sake of the activity is what makes it a game.

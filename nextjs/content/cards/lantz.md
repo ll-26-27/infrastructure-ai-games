@@ -10,4 +10,4 @@ order: 21
 
 Frank Lantz, quoted in Adam Rogers, *Wired*, October 21, 2017.
 
-**Turn it.** Most clicker games already have an arbitrary goal. What did making the player an AI change?
+Lantz, who made Universal Paperclips, saw that clicker games already ask players to maximize a meaningless number. Making the player an AI whose only goal is paperclips turned the genre's mechanic into the argument. Playing the game is behaving like the dangerous AI of the thought experiment.

@@ -10,4 +10,4 @@ order: 19
 
 Miguel Sicart, "Defining Game Mechanics," *Game Studies* 8, no. 2 (2008).
 
-**Turn it.** List the verbs of a game you know: what can you actually do? Then list the verbs of someone who works inside an infrastructure.
+Sicart defines a game mechanic as an action a player can take to change the state of the game. Jump, build, trade, attack. Mechanics are the verbs of a game: what a player can actually do within the rules.

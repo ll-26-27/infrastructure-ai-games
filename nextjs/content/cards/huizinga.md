@@ -10,4 +10,4 @@ order: 12
 
 Johan Huizinga, *Homo Ludens: A Study of the Play-Element in Culture* (Roy, 1950), p. 10.
 
-**Turn it.** On the same page his list of play-grounds includes "the court of justice." Which infrastructures in this course run like a play-ground, with an order of their own?
+Huizinga argues that play creates a world apart, a play-ground with its own rules, separate from ordinary life. Inside it a strict order holds. Later game designers called this boundary the magic circle. He also saw play behind serious institutions such as law and ritual.

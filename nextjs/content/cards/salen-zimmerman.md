@@ -10,4 +10,4 @@ order: 15
 
 Katie Salen and Eric Zimmerman, *Rules of Play: Game Design Fundamentals* (MIT Press, 2003), p. 96, as quoted in Jesper Juul, "The Game, the Player, the World" (2003).
 
-**Turn it.** Take an infrastructure from the course and fill in their definition: what is the system, who are the players, what is the conflict, what are the rules, and what number ends it?
+Salen and Zimmerman give a working definition of a game: a system, with players, an artificial conflict, rules that limit what players can do, and an outcome that can be measured (win, lose, a score). Each part of the definition is something a designer has to decide.

@@ -10,4 +10,4 @@ order: 17
 
 Alexander R. Galloway, "Playing the Code: Allegories of Control in Civilization," *Radical Philosophy* 128 (2004).
 
-**Turn it.** Infrastructure, Star says, is invisible. Galloway says games flaunt their control. Could a game make an invisible infrastructure flaunt itself?
+Galloway argues that games are allegories of control. Unlike films or novels, which hide the systems behind them, games put their rules, numbers and data on screen. Civilization shows its information system openly, and playing it means learning to work that system.

@@ -10,4 +10,4 @@ order: 13
 
 Thomas S. Henricks, "Caillois's *Man, Play, and Games*: An Appreciation and Evaluation," *American Journal of Play* 3, no. 2 (2010), p. 167, quoting Caillois on agôn (competition) and alea (chance). Only the words in inner quotation marks are Caillois's.
 
-**Turn it.** In an infrastructure, who is playing a contest and who is only waiting for the outcome?
+Caillois sorted games into kinds. Two of them: agôn, contests where players compete on equal terms and skill decides; and alea, games of chance, where the player can only wait for the result. Many games, and many real systems, mix the two.

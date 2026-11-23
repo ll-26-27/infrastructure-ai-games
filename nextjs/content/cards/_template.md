@@ -9,4 +9,4 @@ links: [c-breakdown, cascade-failure]
 
 Author, "Title," *Where it was published* (year), page.
 
-**Turn it.** A question that puts the idea to work on a game, or on an infrastructure.
+What their idea is, in two or three plain sentences.

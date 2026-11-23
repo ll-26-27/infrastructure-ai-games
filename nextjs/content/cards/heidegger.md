@@ -10,4 +10,4 @@ order: 6
 
 William F. Stafford, Jr., *Technologies, Operations, and Infrastructures* (SOC-STD 98to), syllabus, course description (Fall 2026).
 
-**Turn it.** In a 4X game every tile on the map is a yield: food, production, gold. Is there anything in the game's world that is not a resource? Could you add one?
+This card's quotation is from the course syllabus, not from Heidegger. It describes the Heideggerian view of technology as a way of relating to the world in which everything, nature and people included, shows up as a resource to be used. The course sets against it work on how technical activity actually happens.

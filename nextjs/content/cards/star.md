@@ -10,4 +10,4 @@ order: 1
 
 Susan Leigh Star, "The Ethnography of Infrastructure," *American Behavioral Scientist* 43, no. 3 (1999), p. 382.
 
-**Turn it.** A game can break infrastructure on purpose, over and over, and score you on it. Does that make the infrastructure visible, or does it make breakdown the fun part?
+Star argues that infrastructure (pipes, cables, standards, databases) usually goes unnoticed because it works. It becomes visible only when it fails: the server goes down, the bridge washes out, the power cuts out. Studying infrastructure means making the invisible visible on purpose.

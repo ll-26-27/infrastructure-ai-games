@@ -10,4 +10,4 @@ order: 7
 
 Susan Leigh Star, "The Ethnography of Infrastructure" (1999), p. 388, on Winner. Your reading for November 23 is his earlier book, *Autonomous Technology* (1977).
 
-**Turn it.** From "Artifice and Order," copy one sentence onto the back of this card. Then ask: what politics is built into the mechanics of the last game you played?
+This card's quotation is Star on Winner. Winner argues that technologies can have politics built into them: the design of a bridge, a factory or a network can settle who gets power and who is shut out, before anyone makes a decision. His earlier book, Autonomous Technology, asks whether technology has escaped human control.

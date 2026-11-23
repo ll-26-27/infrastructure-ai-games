@@ -10,4 +10,4 @@ order: 2
 
 Paul Dourish, "No SQL: The Shifting Materialities of Database Technology," *Computational Culture* 4 (2014), introduction.
 
-**Turn it.** Every game is a database of its world: units, tiles, resources, scores. Pick a game you know. What in its world was turned into a field, and what was left out because it had no column?
+Dourish argues that databases are not neutral containers. Their material form (tables, rows, keys, query languages) shapes what can be stored and asked. Once we use databases to record the world, we start to see the world itself as something to be broken into records.

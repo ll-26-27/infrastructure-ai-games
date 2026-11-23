@@ -10,4 +10,4 @@ order: 3
 
 Lev Manovich, "Database as Symbolic Form," *Convergence* 5, no. 2 (1999), p. 85.
 
-**Turn it.** Two pages earlier he says games are different: "while computer games do not follow a database logic, they appear to be ruled by another logic - that of the algorithm" (p. 83). Is a game's story the narrative, and its rules the algorithm? Where does the database go?
+Manovich argues that the database is the characteristic form of the computer age, as the novel and the film were for earlier ages. A database is an unordered collection of items; a narrative is an ordered sequence of cause and effect. The two compete as ways of making sense of the world. Games, he adds, follow neither: they run on the algorithm the player has to carry out.

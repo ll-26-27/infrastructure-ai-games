@@ -10,7 +10,8 @@ export const metadata = { title: "CNA game" };
 const mechanics = [
   ["Simultaneous Action Selection", "Every country chooses a card in secret; all are revealed at once."],
   ["Card Driven", "Everything a country does, it does by playing a card."],
-  ["Wild Card", "The wildcard lets you choose one of three real events."],
+  ["Wild Card", "The wildcard is a face-down gamble on one of three real events."],
+  ["Victory Points", "The power score turns five bars into one number, so you can see who is ahead."],
   ["Race", "The first country to 100 AI progress reaches AGI."],
   ["Time Track", "Ten years, 2027 to 2036; if nobody reaches AGI, the decade decides."],
   ["Player Elimination", "Any one of four bars at zero and your country is out."],
@@ -59,7 +60,16 @@ export default function CnaGame() {
             <div>
               <h3>The cards</h3>
               <ul>{Object.entries(KINDS).map(([k, v]) => <li key={k} className={`k-${k}`}><b className="g-dot">{v.label}:</b> {v.copy}</li>)}</ul>
+              <p>The wildcard deck has six real events that help you and six that hurt you, and you pick face down. Lethal autonomous weapons are the strongest attack, and the most dangerous for everyone.</p>
               <p>Cards resolve in order: reinforce, then develop, then wildcards, then attacks, so shoring up your defences protects you the same year. A successful hack, attack or assassination makes the target lose next year&apos;s turn.</p>
+            </div>
+            <div>
+              <h3>The news and the ranking</h3>
+              <ul>
+                <li><b>The Daily Compute:</b> after every reveal, the year&apos;s front page tells what happened, with a cast of made-up leaders, CEOs, spies and hackers, and a table of how every country&apos;s points changed.</li>
+                <li><b>Power:</b> one number for how well a country is doing: 40% AI progress, 40% its four survival bars, and 20% its weakest bar, since any bar at zero is the end.</li>
+                <li><b>The class screen:</b> open it from the button above the game and put it on the projector. It follows the game and never shows the cards being chosen.</li>
+              </ul>
             </div>
             <div>
               <h3>The endings</h3>

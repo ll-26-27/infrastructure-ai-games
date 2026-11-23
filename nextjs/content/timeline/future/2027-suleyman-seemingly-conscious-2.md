@@ -10,7 +10,6 @@ said: "2026-02-01"
 statement: "Financial Times interview, as reported by Fortune"
 sources:
   - "https://fortune.com/2026/02/13/when-will-ai-kill-white-collar-office-jobs-18-months-microsoft-mustafa-suleyman/"
-  - "https://mustafa-suleyman.ai/seemingly-conscious-ai-is-coming"
 ---
 
 Suleyman said most professional work done sitting at a computer could be fully automated within the next year to eighteen months.

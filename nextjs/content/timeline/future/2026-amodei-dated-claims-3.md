@@ -10,7 +10,6 @@ said: "2025-05-28"
 statement: "Interview with Axios"
 sources:
   - "https://fortune.com/2026/07/24/anthropic-peter-mccrory-dario-amodei-why-hasnt-it-killed-jobs/"
-  - "https://www.anthropic.com/news/anthropic-s-recommendations-ostp-u-s-ai-action-plan"
 ---
 
 > "I predicted that AI could displace half of all entry-level white collar jobs in the next 1–5 years"

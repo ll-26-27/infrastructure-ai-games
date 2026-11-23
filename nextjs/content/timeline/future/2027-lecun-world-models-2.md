@@ -10,7 +10,6 @@ said: "2024-10-16"
 statement: "Hudson Forum"
 sources:
   - "https://techcrunch.com/2024/10/16/metas-ai-chief-says-world-models-are-key-to-human-level-ai-but-it-might-be-10-years-out"
-  - "https://techcrunch.com/2025/01/23/metas-yann-lecun-predicts-a-new-ai-architectures-paradigm-within-5-years-and-decade-of-robotics"
 ---
 
 > "It's going to take years before we can get everything here to work, if not a decade"

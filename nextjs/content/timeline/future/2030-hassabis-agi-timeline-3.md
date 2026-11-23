@@ -9,7 +9,6 @@ said: "2026-05-28"
 statement: "Interview at Google I/O, as reported by Computerworld"
 sources:
   - "https://www.computerworld.com/article/4178398/deepmind-ceo-agi-could-be-here-in-three-years.html"
-  - "https://www.cbsnews.com/news/google-artificial-intelligence-demis-hassabis-60-minutes"
 ---
 
 In a May 2026 interview, Hassabis said AGI could arrive around 2030, possibly in 2029 or sooner.

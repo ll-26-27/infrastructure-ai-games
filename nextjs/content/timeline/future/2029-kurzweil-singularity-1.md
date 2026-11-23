@@ -9,7 +9,6 @@ said: "1999-01-01"
 statement: "The Singularity Is Near"
 sources:
   - "https://longbets.org/1/"
-  - "https://aiimpacts.org/kurzweil-the-singularity-is-near/"
 ---
 
 Kurzweil wrote that computers would pass the Turing test by the end of the 2020s.

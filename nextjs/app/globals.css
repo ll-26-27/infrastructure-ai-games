@@ -4,9 +4,13 @@
   --ink: #ecece6;
   --muted: #a0a49a;
   --line: #2c2f2b;
-  --accent: #f2b84b;
-  --accent-ink: #231802;
-  --cyan: #6fd3c0;
+  --accent: #c58cff;
+  --accent-ink: #1d0b2e;
+  --purple: #c58cff;
+  --pink: #ff6fb5;
+  --cyan: #5fe1e6;
+  --yellow: #ffd84a;
+  --orange: #ff9a3d;
   --wash: #1a1c19;
   --hover: #20231f;
   --code: #1a1c19;
@@ -31,8 +35,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .wordmark { font-size: 16px; font-weight: 800; letter-spacing: -.01em; }
 .wordmark span { margin-left: 10px; color: var(--muted); font-size: 13px; font-weight: 500; }
 .site-header nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px clamp(14px, 2vw, 28px); font-size: 14px; font-weight: 650; }
-.site-header nav a:hover { color: var(--cyan); }
-.site-header nav a[aria-current="page"] { color: var(--accent); }
+.site-header nav a:hover, .site-header nav a[aria-current="page"] { color: var(--c, var(--accent)); }
+.site-header nav a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--c, var(--accent)); }
 .site-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; padding: 26px var(--gutter); border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
 
 /* --- home: the heading, the intro, one tile per section --- */
@@ -41,9 +45,9 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .home-intro { margin-top: 28px; color: var(--muted); }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; margin-top: 44px; }
 .tile { display: grid; align-content: start; gap: 10px; min-height: 170px; padding: 22px; border: 1px solid var(--line); border-radius: 14px; background: var(--wash); transition: background .15s, border-color .15s; }
-a.tile:hover { border-color: var(--accent); background: var(--hover); }
-a.tile:hover strong { color: var(--accent); }
-.tile-number { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .1em; font-variant-numeric: tabular-nums; }
+a.tile:hover { border-color: var(--c, var(--accent)); background: var(--hover); }
+a.tile:hover strong { color: var(--c, var(--accent)); }
+.tile-number { color: var(--c, var(--accent)); font-size: 12px; font-weight: 800; letter-spacing: .1em; font-variant-numeric: tabular-nums; }
 .tile strong { font-size: 25px; font-weight: 800; letter-spacing: -.04em; line-height: 1.05; }
 .tile-copy { color: var(--muted); font-size: 14.5px; line-height: 1.5; }
 .tile-empty { background: transparent; border-style: dashed; }
@@ -199,3 +203,10 @@ body:has(.print-root) { background: #ffffff; color-scheme: light; }
 .print-root .print-11x17 .prose h3 { margin: 10pt 0 3pt; font-size: 10pt; font-weight: 900; break-after: avoid; }
 .print-root .print-11x17 .prose table { margin: 8pt 0; font-size: 9pt; }
 .print-11x17 .prose li, .print-11x17 .prose tr, .print-11x17 .prose blockquote { break-inside: avoid; }
+
+/* --- the playful colours: nav items, tiles and cards take turns through five colours --- */
+.site-header nav a:nth-child(5n+1), .tiles > :nth-child(5n+1), .ch-list > :nth-child(5n+1) { --c: var(--pink); }
+.site-header nav a:nth-child(5n+2), .tiles > :nth-child(5n+2), .ch-list > :nth-child(5n+2) { --c: var(--cyan); }
+.site-header nav a:nth-child(5n+3), .tiles > :nth-child(5n+3), .ch-list > :nth-child(5n+3) { --c: var(--yellow); }
+.site-header nav a:nth-child(5n+4), .tiles > :nth-child(5n+4), .ch-list > :nth-child(5n+4) { --c: var(--orange); }
+.site-header nav a:nth-child(5n+5), .tiles > :nth-child(5n+5), .ch-list > :nth-child(5n+5) { --c: var(--purple); }

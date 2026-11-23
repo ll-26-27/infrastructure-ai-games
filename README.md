@@ -6,14 +6,20 @@ The kit is for you to build with, not just to play. It is a set of small collect
 
 ## What is in it
 
-- **Why games:** why a course about infrastructure should take games seriously.
-- **Reading the mechanics:** a game makes its argument through what it has you do, and how to read that.
-- **Mechanics:** the mechanics of war, conquest and management games, one page each.
-- **Gallery:** games to know before you build.
-- **Novels and films:** stories about a takeover, and how the takeover works in each.
-- **Graphs and cards:** the course as a map of ideas, games as a map of mechanics, and where the two touch.
-- **The game:** small playable mechanics about AI and the people it works through, for you to change and combine.
-- **Timeline:** a timeline that ends on the day of the workshop.
+The top of the site has six sections:
+
+- **Database:** your cards from September 28 as a database, with the course and the world of AI and its infrastructure beside them. The files are in `nextjs/public/database/` (`students.json`, `course.json`, `world.json`, and `database.json` for all three).
+- **Mechanics:** 218 game mechanics, grouped by kind, in `nextjs/content/mechanics/README.md`.
+- **Inspirations:** ideas from thinkers (`nextjs/content/cards/`), the history of war, conquest and building games (`nextjs/content/games-history/`), visions of AI taking over (`nextjs/content/takeover/`), and a gallery of games to know before you build (`nextjs/content/gallery/`).
+- **Timeline:** real breakdowns up to today, then what people have predicted AI will do (`nextjs/content/timeline/`).
+- **Challenges:** today's tasks. Each asks you to make a piece of a game.
+- **Countdown:** when the games built from your pieces open.
+
+There is more behind them: stories of machines taking over (`nextjs/content/stories/`), graphs of the course and of the mechanics, and small playable mechanics in `/game`.
+
+## Ask Claude Code about it
+
+Open this folder in Claude Code and ask. It is set up (in `CLAUDE.md`) to answer from what is here: mechanics from the mechanics list, ideas from the idea cards, and brainstorming from your own database. For example: "Which mechanics from the list are in Stardew Valley?" or "Using the world database, who could the players be in a game about data centres?"
 
 ## Run it
 

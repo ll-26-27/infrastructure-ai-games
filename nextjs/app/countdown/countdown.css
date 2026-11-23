@@ -3,7 +3,7 @@
 .cd h1 { margin: 0; font-size: clamp(32px, 6vw, 72px); font-weight: 850; letter-spacing: -.045em; line-height: 1.02; }
 .cd-clock { display: flex; gap: clamp(10px, 3vw, 36px); margin-top: 8px; }
 .cd-unit { display: grid; gap: 6px; min-width: clamp(60px, 14vw, 130px); }
-.cd-value { color: var(--accent); font-size: clamp(40px, 9vw, 108px); font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -.04em; line-height: 1; }
+.cd-value { color: var(--c, var(--accent)); font-size: clamp(40px, 9vw, 108px); font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -.04em; line-height: 1; }
 .cd-label { color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 .cd-when { margin: 0; color: var(--muted); font-size: 15px; }
 .cd-note { max-width: 520px; margin: 12px 0 0; color: var(--muted); font-size: 16px; line-height: 1.6; }
@@ -16,3 +16,11 @@
 .cd h1, .cd-value { text-shadow: 0 2px 22px rgba(0, 0, 0, .6); }
 .cd-eyebrow, .cd-label, .cd-when, .cd-note { color: #d8dad2; text-shadow: 0 1px 12px rgba(0, 0, 0, .7); }
 @media print { .cd-media { display: none; } }
+
+/* Matrix green: the clock is phosphor-green type on black, with a soft glow. */
+.cd { --c: #39ff6a; }
+.cd .cd-unit { --c: #39ff6a; }
+.cd-value { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-weight: 700; letter-spacing: -.02em; text-shadow: 0 0 18px rgba(57, 255, 106, .55), 0 0 2px rgba(57, 255, 106, .9); }
+.cd-label { color: #8dffad; }
+.cd-eyebrow { color: #39ff6a; }
+.cd-media::before { content: ""; position: absolute; inset: 0; z-index: 1; background: rgba(0, 40, 12, .35); mix-blend-mode: multiply; }

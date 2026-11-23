@@ -1,0 +1,16 @@
+.ch-intro { max-width: 760px; margin: 0 0 34px; color: var(--muted); font-size: 18px; line-height: 1.6; }
+.ch-intro p { margin: 0 0 14px; }
+.ch-intro strong { color: var(--ink); }
+.ch-intro a { color: var(--accent); }
+.ch-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; margin: 0; padding: 0; list-style: none; }
+.ch-card { border-top: 3px solid var(--c, var(--accent)) !important; display: grid; align-content: start; gap: 12px; padding: 24px; border: 1px solid var(--line); border-radius: 14px; background: var(--wash); }
+.ch-card.is-own { border-style: dashed; border-color: var(--c, var(--accent)); }
+.ch-card .tile-number { color: var(--c, var(--accent)); }
+.ch-card h2 { margin: 0; font-size: 26px; font-weight: 800; letter-spacing: -.04em; line-height: 1.05; }
+.ch-card p { margin: 0; color: var(--muted); font-size: 15.5px; line-height: 1.55; }
+.ch-card .ch-make { color: var(--ink); }
+.ch-from { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.ch-from span { margin-right: 4px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.ch-from a { padding: 3px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); font-size: 13px; }
+.ch-from a:hover { border-color: var(--c, var(--accent)); color: var(--c, var(--accent)); }
+@media print { .ch-card { break-inside: avoid; } }

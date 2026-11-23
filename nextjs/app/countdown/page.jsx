@@ -20,7 +20,7 @@ export default function CountdownPage() {
         <p className="cd-eyebrow">SOC-STD 98to</p>
         <h1>Your game is being built.</h1>
         <Countdown target={target} />
-        <p className="cd-note">You designed the pieces. Several versions of the game are being built from them. Come back when the clock runs out and play.</p>
+        <p className="cd-note">You made pieces of a game. Now AI is pulling them together into several versions of the game. Come back when the clock runs out and play.</p>
       </main>
       <SiteFooter />
     </>

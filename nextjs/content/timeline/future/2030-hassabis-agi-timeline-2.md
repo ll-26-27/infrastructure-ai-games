@@ -1,0 +1,17 @@
+---
+kind: prediction
+title: "AGI (in CBS's summary of the interview)"
+date: "2030-07-01"
+when: "five to 10 years away"
+until: "2035-07-01"
+who: "Demis Hassabis"
+role: "Co-founder and CEO of Google DeepMind; shared the 2024 Nobel Prize in Chemistry for AlphaFold, which predicts the shapes of proteins."
+said: "2025-04-20"
+statement: "Interviews on when AGI will arrive"
+sources:
+  - "https://www.cbsnews.com/news/google-artificial-intelligence-demis-hassabis-60-minutes"
+---
+
+In CBS's summary of the interview, Hassabis said AGI was five to ten years away.
+
+*Interviews on when AGI will arrive*. 60 Minutes, April 20, 2025; CBS's words, not a direct quote.

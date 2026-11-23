@@ -13,4 +13,4 @@ sources:
 
 > "writing a bestselling book (by 2049)"
 
-*When Will AI Exceed Human Performance? Evidence from AI Experts*. Abstract.
+Abstract.

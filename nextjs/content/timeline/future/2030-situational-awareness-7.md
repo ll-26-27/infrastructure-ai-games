@@ -13,4 +13,4 @@ sources:
 
 > "By the end of the decade, we are headed to $1T+ individual training clusters, requiring power equivalent to >20% of US electricity production."
 
-*Situational Awareness: The Decade Ahead*. Part IIIa, Racing to the Trillion-Dollar Cluster.
+Part IIIa, Racing to the Trillion-Dollar Cluster.

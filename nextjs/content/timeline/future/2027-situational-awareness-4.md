@@ -14,4 +14,4 @@ sources:
 
 > "But in the next few years, the world will wake up. So too will the national security state. … by 27/28, the endgame will be on."
 
-*Situational Awareness: The Decade Ahead*. Part IV, The Project.
+Part IV, The Project.

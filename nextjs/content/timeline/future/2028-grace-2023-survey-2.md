@@ -13,4 +13,4 @@ sources:
 
 > "The aggregate forecasts give at least a 50% chance of AI systems achieving several milestones by 2028, including autonomously constructing a payment processing site from scratch, creating a song indistinguishable from a new song by a popular musician"
 
-*Thousands of AI Authors on the Future of AI*. Abstract.
+Abstract.

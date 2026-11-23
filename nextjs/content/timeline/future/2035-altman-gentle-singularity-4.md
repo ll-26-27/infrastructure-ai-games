@@ -13,4 +13,4 @@ sources:
 
 > "It's hard to even imagine today what we will have discovered by 2035; maybe we will go from solving high-energy physics one year to beginning space colonization the next year"
 
-*The Gentle Singularity*. The post.
+The post.

@@ -13,4 +13,4 @@ sources:
 
 > "AGI by 2027 is strikingly plausible."
 
-*Situational Awareness: The Decade Ahead*. Part I, From GPT-4 to AGI: Counting the OOMs.
+Part I, From GPT-4 to AGI: Counting the OOMs.

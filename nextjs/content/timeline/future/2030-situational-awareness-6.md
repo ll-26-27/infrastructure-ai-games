@@ -13,4 +13,4 @@ sources:
 
 > "By the end of the decade, they will be smarter than you or I; we will have superintelligence, in the true sense of the word."
 
-*Situational Awareness: The Decade Ahead*. Introduction.
+Introduction.

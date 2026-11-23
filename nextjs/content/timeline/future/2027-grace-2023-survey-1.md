@@ -13,4 +13,4 @@ sources:
 
 > "the chance of unaided machines outperforming humans in every possible task was estimated at 10% by 2027, and 50% by 2047"
 
-*Thousands of AI Authors on the Future of AI*. Abstract.
+Abstract.

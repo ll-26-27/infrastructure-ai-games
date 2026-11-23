@@ -6,11 +6,11 @@ when: "in 2029"
 who: "Gary Marcus"
 role: "A cognitive scientist, professor emeritus at New York University, and founder of AI companies; the best-known critic of the claim that bigger language models lead to AGI."
 said: "2022-05-31"
-statement: "A bet on 2029, and yearly predictions"
+statement: "Dear Elon Musk, here are five things you might want to consider about AGI"
 sources:
   - "https://garymarcus.substack.com/p/dear-elon-musk-here-are-five-things"
 ---
 
 > "In 2029, AI will not be able to watch a movie and tell you accurately what is going on"
 
-*A bet on 2029, and yearly predictions*. "Dear Elon Musk", May 31, 2022 (the first of five tests; AI must beat at least three with one system).
+"Dear Elon Musk", May 31, 2022 (the first of five tests; AI must beat at least three with one system)

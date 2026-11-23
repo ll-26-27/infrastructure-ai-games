@@ -13,4 +13,4 @@ sources:
 
 > "Researchers believe there is a 50% chance of AI outperforming humans in all tasks in 45 years and of automating all human jobs in 120 years"
 
-*When Will AI Exceed Human Performance? Evidence from AI Experts*. Abstract.
+Abstract.

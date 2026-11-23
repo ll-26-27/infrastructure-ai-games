@@ -14,4 +14,4 @@ sources:
 
 > "powerful AI could be as little as 1–2 years away, although it could also be considerably further out."
 
-*The Adolescence of Technology: Confronting and Overcoming the Risks of Powerful AI*. Introduction.
+Introduction.

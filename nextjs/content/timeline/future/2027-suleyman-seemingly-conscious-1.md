@@ -14,4 +14,4 @@ sources:
 
 > "This is not far away. Such a system can be built with technologies that exist today along with some that will mature over the next 2-3 years."
 
-*Seemingly Conscious AI Is Coming*. The essay.
+The essay.

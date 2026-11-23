@@ -13,4 +13,4 @@ sources:
 
 > "The latter estimate is 13 years earlier than that reached in a similar survey we conducted only one year earlier"
 
-*Thousands of AI Authors on the Future of AI*. Abstract.
+Abstract.

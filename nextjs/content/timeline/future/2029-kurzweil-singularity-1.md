@@ -14,4 +14,4 @@ sources:
 
 Kurzweil wrote that computers would pass the Turing test by the end of the 2020s.
 
-*The Singularity Is Near*. The Singularity Is Near (2005); first dated to 2029 in The Age of Spiritual Machines (1999).
+The Singularity Is Near (2005); first dated to 2029 in The Age of Spiritual Machines (1999)

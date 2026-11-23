@@ -13,4 +13,4 @@ sources:
 
 By the mid-2040s, he wrote, the computing produced each year would be about a billion times more powerful than all human intelligence today.
 
-*The Singularity Is Near*. The Singularity Is Near (2005).
+The Singularity Is Near (2005)

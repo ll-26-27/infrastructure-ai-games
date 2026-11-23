@@ -13,4 +13,4 @@ sources:
 
 > "working in retail (by 2031)"
 
-*When Will AI Exceed Human Performance? Evidence from AI Experts*. Abstract.
+Abstract.

@@ -13,4 +13,4 @@ sources:
 
 > "Anyone in 2035 should be able to marshall the intellectual capacity equivalent to everyone in 2025; everyone should have access to unlimited genius to direct however they can imagine."
 
-*Three Observations*. The post.
+The post.

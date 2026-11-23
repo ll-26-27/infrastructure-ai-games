@@ -14,4 +14,4 @@ sources:
 
 > "I'll be surprised if this event occurs before 2005 or after 2030."
 
-*The Coming Technological Singularity: How to Survive in the Post-Human Era*. What is the Singularity?
+What is the Singularity?

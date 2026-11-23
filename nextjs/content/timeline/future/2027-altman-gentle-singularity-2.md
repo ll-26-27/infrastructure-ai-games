@@ -13,4 +13,4 @@ sources:
 
 > "2027 may see the arrival of robots that can do tasks in the real world."
 
-*The Gentle Singularity*. The post.
+The post.

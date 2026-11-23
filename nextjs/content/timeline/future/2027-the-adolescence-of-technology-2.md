@@ -13,4 +13,4 @@ sources:
 
 > "suppose a literal "country of geniuses" were to materialize somewhere in the world in ~2027."
 
-*The Adolescence of Technology: Confronting and Overcoming the Risks of Powerful AI*. Introduction.
+Introduction.

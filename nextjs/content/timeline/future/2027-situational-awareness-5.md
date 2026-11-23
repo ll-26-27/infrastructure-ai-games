@@ -13,4 +13,4 @@ sources:
 
 > "total AI investment could be north of $1T annually by 2027."
 
-*Situational Awareness: The Decade Ahead*. Part IIIa, Racing to the Trillion-Dollar Cluster.
+Part IIIa, Racing to the Trillion-Dollar Cluster.

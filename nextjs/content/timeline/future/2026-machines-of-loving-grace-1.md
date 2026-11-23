@@ -13,4 +13,4 @@ sources:
 
 > "I think it could come as early as 2026, though there are also ways it could take much longer."
 
-*Machines of Loving Grace: How AI Could Transform the World for the Better*. Basic assumptions and framework.
+Basic assumptions and framework.

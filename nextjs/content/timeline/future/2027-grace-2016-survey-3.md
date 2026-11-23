@@ -13,4 +13,4 @@ sources:
 
 > "driving a truck (by 2027)"
 
-*When Will AI Exceed Human Performance? Evidence from AI Experts*. Abstract.
+Abstract.

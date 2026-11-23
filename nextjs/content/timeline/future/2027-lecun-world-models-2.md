@@ -7,7 +7,7 @@ until: "2034-07-01"
 who: "Yann LeCun"
 role: "A pioneer of neural networks and a winner of the 2018 Turing Award; was Meta's chief AI scientist, and in late 2025 started his own company, AMI Labs, to build \"world models\"."
 said: "2024-10-16"
-statement: "LLMs have a short shelf life; human-level AI needs new ideas"
+statement: "Hudson Forum"
 sources:
   - "https://techcrunch.com/2024/10/16/metas-ai-chief-says-world-models-are-key-to-human-level-ai-but-it-might-be-10-years-out"
   - "https://techcrunch.com/2025/01/23/metas-yann-lecun-predicts-a-new-ai-architectures-paradigm-within-5-years-and-decade-of-robotics"
@@ -15,4 +15,4 @@ sources:
 
 > "It's going to take years before we can get everything here to work, if not a decade"
 
-*LLMs have a short shelf life; human-level AI needs new ideas*. Hudson Forum, October 16, 2024 (as reported by TechCrunch).
+Hudson Forum, October 16, 2024 (as reported by TechCrunch)

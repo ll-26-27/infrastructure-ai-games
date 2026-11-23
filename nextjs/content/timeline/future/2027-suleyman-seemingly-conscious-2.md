@@ -7,7 +7,7 @@ until: "2027-08-01"
 who: "Mustafa Suleyman"
 role: "CEO of Microsoft AI; earlier a co-founder of DeepMind."
 said: "2026-02-01"
-statement: "Seemingly Conscious AI Is Coming"
+statement: "Financial Times interview, as reported by Fortune"
 sources:
   - "https://fortune.com/2026/02/13/when-will-ai-kill-white-collar-office-jobs-18-months-microsoft-mustafa-suleyman/"
   - "https://mustafa-suleyman.ai/seemingly-conscious-ai-is-coming"
@@ -15,4 +15,4 @@ sources:
 
 Suleyman said most professional work done sitting at a computer could be fully automated within the next year to eighteen months.
 
-*Seemingly Conscious AI Is Coming*. Financial Times interview, about February 2026, as summarized by Fortune (the 18 months is Fortune's wording).
+Financial Times interview, about February 2026, as summarized by Fortune (the 18 months is Fortune's wording)

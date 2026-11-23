@@ -14,4 +14,4 @@ sources:
 
 > "It is possible that we will have superintelligence in a few thousand days (!); it may take longer, but I'm confident we'll get there."
 
-*The Intelligence Age*. The essay ("a few thousand days" from September 2024 is roughly 2030 to 2035).
+The essay ("a few thousand days" from September 2024 is roughly 2030 to 2035)

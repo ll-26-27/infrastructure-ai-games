@@ -14,4 +14,4 @@ sources:
 
 > "it's my guess that powerful AI could at least 10x the rate of these discoveries, giving us the next 50-100 years of biological progress in 5-10 years."
 
-*Machines of Loving Grace: How AI Could Transform the World for the Better*. 1. Biology and health (dates counted from 2026, his earliest date for powerful AI).
+1. Biology and health (dates counted from 2026, his earliest date for powerful AI)

@@ -13,4 +13,4 @@ sources:
 
 > "Generally speaking, the ability for one person to get much more done in 2030 than they could in 2020 will be a striking change"
 
-*The Gentle Singularity*. The post.
+The post.

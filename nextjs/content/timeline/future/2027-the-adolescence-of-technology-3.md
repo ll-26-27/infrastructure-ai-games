@@ -14,4 +14,4 @@ sources:
 
 > "This feedback loop is gathering steam month by month, and may be only 1–2 years away from a point where the current generation of AI autonomously builds the next."
 
-*The Adolescence of Technology: Confronting and Overcoming the Risks of Powerful AI*. I'm sorry, Dave.
+I'm sorry, Dave.

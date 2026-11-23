@@ -13,4 +13,4 @@ sources:
 
 > "the chance of all human occupations becoming fully automatable was forecast to reach 10% by 2037, and 50% as late as 2116"
 
-*Thousands of AI Authors on the Future of AI*. Abstract.
+Abstract.

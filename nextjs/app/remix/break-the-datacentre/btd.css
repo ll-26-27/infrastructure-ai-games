@@ -129,3 +129,47 @@
 .btd-rules p { font-size: 14.5px; line-height: 1.55; }
 .btd-rules a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 .btd-from { display: flex; flex-wrap: wrap; gap: 6px 12px; }
+
+/* The cards turned over */
+.btd-played h2 { margin: 0 0 12px; font-size: 22px; letter-spacing: -.03em; }
+.btd-flips { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
+.btd-flip { display: grid; gap: 4px; padding: 10px 12px; border: 1px solid var(--line); border-top: 4px solid var(--k); border-radius: 10px; background: var(--paper); animation: btd-flip .45s ease both; }
+.btd-flip small { color: var(--muted); font-size: 12px; }
+.btd-flip b { font-size: 14px; line-height: 1.3; }
+.btd-flip.k-hidden b { color: var(--purple); letter-spacing: .04em; }
+@keyframes btd-flip { from { transform: rotateY(90deg); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .btd-flip { animation: none; } }
+.btd-screenlink { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+/* The front page: the town's paper, printed on newsprint */
+.btd-paper { padding: clamp(18px, 3vw, 32px); border-radius: 6px; background: #efe9dc; color: #1c1a16; font-family: Georgia, "Times New Roman", serif; box-shadow: 0 10px 30px rgba(0, 0, 0, .35); }
+.btd-masthead { display: grid; justify-items: center; gap: 4px; padding-bottom: 12px; border-bottom: 3px double #1c1a16; text-align: center; }
+.btd-masthead h2 { margin: 0; font-size: clamp(30px, 5vw, 52px); font-weight: 900; letter-spacing: -.02em; line-height: 1; }
+.btd-masthead span { font-family: "Inter Variable", Inter, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #5a554a; }
+.btd-paper-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; margin-top: 18px; }
+@media (max-width: 760px) { .btd-paper-grid { grid-template-columns: 1fr; } }
+.btd-kicker { margin: 0 0 4px; font-family: "Inter Variable", Inter, sans-serif; font-size: 10.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #8a3b2e; }
+.btd-lead h3 { margin: 0 0 10px; font-size: clamp(26px, 3.6vw, 40px); line-height: 1.05; letter-spacing: -.02em; }
+.btd-lead p:last-child { margin: 0; font-size: 18px; line-height: 1.5; }
+.btd-stories { display: grid; gap: 14px; align-content: start; border-left: 1px solid #c9c1ae; padding-left: 20px; }
+@media (max-width: 760px) { .btd-stories { border-left: 0; padding-left: 0; border-top: 1px solid #c9c1ae; padding-top: 14px; } }
+.btd-story h4 { margin: 0 0 4px; font-size: 18px; line-height: 1.15; }
+.btd-story p:last-child { margin: 0; font-size: 14.5px; line-height: 1.45; }
+.btd-paper .t-out .btd-kicker, .btd-paper .t-attack .btd-kicker { color: #b3261e; }
+.btd-paper .t-good .btd-kicker { color: #2f6b34; }
+.btd-paper .t-fail .btd-kicker { color: #6b6457; }
+.btd-brief { margin-top: 18px; padding-top: 12px; border-top: 1px solid #c9c1ae; }
+.btd-brief ul { margin: 0; padding-left: 18px; columns: 2 260px; column-gap: 28px; font-size: 14.5px; line-height: 1.45; }
+.btd-brief li { break-inside: avoid; margin-bottom: 6px; }
+.btd-exact { margin-top: 16px; font-family: "Inter Variable", Inter, sans-serif; }
+.btd-exact summary { cursor: pointer; font-size: 13px; font-weight: 700; }
+.btd-exact .btd-log li { border-left-color: #c9c1ae; color: #1c1a16; }
+.btd-exact .btd-log .t-fail, .btd-exact .btd-log .t-muted { color: #6b6457; }
+.btd-exact .btd-log .t-hidden { color: #6b3fa0; }
+.btd-exact .btd-log .t-cascade { color: #b3261e; }
+.btd-fiction { margin-top: 14px; color: #6b6457; font-family: "Inter Variable", Inter, sans-serif; font-size: 12px; }
+
+/* The class screen */
+.btd-screen { padding: 28px var(--gutter) 48px; }
+.btd-screen-wait { max-width: 720px; margin: 12vh auto; }
+.btd-screen-wait h1 { margin: 12px 0; font-size: clamp(40px, 6vw, 72px); letter-spacing: -.05em; line-height: 1; }

@@ -5,6 +5,21 @@ import {
   CASCADE_MARKS, CASCADE_MAX, CEASEFIRE_ROUNDS, KINDS, RINGS, ROLES, SYSTEMS, WEEKS,
   attackChance, breakdown, cardsFor, newGame, npcChoice, npcVote, resolveVote, resolveWeek, role,
 } from "./engine.mjs";
+import { castOf, writeNews } from "./news.mjs";
+
+// The class screen (/remix/break-the-datacentre/screen) follows the game through this channel. Only what everyone may
+// see is sent: no hands, and no hidden card's name (everyone sees who played one face down, never which one).
+export const CHANNEL = "break-the-datacentre-screen";
+export function publicView(game) {
+  if (!game) return null;
+  const hide = (x) => (CARD_KIND(x.card) === "hidden" ? { who: x.who, card: "hidden" } : x);
+  return { ...game, backdoors: game.backdoors.map(() => "?"), wilds: {}, history: game.history.map((h) => ({ ...h, plays: h.plays.map(hide) })) };
+}
+const CARD_KIND = (id) => cardsFor("hacker").concat(cardsFor("insider")).find((c) => c.id === id)?.kind;
+function broadcast(message) {
+  try { localStorage.setItem(CHANNEL, JSON.stringify(message)); } catch {}
+  try { const bc = new BroadcastChannel(CHANNEL); bc.postMessage(message); bc.close(); } catch {}
+}
 
 export default function Game() {
   const [game, setGame] = useState(null);
@@ -17,6 +32,12 @@ export default function Game() {
   useEffect(() => {
     if (top.current && top.current.getBoundingClientRect().top < 0) top.current.scrollIntoView({ behavior: "smooth", block: "start" });
   }, [phase, turn, covered, game?.week]);
+
+  // Keep the class screen up to date.
+  useEffect(() => {
+    const waiting = game && phase === "choose" ? game.players.filter((p) => p.human && !p.stunned)[turn]?.id || null : null;
+    broadcast({ game: publicView(game), phase, waiting });
+  }, [game, phase, turn]);
 
   if (phase === "setup" || !game) {
     return <div ref={top}><Setup onStart={(humans) => { setGame(newGame(humans)); setChoices({}); setTurn(0); setCovered(humans.length > 1); setPhase("choose"); }} /></div>;
@@ -55,11 +76,13 @@ export default function Game() {
             ? <Cover who={people[turn].id} onOpen={() => setCovered(false)} />
             : <Hand key={`${game.week}-${people[turn].id}`} g={game} who={people[turn].id} onPlay={submit} />)}
           {phase === "vote" && <Vote g={game} onDone={(votes) => { const g = resolveVote(game, votes); setGame(g); setPhase("reveal"); }} />}
-          {(phase === "reveal" || phase === "ended") && <Reveal g={game} week={last} />}
+          {(phase === "reveal" || phase === "vote" || phase === "ended") && <Played g={game} week={last} />}
           {phase === "reveal" && <div className="btd-actions"><button className="btd-btn" onClick={nextWeek}>Week {game.week} →</button></div>}
           {phase === "ended" && <Ending g={game} onAgain={() => { setGame(null); setPhase("setup"); }} />}
+          <p className="btd-small"><a className="btd-screenlink" href="/remix/break-the-datacentre/screen" target="break-the-datacentre-screen">Open the class screen ↗</a> for the projector: it shows the data centre and the front page, never anyone&apos;s cards.</p>
         </div>
       </div>
+      {(phase === "reveal" || phase === "vote" || phase === "ended") && last && <FrontPage g={game} entry={last} />}
       {game.history.length > 1 && <History g={game} />}
     </div>
   );
@@ -92,7 +115,7 @@ function Setup({ onStart }) {
 
 // ---- The status line: the week, the cascade, the bag, the ceasefire ------------------------------------------
 
-function Status({ g }) {
+export function Status({ g }) {
   return (
     <div className="btd-status">
       <div className="btd-week"><span>Week</span><strong>{Math.min(g.week, WEEKS)}</strong><span>of {WEEKS}</span></div>
@@ -130,7 +153,7 @@ function Bag({ bag }) {
 
 // ---- The data centre: its rings, the break-in team, its systems ----------------------------------------------
 
-function Building({ g }) {
+export function Building({ g }) {
   const R = [150, 112, 74, 36];
   return (
     <div className="btd-building">
@@ -262,24 +285,74 @@ function Log({ lines }) {
   return <ul className="btd-log">{lines.map((l, i) => <li key={i} className={`t-${l.tone || "plain"}`}>{l.text}</li>)}</ul>;
 }
 
-function Reveal({ g, week }) {
+// The cards, turned over. A hidden card shows as face down: you can see who played one, not which.
+export function Played({ g, week }) {
   if (!week) return null;
   return (
-    <div className="btd-reveal">
+    <div className="btd-played">
       <h2>Week {week.week}: the cards are turned over</h2>
-      <Log lines={week.log} />
+      <div className="btd-flips">
+        {week.plays.map((x, i) => {
+          const c = x.card === "hidden" ? null : cardsFor(x.who).find((y) => y.id === x.card);
+          const hidden = !c || c.kind === "hidden";
+          return (
+            <div key={i} className={`btd-flip k-${hidden ? "hidden" : c.kind}`}>
+              <small>{role(x.who).avatar} {role(x.who).name}</small>
+              <b>{hidden ? "Face down" : c.title}</b>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
 
-function Ending({ g, onAgain }) {
+export function FrontPage({ g, entry, withLog = true }) {
+  const n = writeNews(g, entry);
+  const c = castOf(g);
+  return (
+    <article className="btd-paper">
+      <header className="btd-masthead">
+        <span>No. {n.edition} · Week {entry.week}</span>
+        <h2>{n.paper}</h2>
+        <span>All the news that stays up · {c.town}&apos;s paper since the data centre came</span>
+      </header>
+      <div className="btd-paper-grid">
+        <div className={`btd-lead t-${n.lead.tone}`}>
+          <p className="btd-kicker">{n.lead.kicker}</p>
+          <h3>{n.lead.title}</h3>
+          <p>{n.lead.body}</p>
+        </div>
+        <div className="btd-stories">
+          {n.stories.map((st, i) => (
+            <div key={i} className={`btd-story t-${st.tone}`}>
+              <p className="btd-kicker">{st.kicker}</p>
+              <h4>{st.title}</h4>
+              <p>{st.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      {n.brief.length > 0 && (
+        <div className="btd-brief">
+          <p className="btd-kicker">In brief</p>
+          <ul>{n.brief.map((b, i) => <li key={i}>{b}</li>)}</ul>
+        </div>
+      )}
+      {withLog && <details className="btd-exact"><summary>Every card, exactly</summary><Log lines={entry.log} /></details>}
+      <p className="btd-small btd-fiction">Everyone named in this paper is made up. The breakdowns it compares to are real, from the Timeline.</p>
+    </article>
+  );
+}
+
+export function Ending({ g, onAgain }) {
   const e = g.ended;
   return (
     <div className={`btd-ending ${e.winners.length ? "is-win" : "is-loss"}`}>
       <h2>{e.title}</h2>
       <p>{e.text}</p>
       <p className="btd-small">{e.winners.length ? `Winners: ${e.winners.map((id) => role(id).name).join(", ")}.` : "Nobody wins."}</p>
-      <div className="btd-actions"><button className="btd-btn" onClick={onAgain}>Play again</button></div>
+      {onAgain && <div className="btd-actions"><button className="btd-btn" onClick={onAgain}>Play again</button></div>}
     </div>
   );
 }

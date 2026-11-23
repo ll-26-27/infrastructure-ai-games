@@ -22,7 +22,9 @@ A data centre is a building full of servers, but it only runs while everything a
 
 4. **The wildcard: choose one of three real events.** A CNA wildcard deals you three real events from the database and you set off one. **Here:** the wildcard deals three of the real breakdowns from the database, matched to the data centre's systems (a storm that downs transmission towers hits Power; an undersea cable fault hits Network; ransomware hits Security). The mechanic is *Wild Card*.
 
-5. **Who you are changes what your cards do.** In the CNA game, democracies and authoritarian states get different results from the same card ([Winner's](/cards/winner) idea that technical choices have politics). **Here:** who owns the data centre (a lab, a cloud company, a government) could change what each defence costs and who gets blamed.
+5. **A front page every year, and a class screen.** The CNA game tells each year as a newspaper with a made-up cast, and has a second screen for the projector that follows the game without showing anyone's cards. **Here:** the town next door's local paper reports each week at the data centre, and the class screen shows the building, its systems, the backup bag, the cascade and the paper, so the laptop can be passed around while everyone else watches the projector.
+
+6. **Who you are changes what your cards do.** In the CNA game, democracies and authoritarian states get different results from the same card ([Winner's](/cards/winner) idea that technical choices have politics). **Here:** who owns the data centre (a lab, a cloud company, a government) could change what each defence costs and who gets blamed.
 
 ## From The Race (BMFAFM branch)
 
@@ -40,7 +42,7 @@ A data centre is a building full of servers, but it only runs while everything a
 
 Neither game has hidden cards, so these are additions of our own:
 
-- **Hidden cards, played face down.** A backdoor that waits for the next attack, and a skipped generator test that quietly puts black tokens in the backup bag (*Bluffing*). They still work during a ceasefire, which makes a ceasefire a good time to cheat.
+- **Hidden cards, played face down.** A backdoor that waits for the next attack, a skipped generator test that quietly puts black tokens in the backup bag, or *Lie low*, which does nothing at all. Everyone sees who played a card face down, but never which one (*Bluffing*). They still work during a ceasefire, which makes a ceasefire a good time to cheat.
 - **The audit and the press.** The security team's audit finds backdoors, and the town can tell the press, which turns every hidden card face up for a week.
 
 ## How the pieces fit

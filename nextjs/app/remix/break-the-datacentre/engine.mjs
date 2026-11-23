@@ -43,7 +43,7 @@ export const KINDS = {
   talk: { label: "Talk", copy: "Ceasefires, strikes, hearings and the press. Resolved first." },
   repair: { label: "Repair or prepare", copy: "Slow and safe. Resolved before anything breaks." },
   shortcut: { label: "Shortcut", copy: "A big fix now, and a black token in the backup bag." },
-  hidden: { label: "Hidden", copy: "Played face down: nobody sees who played it." },
+  hidden: { label: "Hidden", copy: "Played face down: everyone sees that you played one, nobody sees which." },
   wild: { label: "Wildcard", copy: "Choose one of three real breakdowns." },
   attack: { label: "Attack", copy: "Hit one of the data centre's systems." },
   move: { label: "Break in", copy: "Try to get through the next gate." },
@@ -57,6 +57,7 @@ export const CARDS = [
   { id: "ransom", who: ["hacker"], kind: "attack", title: "Ransomware", text: "Lock the files. Network −20, and the cascade moves up 1.", from: [["risks", "a-hack"]] },
   { id: "recon", who: ["hacker"], kind: "repair", title: "Send an AI agent to scout", text: "It finds the weak spots for you: your next attack or break-in is likelier.", from: [["models", "an-ai-agent"]] },
   { id: "backdoor", who: ["hacker"], kind: "hidden", title: "Plant a backdoor", text: "Face down. It waits. The next time a breaker attacks, every backdoor goes off too: Security −10 and Network −10 each. An audit finds it.", from: [["risks", "a-hack"]] },
+  { id: "lielow", who: ["hacker", "insider"], kind: "hidden", title: "Lie low", text: "Face down, and it does nothing at all. Nobody can tell it from a backdoor or a skipped test.", from: [] },
   { id: "breakin", who: ["hacker"], kind: "move", title: "Break in", text: "Try to get through the next gate. If you're caught, you lose next week's turn.", from: [] },
   // The insider
   { id: "badge", who: ["insider"], kind: "move", title: "Badge someone in", text: "Hold the door. A break-in with much better odds. If you're caught, you lose next week's turn.", from: [["people", "data-workers"]] },
@@ -119,6 +120,7 @@ export function newGame(humans) {
     week: 1,
     players: ROLES.map((r) => ({ id: r.id, human: humans.includes(r.id), stunned: false })),
     systems: Object.fromEntries(SYSTEMS.map((s) => [s.key, s.start])),
+    seed: Math.floor(Math.random() * 1e9),
     ring: 0, recon: 0, backdoors: [], bag: { ...START_BAG }, cascade: 0, marks: 0,
     ceasefire: null, vote: null,
     wilds: dealWilds(), history: [], ended: null,
@@ -148,10 +150,11 @@ export function npcChoice(g, id) {
   };
   const r = Math.random();
   if (id === "hacker") {
-    if (g.ceasefire) return r < 0.6 ? choose("backdoor") : r < 0.85 ? choose("recon") : choose("ransom");
+    if (g.ceasefire) return r < 0.5 ? choose("backdoor") : r < 0.7 ? choose("lielow") : r < 0.9 ? choose("recon") : choose("ransom");
     if (s.security < 45 && r < 0.5) return choose("breakin");
     if (!g.recon && r < 0.25) return choose("recon");
-    if (r < 0.35) return choose("backdoor");
+    if (r < 0.3) return choose("backdoor");
+    if (r < 0.35) return choose("lielow");
     if (r < 0.45) return wildFor();
     return choose(pick(["phish", "inject", "ransom", "breakin"]));
   }
@@ -196,13 +199,15 @@ export function npcVote(g, id) {
 export function resolveWeek(game, choices) {
   const g = structuredClone(game);
   const log = [];
+  const events = []; // what happened, for the front page
   const say = (text, tone = "", who = null) => log.push({ text, tone, who });
+  const ev = (type, data = {}) => events.push({ type, ...data });
   const sys = (fx) => { for (const [k, v] of Object.entries(fx)) g.systems[k] = clamp(g.systems[k] + v); };
   const cascade = (n, why) => {
     if (!n) return;
     g.cascade = clamp(g.cascade + n, 0, CASCADE_MAX);
     if (why) say(`${why} The cascade moves up ${n}.`, "cascade");
-    while (g.marks < CASCADE_MARKS.length && g.cascade >= CASCADE_MARKS[g.marks].at) { say(CASCADE_MARKS[g.marks].text, "cascade"); g.marks += 1; }
+    while (g.marks < CASCADE_MARKS.length && g.cascade >= CASCADE_MARKS[g.marks].at) { say(CASCADE_MARKS[g.marks].text, "cascade"); ev("mark", { at: CASCADE_MARKS[g.marks].at }); g.marks += 1; }
   };
   const black = (n, why) => { if (!n) return; g.bag.black += n; cascade(n); say(`${why} ${n} black token${n > 1 ? "s" : ""} in the backup bag; the cascade moves up ${n}.`, "shortcut"); };
   const nextStunned = new Set();
@@ -221,13 +226,16 @@ export function resolveWeek(game, choices) {
   if (g.ceasefire && plays.some((x) => ["attack", "move"].includes(card(x.card).kind))) {
     const who = plays.find((x) => ["attack", "move"].includes(card(x.card).kind)).who;
     say(`${role(who).name} breaks the ceasefire.`, "attack", who);
+    ev("broke", { who });
     g.ceasefire = null;
   }
 
   const sorted = [...plays].sort((a, b) => ORDER.indexOf(card(a.card).kind) - ORDER.indexOf(card(b.card).kind));
   for (const x of sorted) {
     const c = card(x.card), name = role(x.who).name;
-    if (c.kind === "hidden" && press) { say(`${name} tried to play a card face down, and the press saw it: ${c.title}. It fails.`, "fail", x.who); continue; }
+    if (c.kind === "hidden" && press) { say(`${name} tried to play a card face down, and the press saw it: ${c.title}. It fails.`, "fail", x.who); ev("exposed", { who: x.who, card: c.id }); continue; }
+    if (["talk", "repair", "shortcut"].includes(c.kind) && c.id !== "audit") ev("card", { who: x.who, card: c.id });
+    if (c.kind === "hidden") ev("hidden", { who: x.who });
     switch (c.id) {
       case "ceasefire": calledCeasefire = true; say(`${name} calls a ceasefire. Everyone votes.`, "talk", x.who); break;
       case "strike": say(`${name} calls a strike: repairs and shortcuts do half this week, and nobody can break in.`, "talk", x.who); break;
@@ -238,6 +246,7 @@ export function resolveWeek(game, choices) {
       case "restore": fix({ network: 20 }); say(`${name} restores from backup: Network up.`, "repair", x.who); break;
       case "audit": {
         const found = g.backdoors.length;
+        ev("audit", { who: x.who, found });
         if (found) { g.backdoors.forEach((b) => nextStunned.add(b)); g.backdoors = []; say(`${name} runs an audit and finds ${found} backdoor${found > 1 ? "s" : ""}. Whoever planted them loses next week's turn.`, "repair", x.who); }
         else say(`${name} runs an audit and finds nothing.`, "muted", x.who);
         break;
@@ -249,10 +258,12 @@ export function resolveWeek(game, choices) {
       case "rushfix": fix({ security: 25, network: 5 }); black(1, `${name} ships a fix without testing: Security up.`); break;
       case "gas": fix({ power: 30 }); black(1, `${name} switches on onsite gas turbines: Power up.`); break;
       case "runhot": fix({ cooling: 25 }); sys({ water: -10 }); black(1, `${name} runs the chillers flat out: Cooling up, Water −10.`); break;
-      case "backdoor": g.backdoors.push(x.who); say("A card is played face down.", "hidden"); break;
-      case "skiptest": g.bag.black += 2; cascade(2); say("Someone signs the sheet and skips the generator test: 2 black tokens in the backup bag; the cascade moves up 2.", "hidden"); break;
+      case "backdoor": g.backdoors.push(x.who); say(`${name} plays a card face down.`, "hidden", x.who); break;
+      case "lielow": say(`${name} plays a card face down.`, "hidden", x.who); break;
+      case "skiptest": say(`${name} plays a card face down.`, "hidden", x.who); g.bag.black += 2; cascade(2); say("Somewhere in the building, a generator test is signed off but never run: 2 black tokens in the backup bag; the cascade moves up 2.", "hidden"); break;
       case "wild": {
         const b = breakdown(x.wild) || breakdown(g.wilds[x.who][0]);
+        ev("wild", { who: x.who, id: b.id, here: role(x.who).side === "breakers" });
         if (role(x.who).side === "breakers") {
           sys({ [b.hits]: -20 });
           say(`${name} sets off a wildcard: ${b.title} (${b.date}). It happens here: ${sysLabel(b.hits)} −20.`, "wild", x.who);
@@ -272,11 +283,12 @@ export function resolveWeek(game, choices) {
     const c = card(x.card), name = role(x.who).name;
     if (g.backdoors.length) {
       const n = g.backdoors.length;
-      sys({ security: -10 * n, network: -10 * n }); g.backdoors = [];
+      sys({ security: -10 * n, network: -10 * n }); g.backdoors = []; ev("backdoors", { n });
       say(`${n} backdoor${n > 1 ? "s" : ""} go${n > 1 ? "" : "es"} off: Security and Network −${10 * n}.`, "attack");
     }
     const ok = Math.random() < attackChance(g);
     g.recon = 0;
+    ev("attack", { who: x.who, card: c.id, ok });
     if (!ok) { sys({ security: 3 }); say(`${name} tries ${c.title.toLowerCase()} and is stopped.`, "fail", x.who); continue; }
     if (c.id === "phish") { sys({ security: -15 }); say(`${name}: ${c.title}. Someone clicks: Security −15.`, "attack", x.who); }
     if (c.id === "inject") { sys({ network: -10, security: -8 }); say(`${name}: ${c.title}. The data centre's AI agent is hijacked: Network −10, Security −8.`, "attack", x.who); }
@@ -293,6 +305,7 @@ export function resolveWeek(game, choices) {
     const extra = STEP_CHANCE[g.ring] - 0.5 + (x.card === "badge" ? 0.25 : 0) - (guarded ? 0.3 : 0);
     const ok = Math.random() < attackChance(g, extra);
     g.recon = 0;
+    ev("breakin", { who: x.who, ok, ring: ok ? g.ring + 1 : g.ring });
     if (ok) { g.ring += 1; say(`${name} gets through: the break-in team is in ${RINGS[g.ring].toLowerCase()}.`, "move", x.who); }
     else { nextStunned.add(x.who); sys({ security: 5 }); say(`${name} is caught at the gate and loses next week's turn. Security +5.`, "fail", x.who); }
   }
@@ -305,6 +318,7 @@ export function resolveWeek(game, choices) {
     if (g.ended || g.systems[s.key] > 0) continue;
     say(`${s.label} hits zero.`, "out");
     const safe = draw(g, say, cascade, "The backup is tried");
+    ev("outage", { system: s.key, safe });
     if (safe) g.systems[s.key] = 20;
     else { cascade(3, "The data centre goes dark."); if (g.cascade < CASCADE_MAX) g.ended = end("dark", `${s.label} failed, and the backup didn't start.`); }
   }
@@ -320,7 +334,7 @@ export function resolveWeek(game, choices) {
   if (!g.ended && g.week >= WEEKS) g.ended = end("held", `The data centre was still running after ${WEEKS} weeks.`, g.cascade < 4);
 
   for (const p of g.players) p.stunned = nextStunned.has(p.id);
-  g.history.push({ week: g.week, plays, log });
+  g.history.push({ week: g.week, plays, log, events, ended: g.ended, cascade: g.cascade, ring: g.ring });
   if (g.ended) say(`${g.ended.title} ${g.ended.text}`, g.ended.winners.length ? "win" : "out");
   else {
     g.vote = calledCeasefire && !g.ceasefire ? {} : null;
@@ -355,6 +369,8 @@ export function resolveVote(game, votes) {
   const g = structuredClone(game);
   const log = g.history[g.history.length - 1].log;
   const no = ROLES.filter((r) => !votes[r.id]).map((r) => r.name);
+  const entry = g.history[g.history.length - 1];
+  entry.events.push({ type: "vote", passed: !no.length, no: ROLES.filter((r) => !votes[r.id]).map((r) => r.id) });
   if (no.length) log.push({ text: `The ceasefire vote fails: ${no.join(", ")} voted no.`, tone: "talk" });
   else { g.ceasefire = { weeks: 0 }; log.push({ text: `Everyone votes yes. The ceasefire is in force: no attacks, no break-ins, and repairs do half again as much. ${CEASEFIRE_ROUNDS} weeks of peace and everyone shares the win.`, tone: "talk" }); }
   g.vote = null;

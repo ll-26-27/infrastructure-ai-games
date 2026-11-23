@@ -19,7 +19,7 @@ const mechanics = [
   ["Multiple Loss Conditions", "Five systems, any one of which can fail; the racks; the cascade."],
   ["Wild Card", "Choose one of three real breakdowns."],
   ["Negotiation", `The ceasefire: everyone must agree, and ${CEASEFIRE_ROUNDS} weeks of peace is a shared win.`],
-  ["Bluffing", "Hidden cards are played face down; an audit or the press can turn them up."],
+  ["Bluffing", "Everyone sees who played a card face down, never which: a backdoor, a skipped test, or nothing at all."],
 ];
 
 const ideas = [
@@ -90,6 +90,8 @@ export default function BreakTheDataCentreCombined() {
                 <li><b>The wildcard</b>: choose one of three real events from the database. Here they are real breakdowns, and a breaker makes one happen here while anyone else learns from it.</li>
                 <li><b>Losing a turn</b> after you&apos;re caught.</li>
                 <li><b>The game plays anyone nobody is playing</b>, and the pass-the-screen cover between players.</li>
+                <li><b>A front page every week</b>, with a made-up cast: here, the local paper of the town next door.</li>
+                <li><b>A class screen for the projector</b>, which follows the game and never shows anyone&apos;s cards.</li>
               </ul>
               <h3>From <Link href="/race">The Race</Link> (branch BMFAFM)</h3>
               <ul>
@@ -101,7 +103,7 @@ export default function BreakTheDataCentreCombined() {
               </ul>
               <h3>New in this game</h3>
               <ul>
-                <li><b>Hidden cards</b>, played face down: a backdoor that waits for the next attack, and a skipped generator test. They still work during a ceasefire.</li>
+                <li><b>Hidden cards</b>, played face down: a backdoor that waits for the next attack, a skipped generator test, or <i>Lie low</i>, which does nothing and looks the same. They still work during a ceasefire.</li>
                 <li><b>The audit and the press</b>, which turn hidden cards face up.</li>
                 <li><b>The town next door</b>, a player with a goal of its own.</li>
               </ul>

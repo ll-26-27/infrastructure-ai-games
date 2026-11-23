@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components/Chrome.jsx";
+import { remixes } from "./remixes.mjs";
 
 export const metadata = {
   title: "Student games",
@@ -14,32 +15,20 @@ const games = [
   { href: "/break-the-datacentre", title: "Break the datacentre", copy: "The third group's game. It will be here as soon as the group shares it.", from: "the break-the-datacentre branch", ready: false },
 ];
 
-// The combined games: each keeps one group's game at its core and brings in ideas from the other two.
-const remixes = [
-  { href: "/remix/cna", title: "CNA game, combined", copy: "The CNA game at the core, with ideas from The Race and from Break the datacentre.", ready: false },
-  { href: "/remix/bmfafm", title: "The Race, combined", copy: "The Race at the core, with ideas from the CNA game and from Break the datacentre.", ready: false },
-  { href: "/remix/break-the-datacentre", title: "Break the datacentre, combined", copy: "Break the datacentre at the core, with ideas from the CNA game and from The Race.", ready: false },
-];
 
 function Tiles({ items, start, label }) {
   return (
     <nav className="tiles" aria-label={label}>
-      {items.map(({ href, title, copy, from, ready }, index) => {
-        const number = <span className="tile-number">{String(start + index).padStart(2, "0")}</span>;
-        const body = (
-          <>
-            {number}
-            <strong>{title}</strong>
+      {items.map(({ name, href, title, copy, from, ready }, index) => {
+        const plan = name && <Link className="tile-plan" href={`/student-games/plans/${name}`}>Tentative plan</Link>;
+        return (
+          <div className={ready ? "tile tile-open" : "tile tile-empty"} key={href}>
+            <span className="tile-number">{String(start + index).padStart(2, "0")}</span>
+            <strong>{ready ? <Link className="tile-link" href={href}>{title}</Link> : title}</strong>
             <span className="tile-copy">{copy}</span>
             {from && <span className="tile-note">From {from}</span>}
-          </>
-        );
-        return ready ? (
-          <Link className="tile" href={href} key={href}>{body}</Link>
-        ) : (
-          <div className="tile tile-empty" key={href}>
-            {body}
-            <span className="tile-note">Not here yet</span>
+            {!ready && <span className="tile-note">Not here yet</span>}
+            {plan}
           </div>
         );
       })}

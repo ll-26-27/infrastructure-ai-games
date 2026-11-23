@@ -214,3 +214,8 @@ body:has(.print-root) { background: #ffffff; color-scheme: light; }
 /* --- student games: the index's two groups of tiles --- */
 .sg-heading { margin: 52px 0 0; font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 .sg-heading + .tiles { margin-top: 18px; }
+.tile-open { position: relative; }
+.tile-open:hover { border-color: var(--c, var(--accent)); background: var(--hover); }
+.tile-open:hover strong { color: var(--c, var(--accent)); }
+.tile-link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.tile-plan { position: relative; z-index: 1; justify-self: start; margin-top: 4px; color: var(--c, var(--accent)); font-size: 13px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }

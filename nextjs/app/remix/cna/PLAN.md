@@ -71,6 +71,14 @@ That game isn't in yet. What we would look for in it, and where it would go:
 
 We will fold these in once we can play it, and credit it here by name.
 
-## What stays exactly as it was
+## What stays as it is in the CNA game
 
-The map and its colours, the five bars and what knocks you out, the four kinds of cards and their colours, the order cards resolve in (reinforce, develop, wildcards, attacks), the pass-the-screen turns for up to four people, every attack card and wildcard, and every ending in the CNA game except the hidden roll at AGI, which the bag replaces.
+The map and its colours, the five bars and what knocks you out, the four kinds of cards and their colours, the order cards resolve in (reinforce, develop, wildcards, attacks), the pass-the-laptop turns for up to four people, every attack card and wildcard, and every ending in the CNA game except the hidden roll at AGI, which the bag replaces.
+
+The CNA game's newest version added five things, and all five are in this game too:
+
+- **Lethal autonomous weapons**, the strongest attack. Here it also puts two doom tokens in the attacker's bag, so the most dangerous weapon makes your own draw at the centre worse.
+- **Face-down wildcards**: twelve real events from the database, six that help and six that hurt, picked blind.
+- **The power ranking**: one number for how well each country is doing. It doesn't count the bag, so the country at the top of the ranking can be the one most likely to draw black. That gap is part of what the combined game argues.
+- **The Daily Compute**, the yearly front page with its made-up cast. Here it also reports the AI's stops, the pause votes, inspections, and the draw at the centre.
+- **The class screen** for the projector, at `/remix/cna/screen`. Here it also shows the bags, the AI on the map and the pause votes.

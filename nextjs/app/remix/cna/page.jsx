@@ -13,7 +13,8 @@ export const metadata = {
 const mechanics = [
   ["Simultaneous Action Selection", "Every country chooses a card in secret; all are revealed at once."],
   ["Card Driven", "Everything a country does, it does by playing a card."],
-  ["Wild Card", "The wildcard lets you choose one of three real events."],
+  ["Wild Card", "The wildcard is a face-down gamble on one of three real events, half good and half bad."],
+  ["Victory Points", "The power score turns five bars into one number, so you can see who is ahead."],
   ["Chit-Pull System", "Superintelligence is decided by drawing one token from your own bag."],
   ["Press Your Luck", "At 100 AI you can switch it on now, or wait and fill your bag with safe tokens while a rival catches up."],
   ["Race", "The first country to switch on a safe superintelligence wins."],
@@ -78,7 +79,7 @@ export default function CnaCombined() {
 
         <section className="cx-credit">
           <h2>What this game is built from</h2>
-          <p><b>At its core: the CNA game (branch cna-game, route <Link href="/cna-game">/cna-game</Link>).</b> Its premise, its world map, its five bars, its two world meters, its four kinds of cards, its secret choices revealed at once, its attacks and wildcards, and its endings are all here as they were.</p>
+          <p><b>At its core: the CNA game (branch cna-game, route <Link href="/cna-game">/cna-game</Link>).</b> Its premise, its world map, its five bars, its two world meters, its four kinds of cards, its secret choices revealed at once, its attacks (lethal autonomous weapons among them), its face-down wildcards, its power ranking, its yearly front page in The Daily Compute, its class screen for the projector, and its endings are all here.</p>
           <div className="cx-from-game">
             <h3>From The Race (the BMFAFM game, <Link href="/race">/race</Link>)</h3>
             <ul>{fromRace.map(([what, how]) => <li key={what}><b>{what}:</b> {how}</li>)}</ul>
@@ -110,6 +111,7 @@ export default function CnaCombined() {
             <div>
               <h3>The cards</h3>
               <ul>{Object.entries(KINDS).map(([k, v]) => <li key={k} className={`k-${k}`}><b className="cx-dot">{v.label}:</b> {v.copy}</li>)}</ul>
+              <p>The wildcard deck has six real events that help you and six that hurt you, and you pick face down. Lethal autonomous weapons are the strongest attack, and the most dangerous for everyone: two doom tokens go in your bag.</p>
               <p>Cards resolve in order: reinforce, then develop, then wildcards, then attacks, so shoring up your defences protects you the same year, and an inspection catches what was built in secret that year. A successful hack, attack or assassination makes the target lose next year&apos;s turn.</p>
             </div>
             <div>
@@ -118,6 +120,14 @@ export default function CnaCombined() {
                 <li><b>The AI</b> rolls every year and stops in one country, or more as the world gets riskier. That country draws an incident.</li>
                 <li><b>A pause</b> is called with a card and voted on the next year, by everyone at once. It needs every yes. While it holds, AI doesn&apos;t grow and safe tokens come easier.</li>
                 <li><b>Breaking it:</b> play a card that grows AI and the pause ends, openly, for 10 allies. Or build in secret and hope nobody inspects you.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>The news, the ranking and the class screen</h3>
+              <ul>
+                <li><b>The Daily Compute:</b> after every reveal, the year&apos;s front page tells what happened, with a cast of made-up leaders, CEOs, spies and hackers, the AI&apos;s stops, the pause, and a table of how every country&apos;s points changed.</li>
+                <li><b>Power:</b> one number for how well a country is doing: 40% AI progress, 40% its four survival bars, and 20% its weakest bar. It doesn&apos;t count the bag, so the country at the top may be the one most likely to draw black.</li>
+                <li><b>The class screen:</b> open it from the button above the game and put it on the projector. It follows the game and never shows the cards being chosen.</li>
               </ul>
             </div>
             <div>

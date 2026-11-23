@@ -1,27 +1,26 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
-import { geoNaturalEarth1, geoPath } from "d3-geo";
-import { feature } from "topojson-client";
-import world from "world-atlas/countries-110m.json";
-import {
-  AVATARS, BARS, COUNTRIES, FIRST_YEAR, KINDS, PAUSE_YEARS, RINGS, WILDS, YEARS,
-  aiVisits, alive, card, countryOf, holdVote, incident, newGame, npcChoice, odds, playable, resolveYear,
-} from "./engine.mjs";
+import { useEffect, useRef, useState } from "react";
+import { AVATARS, BARS, COUNTRIES, FIRST_YEAR, KINDS, PAUSE_YEARS, alive, card, countryOf, holdVote, newGame, npcChoice, odds, playable, resolveYear } from "./engine.mjs";
+import { Bag, Ending, FrontPage, Players, Ranking, Topline, VoteResult, WorldMap, colorsFor } from "./Board.jsx";
 
-const COLORS = ["#c58cff", "#ff6fb5", "#5fe1e6", "#ffd84a", "#ff9a3d", "#7fc787", "#8ab4ff", "#ff8a80", "#e6e6a0", "#b0ffd8"];
-const W = 960;
-const H = 470;
-const REGIONS = [
-  ["North America", [-110, 55]], ["South America", [-60, -18]], ["Europe", [15, 60]], ["Africa", [20, 5]],
-  ["Middle East", [45, 30]], ["Russia and Central Asia", [75, 52]], ["East Asia", [110, 45]], ["South Asia", [78, 15]],
-  ["Southeast Asia", [110, 5]], ["Oceania", [135, -25]],
-];
+// The class screen (/remix/cna/screen) follows the game through this channel. Only what everyone may see is sent:
+// the game after each reveal, the votes once they are revealed, and how many presidents have locked in a card,
+// never which card.
+export const CHANNEL = "remix-cna-screen";
+function broadcast(message) {
+  try {
+    localStorage.setItem(CHANNEL, JSON.stringify(message));
+    const bc = new BroadcastChannel(CHANNEL);
+    bc.postMessage(message);
+    bc.close();
+  } catch {}
+}
 
 export default function Game() {
   const [game, setGame] = useState(null);
   const [setup, setSetup] = useState(null);
-  const [phase, setPhase] = useState("setup"); // setup, vote, choose, reveal, ended
+  const [phase, setPhase] = useState("setup"); // setup, vote, voted, choose, reveal, ended
   const [turn, setTurn] = useState(0); // which human is choosing
   const [covered, setCovered] = useState(true); // the pass-the-screen cover between human players
   const [choices, setChoices] = useState({});
@@ -31,16 +30,22 @@ export default function Game() {
     if (top.current && top.current.getBoundingClientRect().top < 0) top.current.scrollIntoView({ behavior: "smooth", block: "start" });
   }, [phase, turn, covered, game?.year]);
 
+  const humansNow = game ? game.players.filter((p) => p.human && !p.out && !p.stunned) : [];
+  useEffect(() => {
+    broadcast({ phase, game, waiting: { locked: Object.keys(choices).length, total: humansNow.length, next: phase === "choose" ? humansNow[turn]?.id : null } });
+  }, [phase, game, choices, turn]); // eslint-disable-line react-hooks/exhaustive-deps
+
   // A year opens with a vote when a pause was called. With no people left to vote, the game votes for everyone.
   const voters = game ? game.players.filter((p) => p.human && !p.out) : [];
   const mustVote = phase === "choose" && game && !game.ended && game.vote && !game.vote.result;
   useEffect(() => {
-    if (mustVote && !voters.length) setGame(holdVote(game, {}));
-    else if (mustVote) setPhase("vote");
+    if (!mustVote) return;
+    if (!voters.length) { setGame(holdVote(game, {})); setPhase("voted"); }
+    else setPhase("vote");
   }, [mustVote]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // If no person can play this year (all out or losing a turn), the countries the game runs play on.
-  const nobody = phase === "choose" && game && !game.ended && !mustVote && !game.players.some((p) => p.human && !p.out && !p.stunned);
+  const nobody = phase === "choose" && game && !game.ended && !mustVote && humansNow.length === 0;
   useEffect(() => {
     if (!nobody) return;
     const t = setTimeout(() => {
@@ -53,12 +58,14 @@ export default function Game() {
     return () => clearTimeout(t);
   }, [nobody, game]);
 
+  const start = (s) => { const g = newGame(s); setSetup(s); setGame(g); setChoices({}); setTurn(0); setCovered(s.humans.length > 1); setPhase("choose"); };
+
   if (phase === "setup" || !game) {
-    return <div ref={top} className="cx-anchor"><Setup onStart={(s) => { const g = newGame(s); setSetup(s); setGame(g); setChoices({}); setTurn(0); setCovered(s.humans.length > 1); setPhase("choose"); }} /></div>;
+    return <div ref={top} className="cx-anchor"><ScreenLink /><Setup onStart={start} /></div>;
   }
 
-  const humans = game.players.filter((p) => p.human && !p.out && !p.stunned);
-  const colorOf = Object.fromEntries(game.players.map((p, i) => [p.id, COLORS[i % COLORS.length]]));
+  const humans = humansNow;
+  const colorOf = colorsFor(game);
   const last = game.history[game.history.length - 1];
   const showing = phase === "reveal" || phase === "ended";
 
@@ -81,67 +88,46 @@ export default function Game() {
 
   return (
     <div className="cx-game cx-anchor" ref={top}>
-      <div className="cx-topline">
-        <div className="cx-year">
-          <span className="eyebrow">Year</span>
-          <b>{showing ? last.year : game.year}</b>
-          <span className="cx-of">of {FIRST_YEAR}–{FIRST_YEAR + YEARS - 1}</span>
-        </div>
-        <Meter label="World AI risk" hint="Every doom token added to any bag raises it. At 100 the AI takes over and everyone loses." value={game.world.risk} color="var(--pink)" note={`The AI visits ${aiVisits(game.world.risk)} ${aiVisits(game.world.risk) === 1 ? "country" : "countries"} a year`} />
-        <Meter label="World tension" hint="At 100, world war: everyone loses." value={game.world.tension} color="var(--orange)" />
-        {game.pause && <div className="cx-pause-tag" title="While the pause holds, nobody's AI grows. If it holds three years, everyone still standing shares the win.">Pause in force · {game.pause.years} of {PAUSE_YEARS} years</div>}
-      </div>
-
-      <div className="cx-board">
-        <WorldMap game={game} colorOf={colorOf} plays={showing ? last?.plays : null} aiAt={showing ? last?.aiAt : game.aiAt} />
-        <Players game={game} colorOf={colorOf} />
-      </div>
+      <ScreenLink />
+      <Topline game={game} year={showing ? last.year : game.year} />
 
       {phase === "vote" && <Vote game={game} voters={voters} onDone={(votes) => { setGame(holdVote(game, votes)); setPhase("voted"); }} />}
-
       {phase === "voted" && game.vote?.result && (
-        <section className="cx-reveal">
-          <p className="eyebrow">{game.year}: the vote on a pause</p>
-          <div className="cx-revealed">{game.vote.result.map((r) => { const p = game.players.find((q) => q.id === r.who); return (
-            <div key={r.who} className={`cx-flip ${r.yes ? "k-reinforce" : "k-attack"}`} style={{ "--pc": colorOf[r.who] }}><small>{p.avatar} {p.name}</small><b>{r.yes ? "Yes" : "No"}</b></div>
-          ); })}</div>
-          <p className="cx-verdict">{game.vote.passed ? `Everyone voted yes. The pause is in force: envelopes are opened, nobody's AI grows, and safe tokens come easier. Hold it ${PAUSE_YEARS} years and everyone still standing shares the win.` : "Not everyone voted yes, so there is no pause. The race goes on."}</p>
+        <>
+          <VoteResult game={game} colorOf={colorOf} />
           <div className="cx-actions"><button className="cx-btn" onClick={() => setPhase("choose")}>Choose this year&apos;s cards →</button></div>
-        </section>
+        </>
       )}
 
       {phase === "choose" && !mustVote && humans.length > 0 && (
         covered
-          ? <div className="cx-cover"><p>Pass the screen to</p><h2>{humans[turn].avatar} {humans[turn].name}</h2><p className="cx-muted">The others look away: everyone chooses in secret, and all cards are revealed at once.</p><button className="cx-btn" onClick={() => setCovered(false)}>I&apos;m {humans[turn].name}: show my cards</button></div>
+          ? <div className="cx-cover"><p>Pass the laptop to</p><h2>{humans[turn].avatar} {humans[turn].name}</h2><p className="cx-muted">Everyone else looks at the class screen, or away: cards are chosen in secret, and all are revealed at once.</p><button className="cx-btn" onClick={() => setCovered(false)}>I&apos;m {humans[turn].name}: show my cards</button></div>
           : <Hand key={`${game.year}-${humans[turn].id}`} game={game} me={humans[turn]} onPlay={submit} />
       )}
 
-      {showing && last && <Reveal game={game} last={last} colorOf={colorOf} />}
+      {showing && last && <FrontPage game={game} entry={last} colorOf={colorOf} />}
 
       {phase === "reveal" && <div className="cx-actions"><button className="cx-btn" onClick={nextYear}>On to {game.year} →</button></div>}
 
-      {phase === "ended" && (
-        <div className={`cx-ending is-${game.ended.kind}`}>
-          <p className="eyebrow">{{ "one-wins": "One country wins", "some-win": "Some countries win", "all-lose": "Everyone loses" }[game.ended.kind]}</p>
-          <h2>{game.ended.title}</h2>
-          <p>{game.ended.text}</p>
-          {game.ended.winners.length > 0 && <p className="cx-winners">{game.ended.winners.map((id) => { const p = game.players.find((q) => q.id === id); return <span key={id}>{p.avatar} {p.name}</span>; })}</p>}
-          <div className="cx-actions">
-            <button className="cx-btn" onClick={() => { const g = newGame(setup); setGame(g); setTurn(0); setCovered(setup.humans.length > 1); setPhase("choose"); }}>Play again, same countries</button>
-            <button className="cx-btn is-ghost" onClick={() => setPhase("setup")}>New game</button>
-          </div>
+      {phase === "ended" && <Ending game={game} onAgain={() => start(setup)} onNew={() => setPhase("setup")} />}
+
+      <div className="cx-board">
+        <WorldMap game={game} colorOf={colorOf} plays={showing ? last?.plays : null} aiAt={showing ? last?.aiAt : game.aiAt} />
+        <div className="cx-side-col">
+          <Ranking game={game} colorOf={colorOf} />
+          <Players game={game} colorOf={colorOf} />
         </div>
-      )}
+      </div>
     </div>
   );
 }
 
-function Meter({ label, hint, value, color, note }) {
+function ScreenLink() {
   return (
-    <div className="cx-meter" title={hint}>
-      <span>{label} <b>{value}</b>{note && <small> · {note}</small>}</span>
-      <div className="cx-track"><i style={{ width: `${value}%`, background: color }} /></div>
-    </div>
+    <p className="cx-screenlink">
+      <a href="/remix/cna/screen" target="remix-cna-screen" className="cx-btn is-ghost">Open the class screen ↗</a>
+      <span className="cx-small cx-muted">For the projector: it follows this game, shows the map, the AI, the ranking, the bags, the votes and each year&apos;s front page, and never shows anyone&apos;s cards.</span>
+    </p>
   );
 }
 
@@ -170,7 +156,7 @@ function Setup({ onStart }) {
     <div className="cx-setup">
       <section>
         <h2>How many people are playing?</h2>
-        <p className="cx-muted">On one screen: each president chooses a card in secret while the others look away, then every card is revealed at once. Every country nobody plays is run by the game.</p>
+        <p className="cx-muted">On one laptop: each president chooses a card in secret while the others look away, then every card is revealed at once. Every country nobody plays is run by the game.</p>
         <div className="cx-seg">{[1, 2, 3, 4].map((n) => <button key={n} className={n === count ? "is-on" : ""} onClick={() => setCount(n)}>{n} {n === 1 ? "player" : "players"}</button>)}</div>
       </section>
 
@@ -206,123 +192,6 @@ function Setup({ onStart }) {
 
       <button className="cx-btn cx-start" disabled={!ok} onClick={() => onStart({ humans: playing, rivals: npcIds })}>Start in {FIRST_YEAR} →</button>
     </div>
-  );
-}
-
-// ------------------------------------------------------------------------------------------------- map
-
-function WorldMap({ game, colorOf, plays, aiAt }) {
-  const { paths, project } = useMemo(() => {
-    const land = feature(world, world.objects.countries).features.filter((f) => f.id !== "010"); // no Antarctica
-    const projection = geoNaturalEarth1().fitExtent([[6, 6], [W - 6, H - 6]], { type: "FeatureCollection", features: land });
-    const path = geoPath(projection);
-    return { paths: land.map((f) => ({ id: f.id, d: path(f) })), project: projection };
-  }, []);
-  const owner = {};
-  for (const p of game.players) for (const iso of countryOf(p.id).iso) owner[iso] = p;
-  const pos = Object.fromEntries(game.players.map((p) => [p.id, project(countryOf(p.id).at)]));
-  const arcs = (plays || []).filter((x) => x.target && pos[x.who] && pos[x.target]);
-  const visits = (aiAt || []).filter((v) => pos[v.who]);
-
-  return (
-    <figure className="cx-map">
-      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="World map of the countries in the game, with the AI's path this year">
-        <rect width={W} height={H} className="cx-sea" />
-        {paths.map((f, i) => {
-          const p = owner[f.id];
-          return <path key={i} d={f.d} className={p ? (p.out ? "cx-land is-out" : "cx-land is-in") : "cx-land"} style={p && !p.out ? { fill: colorOf[p.id] } : undefined} />;
-        })}
-        {REGIONS.map(([name, at]) => { const [x, y] = project(at); return <text key={name} x={x} y={y} className="cx-region">{name}</text>; })}
-        <defs>
-          <marker id="cx-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ff5a4f" /></marker>
-          <marker id="cx-ai-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3dff8a" /></marker>
-        </defs>
-        {arcs.map((x, i) => {
-          const [x1, y1] = pos[x.who]; const [x2, y2] = pos[x.target];
-          const mx = (x1 + x2) / 2; const my = Math.min(y1, y2) - 40 - Math.abs(x1 - x2) * 0.1;
-          return <path key={i} d={`M${x1},${y1} Q${mx},${my} ${x2},${y2}`} className={card(x.card)?.id === "inspect" ? "cx-arc is-inspect" : "cx-arc"} markerEnd="url(#cx-arrow)" />;
-        })}
-        {visits.slice(1).map((v, i) => {
-          const [x1, y1] = pos[visits[i].who]; const [x2, y2] = pos[v.who];
-          return <path key={`ai${i}`} d={`M${x1 + 18},${y1 + 18} L${x2 + 18},${y2 + 18}`} className="cx-ai-path" markerEnd="url(#cx-ai-arrow)" />;
-        })}
-        {game.players.map((p) => {
-          const [x, y] = pos[p.id];
-          const play = plays?.find((q) => q.who === p.id);
-          const c = play && play.card && play.card !== "stunned" ? card(play.card) : null;
-          const shown = c?.id === "secret" ? "a sealed envelope" : c?.title;
-          return (
-            <g key={p.id} transform={`translate(${x},${y})`} className={p.out ? "cx-pin is-out" : "cx-pin"}>
-              <circle r="15" style={{ stroke: colorOf[p.id] }} />
-              <text className="cx-pin-face" y="6">{p.out ? "✖" : p.avatar}</text>
-              <text className="cx-pin-name" y="29">{p.name.length > 16 ? countryOf(p.id).name : p.name}</text>
-              {c && <text className={`cx-pin-card k-${c.kind}`} y="-21">{shown.length > 22 ? shown.slice(0, 21) + "…" : shown}</text>}
-              {play?.card === "stunned" && <text className="cx-pin-card k-muted" y="-21">recovering</text>}
-            </g>
-          );
-        })}
-        {visits.map((v, i) => {
-          const [x, y] = pos[v.who];
-          return (
-            <g key={`v${i}`} transform={`translate(${x + 18},${y + 18})`} className="cx-ai-pawn">
-              <circle r="12" className="cx-ai-ring" style={{ animationDelay: `${i * 200}ms` }} />
-              <text y="5">🤖</text>
-              <text className="cx-ai-step" x="13" y="-8">{i + 1}</text>
-            </g>
-          );
-        })}
-      </svg>
-      <figcaption>🤖 The AI: each year it rolls and stops in {aiVisits(game.world.risk) === 1 ? "one country" : `${aiVisits(game.world.risk)} countries`}, and each draws an incident. The riskier the world, the more it moves.</figcaption>
-    </figure>
-  );
-}
-
-// ------------------------------------------------------------------------------------------------- players
-
-function Bag({ bag, small }) {
-  const dots = [...Array(bag.white).fill("w"), ...Array(bag.black).fill("b")];
-  return (
-    <span className={small ? "cx-bag is-small" : "cx-bag"} title={`${bag.white} safe, ${bag.black} doom: a ${Math.round((100 * bag.white) / (bag.white + bag.black))}% chance of drawing safe`}>
-      {dots.slice(0, 30).map((d, i) => <i key={i} className={d === "w" ? "is-white" : "is-black"} />)}
-      {dots.length > 30 && <em>+{dots.length - 30}</em>}
-      <b>{Math.round((100 * bag.white) / (bag.white + bag.black))}% safe</b>
-    </span>
-  );
-}
-
-function Players({ game, colorOf }) {
-  return (
-    <ol className="cx-players">
-      {game.players.map((p) => (
-        <li key={p.id} className={p.out ? "cx-player is-out" : "cx-player"} style={{ "--pc": colorOf[p.id] }}>
-          <div className="cx-player-head">
-            <span className="cx-avatar">{p.avatar}</span>
-            <div>
-              <b>{p.name}</b>
-              <small>{p.name !== countryOf(p.id).name ? `${countryOf(p.id).name} · ` : ""}{p.system === "authoritarian" ? "Authoritarian" : "Democratic"}{p.human ? " · you" : ""}</small>
-            </div>
-            {p.out ? <span className="cx-tag is-out">OUT</span> : p.stunned ? <span className="cx-tag">loses a turn</span> : p.hidden ? <span className="cx-tag is-env" title="Something is in its envelope">✉ sealed</span> : null}
-          </div>
-          {p.out ? <p className="cx-small cx-muted">Out in {p.out.year}. {p.out.why}</p> : (
-            <>
-              <div className="cx-bars">
-                {BARS.map((b) => (
-                  <div key={b.key} className={`cx-bar b-${b.key}${p.bars[b.key] <= 20 && b.out ? " is-low" : ""}`} title={`${b.label}: ${p.bars[b.key]}${b.out ? " (out at 0)" : " (superintelligence at 100)"}`}>
-                    <span>{b.short}</span>
-                    <div className={b.key === "ai" ? "cx-track cx-rings" : "cx-track"}><i style={{ width: `${p.bars[b.key]}%` }} /></div>
-                    <em>{p.bars[b.key]}</em>
-                  </div>
-                ))}
-              </div>
-              <div className="cx-player-foot">
-                <span className="cx-ring-name">{RINGS[Math.min(3, p.bars.ai >= 100 ? 3 : p.bars.ai >= 70 ? 2 : p.bars.ai >= 40 ? 1 : 0)].name}</span>
-                <Bag bag={p.bag} small />
-              </div>
-            </>
-          )}
-        </li>
-      ))}
-    </ol>
   );
 }
 
@@ -411,7 +280,7 @@ function Hand({ game, me, onPlay }) {
           <h3>{k.label} <small>{k.copy}</small></h3>
           <div className="cx-cards">
             {cards.filter((x) => x.kind === kind && !x.special).map((x) => (
-              <button key={x.id} className={`cx-card k-${x.kind}${chosen === x.id ? " is-on" : ""}`} onClick={() => { setChosen(x.id); setTarget(null); }}>
+              <button key={x.id} className={`cx-card k-${x.kind}${chosen === x.id ? " is-on" : ""}`} onClick={() => { setChosen(x.id); setTarget(null); setWild(null); }}>
                 <b>{x.title}</b>
                 <span>{x.text}</span>
                 {(x.fx || x.bag) && <Effects fx={x.fx || {}} world={x.world} bag={x.bag} paused={!!game.pause} />}
@@ -430,13 +299,12 @@ function Hand({ game, me, onPlay }) {
           </div>
         )}
         {c?.kind === "wild" && (
-          <div className="cx-pick">
-            <h3>Your three wildcards this year: choose one</h3>
-            <div className="cx-cards">{game.wilds[me.id].map((id) => { const w = WILDS.find((y) => y.id === id); return (
-              <button key={id} className={`cx-card k-wild${wild === id ? " is-on" : ""}`} onClick={() => setWild(id)}>
-                <b>{w.title}</b><span>{w.text}</span>
-              </button>
-            ); })}</div>
+          <div className="cx-pick k-wild">
+            <h3>Three face-down wildcards: pick one</h3>
+            <p className="cx-small cx-muted">Half the deck helps you and half hurts you. You find out at the reveal.</p>
+            <div className="cx-faces">{game.wilds[me.id].map((id, i) => (
+              <button key={i} className={`cx-face${wild === id ? " is-on" : ""}`} onClick={() => setWild(id)} aria-label={`Wildcard ${i + 1}`}>?</button>
+            ))}</div>
           </div>
         )}
         <div className="cx-actions">
@@ -459,38 +327,5 @@ function Effects({ fx, world: w, bag, paused }) {
       {bag?.white ? <i className="tok is-white">+{bag.white + (paused ? 1 : 0)} safe</i> : null}
       {bag?.black ? <i className="tok is-black">+{bag.black} doom</i> : null}
     </span>
-  );
-}
-
-// ------------------------------------------------------------------------------------------------- reveal
-
-function Reveal({ game, last, colorOf }) {
-  const P = (id) => game.players.find((p) => p.id === id);
-  return (
-    <section className="cx-reveal">
-      <p className="eyebrow">{last.year}: every card, revealed at once</p>
-      <div className="cx-revealed">
-        {last.plays.map((x, i) => {
-          const p = P(x.who);
-          const c = x.card === "stunned" || !x.card ? null : card(x.card);
-          return (
-            <div key={x.who} className={`cx-flip k-${c ? c.kind : "muted"}`} style={{ "--pc": colorOf[x.who], animationDelay: `${i * 90}ms` }}>
-              <small>{p.avatar} {p.name}</small>
-              <b>{c ? (c.id === "secret" ? "✉ A sealed envelope" : c.title) : "Recovering"}</b>
-              {x.target && <span>→ {P(x.target).name}</span>}
-              {x.wild && <span>{WILDS.find((w) => w.id === x.wild)?.title}</span>}
-            </div>
-          );
-        })}
-      </div>
-      {last.aiAt?.length > 0 && (
-        <div className="cx-incidents">
-          {last.aiAt.map((v, i) => (
-            <div key={i} className="cx-incident"><span>🤖 rolls {v.roll} →</span> <b>{P(v.who).name}</b>: {incident(v.incident).title}</div>
-          ))}
-        </div>
-      )}
-      <ul className="cx-log">{last.log.map((l, i) => <li key={i} className={`t-${l.tone}`}>{l.text}</li>)}</ul>
-    </section>
   );
 }

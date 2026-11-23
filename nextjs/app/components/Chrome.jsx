@@ -1,5 +1,3 @@
-import { access } from "node:fs/promises";
-import path from "node:path";
 import Link from "next/link";
 import { getRoot, site } from "../../lib/content.mjs";
 
@@ -13,21 +11,15 @@ export const sections = [
   { slug: "countdown", title: "Your game", short: "Countdown", copy: "The game you design today is being built. It opens Monday, November 30, at 12:45." },
 ];
 
-async function hasRoute(slug) {
-  for (const file of ["page.jsx", "page.js", "route.js"]) {
-    try {
-      await access(path.join(/* turbopackIgnore: true */ process.cwd(), "app", slug, file));
-      return true;
-    } catch {}
-  }
-  return false;
-}
+// The sections that are routes in app/ rather than folders in content/. Listed here, not looked up on disk, because
+// app/'s source files are not on the server once the site is deployed.
+const routes = new Set(["database", "mechanics", "inspirations", "timeline", "countdown", "game", "gallery", "graphs"]);
 
 // The sections that have something in them yet: a content folder or a route.
 export async function readySections() {
   const folders = new Set((await getRoot()).folders.map((folder) => folder.slug));
   const ready = new Set();
-  for (const { slug } of sections) if (folders.has(slug) || await hasRoute(slug)) ready.add(slug);
+  for (const { slug } of sections) if (folders.has(slug) || routes.has(slug)) ready.add(slug);
   return ready;
 }
 

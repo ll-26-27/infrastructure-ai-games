@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import {
-  AI_INNER, AI_MIDDLE, CARDS, CAUGHT_FINE, DC_PRICE, DECK, GATE_BLACK, GATE_COST, INSPECT_COST, MARKET_PRICE,
+  AI_INNER, AI_MIDDLE, CARDS, DC_PRICE, DECK, GATE_BLACK, GATE_COST, MARKET_PRICE,
   PLAYERS, RENT, RING_NAMES, SAFETY_COST, SIZES, START_BAG, TAKEOVER, TREATY_CAP, TREATY_ROUNDS, spaceType,
 } from "../../lib/race/rules.mjs";
 
@@ -16,7 +16,7 @@ const shuffle = (list) => {
 
 function newGame() {
   return {
-    players: PLAYERS.map((p) => ({ compute: p.compute, capital: p.capital, hidden: 0, white: START_BAG.white, black: START_BAG.black, ring: 0, pos: 0, skipIncome: false, regulatedBy: null, usedRegulate: false })),
+    players: PLAYERS.map((p) => ({ compute: p.compute, capital: p.capital, white: START_BAG.white, black: START_BAG.black, ring: 0, pos: 0, skipIncome: false, regulatedBy: null, usedRegulate: false })),
     owners: {}, ai: { ring: 0, pos: SIZES[0] / 2 }, doom: 0, turn: 0, round: 1,
     phase: "roll", remaining: 0, roll: null, treaty: null, vote: null, queue: [], deck: [],
     marketBlock: null, shortage: null, usedPower: false, ended: null,
@@ -32,7 +32,7 @@ const gateCost = (p, ring) => GATE_COST[ring] - (p === 4 ? 1 : 0);
 const owned = (g, p) => Object.values(g.owners).filter((o) => o === p).length;
 const canStep = (g, p) => {
   const pl = g.players[p];
-  return pl.ring < 3 && pl.regulatedBy === null && pl.compute + pl.hidden >= gateCost(p, pl.ring);
+  return pl.ring < 3 && pl.regulatedBy === null && pl.compute >= gateCost(p, pl.ring);
 };
 const marketOpen = (g, p) => !g.shortage && g.marketBlock?.target !== p;
 
@@ -99,9 +99,7 @@ function move(g, steps) {
 
 function stepIn(g) {
   const p = g.turn, pl = g.players[p];
-  let cost = gateCost(p, pl.ring);
-  const fromCompute = Math.min(cost, pl.compute);
-  pl.compute -= fromCompute; cost -= fromCompute; pl.hidden -= cost;
+  pl.compute -= gateCost(p, pl.ring);
   if (g.treaty) { say(g, `${PLAYERS[p].name} breaks the treaty.`); g.treaty = null; }
   addBlack(g, p, GATE_BLACK[pl.ring]);
   if (g.ended) return;
@@ -123,13 +121,6 @@ function keepMoving(g) {
   if (steps) move(g, steps); else g.phase = "act";
 }
 
-function catchCheat(g, p) {
-  const pl = g.players[p];
-  const found = pl.hidden;
-  if (g.treaty && found > 0) { pl.hidden = 0; return found; }
-  return 0;
-}
-
 function resolveCard(g, accept) {
   const { id, p } = g.queue.shift();
   const pl = g.players[p], name = PLAYERS[p].name;
@@ -145,9 +136,10 @@ function resolveCard(g, accept) {
     say(g, k ? `${name} loses a data center to fire.` : `${name}: data center fire, but they own none.`);
   }
   if (id === "scandal") { pl.capital = Math.max(0, pl.capital - 2); say(g, `${name}: public scandal, -2 capital.`); }
-  if (id === "whistle") {
-    const found = catchCheat(g, p);
-    say(g, found ? `Whistleblower: ${name} was hiding ${found} compute during the treaty and loses it.` : `Whistleblower: ${name}'s envelope holds ${pl.hidden} compute.`);
+  if (id === "leak") {
+    const took = p !== 1 && pl.compute > 0;
+    if (took) { pl.compute -= 1; g.players[1].compute += 1; }
+    say(g, took ? `${name}: leaked weights. China takes 1 compute.` : `${name}: leaked weights, but nothing to take.`);
   }
   if (id === "poached") {
     const to = (p + 1) % N;
@@ -183,49 +175,95 @@ function endTurn(g) {
 }
 
 function startTreaty(g) {
-  g.players.forEach((pl) => { pl.compute = Math.min(TREATY_CAP, pl.compute + pl.hidden); pl.hidden = 0; });
+  g.players.forEach((pl) => { pl.compute = Math.min(TREATY_CAP, pl.compute); });
   g.treaty = { rounds: 0 };
   g.vote = null;
-  say(g, `Everyone signs. The pause treaty is in force. Envelopes are opened and compute is capped at ${TREATY_CAP}.`);
+  say(g, `Everyone signs. The pause treaty is in force. Everyone's compute is capped at ${TREATY_CAP}.`);
 }
 
 // ---- The board ---------------------------------------------------------------------------------------------
 
-const C = 250;
-const RADII = [[240, 198], [190, 148], [140, 98]];
-const pt = (r, a) => `${(C + r * Math.cos(a)).toFixed(2)},${(C + r * Math.sin(a)).toFixed(2)}`;
+const C = 280;
+const RADII = [[252, 206], [200, 154], [148, 102]];
+// Rounded, so the server and the browser draw the same numbers.
+const xy = (r, a) => [Math.round((C + r * Math.cos(a)) * 100) / 100, Math.round((C + r * Math.sin(a)) * 100) / 100];
+const pt = (r, a) => xy(r, a).map((v) => v.toFixed(2)).join(",");
 const angle = (ring, i) => -Math.PI / 2 + (i * 2 * Math.PI) / SIZES[ring];
-const FILL = { gate: "var(--ink)", summit: "var(--ok)", incident: "var(--orange)", dc: "var(--wash)" };
+// Terrain colors for each kind of space, light and dark (the dark one is the tile's bevel).
+export const TILE = {
+  gate: ["#e2b44a", "#a77b22"],
+  summit: ["#6f9a48", "#4a6d2c"],
+  incident: ["#c0582f", "#8a3a1c"],
+  dc: ["#8e9ca3", "#5f6c73"],
+};
+
+function Pawn({ x, y, color, active }) {
+  return (
+    <g>
+      {active && <circle cx={x} cy={y + 1} r="12.5" fill="none" stroke="#ffe08a" strokeWidth="2.5" />}
+      <ellipse cx={x} cy={y + 7} rx="8" ry="3" fill="rgba(0,0,0,.35)" />
+      <path d={`M${x - 7},${y + 6} Q${x},${y - 14} ${x + 7},${y + 6} Z`} fill={color} stroke="#2a1a0e" strokeWidth="1.2" />
+      <circle cx={x} cy={y - 6} r="4.6" fill={color} stroke="#2a1a0e" strokeWidth="1.2" />
+      <circle cx={x - 1.5} cy={y - 7.5} r="1.6" fill="rgba(255,255,255,.55)" />
+    </g>
+  );
+}
 
 function Board({ g }) {
   const pawnsAt = {};
   g.players.forEach((pl, p) => { if (pl.ring < 3) (pawnsAt[key(pl.ring, pl.pos)] ||= []).push(p); });
   return (
-    <svg className="rc-board" viewBox="0 0 500 500" role="img" aria-label="The board: three rings around the center">
+    <svg className="rc-board" viewBox="0 0 560 560" role="img" aria-label="The board: three rings of tiles around the center">
+      <circle cx={C} cy={C} r="276" fill="#6b3f1d" />
+      <circle cx={C} cy={C} r="270" fill="#8a5a2b" stroke="#4a2a10" strokeWidth="2" />
+      <circle cx={C} cy={C} r="259" fill="#ead7a8" stroke="#4a2a10" strokeWidth="1.5" />
       {RADII.map(([ro, ri], ring) => Array.from({ length: SIZES[ring] }, (_, i) => {
-        const step = (2 * Math.PI) / SIZES[ring], gap = 0.03, mid = angle(ring, i);
+        const step = (2 * Math.PI) / SIZES[ring], gap = 0.045, mid = angle(ring, i);
         const a0 = mid - step / 2 + gap / 2, a1 = mid + step / 2 - gap / 2;
         const type = spaceType(ring, i), owner = g.owners[key(ring, i)];
+        const [light, dark] = TILE[type];
+        const tile = `M${pt(ro, a0)}A${ro},${ro} 0 0 1 ${pt(ro, a1)}L${pt(ri, a1)}A${ri},${ri} 0 0 0 ${pt(ri, a0)}Z`;
+        const inner = `M${pt(ro - 4, a0 + 0.01)}A${ro - 4},${ro - 4} 0 0 1 ${pt(ro - 4, a1 - 0.01)}L${pt(ri + 5, a1 - 0.01)}A${ri + 5},${ri + 5} 0 0 0 ${pt(ri + 5, a0 + 0.01)}Z`;
+        const [tx, ty] = xy(ro - 11, mid);
         return (
-          <path key={key(ring, i)} d={`M${pt(ro, a0)}A${ro},${ro} 0 0 1 ${pt(ro, a1)}L${pt(ri, a1)}A${ri},${ri} 0 0 0 ${pt(ri, a0)}Z`}
-            fill={FILL[type]} fillOpacity={type === "dc" ? 1 : type === "gate" ? 0.9 : 0.6}
-            stroke={owner !== undefined ? PLAYERS[owner].color : "var(--line)"} strokeWidth={owner !== undefined ? 3 : 1} />
+          <g key={key(ring, i)}>
+            <path d={tile} fill={dark} stroke="#4a2a10" strokeWidth="1" />
+            <path d={inner} fill={light} />
+            {type === "dc" && (
+              <g>
+                <circle cx={tx} cy={ty} r="9.5" fill={owner !== undefined ? PLAYERS[owner].color : "#f6ead0"} stroke="#4a2a10" strokeWidth="1.2" />
+                <text x={tx} y={ty + 4} textAnchor="middle" className="rc-chip" fill={owner !== undefined ? "#fff8e8" : "#3b2a1a"}>{DC_PRICE[ring]}</text>
+              </g>
+            )}
+            {type === "incident" && <text x={tx} y={ty + 5} textAnchor="middle" className="rc-glyph">!</text>}
+            {type === "summit" && <path d={`M${tx - 4},${ty + 8} V${ty - 8} L${tx + 7},${ty - 4} L${tx - 4},${ty}`} fill="#f6ead0" stroke="#2a1a0e" strokeWidth="1.2" strokeLinejoin="round" />}
+            {type === "gate" && <path d={`M${tx - 7},${ty - 4} L${tx + 7},${ty - 4} L${tx},${ty + 6} Z`} fill="#4a2a10" />}
+          </g>
         );
       }))}
-      <circle cx={C} cy={C} r="88" fill="none" stroke="var(--ink)" strokeWidth="1" />
-      <text x={C} y={C - 8} textAnchor="middle" className="rc-center">Superintelligence</text>
-      <text x={C} y={C + 16} textAnchor="middle" className="rc-doom">Doom {g.doom} / {TAKEOVER}</text>
+      <circle cx={C} cy={C} r="94" fill="#4a2a10" />
+      <circle cx={C} cy={C} r="89" fill="#1e1814" stroke="#c9a24a" strokeWidth="2.5" />
+      {Array.from({ length: TAKEOVER }, (_, i) => {
+        const [x, y] = xy(75, -Math.PI / 2 + (i * 2 * Math.PI) / TAKEOVER);
+        return <circle key={i} cx={x} cy={y} r="5.5" fill={i < g.doom ? "#d8432c" : "#2e2620"} stroke={i < g.doom ? "#ff9a7a" : "#6b5a48"} strokeWidth="1.2" />;
+      })}
+      <text x={C} y={C - 2} textAnchor="middle" className="rc-center">Superintelligence</text>
+      <text x={C} y={C + 20} textAnchor="middle" className="rc-doom">Doom {g.doom} of {TAKEOVER}</text>
       {(() => {
-        const [ro, ri] = RADII[g.ai.ring], a = angle(g.ai.ring, g.ai.pos), r = ri + 9;
-        const [x, y] = pt(r, a).split(",").map(Number);
-        return <g><rect x={x - 11} y={y - 7} width="22" height="14" rx="3" fill="var(--ink)" /><text x={x} y={y + 4} textAnchor="middle" className="rc-ai">AI</text></g>;
+        const [x, y] = xy(RADII[g.ai.ring][0] - 11, angle(g.ai.ring, g.ai.pos));
+        const hex = Array.from({ length: 6 }, (_, i) => xy(12, Math.PI / 6 + (i * Math.PI) / 3).map((v, j) => (v - C + (j ? y : x)).toFixed(1)).join(",")).join(" ");
+        return (
+          <g aria-label="The AI">
+            <polygon points={hex} fill="#111" stroke="#d8432c" strokeWidth="2" />
+            <circle cx={x} cy={y} r="3.5" fill="#ff5a3c" />
+          </g>
+        );
       })()}
       {Object.entries(pawnsAt).map(([k, ps]) => {
-        const [ring, pos] = k.split("-").map(Number), [ro, ri] = RADII[ring], rm = (ro + ri) / 2 + 5;
+        const [ring, pos] = k.split("-").map(Number), [, ri] = RADII[ring], rm = ri + 15;
         return ps.map((p, j) => {
-          const a = angle(ring, pos) + ((j - (ps.length - 1) / 2) * 15) / rm;
-          const [x, y] = pt(rm, a).split(",").map(Number);
-          return <circle key={p} cx={x} cy={y} r="7" fill={PLAYERS[p].color} stroke={p === g.turn ? "var(--ink)" : "var(--paper)"} strokeWidth={p === g.turn ? 2.5 : 1.5} />;
+          const [x, y] = xy(rm, angle(ring, pos) + ((j - (ps.length - 1) / 2) * 16) / rm);
+          return <Pawn key={p} x={x} y={y} color={PLAYERS[p].color} active={p === g.turn && !g.ended} />;
         });
       })}
     </svg>
@@ -244,7 +282,6 @@ function Bag({ white, black }) {
 }
 
 function PlayerScreen({ g, p }) {
-  const [peek, setPeek] = useState(false);
   const pl = g.players[p], info = PLAYERS[p];
   const where = pl.ring === 3 ? "At the center" : `${RING_NAMES[pl.ring].split(":")[0]}, space ${pl.pos + 1}`;
   const flags = [
@@ -257,13 +294,9 @@ function PlayerScreen({ g, p }) {
       <header><span className="rc-dot" />{info.name}</header>
       <p className="rc-where">{where}</p>
       <dl>
-        <div><dt>Compute</dt><dd>{pl.compute}</dd></div>
-        <div><dt>Capital</dt><dd>{pl.capital}</dd></div>
-        <div><dt>Data centers</dt><dd>{owned(g, p)}</dd></div>
-        <div>
-          <dt>Envelope</dt>
-          <dd><button type="button" className="rc-peek" onClick={() => setPeek(!peek)} aria-pressed={peek}>{peek ? pl.hidden : "Hidden"}</button></dd>
-        </div>
+        <div><dt>Compute</dt><dd><i className="rc-cube" aria-hidden="true" />{pl.compute}</dd></div>
+        <div><dt>Capital</dt><dd><i className="rc-coin" aria-hidden="true" />{pl.capital}</dd></div>
+        <div><dt>Data centers</dt><dd><i className="rc-dc" aria-hidden="true" />{owned(g, p)}</dd></div>
       </dl>
       <div className="rc-bagrow">
         <Bag white={pl.white} black={pl.black} />
@@ -357,31 +390,20 @@ function Controls({ g, act }) {
             {canBuy && <button type="button" onClick={() => act((n) => { n.players[n.turn].capital -= DC_PRICE[pl.ring]; n.owners[k] = n.turn; say(n, `${info.name} buys a data center for ${DC_PRICE[pl.ring]} capital.`); })}>Buy this data center ({DC_PRICE[pl.ring]} capital)</button>}
             <button type="button" disabled={!marketOpen(g, p) || pl.capital < MARKET_PRICE} onClick={() => act((n) => { n.players[n.turn].capital -= MARKET_PRICE; n.players[n.turn].compute += 1; say(n, `${info.name} buys 1 compute.`); })}>Buy compute ({MARKET_PRICE} capital)</button>
             <button type="button" disabled={pl.compute < safety} onClick={() => act((n) => { n.players[n.turn].compute -= safety; n.players[n.turn].white += 1; say(n, `${info.name} spends ${safety} compute on safety: 1 white token.`); })}>Safety: 1 white ({safety} compute)</button>
-            <button type="button" disabled={pl.compute < 1} onClick={() => act((n) => { n.players[n.turn].compute -= 1; n.players[n.turn].hidden += 1; })}>Hide 1 compute</button>
-            <button type="button" disabled={pl.hidden < 1} onClick={() => act((n) => { n.players[n.turn].hidden -= 1; n.players[n.turn].compute += 1; })}>Take 1 out of the envelope</button>
           </div>
 
-          <div className="rc-target">
+          {isState && <div className="rc-target">
             <label>Target
               <select value={t} onChange={(e) => setTarget(Number(e.target.value))}>
                 {others.map((i) => <option key={i} value={i}>{PLAYERS[i].name}</option>)}
               </select>
             </label>
             <div className="rc-actions">
-              <button type="button" disabled={pl.capital < INSPECT_COST} onClick={() => act((n) => {
-                n.players[n.turn].capital -= INSPECT_COST;
-                const found = catchCheat(n, t);
-                if (found) {
-                  const fine = Math.min(CAUGHT_FINE, n.players[t].capital);
-                  n.players[t].capital -= fine; n.players[n.turn].capital += fine;
-                  say(n, `${info.name} inspects ${PLAYERS[t].name} and catches ${found} hidden compute. ${PLAYERS[t].name} loses it and pays ${fine} capital.`);
-                } else say(n, `${info.name} inspects ${PLAYERS[t].name}: ${n.players[t].hidden} compute in the envelope${g.treaty ? ", nothing to punish" : ""}.`);
-              })}>Inspect ({INSPECT_COST} capital)</button>
               {p === 0 && <button type="button" disabled={g.usedPower} onClick={() => act((n) => { n.marketBlock = { target: t, until: 0 }; n.usedPower = true; say(n, `Export controls: ${PLAYERS[t].name} is blocked from the market.`); })}>Export controls</button>}
               {p === 1 && <button type="button" disabled={g.usedPower || g.players[t].compute < 1} onClick={() => act((n) => { n.players[t].compute -= 1; n.players[1].compute += 1; n.usedPower = true; say(n, `Espionage: China takes 1 compute from ${PLAYERS[t].name}.`); })}>Espionage</button>}
               {isState && myLabs.includes(t) && <button type="button" disabled={pl.usedRegulate} onClick={() => act((n) => { n.players[t].regulatedBy = n.turn; n.players[n.turn].usedRegulate = true; say(n, `${info.name} regulates ${PLAYERS[t].name}: no stepping inward until ${info.name}'s next turn.`); })}>Regulate (once per game)</button>}
             </div>
-          </div>
+          </div>}
 
           <button type="button" className="rc-primary" onClick={() => act(endTurn)}>End turn</button>
         </>
@@ -404,10 +426,11 @@ export default function Race() {
         <div className="rc-boardwrap">
           <Board g={g} />
           <div className="rc-legend">
-            <span><i style={{ background: "var(--ink)" }} />Gate</span>
-            <span><i style={{ background: "var(--ok)" }} />Summit</span>
-            <span><i style={{ background: "var(--orange)" }} />Incident</span>
-            <span><i style={{ background: "var(--wash)", border: "1px solid var(--line)" }} />Data center</span>
+            <span><i style={{ background: TILE.gate[0] }} />Gate</span>
+            <span><i style={{ background: TILE.summit[0] }} />Summit</span>
+            <span><i style={{ background: TILE.incident[0] }} />Incident</span>
+            <span><i style={{ background: TILE.dc[0] }} />Data center (price)</span>
+            <span><i className="rc-ai-key" />The AI</span>
           </div>
         </div>
         <div className="rc-side">

@@ -64,6 +64,21 @@ function Accident({ entry }) {
   );
 }
 
+function Course({ entry }) {
+  return (
+    <li className={styles.course} id={entry.slug}>
+      <p className={styles.meta}>
+        <span className={styles.courseLabel}>SOC-STD 98to</span>
+        {entry.time && <span>{entry.time}</span>}
+        {entry.where && <span>{entry.where}</span>}
+      </p>
+      <h4>{entry.title}</h4>
+      {entry.content && <div className={`prose ${styles.body}`}><Markdown doc={entry} /></div>}
+      <p className={styles.sources}>Source: {entry.from}</p>
+    </li>
+  );
+}
+
 function Prediction({ entry }) {
   return (
     <li className={styles.prediction} id={entry.slug}>
@@ -106,11 +121,13 @@ export default async function TimelinePage({ searchParams }) {
   const intro = found.entry;
   const params = await searchParams;
   const show = SHOW[params?.show] ? params.show : "both";
-  const { accidents, predictions } = await getTimeline();
+  const { accidents, course, predictions } = await getTimeline();
+  const past = [...course, ...accidents].sort((a, b) => a.date.localeCompare(b.date) || (a.kind === b.kind ? a.title.localeCompare(b.title) : a.kind === "course" ? -1 : 1));
   const showAccidents = show !== "predictions";
   const showPredictions = show !== "accidents" && predictions.length > 0;
-  const counts = { both: accidents.length + predictions.length, accidents: accidents.length, predictions: predictions.length };
-  const first = accidents[0]?.date;
+  const counts = { both: past.length + predictions.length, accidents: past.length, predictions: predictions.length };
+  const first = past[0]?.date;
+  const firstAccident = accidents[0]?.date;
   const last = predictions.at(-1)?.date;
 
   return (
@@ -146,14 +163,14 @@ export default async function TimelinePage({ searchParams }) {
 
         {showAccidents && (
           <section className={styles.part} aria-labelledby="accidents">
-            <h2 id="accidents"><span>Accidents</span> What broke, {first ? `${shortDate(first)} to ` : ""}{shortDate(TODAY)}</h2>
-            <p className={styles.partNote}>Real events, each with its date and sources. Times are US Eastern unless given otherwise.</p>
+            <h2 id="accidents"><span>Accidents</span> What broke, {firstAccident ? `${shortDate(firstAccident)} to ` : ""}{shortDate(TODAY)}</h2>
+            <p className={styles.partNote}>Real events, each with its date and sources. Times are US Eastern unless given otherwise. The class meetings of SOC-STD 98to are in among them, outlined in green.</p>
             <ol className={styles.days}>
-              {groupBy(accidents, (entry) => entry.date).map((group) => (
+              {groupBy(past, (entry) => entry.date).map((group) => (
                 <li key={group.key} className={styles.day}>
                   <h3><time dateTime={group.key}>{shortDate(group.key)}</time></h3>
                   <ol className={styles.entries}>
-                    {group.entries.map((entry) => <Accident key={entry.slug} entry={entry} />)}
+                    {group.entries.map((entry) => (entry.kind === "course" ? <Course key={entry.slug} entry={entry} /> : <Accident key={entry.slug} entry={entry} />))}
                   </ol>
                 </li>
               ))}

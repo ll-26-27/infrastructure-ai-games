@@ -7,6 +7,8 @@ import matter from "gray-matter";
 //                                         (outage | hack | grid | cable | hardware | other), visible, cause, sources.
 //   content/timeline/future/<slug>.md     kind: prediction. title, date (the date it predicts), when (as said), until,
 //                                         who, role, said "YYYY-MM-DD", statement, sources (or source).
+//   content/timeline/course/<slug>.md     kind: course. A class meeting of SOC-STD 98to: title, date, time, where, from
+//                                         (the syllabus it comes from).
 // The body is a sentence or two of Markdown.
 
 export const TODAY = "2026-11-23";
@@ -37,6 +39,7 @@ async function load(folder) {
     const { data, content } = matter(await readFile(/* turbopackIgnore: true */ path.join(dir, name), "utf8"));
     return {
       slug: name.slice(0, -3),
+      kind: folder === "course" ? "course" : folder === "future" ? "prediction" : "accident",
       dir: `timeline/${folder}`,
       title: str(data.title),
       date: str(data.date),
@@ -51,20 +54,22 @@ async function load(folder) {
       role: str(data.role),
       said: str(data.said),
       statement: str(data.statement),
+      from: str(data.from),
       sources: [...list(data.sources), ...list(data.source)],
       content: content.trim(),
     };
   }));
   // An entry without a title, a date or a source isn't shown.
-  return entries.filter((entry) => entry.title && isDate(entry.date) && entry.sources.length);
+  return entries.filter((entry) => entry.title && isDate(entry.date) && (entry.sources.length || entry.from));
 }
 
 const byDate = (a, b) => a.date.localeCompare(b.date) || a.time.localeCompare(b.time) || a.title.localeCompare(b.title);
 
 export async function getTimeline() {
-  const [accidents, future] = await Promise.all([load("accidents"), load("future")]);
+  const [accidents, course, future] = await Promise.all([load("accidents"), load("course"), load("future")]);
   return {
     accidents: accidents.filter((entry) => entry.date <= TODAY).sort(byDate),
+    course: course.filter((entry) => entry.date <= TODAY).sort(byDate),
     predictions: future.filter((entry) => entry.date > TODAY).sort(byDate),
   };
 }

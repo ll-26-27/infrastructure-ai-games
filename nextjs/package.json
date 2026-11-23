@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
+    "d3-geo": "^3.1.2",
     "gray-matter": "^4.0.3",
     "next": "16.3.6",
     "react": "^19.2.0",
@@ -20,7 +21,9 @@
     "react-markdown": "^10.1.0",
     "rehype-slug": "^6.0.0",
     "remark-gfm": "^4.0.1",
-    "three": "0.187.0"
+    "three": "0.187.0",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
   },
   "packageManager": "pnpm@10.28.0"
 }

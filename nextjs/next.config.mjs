@@ -12,6 +12,6 @@ export default {
   turbopack: { root: repoRoot },
   outputFileTracingRoot: repoRoot,
   outputFileTracingIncludes: {
-    "/*": ["./content/**/*", "./public/database/**/*.json", "./public/gallery/**/*"],
+    "/*": ["./content/**/*", "./public/database/**/*.json", "./public/gallery/**/*", "./app/remix/*/PLAN.md"],
   },
 };

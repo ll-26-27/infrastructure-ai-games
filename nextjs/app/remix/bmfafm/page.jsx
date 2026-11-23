@@ -25,29 +25,29 @@ export default function RemixRacePage() {
         <header className="rx-intro">
           <p className="eyebrow">A combined game · The Race at its core</p>
           <h1>The Race on the world stage</h1>
-          <p>Two states and three labs race to superintelligence. Whoever gets there draws from their own bag: white, they win everything; black, everyone dies. Now the world is watching. Hack, spy on and strike your rivals, but every covert op pushes world tension toward war. Set off real events from your hand of wildcards. And when a summit is called, everyone votes on the pause treaty in secret. Pass the screen around the table.</p>
+          <p>Two states and three labs race to superintelligence. Whoever gets there draws from their own bag: white, they win everything; black, everyone dies. Now the world is watching. Hack, spy on and strike your rivals, but every covert op pushes world tension toward war. Set off real events from your hand of wildcards. And when a summit is called, vote on the pause treaty: in secret if your country is an autocracy, in public if it is a democracy. Pass the screen around the table.</p>
         </header>
 
         <Game />
 
         <section className="rx-from">
           <h2>What it is built from</h2>
-          <p className="rx-core">At its core: <Link href="/race">The Race</Link> (branch BMFAFM, routes <Link href="/race">/race</Link> and <Link href="/race/rules">/race/rules</Link>). The three rings, the gates, data centers, incidents and summits, the five players and their powers, each player&apos;s bag of white and black tokens, the hidden-compute envelopes, the doom track and the AI pawn, and the pause treaty are all The Race&apos;s, with its numbers. <Link href="/race/rules">Its full rules</Link> still apply.</p>
+          <p className="rx-core">At its core: <Link href="/race">The Race</Link> (branch BMFAFM, routes <Link href="/race">/race</Link> and <Link href="/race/rules">/race/rules</Link>). The three rings, the gates, data centers, incidents and summits, the five players and their powers, each player&apos;s bag of white and black tokens, the Incident deck, the doom track and the AI pawn, the pause treaty, and the tabletop look (wooden table, terrain tiles, wooden pawns, parchment cards) are all The Race&apos;s, with its numbers. <Link href="/race/rules">Its full rules</Link> still apply.</p>
 
           <div>
             <h3>From the <Link href="/cna-game">CNA game</Link> (branch cna-game)</h3>
             <ul>
               <li><b>World tension.</b> A second shared track beside the doom track. Covert ops push it up; it eases by 1 every round, and a signed treaty and a peace summit bring it down further. At {WAR}, world war, and everyone loses: a new way for the whole table to lose, as in the CNA game.</li>
               <li><b>Covert ops.</b> The CNA game&apos;s attack cards, played on another player once a turn: hack, send spies, a honey trap for a lab&apos;s CEO, and a military strike on a data center. A successful hack or strike costs the target their next turn, as in the CNA game.</li>
-              <li><b>Political systems.</b> The United States and its labs are democracies, China and its lab are autocracies, and the same move works differently in each: an autocracy&apos;s ops roll higher and its envelope is closed to inspectors outside a treaty; a democracy&apos;s failed ops cost more, because a free press finds out, and it inspects for less.</li>
+              <li><b>Political systems.</b> The United States and its labs are democracies, China and its lab are autocracies, and the same move works differently in each. An autocracy&apos;s ops roll higher and its summit vote stays secret. A democracy has a free press: its failed ops cost more and its summit vote is public as soon as it is cast; and it has open research, so safety costs it 1 compute less.</li>
               <li><b>Wildcards.</b> Choose one of three real events from the world database, as in the CNA game. You are dealt three at the start and three more each time you step inward.</li>
-              <li><b>The secret vote.</b> The CNA game reveals every country&apos;s card at once. Here the summit&apos;s treaty vote works the same way: everyone votes in secret, and the votes are revealed together.</li>
+              <li><b>The secret vote.</b> The CNA game reveals every country&apos;s card at once. Here the summit&apos;s treaty vote works the same way: the screen passes round, each player votes in private, and the votes are revealed together (except a democracy&apos;s, which is public as soon as it is cast).</li>
             </ul>
           </div>
 
           <div>
             <h3>Mechanics, from the <Link href="/mechanics">mechanics list</Link></h3>
-            <p>From The Race: Press Your Luck (each player&apos;s bag), Race, Negotiation, Secret Traitor (the treaty and the envelopes), Variable Player Powers. Added from the CNA game: Simultaneous Action Selection and Voting (the secret vote), Take That (covert ops), Wild Card (real events), and Multiple Loss Conditions (the AI takes over, an unsafe superintelligence, or world war).</p>
+            <p>From The Race: Roll / Spin and Move, Press Your Luck (each player&apos;s bag), Race, Negotiation (the treaty), Scarce Resource, Time Track (the doom track) and Variable Player Powers. Added from the CNA game: Simultaneous Action Selection and Voting (the secret vote), Take That (covert ops), Wild Card (real events), and Multiple Loss Conditions (the AI takes over, an unsafe superintelligence, or world war).</p>
           </div>
 
           <div>

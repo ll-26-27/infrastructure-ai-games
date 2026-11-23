@@ -11,8 +11,6 @@ export const DC_PRICE = [3, 5, 7]; // capital to buy a data center on each ring
 export const RENT = [1, 2, 3]; // capital you pay when you stop on someone else's data center
 export const SAFETY_COST = 2; // compute for one white token (1 while a treaty is in force)
 export const MARKET_PRICE = 2; // capital for one compute
-export const INSPECT_COST = 2;
-export const CAUGHT_FINE = 3;
 export const TREATY_CAP = 6; // most compute anyone may hold while a treaty is in force
 export const TREATY_ROUNDS = 3; // rounds a treaty must hold for the shared win
 export const START_BAG = { white: 2, black: 8 };
@@ -30,16 +28,16 @@ export const WILD_HAND = 3; // real events you choose from, dealt at the start a
 
 // Political systems, from the CNA game: the same move does different things in a democracy and an autocracy.
 export const SYSTEMS = {
-  democratic: { label: "Democracy", text: "A free press finds out: a failed covert op costs you 2 more capital. Open books: you inspect for 1 capital, not 2." },
-  authoritarian: { label: "Autocracy", text: "Your covert ops roll 1 higher. No one can inspect your envelope unless a treaty is in force." },
+  democratic: { label: "Democracy", text: "A free press: a failed covert op costs you 2 more capital, and your summit vote is shown as soon as you cast it. Open research: safety costs you 1 compute less (never under 1)." },
+  authoritarian: { label: "Autocracy", text: "Your covert ops roll 1 higher, and your summit vote stays secret until all the votes are revealed." },
 };
 
 export const PLAYERS = [
-  { name: "United States", short: "US", color: "#5fa8ff", compute: 3, capital: 8, system: "democratic", power: "Export controls: once per turn, block one player from the market until your next turn." },
-  { name: "China", short: "CN", color: "#ff6b5b", compute: 1, capital: 8, system: "authoritarian", power: "Espionage: once per turn, take 1 compute from any player." },
-  { name: "US Lab A", short: "A", color: "#c58cff", compute: 6, capital: 4, stateOf: 0, system: "democratic", power: "Raise capital: +2 capital every time you collect income." },
-  { name: "US Lab B", short: "B", color: "#5fe1e6", compute: 6, capital: 4, stateOf: 0, system: "democratic", power: "Ship products: +1 compute every time you collect income." },
-  { name: "Chinese Lab", short: "CL", color: "#ffd84a", compute: 2, capital: 4, stateOf: 1, system: "authoritarian", power: "Cheap power: every gate costs you 1 less compute." },
+  { name: "United States", short: "US", color: "#2f6db5", compute: 3, capital: 8, system: "democratic", power: "Export controls: once per turn, block one player from the market until your next turn." },
+  { name: "China", short: "CN", color: "#c0392b", compute: 1, capital: 8, system: "authoritarian", power: "Espionage: once per turn, take 1 compute from any player." },
+  { name: "US Lab A", short: "A", color: "#7b4fa0", compute: 6, capital: 4, stateOf: 0, system: "democratic", power: "Raise capital: +2 capital every time you collect income." },
+  { name: "US Lab B", short: "B", color: "#3f8f5a", compute: 6, capital: 4, stateOf: 0, system: "democratic", power: "Ship products: +1 compute every time you collect income." },
+  { name: "Chinese Lab", short: "CL", color: "#e08a2e", compute: 2, capital: 4, stateOf: 1, system: "authoritarian", power: "Cheap power: every gate costs you 1 less compute." },
 ];
 
 // The Race's Incident deck.
@@ -49,7 +47,7 @@ export const CARDS = {
   breakthrough: { title: "Safety breakthrough", text: "Add 1 white token to your bag." },
   fire: { title: "Data center fire", text: "Return one of your data centers to the bank." },
   scandal: { title: "Public scandal", text: "Pay 2 capital." },
-  whistle: { title: "Whistleblower", text: "Open your envelope. If a treaty is in force and you are hiding compute, you are caught." },
+  leak: { title: "Leaked weights", text: "China takes 1 compute from you." },
   poached: { title: "Talent poached", text: "Give 1 compute to the next player." },
   shortage: { title: "Chip shortage", text: "No one can use the market until your next turn." },
   grid: { title: "Grid strain", text: "Skip your next income." },
@@ -57,7 +55,7 @@ export const CARDS = {
 
 export const DECK = [
   ...Array(3).fill("deal"), ...Array(3).fill("escape"),
-  ...["breakthrough", "fire", "scandal", "whistle", "poached", "shortage", "grid"].flatMap((id) => [id, id]),
+  ...["breakthrough", "fire", "scandal", "leak", "poached", "shortage", "grid"].flatMap((id) => [id, id]),
 ];
 
 // Covert ops, from the CNA game's attack cards: one per turn, played on another player. Every op raises world tension.

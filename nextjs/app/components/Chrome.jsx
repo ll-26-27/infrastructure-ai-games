@@ -12,6 +12,7 @@ export const sections = [
   { slug: "timeline", title: "Timeline", short: "Timeline", copy: "Real breakdowns up to today, then what people have predicted AI will do." },
   { slug: "challenges", title: "Challenges", short: "Challenges", copy: "Today's tasks: make a piece of a game, or as many pieces as you can." },
   { slug: "countdown", title: "Your game", short: "Countdown", copy: "The game you design today is being built. It opens Monday, November 30, at 12:45." },
+  { slug: "cna-game", title: "CNA game", short: "CNA game", copy: "Our game about AI and infrastructure, piece by piece.", route: true },
 ];
 
 // The sections that are routes in app/ rather than folders in content/. Listed here, not looked up on disk, because

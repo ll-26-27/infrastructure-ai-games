@@ -20,7 +20,7 @@ A data centre is a building full of servers, but it only runs while everything a
 
 3. **Two meters everyone shares.** The CNA game has world **risk** and world **tension**, and if either reaches 100 everyone loses. **Here:** a shared meter for how much of the world depends on this one building. When the data centre goes down, the meter shows who goes down with it (banks, airlines, emergency calls), as in the real breakdowns in the database. This is where [Perrow's](/cards/perrow) idea lives: tightly coupled systems turn one failure into many.
 
-4. **The wildcard: choose one of three real events.** A CNA wildcard deals you three real events from the database and you set off one. **Here:** the wildcard deals three of the real breakdowns from the database, matched to the data centre's systems (a storm that downs transmission towers hits Power; an undersea cable fault hits Network; a drought hits Water and Cooling). The mechanic is *Wild Card*.
+4. **The wildcard: choose one of three real events.** A CNA wildcard deals you three real events from the database and you set off one. **Here:** the wildcard deals three of the real breakdowns from the database, matched to the data centre's systems (a storm that downs transmission towers hits Power; an undersea cable fault hits Network; ransomware hits Security). The mechanic is *Wild Card*.
 
 5. **Who you are changes what your cards do.** In the CNA game, democracies and authoritarian states get different results from the same card ([Winner's](/cards/winner) idea that technical choices have politics). **Here:** who owns the data centre (a lab, a cloud company, a government) could change what each defence costs and who gets blamed.
 
@@ -32,9 +32,16 @@ A data centre is a building full of servers, but it only runs while everything a
 
 3. **The doom track.** In The Race every black token anywhere moves a doom track, and at 12 the AI takes over (*Time Track*). **Here:** a **cascade track**. Every black token moves it up, and at set marks the failure spreads outward from the building: first the data centre's own customers, then the services built on them, then emergency calls and the grid.
 
-4. **The pause treaty, hidden envelopes and inspections.** In The Race, everyone can sign a pause; while it holds, hiding compute in your envelope breaks it, and any player can pay to inspect an envelope (*Negotiation*, *Bluffing*, *Secret Traitor*). **Here:** a **ceasefire or a maintenance window**. While it holds, nobody attacks and repairs are cheaper. An attacker can still hide something in their envelope, a backdoor planted for later, and a security audit can open it. If it holds for three rounds, everyone shares a smaller win.
+4. **The pause treaty.** In The Race, a player who stops on a summit calls a vote, and the treaty starts only if everyone votes yes. While it holds, no one may step inward, safety is cheaper, and no one may hold more than 6 compute; anyone can break it by stepping inward anyway, and if it holds for three full rounds everyone shares the win (*Negotiation*). **Here:** a **ceasefire**. While it holds, nobody attacks or breaks in and repairs do more. Anyone can break it in the open with an attack or a break-in, and if it holds for three weeks, everyone shares the win.
 
 5. **Players who are not alike.** The Race gives each of its five players a different power: export controls, espionage, raising capital, shipping products, cheap power (*Variable Player Powers*). **Here:** roles from the database, each with one power: the **hacker** (`hackers`), the **insider** (`data-workers`), the **security team** (`security-teams`), the **grid operator** (`grid-operators`), and the **town next door** (`local-communities`), who can vote down the next expansion or call `a-strike`.
+
+## New in this game
+
+Neither game has hidden cards, so these are additions of our own:
+
+- **Hidden cards, played face down.** A backdoor that waits for the next attack, and a skipped generator test that quietly puts black tokens in the backup bag (*Bluffing*). They still work during a ceasefire, which makes a ceasefire a good time to cheat.
+- **The audit and the press.** The security team's audit finds backdoors, and the town can tell the press, which turns every hidden card face up for a week.
 
 ## How the pieces fit
 

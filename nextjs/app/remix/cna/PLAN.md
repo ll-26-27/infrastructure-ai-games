@@ -36,14 +36,26 @@ This combined game keeps **the CNA game** (branch `cna-game`, route `/cna-game`)
 
 ### 6. The incident deck
 
-- **What we take:** *The Race*'s Incident deck, with each card tied to a record in the database: the AI offers a deal (take 10 AI and 2 doom tokens next year, or refuse), a model escapes the sandbox, a safety breakthrough, a data centre fire, a public scandal (a lawsuit), a whistleblower, talent poached, grid strain (the electricity grid), and prompt injection, which we added from the database.
+- **What we take:** *The Race*'s Incident deck, with each card tied to a record in the database: the AI offers a deal (take 10 AI and 2 doom tokens next year, or refuse), a model escapes the sandbox, a safety breakthrough, a data centre fire, a public scandal (a lawsuit), leaked weights (China takes some of your AI; the database's model weights leak), talent poached, and grid strain (the electricity grid).
 - **Where it goes:** the AI draws them for the countries it visits; the deal waits in your hand next year as a choice.
 
-### 7. The pause treaty, hidden compute and inspections
+### 7. The pause treaty
 
-- **What we take:** *The Race*'s treaty: everyone has to vote yes; while it holds nobody steps inward and safety is cheaper; hiding compute in your envelope breaks it in secret; inspections catch cheaters; three rounds of treaty is a shared win.
-- **Where it goes:** a new reinforce card, **Call for a pause**. The next year opens with an open vote (👍 or 👎), and the pause starts only if every country still in the race votes yes. While it holds, nobody's AI grows, safe-token cards give one extra token, and the cards that grow AI **break the pause** openly, for 10 allies. A new develop card, **Build in secret**, puts 8 AI in a sealed envelope (it shows on the board only as ✉). A new attack card, **Inspect their data centres**, opens a rival's envelope: anyone caught cheating during a pause loses what they hid and 15 allies. If the pause holds three years, everyone still standing shares the win.
-- **What it changes:** the CNA game's only cooperation was the shared loss. Now there is a shared win too, and the game argues that it is fragile: one country that won't vote yes, or one that cheats and isn't caught, is enough to end it (Voting, Bluffing, Cooperative Play).
+- **What we take:** *The Race*'s treaty: it starts only if everyone votes yes; while it holds nobody steps inward and safety is cheaper; anyone can break it by stepping inward anyway; three rounds of treaty is a shared win.
+- **Where it goes:** a new reinforce card, **Call for a pause**. The next year opens with an open vote (👍 or 👎), and the pause starts only if every country still in the race votes yes. While it holds, nobody's AI grows, safe-token cards give one extra token, and the cards that grow AI **break the pause** openly, for 10 allies. If the pause holds three years, everyone still standing shares the win.
+- **What it changes:** the CNA game's only cooperation was the shared loss. Now there is a shared win too, and the game argues that it is fragile: one country that won't vote yes, or one that breaks it, is enough to end it (Voting, Cooperative Play).
+
+## New in this combined game
+
+### Hidden compute and inspections
+
+- **What it is:** a new develop card, **Build in secret**, puts 8 AI in a sealed envelope (on the board it shows only as ✉), and it joins your AI at the end of the year, or when a pause ends. A new attack card, **Inspect their data centres**, opens a rival's envelope. Anyone caught building in secret during a pause loses what they hid and 15 allies; an empty envelope costs the inspector 3 economy.
+- **Where it comes from:** it joins the CNA game's covert cards (spies, the honey trap) to *The Race*'s treaty. *The Race* itself now has no hidden compute: breaking its treaty is done in the open.
+- **What it changes:** the pause can be broken without anyone seeing, so trust and checking become part of the game (Bluffing). Whether to keep this, or to match *The Race* and make every break open, is a choice to test in play.
+
+### Prompt injection
+
+A new incident from the database's risks: your agents are hijacked, and you lose 10 cybersecurity.
 
 ### What we leave out, for now
 

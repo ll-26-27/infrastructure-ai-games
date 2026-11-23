@@ -1,6 +1,8 @@
 // The rules of the game: the countries, the cards, and what happens when the cards are revealed.
 // Everything here is plain data and plain functions, so the page only has to draw it.
 
+import { writeNews } from "./news.mjs";
+
 export const FIRST_YEAR = 2027;
 export const YEARS = 10;
 
@@ -38,7 +40,7 @@ export const KINDS = {
   attack: { label: "Attack", copy: "Played on another country." },
   develop: { label: "Develop AI", copy: "Grow your AI and your economy, faster and riskier." },
   reinforce: { label: "Reinforce", copy: "Safety and security: slower, safer." },
-  wild: { label: "Wildcard", copy: "Choose one of three real events." },
+  wild: { label: "Wildcard", copy: "A gamble: one of three face-down real events, half good and half bad." },
 };
 
 export const CARDS = [
@@ -47,34 +49,49 @@ export const CARDS = [
   { id: "assassinate", kind: "attack", title: "Assassinate their leader", target: true, text: "A long shot. If it works they lose allies and economy and next year's turn. If it fails, everyone knows it was you.", from: [] },
   { id: "spies", kind: "attack", title: "Send spies", target: true, text: "Steal AI research. Spies make your next hack or assassination likelier, but if they are caught you lose allies.", from: [["risks", "model-weights-leak"]] },
   { id: "ceo", kind: "attack", title: "Their top tech CEO cheats with a spy", target: true, text: "A honey trap. Their lab leaks to you: they lose AI, you gain it. If it comes out, you lose allies.", from: [["labs", null]] },
+  { id: "laws", kind: "attack", title: "Deploy lethal autonomous weapons", target: true, text: "Machines that choose their own targets. Hard to stop: they lose a lot of economy and cybersecurity and next year's turn. You lose many allies, and the world gets far tenser and riskier.", from: [] },
   { id: "invest", kind: "develop", title: "Internal investment", text: "Put money into your own industry. Economy up, a little AI.", fx: { econ: 12, ai: 4 }, world: {}, from: [["governments", "chips-act"]] },
   { id: "datacentres", kind: "develop", title: "Build more data centres", text: "More compute, paid for out of the economy.", fx: { ai: 10, econ: -5 }, world: { risk: 2 }, from: [["datacentres", "hyperscale-data-centre"], ["datacentres", "stargate-abilene"]] },
   { id: "agi", kind: "develop", title: "Accelerate towards AGI", text: "Race ahead and cut corners. Big AI gain, safety falls, the world's risk rises.", fx: { ai: 16, safety: -10 }, world: { risk: 6 }, from: [["models", null]] },
   { id: "space", kind: "develop", title: "Make a space data centre", text: "Expensive, but hard to reach: AI and cybersecurity up, economy down.", fx: { ai: 12, cyber: 5, econ: -12 }, world: { risk: 2 }, from: [["energy", null]] },
-  { id: "military", kind: "develop", title: "AI military integration", text: "Put AI in the army. Your attacks get stronger from now on; your neighbours get nervous.", fx: { ai: 8, cyber: 6, allies: -4 }, world: { risk: 6, tension: 10 }, from: [] },
+  { id: "military", kind: "develop", title: "AI military integration", text: "Put AI in the army. Your attacks, and lethal autonomous weapons above all, get stronger from now on; your neighbours get nervous.", fx: { ai: 8, cyber: 6, allies: -4 }, world: { risk: 6, tension: 10 }, from: [] },
   { id: "regulation", kind: "reinforce", title: "Regulation", text: "Write the rules. Safety up, AI slower. Democracies win friends for it.", fx: { safety: 12, ai: -4 }, world: { risk: -4 }, from: [["governments", "eu-ai-act"], ["governments", "california-sb-53"]] },
   { id: "killswitch", kind: "reinforce", title: "Use the killswitch", text: "Shut your frontier models down for a year. Safety jumps, AI drops, the world calms.", fx: { safety: 25, ai: -15 }, world: { risk: -10 }, from: [["risks", "a-safety-incident"]] },
   { id: "agency", kind: "reinforce", title: "Create a government agency", text: "Someone whose job is to watch AI. Safety and cybersecurity up, a little economy down.", fx: { safety: 8, cyber: 8, econ: -4 }, world: {}, from: [["governments", "us-ai-action-plan"]] },
   { id: "interpretability", kind: "reinforce", title: "Fund interpretability research", text: "Learn what your models are doing inside. Safety up, the world's risk down.", fx: { safety: 14, ai: 2, econ: -3 }, world: { risk: -5 }, from: [] },
   { id: "surveillance", kind: "reinforce", title: "Fund surveillance", text: "Watch the networks. Cybersecurity up. Democracies lose allies for it.", fx: { cyber: 12, allies: -4 }, world: {}, from: [] },
   { id: "mass", kind: "reinforce", title: "Mass autonomous surveillance", text: "Let AI watch everyone. Cybersecurity way up, safety and allies down.", fx: { cyber: 20, safety: -6, allies: -10 }, world: { risk: 4 }, from: [] },
-  { id: "wild", kind: "wild", title: "Wildcard", text: "Choose one of three real events to set off.", from: [] },
+  { id: "wild", kind: "wild", title: "Wildcard", text: "Draw one of three face-down events. Half the deck helps you and half hurts you: a gamble.", from: [] },
 ];
 
 export const card = (id) => CARDS.find((c) => c.id === id);
 
-// The wildcard's options: real events from the world database. You choose one of three.
+// The wildcard deck: real events from the world database, face down. Half help the country that draws them and
+// half hurt it, so a wildcard is a gamble. `fx` is the drawer's bars, `rivals` every other country's, `world` the meters.
 export const WILDS = [
-  { id: "shortage", title: "A chip shortage", text: "Every rival loses 6 AI.", record: ["compute", "a-chip-shortage"] },
-  { id: "export", title: "Export controls", text: "The country furthest ahead in AI loses 10 AI (even if it's you).", record: ["governments", "export-controls"] },
-  { id: "quake", title: "An earthquake in Taiwan", text: "The chip supply shakes: every country loses 4 AI, Taiwan loses 12 economy.", record: ["risks", "an-earthquake-in-taiwan"] },
-  { id: "subsidy", title: "A chips subsidy", text: "You gain 8 economy and 6 AI.", record: ["governments", "chips-act"] },
-  { id: "leak", title: "A model's weights leak", text: "Everyone gains 5 AI. The world's risk rises 8.", record: ["risks", "model-weights-leak"] },
-  { id: "summit", title: "A peace summit", text: "World tension falls 15. You gain 10 allies.", record: null },
-  { id: "drought", title: "A drought", text: "Data centres run short of water: every rival loses 5 economy.", record: ["risks", "a-drought"] },
-  { id: "opensource", title: "You release an open model", text: "You gain 10 allies and 4 AI. The world's risk rises 4.", record: ["risks", "model-weights-leak"] },
-  { id: "outage", title: "An outage", text: "Every rival loses 6 cybersecurity.", record: ["risks", "an-outage"] },
+  { id: "subsidy", good: true, title: "A chips subsidy", text: "+8 economy, +6 AI.", fx: { econ: 8, ai: 6 }, record: ["governments", "chips-act"] },
+  { id: "summit", good: true, title: "A peace summit", text: "+10 allies; world tension −15.", fx: { allies: 10 }, world: { tension: -15 }, record: null },
+  { id: "breakthrough", good: true, title: "A research breakthrough", text: "+10 AI.", fx: { ai: 10 }, record: ["models", null] },
+  { id: "defector", good: true, title: "A star researcher defects to you", text: "+6 AI, +4 safety.", fx: { ai: 6, safety: 4 }, record: ["people", null] },
+  { id: "fab", good: true, title: "A new chip fab opens at home", text: "+6 economy, +6 cybersecurity.", fx: { econ: 6, cyber: 6 }, record: ["compute", "fab"] },
+  { id: "shortage", good: true, title: "A chip shortage hits your rivals", text: "Every rival −5 AI.", rivals: { ai: -5 }, record: ["compute", "a-chip-shortage"] },
+  { id: "leak", good: false, title: "Your model's weights leak", text: "−8 AI; the world's risk +8.", fx: { ai: -8 }, world: { risk: 8 }, record: ["risks", "model-weights-leak"] },
+  { id: "drought", good: false, title: "A drought hits your data centres", text: "−8 economy, −4 AI.", fx: { econ: -8, ai: -4 }, record: ["risks", "a-drought"] },
+  { id: "outage", good: false, title: "A national outage", text: "−10 cybersecurity.", fx: { cyber: -10 }, record: ["risks", "an-outage"] },
+  { id: "quake", good: false, title: "An earthquake in Taiwan cuts your chip supply", text: "−8 AI.", fx: { ai: -8 }, record: ["risks", "an-earthquake-in-taiwan"] },
+  { id: "lawsuit", good: false, title: "A lawsuit against your top lab", text: "−6 economy, −4 AI.", fx: { econ: -6, ai: -4 }, record: ["risks", "a-lawsuit"] },
+  { id: "export", good: false, title: "Export controls cut you off", text: "−10 AI.", fx: { ai: -10 }, record: ["governments", "export-controls"] },
 ];
+
+// How well a country is doing, in one number: the race counts most, but a country that is ahead in AI and about
+// to collapse is not doing well. Its weakest survival bar counts extra, since any of them at zero is the end.
+export function power(p) {
+  if (p.out) return 0;
+  const b = p.bars;
+  const weakest = Math.min(b.safety, b.cyber, b.allies, b.econ);
+  return Math.round(b.ai * 0.4 + (b.safety + b.cyber + b.allies + b.econ) * 0.1 + weakest * 0.2);
+}
+export const ranking = (players) => [...players].sort((a, b) => (a.out ? 1 : 0) - (b.out ? 1 : 0) || power(b) - power(a) || b.bars.ai - a.bars.ai).map((p) => p.id);
 
 export const recordHref = ([category, id]) => `/database/world/${category}${id ? `#${id}` : ""}`;
 
@@ -92,13 +109,13 @@ export function newGame(setup) {
   for (const h of setup.humans) {
     const c = COUNTRIES.find((x) => x.id === h.country);
     used.add(c.id);
-    players.push({ id: c.id, human: true, name: h.name || c.name, system: h.system, avatar: h.avatar, bars: { ...c.start }, out: null, stunned: false, spies: 0, military: false });
+    players.push({ id: c.id, country: c.name, human: true, name: h.name || c.name, system: h.system, avatar: h.avatar, bars: { ...c.start }, out: null, stunned: false, spies: 0, military: false });
   }
   const npcAvatars = shuffle(AVATARS.filter((a) => !setup.humans.some((h) => h.avatar === a)));
   for (const id of setup.rivals) {
     if (used.has(id)) continue;
     const c = COUNTRIES.find((x) => x.id === id);
-    players.push({ id, human: false, name: c.name, system: c.system, avatar: npcAvatars.pop(), bars: { ...c.start }, out: null, stunned: false, spies: 0, military: false });
+    players.push({ id, country: c.name, human: false, name: c.name, system: c.system, avatar: npcAvatars.pop(), bars: { ...c.start }, out: null, stunned: false, spies: 0, military: false });
   }
   for (const p of players) applySystemStart(p);
   return { year: FIRST_YEAR, players, world: { risk: 20, tension: 20 }, history: [], wilds: dealWilds(players), ended: null };
@@ -111,7 +128,7 @@ function applySystemStart(p) {
 
 function dealWilds(players) {
   const deal = {};
-  for (const p of players) deal[p.id] = shuffle(WILDS).slice(0, 3).map((w) => w.id);
+  for (const p of players) deal[p.id] = shuffle(WILDS).slice(0, 3).map((w) => w.id); // face down: the player sees only "?"
   return deal;
 }
 
@@ -128,7 +145,7 @@ export function npcChoice(game, p) {
   if (b.safety < 22) return choose(Math.random() < 0.5 ? "interpretability" : "killswitch");
   if (b.econ < 25) return choose("invest");
   if (b.cyber < 25) return choose(p.system === "authoritarian" ? "mass" : "agency");
-  if (b.allies < 25) return choose(Math.random() < 0.5 ? "regulation" : "wild", null, "summit");
+  if (b.allies < 25) return choose("regulation");
   const c = countryOf(p.id);
   const weights = { ...c.leans, attack: c.leans.attack * 1.6, wild: 0.6 };
   if (game.world.risk > 65) weights.reinforce *= 2;
@@ -165,11 +182,16 @@ export function resolveYear(game, choices) {
   const addWorld = (fx) => { for (const [k, v] of Object.entries(fx || {})) g.world[k] = clamp(g.world[k] + v); };
   const nextStunned = new Set();
   const playing = alive(g);
+  const events = [];
+  const ev = (e) => events.push(e);
+  const before = Object.fromEntries(g.players.map((p) => [p.id, { ...p.bars }]));
+  const worldBefore = { ...g.world };
+  const ranksBefore = ranking(g.players);
 
   const plays = playing.map((p) => (p.stunned ? { who: p.id, card: "stunned" } : { who: p.id, ...choices[p.id] }));
   const order = { reinforce: 0, develop: 1, wild: 2, attack: 3 };
   const sorted = plays.filter((x) => x.card !== "stunned").sort((a, b) => order[card(a.card).kind] - order[card(b.card).kind]);
-  for (const x of plays) if (x.card === "stunned") say(`${P(x.who).name} is recovering and loses this year's turn.`, "muted", x.who);
+  for (const x of plays) if (x.card === "stunned") { say(`${P(x.who).name} is recovering and loses this year's turn.`, "muted", x.who); ev({ type: "stunned", who: x.who }); }
 
   for (const x of sorted) {
     const p = P(x.who);
@@ -183,10 +205,14 @@ export function resolveYear(game, choices) {
       add(p, fx);
       addWorld(c.world);
       say(`${p.name}: ${c.title}.`, c.kind, p.id, null, c.kind);
+      ev({ type: "card", who: p.id, card: c.id });
     } else if (c.kind === "wild") {
-      const w = WILDS.find((y) => y.id === x.wild) || WILDS[0];
-      wild(g, p, w, add, addWorld);
-      say(`${p.name} sets off a wildcard: ${w.title}. ${w.text.replace(/ \(even if it's you\)/, "").replace(/\bYou\b/g, p.name)}`, "wild", p.id, null, "wild");
+      const w = WILDS.find((y) => y.id === x.wild) || pick(WILDS);
+      add(p, w.fx || {});
+      for (const q of alive(g)) if (q.id !== p.id) add(q, w.rivals || {});
+      addWorld(w.world);
+      say(`${poss(p.name)} wildcard: ${w.title.replace(/\byour\b/gi, "its").replace(/\byou\b/g, p.name)}. ${w.text}`, w.good ? "wild" : "fail", p.id, null, "wild");
+      ev({ type: "wild", who: p.id, wild: w.id, good: w.good });
     }
   }
 
@@ -195,6 +221,7 @@ export function resolveYear(game, choices) {
     const t = P(x.target);
     const c = card(x.card);
     if (!t || t.out) { say(`${p.name} played ${c.title}, but the target is already out.`, "muted", p.id); continue; }
+    const E = (ok, extra = {}) => ev({ type: c.id, who: p.id, target: t.id, ok, ...extra });
     const edge = (p.bars.ai - t.bars.cyber) / 200 + (p.military ? 0.1 : 0) + p.spies * 0.15;
     const roll = Math.random();
     if (c.id === "hack") {
@@ -203,8 +230,8 @@ export function resolveYear(game, choices) {
       g.world.tension = clamp(g.world.tension + 5);
       if (roll < chance) {
         add(t, { cyber: -15, ai: -5 }); add(p, { ai: 5 }); nextStunned.add(t.id);
-        say(`${p.name} hacks ${t.name}: −15 cybersecurity, −5 AI, and ${t.name} loses a turn.`, "attack", p.id, t.id, "attack");
-      } else { add(p, { allies: -8 }); say(`${p.name} tries to hack ${t.name} and is caught: −8 allies.`, "fail", p.id, t.id, "attack"); }
+        say(`${p.name} hacks ${t.name}: −15 cybersecurity, −5 AI, and ${t.name} loses a turn.`, "attack", p.id, t.id, "attack"); E(true);
+      } else { add(p, { allies: -8 }); say(`${p.name} tries to hack ${t.name} and is caught: −8 allies.`, "fail", p.id, t.id, "attack"); E(false); }
     }
     if (c.id === "attack") {
       const chance = clamp(0.55 + edge / 2 + (p.military ? 0.1 : 0), 0.2, 0.85);
@@ -212,8 +239,18 @@ export function resolveYear(game, choices) {
       g.world.tension = clamp(g.world.tension + 20);
       if (roll < chance) {
         add(t, { econ: -20, cyber: -10 }); nextStunned.add(t.id);
-        say(`${p.name} attacks ${t.name}: −20 economy, −10 cybersecurity, and ${t.name} loses a turn. The world is tenser.`, "attack", p.id, t.id, "attack");
-      } else say(`${p.name} attacks ${t.name} and is beaten back. The world is tenser anyway.`, "fail", p.id, t.id, "attack");
+        say(`${p.name} attacks ${t.name}: −20 economy, −10 cybersecurity, and ${t.name} loses a turn. The world is tenser.`, "attack", p.id, t.id, "attack"); E(true);
+      } else { say(`${p.name} attacks ${t.name} and is beaten back. The world is tenser anyway.`, "fail", p.id, t.id, "attack"); E(false); }
+    }
+    if (c.id === "laws") {
+      const chance = clamp(0.7 + edge / 2 + (p.military ? 0.15 : 0), 0.4, 0.95);
+      add(p, { allies: -18, econ: -6 });
+      g.world.tension = clamp(g.world.tension + 25);
+      g.world.risk = clamp(g.world.risk + 10);
+      if (roll < chance) {
+        add(t, { econ: -25, cyber: -10 }); nextStunned.add(t.id);
+        say(`${p.name} sends lethal autonomous weapons into ${t.name}: −25 economy, −10 cybersecurity, and ${t.name} loses a turn. The world is far tenser and riskier.`, "attack", p.id, t.id, "attack"); E(true);
+      } else { say(`${poss(p.name)} lethal autonomous weapons misfire over ${t.name}. Nobody trusts them now, and the world is far tenser.`, "fail", p.id, t.id, "attack"); E(false); }
     }
     if (c.id === "assassinate") {
       const chance = clamp(0.25 + p.spies * 0.15 + (p.system === "authoritarian" ? 0.05 : 0), 0.1, 0.6);
@@ -221,18 +258,18 @@ export function resolveYear(game, choices) {
       g.world.tension = clamp(g.world.tension + 15);
       if (roll < chance) {
         add(t, { allies: -25, econ: -10 }); nextStunned.add(t.id); g.world.tension = clamp(g.world.tension + 10);
-        say(`${p.name} has ${poss(t.name)} leader assassinated: −25 allies, −10 economy, and ${t.name} loses a turn.`, "attack", p.id, t.id, "attack");
-      } else { add(p, { allies: -20 }); say(`${poss(p.name)} plot against ${poss(t.name)} leader fails, and everyone knows: −20 allies.`, "fail", p.id, t.id, "attack"); }
+        say(`${p.name} has ${poss(t.name)} leader assassinated: −25 allies, −10 economy, and ${t.name} loses a turn.`, "attack", p.id, t.id, "attack"); E(true);
+      } else { add(p, { allies: -20 }); say(`${poss(p.name)} plot against ${poss(t.name)} leader fails, and everyone knows: −20 allies.`, "fail", p.id, t.id, "attack"); E(false); }
     }
     if (c.id === "spies") {
       const caught = clamp(0.3 + (t.bars.cyber - 50) / 200, 0.1, 0.6);
-      if (roll < caught) { add(p, { allies: -12 }); say(`${poss(p.name)} spies are caught in ${t.name}: an ally walks away (−12 allies).`, "fail", p.id, t.id, "attack"); }
-      else { add(p, { ai: 8 }); p.spies += 1; say(`${poss(p.name)} spies steal research from ${t.name}: +8 AI, and the next hack or plot is likelier.`, "attack", p.id, t.id, "attack"); }
+      if (roll < caught) { add(p, { allies: -12 }); say(`${poss(p.name)} spies are caught in ${t.name}: an ally walks away (−12 allies).`, "fail", p.id, t.id, "attack"); E(false); }
+      else { add(p, { ai: 8 }); p.spies += 1; say(`${poss(p.name)} spies steal research from ${t.name}: +8 AI, and the next hack or plot is likelier.`, "attack", p.id, t.id, "attack"); E(true); }
     }
     if (c.id === "ceo") {
       add(t, { ai: -10 }); add(p, { ai: 6 });
-      if (roll < 0.4) { add(p, { allies: -15 }); g.world.tension = clamp(g.world.tension + 8); say(`${poss(t.name)} top tech CEO leaks to ${poss(p.name)} spy (−10 AI for ${t.name}, +6 for ${p.name}), and the scandal breaks: −15 allies.`, "fail", p.id, t.id, "attack"); }
-      else say(`${poss(t.name)} top tech CEO leaks to ${poss(p.name)} spy: −10 AI for ${t.name}, +6 for ${p.name}.`, "attack", p.id, t.id, "attack");
+      if (roll < 0.4) { add(p, { allies: -15 }); g.world.tension = clamp(g.world.tension + 8); say(`${poss(t.name)} top tech CEO leaks to ${poss(p.name)} spy (−10 AI for ${t.name}, +6 for ${p.name}), and the scandal breaks: −15 allies.`, "fail", p.id, t.id, "attack"); E(true, { exposed: true }); }
+      else { say(`${poss(t.name)} top tech CEO leaks to ${poss(p.name)} spy: −10 AI for ${t.name}, +6 for ${p.name}.`, "attack", p.id, t.id, "attack"); E(true); }
     }
   }
 
@@ -252,28 +289,20 @@ export function resolveYear(game, choices) {
       if (bar.out && p.bars[bar.key] <= 0 && !p.out) {
         p.out = { year: g.year, why: bar.out, bar: bar.key };
         say(`${p.name} is OUT. ${bar.out}`, "out", p.id);
+        ev({ type: "out", who: p.id, bar: bar.key });
         if (bar.key === "safety") { g.world.risk = clamp(g.world.risk + 25); say("A rogue AI loose in the world: the world's risk jumps 25.", "out"); }
       }
     }
   }
 
-  g.history.push({ year: g.year, plays, log });
   g.ended = checkEnd(g, say);
+  const after = Object.fromEntries(g.players.map((p) => [p.id, { ...p.bars }]));
+  const ranks = ranking(g.players);
+  const entry = { year: g.year, plays, log, events, before, after, worldBefore, world: { ...g.world }, ranksBefore, ranks, power: Object.fromEntries(g.players.map((p) => [p.id, power(p)])), ended: g.ended };
+  entry.news = writeNews(g, entry);
+  g.history.push(entry);
   if (!g.ended) { g.year += 1; g.wilds = dealWilds(g.players); }
   return g;
-}
-
-function wild(g, p, w, add, addWorld) {
-  const rivals = alive(g).filter((q) => q.id !== p.id);
-  if (w.id === "shortage") rivals.forEach((q) => add(q, { ai: -6 }));
-  if (w.id === "export") { const top = [...alive(g)].sort((a, b) => b.bars.ai - a.bars.ai)[0]; add(top, { ai: -10 }); }
-  if (w.id === "quake") { alive(g).forEach((q) => add(q, { ai: -4 })); const tw = alive(g).find((q) => q.id === "tw"); if (tw) add(tw, { econ: -12 }); }
-  if (w.id === "subsidy") add(p, { econ: 8, ai: 6 });
-  if (w.id === "leak") { alive(g).forEach((q) => add(q, { ai: 5 })); addWorld({ risk: 8 }); }
-  if (w.id === "summit") { addWorld({ tension: -15 }); add(p, { allies: 10 }); }
-  if (w.id === "drought") rivals.forEach((q) => add(q, { econ: -5 }));
-  if (w.id === "opensource") { add(p, { allies: 10, ai: 4 }); addWorld({ risk: 4 }); }
-  if (w.id === "outage") rivals.forEach((q) => add(q, { cyber: -6 }));
 }
 
 // The endings. Everyone can lose together; one country can win; several can win together.

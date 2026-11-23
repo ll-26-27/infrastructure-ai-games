@@ -1,0 +1,68 @@
+/* /database: the course as one database with three shelves. */
+.db-shell { width: min(100%, 1320px); margin: 0 auto; padding: 44px var(--gutter) 100px; }
+.db-shell .breadcrumbs { margin-bottom: 28px; }
+.db-heading h1 { margin: 14px 0 0; font-size: clamp(52px, 8vw, 104px); font-weight: 800; letter-spacing: -.06em; line-height: .9; }
+.db-deck { max-width: 800px; margin: 22px 0 0; color: var(--muted); font-size: 18px; line-height: 1.55; }
+.db-views { display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0 0; }
+.db-views a { padding: 9px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); font-size: 14px; font-weight: 650; }
+.db-views a:hover, .db-views a.is-primary { background: var(--accent); color: var(--accent-ink); }
+.db-shelves { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 16px; margin-top: 40px; align-items: start; }
+.db-shelf { padding: 18px 20px; border: 1px solid var(--line); border-top: 5px solid var(--hue-c, var(--accent)); border-radius: 12px; background: var(--wash); }
+.db-shelf.is-students { --hue-c: hsl(12 70% 62%); }
+.db-shelf.is-course { --hue-c: hsl(265 60% 68%); }
+.db-shelf.is-world { --hue-c: hsl(175 55% 55%); }
+.db-shelf h2 { margin: 4px 0 6px; font-size: 26px; letter-spacing: -.03em; }
+.db-shelf-lede { margin: 0 0 12px; color: var(--muted); line-height: 1.5; }
+.db-group h3 { margin: 14px 0 6px; font-size: 15px; }
+.db-cats { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+.db-cats ul { padding-left: 18px; }
+.db-cats.is-flat { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; list-style: none; }
+.db-cats.is-flat li { padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); }
+.db-cats.is-flat a.db-cat-name:hover { color: var(--accent); }
+.db-also { margin-top: 10px; }
+.db-n { color: var(--muted); font-variant-numeric: tabular-nums; }
+.db-more { margin: 14px 0 0; font-size: 13px; color: var(--muted); }
+.db-more a { color: var(--accent); }
+
+/* /database/json */
+.db-json-bar { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin: 26px 0 12px; font-size: 13px; }
+.db-json-bar button { padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--wash); color: var(--ink); font: inherit; cursor: pointer; }
+.db-json-bar button.is-on { border-color: var(--accent); color: var(--accent); font-weight: 700; }
+.db-json-bar a { color: var(--accent); }
+.db-tree { padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--code); font: 13px/1.6 ui-monospace, monospace; overflow-x: auto; }
+.db-tree ul { margin: 0; padding-left: 18px; list-style: none; border-left: 1px dotted var(--line); }
+.db-tree > ul { padding-left: 0; border: 0; }
+.db-tree button { padding: 0; border: 0; background: none; color: var(--muted); font: inherit; cursor: pointer; }
+.db-tree button:hover { color: var(--accent); }
+.db-k { color: var(--accent); }
+.db-s { color: var(--ok); }
+.db-num { color: var(--cyan); }
+.db-b { color: var(--error); }
+.db-hint { color: var(--muted); }
+
+/* /database/cards-to-db */
+.ctd { max-width: 1100px; }
+.ctd section { margin: 54px 0 0; }
+.ctd h2 { margin: 0 0 8px; font-size: 32px; letter-spacing: -.04em; }
+.ctd p.lede { max-width: 760px; margin: 0 0 16px; color: var(--muted); font-size: 17px; line-height: 1.6; }
+.ctd-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+.ctd-step { padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--wash); }
+.ctd-step h3 { margin: 0 0 6px; font-size: 18px; }
+.ctd-step p { margin: 0 0 8px; color: var(--muted); line-height: 1.5; font-size: 14.5px; }
+.ctd-code { margin: 8px 0 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--code); color: var(--ink); font: 12.5px/1.5 ui-monospace, monospace; white-space: pre-wrap; overflow-x: auto; }
+.ctd-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+.ctd-group { padding: 14px 16px; border: 1px solid var(--line); border-top: 4px solid hsl(12 70% 62%); border-radius: 10px; background: var(--wash); }
+.ctd-group h3 { margin: 4px 0 6px; font-size: 19px; }
+.ctd-group p { margin: 0 0 10px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.ctd-thumbs { display: flex; flex-wrap: wrap; gap: 4px; }
+.ctd-thumbs img { width: 64px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 4px; border: 1px solid var(--line); }
+.ctd-media { width: 100%; max-width: 720px; border-radius: 10px; border: 1px solid var(--line); }
+
+/* typed cards on the tables (cards-to-db) */
+.ctd-pile { margin: 10px 0 0; padding: 8px 10px; border: 1px dashed var(--line); border-radius: 8px; }
+.ctd-pile .ctd-pile { margin-left: 8px; }
+.ctd-pile-head { margin: 0 0 6px; font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.ctd-typed { display: flex; flex-wrap: wrap; gap: 5px; }
+.ctd-card { padding: 4px 8px; border: 1px solid var(--line); border-radius: 4px; background: #f4efe4; color: #2b2620; font-family: Georgia, serif; font-size: 14px; }
+.ctd-unplaced { margin-top: 14px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; }
+.ctd-unplaced summary { cursor: pointer; font-weight: 700; margin-bottom: 8px; }

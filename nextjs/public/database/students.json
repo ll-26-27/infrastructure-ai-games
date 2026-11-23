@@ -1,0 +1,1281 @@
+{
+  "description": "What the class made on September 28: three groups each laid the course out on a table as index cards, sorted into piles.",
+  "sessions": [
+    {
+      "id": "session-01",
+      "group": "Group 1",
+      "title": "Disciplines, thinkers, and applications"
+    },
+    {
+      "id": "session-02",
+      "group": "Group 2",
+      "title": "Categories developed through contradictions"
+    },
+    {
+      "id": "session-03",
+      "group": "Group 3",
+      "title": "Theory and materiality, connected by technology and infrastructure"
+    }
+  ],
+  "categories": [
+    {
+      "id": "session-01-category-01",
+      "session": "session-01",
+      "label": "disciplines",
+      "parent": null
+    },
+    {
+      "id": "session-01-category-02",
+      "session": "session-01",
+      "label": "Thinkers",
+      "parent": null
+    },
+    {
+      "id": "session-01-category-03",
+      "session": "session-01",
+      "label": "Applications",
+      "parent": null
+    },
+    {
+      "id": "session-01-category-04",
+      "session": "session-01",
+      "label": "Practical",
+      "parent": "session-01-category-03"
+    },
+    {
+      "id": "session-01-category-05",
+      "session": "session-01",
+      "label": "Personal Devices",
+      "parent": "session-01-category-03"
+    },
+    {
+      "id": "session-01-category-06",
+      "session": "session-01",
+      "label": "digital",
+      "parent": "session-01-category-03"
+    },
+    {
+      "id": "session-02-category-01",
+      "session": "session-02",
+      "label": "CONCEPT",
+      "parent": null
+    },
+    {
+      "id": "session-02-category-02",
+      "session": "session-02",
+      "label": "THINKER",
+      "parent": null
+    },
+    {
+      "id": "session-02-category-03",
+      "session": "session-02",
+      "label": "TECHNOLOGY",
+      "parent": null
+    },
+    {
+      "id": "session-02-category-04",
+      "session": "session-02",
+      "label": "INFRASTRUCTURE",
+      "parent": null
+    },
+    {
+      "id": "session-02-category-05",
+      "session": "session-02",
+      "label": "INSTITUTION",
+      "parent": null
+    },
+    {
+      "id": "session-02-category-06",
+      "session": "session-02",
+      "label": "REPRESENTATION",
+      "parent": null
+    },
+    {
+      "id": "session-02-category-07",
+      "session": "session-02",
+      "label": "METHOD",
+      "parent": null
+    },
+    {
+      "id": "session-03-category-01",
+      "session": "session-03",
+      "label": "Theory",
+      "parent": null
+    },
+    {
+      "id": "session-03-category-02",
+      "session": "session-03",
+      "label": "Materiality",
+      "parent": null
+    },
+    {
+      "id": "session-03-category-03",
+      "session": "session-03",
+      "label": "Technology/Infrastructure",
+      "parent": null
+    },
+    {
+      "id": "session-03-category-04",
+      "session": "session-03",
+      "label": "Method",
+      "parent": null
+    }
+  ],
+  "cards": [
+    {
+      "id": "session-01-card-001",
+      "text": "disciplines",
+      "session": "session-01",
+      "role": "heading",
+      "categories": [
+        "session-01-category-01"
+      ]
+    },
+    {
+      "id": "session-01-card-002",
+      "text": "Anthropology",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-01"
+      ]
+    },
+    {
+      "id": "session-01-card-003",
+      "text": "philosophers",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-01"
+      ]
+    },
+    {
+      "id": "session-01-card-004",
+      "text": "Ethnography",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-01"
+      ]
+    },
+    {
+      "id": "session-01-card-005",
+      "text": "Thinkers",
+      "session": "session-01",
+      "role": "heading",
+      "categories": [
+        "session-01-category-02"
+      ]
+    },
+    {
+      "id": "session-01-card-006",
+      "text": "Manovich",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-02"
+      ]
+    },
+    {
+      "id": "session-01-card-007",
+      "text": "Star",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-02"
+      ]
+    },
+    {
+      "id": "session-01-card-008",
+      "text": "Dourish",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-02"
+      ]
+    },
+    {
+      "id": "session-01-card-009",
+      "text": "Prasad",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-02"
+      ]
+    },
+    {
+      "id": "session-01-card-010",
+      "text": "Hasan",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-02"
+      ]
+    },
+    {
+      "id": "session-01-card-011",
+      "text": "Applications",
+      "session": "session-01",
+      "role": "heading",
+      "categories": [
+        "session-01-category-03"
+      ]
+    },
+    {
+      "id": "session-01-card-012",
+      "text": "Practical",
+      "session": "session-01",
+      "role": "heading",
+      "categories": [
+        "session-01-category-04"
+      ]
+    },
+    {
+      "id": "session-01-card-013",
+      "text": "phone books",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-04"
+      ]
+    },
+    {
+      "id": "session-01-card-014",
+      "text": "Infrastructure",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-04"
+      ]
+    },
+    {
+      "id": "session-01-card-015",
+      "text": "Railway",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-04"
+      ]
+    },
+    {
+      "id": "session-01-card-016",
+      "text": "Highway",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-04"
+      ]
+    },
+    {
+      "id": "session-01-card-017",
+      "text": "Power Line",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-04"
+      ]
+    },
+    {
+      "id": "session-01-card-018",
+      "text": "Energy",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-04"
+      ]
+    },
+    {
+      "id": "session-01-card-019",
+      "text": "Personal Devices",
+      "session": "session-01",
+      "role": "heading",
+      "categories": [
+        "session-01-category-05"
+      ]
+    },
+    {
+      "id": "session-01-card-020",
+      "text": "MRI",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-05"
+      ]
+    },
+    {
+      "id": "session-01-card-021",
+      "text": "Taxi Meters",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-05"
+      ]
+    },
+    {
+      "id": "session-01-card-022",
+      "text": "digital",
+      "session": "session-01",
+      "role": "heading",
+      "categories": [
+        "session-01-category-06"
+      ]
+    },
+    {
+      "id": "session-01-card-023",
+      "text": "SQL",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-06"
+      ]
+    },
+    {
+      "id": "session-01-card-024",
+      "text": "Databases",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-06"
+      ]
+    },
+    {
+      "id": "session-01-card-025",
+      "text": "Early Internet Marketing",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-06"
+      ]
+    },
+    {
+      "id": "session-01-card-026",
+      "text": "internet",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-06"
+      ]
+    },
+    {
+      "id": "session-01-card-027",
+      "text": "Machine Learning",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-06"
+      ]
+    },
+    {
+      "id": "session-01-card-028",
+      "text": "simulations",
+      "session": "session-01",
+      "role": "term",
+      "categories": [
+        "session-01-category-06"
+      ]
+    },
+    {
+      "id": "session-01-card-029",
+      "text": "Multi-select →",
+      "session": "session-01",
+      "role": "annotation",
+      "categories": [
+        "session-01-category-01"
+      ]
+    },
+    {
+      "id": "session-02-card-001",
+      "text": "CONCEPT",
+      "session": "session-02",
+      "role": "heading",
+      "categories": [
+        "session-02-category-01"
+      ]
+    },
+    {
+      "id": "session-02-card-002",
+      "text": "symbolic form",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-01"
+      ]
+    },
+    {
+      "id": "session-02-card-003",
+      "text": "invisible work",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-01"
+      ]
+    },
+    {
+      "id": "session-02-card-004",
+      "text": "narrative",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-01"
+      ]
+    },
+    {
+      "id": "session-02-card-005",
+      "text": "Singularization",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-01"
+      ]
+    },
+    {
+      "id": "session-02-card-006",
+      "text": "Postcolonialism",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-01"
+      ]
+    },
+    {
+      "id": "session-02-card-007",
+      "text": "technoscience imaginary",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-01"
+      ]
+    },
+    {
+      "id": "session-02-card-008",
+      "text": "FUNCTION-ALITY",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-01"
+      ]
+    },
+    {
+      "id": "session-02-card-009",
+      "text": "alignment",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-01"
+      ]
+    },
+    {
+      "id": "session-02-card-010",
+      "text": "THINKER",
+      "session": "session-02",
+      "role": "heading",
+      "categories": [
+        "session-02-category-02"
+      ]
+    },
+    {
+      "id": "session-02-card-011",
+      "text": "Manovich",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-02"
+      ]
+    },
+    {
+      "id": "session-02-card-012",
+      "text": "Hui",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-02"
+      ]
+    },
+    {
+      "id": "session-02-card-013",
+      "text": "Dourish",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-02"
+      ]
+    },
+    {
+      "id": "session-02-card-014",
+      "text": "Prasad",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-02"
+      ]
+    },
+    {
+      "id": "session-02-card-015",
+      "text": "Star",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-02"
+      ]
+    },
+    {
+      "id": "session-02-card-016",
+      "text": "Hasan",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-02"
+      ]
+    },
+    {
+      "id": "session-02-card-017",
+      "text": "Toupin",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-02"
+      ]
+    },
+    {
+      "id": "session-02-card-018",
+      "text": "TECHNOLOGY",
+      "session": "session-02",
+      "role": "heading",
+      "categories": [
+        "session-02-category-03"
+      ]
+    },
+    {
+      "id": "session-02-card-019",
+      "text": "MRI",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-03"
+      ]
+    },
+    {
+      "id": "session-02-card-020",
+      "text": "AI",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-03"
+      ]
+    },
+    {
+      "id": "session-02-card-021",
+      "text": "metal detector/scanner",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-03"
+      ]
+    },
+    {
+      "id": "session-02-card-022",
+      "text": "CODE",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-03"
+      ]
+    },
+    {
+      "id": "session-02-card-023",
+      "text": "pace maker",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-03"
+      ]
+    },
+    {
+      "id": "session-02-card-024",
+      "text": "INFRASTRUCTURE",
+      "session": "session-02",
+      "role": "heading",
+      "categories": [
+        "session-02-category-04"
+      ]
+    },
+    {
+      "id": "session-02-card-025",
+      "text": "BRIDGES",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-04"
+      ]
+    },
+    {
+      "id": "session-02-card-026",
+      "text": "SCHOOLS",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-04"
+      ]
+    },
+    {
+      "id": "session-02-card-027",
+      "text": "HOSPITAL",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-04"
+      ]
+    },
+    {
+      "id": "session-02-card-028",
+      "text": "INSTITUTION",
+      "session": "session-02",
+      "role": "heading",
+      "categories": [
+        "session-02-category-05"
+      ]
+    },
+    {
+      "id": "session-02-card-029",
+      "text": "GOVT",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-05"
+      ]
+    },
+    {
+      "id": "session-02-card-030",
+      "text": "CDC",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-05"
+      ]
+    },
+    {
+      "id": "session-02-card-031",
+      "text": "\"SCIENCE\"",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-05"
+      ]
+    },
+    {
+      "id": "session-02-card-032",
+      "text": "FBI/CIA",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-05"
+      ]
+    },
+    {
+      "id": "session-02-card-033",
+      "text": "Claude",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-05"
+      ]
+    },
+    {
+      "id": "session-02-card-034",
+      "text": "REPRESENTATION",
+      "session": "session-02",
+      "role": "heading",
+      "categories": [
+        "session-02-category-06"
+      ]
+    },
+    {
+      "id": "session-02-card-035",
+      "text": "FILM",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-06"
+      ]
+    },
+    {
+      "id": "session-02-card-036",
+      "text": "DATABASES",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-06"
+      ]
+    },
+    {
+      "id": "session-02-card-037",
+      "text": "SYMBOLS",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-06"
+      ]
+    },
+    {
+      "id": "session-02-card-038",
+      "text": "TRACE/RECORD",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-06"
+      ]
+    },
+    {
+      "id": "session-02-card-039",
+      "text": "MIRROR",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-06"
+      ]
+    },
+    {
+      "id": "session-02-card-040",
+      "text": "METHOD",
+      "session": "session-02",
+      "role": "heading",
+      "categories": [
+        "session-02-category-07"
+      ]
+    },
+    {
+      "id": "session-02-card-041",
+      "text": "FIELDWORK",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-07"
+      ]
+    },
+    {
+      "id": "session-02-card-042",
+      "text": "Ethnography",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-07"
+      ]
+    },
+    {
+      "id": "session-02-card-043",
+      "text": "coding",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-07"
+      ]
+    },
+    {
+      "id": "session-02-card-044",
+      "text": "genealogy",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-07"
+      ]
+    },
+    {
+      "id": "session-02-card-045",
+      "text": "historiography",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-07"
+      ]
+    },
+    {
+      "id": "session-02-card-046",
+      "text": "Survey",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-07"
+      ]
+    },
+    {
+      "id": "session-02-card-047",
+      "text": "Statistics",
+      "session": "session-02",
+      "role": "term",
+      "categories": [
+        "session-02-category-07"
+      ]
+    },
+    {
+      "id": "session-03-card-001",
+      "text": "Theory",
+      "session": "session-03",
+      "role": "heading",
+      "categories": [
+        "session-03-category-01"
+      ]
+    },
+    {
+      "id": "session-03-card-002",
+      "text": "Thinkers",
+      "session": "session-03",
+      "role": "term",
+      "categories": [
+        "session-03-category-01"
+      ]
+    },
+    {
+      "id": "session-03-card-003",
+      "text": "Readings",
+      "session": "session-03",
+      "role": "term",
+      "categories": [
+        "session-03-category-01"
+      ]
+    },
+    {
+      "id": "session-03-card-004",
+      "text": "Materiality",
+      "session": "session-03",
+      "role": "heading",
+      "categories": [
+        "session-03-category-02"
+      ]
+    },
+    {
+      "id": "session-03-card-005",
+      "text": "Functionality",
+      "session": "session-03",
+      "role": "term",
+      "categories": [
+        "session-03-category-02"
+      ]
+    },
+    {
+      "id": "session-03-card-006",
+      "text": "Operations",
+      "session": "session-03",
+      "role": "term",
+      "categories": [
+        "session-03-category-02"
+      ]
+    },
+    {
+      "id": "session-03-card-007",
+      "text": "Technology",
+      "session": "session-03",
+      "role": "heading",
+      "categories": [
+        "session-03-category-03"
+      ]
+    },
+    {
+      "id": "session-03-card-008",
+      "text": "Infrastructure",
+      "session": "session-03",
+      "role": "heading",
+      "categories": [
+        "session-03-category-03"
+      ]
+    },
+    {
+      "id": "session-03-card-009",
+      "text": "Database",
+      "session": "session-03",
+      "role": "term",
+      "categories": [
+        "session-03-category-03"
+      ]
+    },
+    {
+      "id": "session-03-card-010",
+      "text": "Computer",
+      "session": "session-03",
+      "role": "term",
+      "categories": [
+        "session-03-category-03"
+      ]
+    },
+    {
+      "id": "session-03-card-011",
+      "text": "Virtual",
+      "session": "session-03",
+      "role": "term",
+      "categories": [
+        "session-03-category-03"
+      ]
+    },
+    {
+      "id": "session-03-card-012",
+      "text": "Method",
+      "session": "session-03",
+      "role": "heading",
+      "categories": [
+        "session-03-category-04"
+      ]
+    },
+    {
+      "id": "session-03-card-013",
+      "text": "Archive",
+      "session": "session-03",
+      "role": "term",
+      "categories": [
+        "session-03-category-04"
+      ]
+    },
+    {
+      "id": "session-03-card-014",
+      "text": "Empiricism",
+      "session": "session-03",
+      "role": "term",
+      "categories": [
+        "session-03-category-04"
+      ]
+    },
+    {
+      "id": "session-03-card-015",
+      "text": "Research",
+      "session": "session-03",
+      "role": "term",
+      "categories": [
+        "session-03-category-04"
+      ]
+    },
+    {
+      "id": "studio-card-0001",
+      "text": "queries",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0002",
+      "text": "Time Period",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0004",
+      "text": "Practical Impacts",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0005",
+      "text": "double blindness",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0006",
+      "text": "journal",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0007",
+      "text": "MRI",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0008",
+      "text": "questions",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0009",
+      "text": "Assignments",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0010",
+      "text": "databases",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0012",
+      "text": "Assignments",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0013",
+      "text": "Homework",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0014",
+      "text": "Thinker",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0015",
+      "text": "Theory",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0016",
+      "text": "paradigm",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0017",
+      "text": "Starr",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0018",
+      "text": "Entropy",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0019",
+      "text": "syllabus",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0020",
+      "text": "Empiricism",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0021",
+      "text": "Readings",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0022",
+      "text": "Reading",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0023",
+      "text": "Computer-imaging",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0024",
+      "text": "infrastructure",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0025",
+      "text": "database",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0026",
+      "text": "Technology",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0027",
+      "text": "Discussion",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0028",
+      "text": "Technology",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0029",
+      "text": "Computer",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0030",
+      "text": "OPERATION",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0031",
+      "text": "SQL",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0032",
+      "text": "Infrastructures",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0033",
+      "text": "infrastructures",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0034",
+      "text": "CLOCK",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0035",
+      "text": "Demographic",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0036",
+      "text": "Theories",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0037",
+      "text": "Theory",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-card-0055",
+      "text": "Non-digital",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-extra-0010",
+      "text": "Readings",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-extra-0015",
+      "text": "Methodology",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-extra-0019",
+      "text": "evolution",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-extra-0020",
+      "text": "Readings",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-extra-0022",
+      "text": "Thinkers",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-extra-0025",
+      "text": "QUESTION",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-extra-0026",
+      "text": "lawsuit",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-extra-0027",
+      "text": "AI",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-extra-0031",
+      "text": "PHONE",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-extra-0033",
+      "text": "Database",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-extra-0034",
+      "text": "SCREEN",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    },
+    {
+      "id": "studio-manual-thesis",
+      "text": "thesis",
+      "session": null,
+      "role": "unclassified",
+      "categories": []
+    }
+  ]
+}

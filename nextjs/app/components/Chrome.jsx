@@ -14,7 +14,7 @@ export const sections = [
   { slug: "graphs", title: "Graphs and cards", short: "Graphs", copy: "The course as a map of ideas, games as a map of mechanics, and where the two touch." },
   { slug: "cards", title: "Ideas", short: "Ideas", copy: "Thinkers from the course and from game studies: a quotation and a short summary of each idea." },
   { slug: "game", title: "The game", short: "Game", copy: "Small playable mechanics about AI and the people it works through, for you to change and combine." },
-  { slug: "timeline", title: "Timeline", short: "Timeline", copy: "A timeline that ends on the day of the workshop." },
+  { slug: "timeline", title: "Timeline", short: "Timeline", copy: "Real breakdowns up to today, then what people have predicted AI will do." },
 ];
 
 async function hasRoute(slug) {

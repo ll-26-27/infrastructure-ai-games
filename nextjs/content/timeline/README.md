@@ -1,14 +1,10 @@
 ---
-title: "INFRASTRUCTURAL AWARENESS: The Week Ahead"
-description: A parody timeline of this week's breakdowns, ending on the day of the workshop
+title: Timeline
+description: "What broke in the weeks before this workshop, then what people have predicted AI will do next."
 ---
 
-**This page is a parody** of Leopold Aschenbrenner's essay [*Situational Awareness: The Decade Ahead*](https://situational-awareness.ai/) (June 2024; [its card](/stories/situational-awareness)), which extends trendlines of computing power to predict artificial general intelligence by 2027. It keeps the essay's numbered parts, trendline chart and insider voice, borrows the dashboard from [*AI 2027*](/stories/ai-2027), and points them at one week of broken infrastructure.
+The first part is **accidents**: real outages, hacks, blackouts and cable faults from late October to today, each with its date, what failed, the cause as those in charge stated it, and the sources. The sociologist Susan Leigh Star wrote that "the normally invisible quality of working infrastructure becomes visible when it breaks: the server is down, the bridge washes out, there is a power blackout" ("The Ethnography of Infrastructure", 1999, p. 382). Each of these is one of those moments.
 
-- **Real** entries happened: each has a date and a source link, and quotations are exact.
-- **Course** entries are from the SOC-STD 98to syllabus.
-- **Parody** entries, in italics, are invented. Their narrator believes in straight lines on a graph and is not to be trusted.
+After the **Today** line the timeline cuts to **predictions**: dates that researchers, executives and essayists have given for what AI will do, from Leopold Aschenbrenner's *Situational Awareness* and Dario Amodei's *Machines of Loving Grace* to *AI 2027* and surveys of AI researchers. They are placed at the dates they name. None of them has happened.
 
-The real record says the opposite of the narrator: Microsoft saw no link between its outage and the ground stop, FAA officials said the AI tool had nothing to do with it, and no company or agency involved reported an attack.
-
-**As you read:** pick the one real entry you would put in a game, and say which mechanic it would become.
+Use the switch to see both parts, the accidents only, or the predictions only.

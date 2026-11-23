@@ -21,6 +21,16 @@ There is more behind them: stories of machines taking over (`nextjs/content/stor
 
 Open this folder in Claude Code and ask. It is set up (in `CLAUDE.md`) to answer from what is here: mechanics from the mechanics list, ideas from the idea cards, and brainstorming from your own database. For example: "Which mechanics from the list are in Stardew Valley?" or "Using the world database, who could the players be in a game about data centres?"
 
+## Build your own game
+
+Ask Claude Code to set you up. It will make a branch of your own (so the kit stays as it is), put your game at its own address (`/your-game`), and add it to the top nav. In short:
+
+1. `git switch -c your-game` (a branch named for your game or your group).
+2. A page at `nextjs/app/your-game/page.jsx`, copied from `nextjs/app/challenges/page.jsx`.
+3. One line in `sections` in `nextjs/app/components/Chrome.jsx`, ending `route: true`, puts it in the nav.
+
+Good things to ask, once you have a page: "Turn our clicker into a playable page at /paperclip-grid, using three records from world.json as the upgrades." "Which mechanics from the list does our game use, and what do they argue, using the idea cards?" "Add an event deck to our game made from the breakdowns in world.json."
+
 ## Run it
 
 You need [Node.js](https://nodejs.org) 22 or later and [pnpm](https://pnpm.io).

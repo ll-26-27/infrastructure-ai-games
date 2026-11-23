@@ -12,6 +12,16 @@ Students open this repository in Claude Code to design pieces of a game about AI
 - **Games and stories.** Games to compare against are in `nextjs/content/gallery/` and the five lines of games in `nextjs/content/games-history/` (war games, 4X, farming and management, clickers and idle games, simulation and city-builders). Stories of machines taking over, sorted by how the takeover works, are in `nextjs/content/takeover/` and `nextjs/content/stories/`. Real accidents and predictions are in `nextjs/content/timeline/`.
 - **The challenges.** Today's tasks are on the Challenges page (`nextjs/app/challenges/page.jsx`). Each asks for a piece of a game; help students make pieces, and as many as they like.
 
+## When a student wants to build their own game, or a piece of one
+
+Set them up so their work is theirs and the kit stays as it is:
+
+1. **A new branch first.** Before changing any file, check the branch (`git status`). If it is `main`, make a branch named for the game or the group, for example `git switch -c paperclip-grid`, and work there. Never commit a student's work to `main`.
+2. **A new route for the game.** Put it at its own address: `nextjs/app/<slug>/page.jsx` (for example `nextjs/app/paperclip-grid/page.jsx` is `/paperclip-grid`). Copy the shape of `nextjs/app/challenges/page.jsx`: import `SiteHeader` and `SiteFooter` from `../components/Chrome.jsx` and pass `current="<slug>"`. If the game needs its own styles, put a CSS file beside the page. If it has Markdown pages, put them in `nextjs/content/<slug>/`.
+3. **In the nav by default.** Add one line to `sections` in `nextjs/app/components/Chrome.jsx`, with `route: true`: `{ slug: "paperclip-grid", title: "Paperclip grid", short: "Paperclip grid", copy: "One sentence on the game.", route: true }`. The game then shows in the top nav and as a tile on the home page.
+4. **See it.** Run `pnpm dev` in `nextjs/` (after `pnpm install` the first time) and open `http://localhost:3000/<slug>`. Commit on the branch as the game grows, with a short message saying what changed.
+5. **Build from the kit.** Take the game's characters, resources, events and rules from the database files, its mechanics from the mechanics list, and its argument from the idea cards, and say in the game's own page which ones it uses.
+
 ## When you change the repository
 
 - Write everything to students. No process notes, planning, authorship or provenance frontmatter, and no mentions of agents, panes, briefs or how a page was made.

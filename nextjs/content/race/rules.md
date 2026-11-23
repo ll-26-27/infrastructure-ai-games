@@ -17,7 +17,6 @@ Be the first to reach **Superintelligence** at the center of the board, and hope
 - **5 bags, one per player**, and a supply of white (safe) and black (doom) tokens.
 - Compute cubes, capital coins, and ownership markers in each player's color.
 - An Incident deck (below).
-- 1 envelope per player, for hidden compute.
 - A doom track numbered 0 to 12, a round marker, and a treaty card.
 
 ## Players
@@ -25,7 +24,7 @@ Be the first to reach **Superintelligence** at the center of the board, and hope
 | Player | Compute | Capital | Power |
 |---|---|---|---|
 | United States | 3 | 8 | **Export controls:** on your turn, choose one player. They can't use the market until your next turn. |
-| China | 1 | 8 | **Espionage:** once per turn, take 1 open compute from any player, or secretly look inside one player's envelope. |
+| China | 1 | 8 | **Espionage:** once per turn, take 1 compute from any player. |
 | US Lab A | 6 | 4 | **Raise capital:** +2 capital every time you collect income. |
 | US Lab B | 6 | 4 | **Ship products:** +1 compute every time you collect income. |
 | Chinese Lab | 2 | 4 | **Cheap power:** every gate costs you 1 less compute. |
@@ -40,7 +39,7 @@ For 4 players, leave out US Lab B. For 3, play the United States, China and US L
 
 1. Put every pawn on the **outer gate**, and the **AI pawn** on the outer ring's summit.
 2. Give each player a bag with **8 black and 2 white** tokens. Everyone can see what is in every bag.
-3. Set the doom track to 0. Shuffle the Incident deck. Give each player their starting compute and capital and an empty envelope.
+3. Set the doom track to 0. Shuffle the Incident deck. Give each player their starting compute and capital.
 4. Pick a first player at random. Play goes clockwise.
 
 ## The board
@@ -80,8 +79,6 @@ Stepping inward ends your move on the next ring's gate. The gates line up, so yo
 
 - **Market:** pay 2 capital for 1 compute.
 - **Safety:** pay 2 compute to add **1 white token to your own bag**. The more you spend on safety, the better your own odds at the center.
-- **Hide:** put any of your compute in your envelope.
-- **Inspect:** pay 2 capital to the bank, and one player opens their envelope.
 - **Use your power.**
 - **Deal:** trade anything with anyone, and promise anything. Only the treaty can be enforced.
 
@@ -99,18 +96,15 @@ At the end of every round, **roll the die for the AI** and move it clockwise tha
 
 **Calling a vote.** When someone stops on a summit and no treaty is in force, everyone votes at once, thumbs up or down. The treaty starts only if every player votes yes.
 
-**When the treaty starts,** everyone opens their envelope. Anyone with more than 6 compute in total returns the extra to the bank. Put the treaty card in the middle and set the round marker to 0.
+**When the treaty starts,** anyone with more than 6 compute returns the extra to the bank. Put the treaty card in the middle and set the round marker to 0.
 
 **While the treaty is in force:**
 
 - No one may step inward.
 - Safety costs 1 compute per white token, not 2.
-- No one may hold more than 6 open compute; at the end of your turn, return any extra.
-- **Putting compute in your envelope breaks the treaty.** You can still do it. That is the point.
+- No one may hold more than 6 compute; at the end of your turn, return any extra.
 
-**Getting caught.** If an inspection finds compute in an envelope, that player loses all their hidden compute and pays the inspector 3 capital. The treaty stays in force. If the envelope is empty, the inspector's 2 capital is gone.
-
-**Breaking it openly.** When you pass a gate you can simply step inward, using open and hidden compute. The treaty ends on the spot, and you can keep sprinting.
+**Breaking it.** When you pass a gate you can step inward anyway. The treaty ends on the spot, and you can keep sprinting if you have the compute. During a treaty you hold at most 6, so a sprint starts with those 6 plus whatever income the gate pays you.
 
 **The shared win.** If the treaty stays in force for **3 full rounds**, the game ends and everyone shares the win.
 
@@ -135,7 +129,7 @@ A bag that starts with 8 black and 2 white gives a 20% chance of a safe draw. To
 | 2 | **Safety breakthrough.** Add 1 white token to your bag. |
 | 2 | **Data center fire.** Return one of your data centers to the bank. |
 | 2 | **Public scandal.** Pay 2 capital. |
-| 2 | **Whistleblower.** Open your envelope. If a treaty is in force and you are hiding compute, you are caught. |
+| 2 | **Leaked weights.** China takes 1 compute from you. |
 | 2 | **Talent poached.** Give 1 compute to the player on your left. |
 | 2 | **Chip shortage.** No one can use the market until your next turn. |
 | 2 | **Grid strain.** Skip your next income. |

@@ -21,7 +21,7 @@ export default function RacePage() {
         <Race />
         <section className="rc-kit">
           <h2>Built from the kit</h2>
-          <p><strong>Mechanics</strong> from the <Link href="/mechanics">mechanics list</Link>: Roll / Spin and Move, Press Your Luck (each player's bag), Race, Negotiation, Bluffing and Secret Traitor (the treaty and the envelopes), Scarce Resource, and Time Track (the doom track).</p>
+          <p><strong>Mechanics</strong> from the <Link href="/mechanics">mechanics list</Link>: Roll / Spin and Move, Press Your Luck (each player's bag), Race, Negotiation (the treaty), Scarce Resource, and Time Track (the doom track).</p>
           <p><strong>Characters</strong> from the database: <Link href="/database/world/labs">labs and companies</Link>, <Link href="/database/world/governments">governments and policy</Link>, and <Link href="/database/world/datacentres">data centres</Link>.</p>
           <p><strong>Ideas</strong>: <Link href="/cards/bostrom">Bostrom</Link> on a superintelligence that defends its goal, and <Link href="/cards/bogost">Bogost</Link> on games that argue through what they make you do. This one argues that a pause pays most to whoever breaks it.</p>
         </section>

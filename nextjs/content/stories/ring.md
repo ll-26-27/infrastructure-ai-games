@@ -10,7 +10,7 @@ order: 7
 
 **How the takeover works.** The only way to survive the tape is to copy it and show it to someone else. Asakawa realizes the curse works like a virus that spreads by copying, and he copies it anyway, to save his wife and baby daughter. In the 1998 film, a mother drives to her own father's house to show him the tape and save her son. The curse spreads through love and self-interest, not force.
 
-**A question.** In *Ring*, every person who spreads the curse is acting reasonably. Compare the [spread](/mechanics/spread) mechanic: what changes when the thing spreading needs each player's cooperation, and the players have good reasons to give it?
+**A question.** In *Ring*, every person who spreads the curse is acting reasonably. Compare the [spread](/mechanics-archived/spread) mechanic: what changes when the thing spreading needs each player's cooperation, and the players have good reasons to give it?
 
 ## Sources
 

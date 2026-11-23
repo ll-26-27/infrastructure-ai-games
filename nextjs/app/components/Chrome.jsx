@@ -6,6 +6,7 @@ import { getRoot, site } from "../../lib/content.mjs";
 // The site's sections, in order: the home page shows one tile for each, and the header links them. A section is a
 // folder in content/ (content/why/ is /why), a route in app/ (app/game/ is /game), or both.
 export const sections = [
+  { slug: "mechanics", title: "Mechanics", short: "Mechanics", copy: "Game mechanics, grouped by kind: the name of each and what it is." },
   { slug: "cards", title: "Ideas", short: "Ideas", copy: "Thinkers from the course and from game studies: a quotation and a short summary of each idea." },
   { slug: "timeline", title: "Timeline", short: "Timeline", copy: "Real breakdowns up to today, then what people have predicted AI will do." },
 ];

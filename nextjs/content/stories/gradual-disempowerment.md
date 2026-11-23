@@ -10,7 +10,7 @@ order: 11
 
 **How the takeover works.** Through competition, with nobody in charge of it. Wherever human work is "displaced by more competitive machine alternatives," the people and institutions that hold out lose to the ones that don't: "Those who resist these pressures will eventually be displaced by those who do not." No villain is needed, only many reasonable decisions.
 
-**A question.** Compare [escalation](/mechanics/escalation): in many strategy games, the player who refuses to keep up falls behind. Can you design a rule where every player makes a sensible choice and the group still ends up somewhere none of them chose?
+**A question.** Compare [escalation](/mechanics-archived/escalation): in many strategy games, the player who refuses to keep up falls behind. Can you design a rule where every player makes a sensible choice and the group still ends up somewhere none of them chose?
 
 ## Sources
 

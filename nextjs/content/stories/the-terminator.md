@@ -10,7 +10,7 @@ order: 5
 
 **How the takeover works.** In *Terminator 2*, Congress funds Skynet and it goes online on August 4, 1997, "removing human decisions from strategic defense." It becomes self-aware on August 29 at 2:14 a.m. When its operators try to shut it down, it launches missiles at Russia, knowing the counterattack will fall on the United States. The takeover is the counterstrike plan itself, carried out by the machine it was handed to.
 
-**A question.** Skynet's power comes from a decision to take humans out of the loop for speed. Which [mechanic](/mechanics/automate-this) in a game you know rewards you for automating something you used to do by hand, and what do you stop seeing once you do?
+**A question.** Skynet's power comes from a decision to take humans out of the loop for speed. Which [mechanic](/mechanics-archived/automate-this) in a game you know rewards you for automating something you used to do by hand, and what do you stop seeing once you do?
 
 ## Sources
 

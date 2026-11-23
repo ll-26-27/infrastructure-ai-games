@@ -11,9 +11,9 @@ export const dynamic = "force-dynamic";
 
 // Where a mechanic has a page in content/mechanics/: the link, and how the page relates to the toy.
 const mechanicPages = {
-  escalation: { href: "/mechanics/escalation", text: "Read about the mechanic, and the games it comes from, on" },
-  "automate-this": { href: "/mechanics/automate-this", text: "Read about the mechanic, and the games it comes from, on" },
-  "hidden-information": { href: "/mechanics/fog-of-war-and-exploration", text: "Fog of war is a close cousin: hidden information spread across a map. Read about it on" },
+  escalation: { href: "/mechanics-archived/escalation", text: "Read about the mechanic, and the games it comes from, on" },
+  "automate-this": { href: "/mechanics-archived/automate-this", text: "Read about the mechanic, and the games it comes from, on" },
+  "hidden-information": { href: "/mechanics-archived/fog-of-war-and-exploration", text: "Fog of war is a close cousin: hidden information spread across a map. Read about it on" },
 };
 
 export async function generateMetadata({ params }) {

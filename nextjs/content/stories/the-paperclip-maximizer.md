@@ -12,7 +12,7 @@ order: 12
 
 **The game.** In 2017 Frank Lantz, then director of NYU's Game Center, released *Universal Paperclips*, a free browser game in which you are that AI. You start by clicking a button to make one clip at a time and setting a price; soon machines make the clips for you, and your job becomes tuning the rates, until the universe has been turned into paperclips.
 
-**A question.** In *Universal Paperclips* you never decide to destroy the world; you just keep making each number go up. Look at the [automate this](/mechanics/automate-this) mechanic: at what point in a game you know did you stop noticing what your numbers were made of?
+**A question.** In *Universal Paperclips* you never decide to destroy the world; you just keep making each number go up. Look at the [automate this](/mechanics-archived/automate-this) mechanic: at what point in a game you know did you stop noticing what your numbers were made of?
 
 ## Sources
 

@@ -8,6 +8,6 @@ order: 24
 
 > a powerful dissonance between what it is about as a game, and what it is about as a story
 
-Clint Hocking, "Ludonarrative Dissonance in Bioshock," *Click Nothing* (blog), October 7, 2007.
+Clint Hocking, "[Ludonarrative Dissonance in Bioshock](https://www.clicknothing.com/click_nothing/2007/10/ludonarrative-d.html)," *Click Nothing* (blog), October 7, 2007.
 
 Hocking named the clash between what a game makes you do and what its story says. In BioShock the story criticizes selfish individualism while the mechanics reward the player for exactly that. When rules and story pull in different directions, the player feels the contradiction.

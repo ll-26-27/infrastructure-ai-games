@@ -11,6 +11,7 @@ export const sections = [
   { slug: "inspirations", title: "Inspirations", short: "Inspirations", copy: "Ideas from thinkers, the history of war, conquest and building games, visions of AI taking over, and a gallery of games." },
   { slug: "timeline", title: "Timeline", short: "Timeline", copy: "Real breakdowns up to today, then what people have predicted AI will do." },
   { slug: "challenges", title: "Challenges", short: "Challenges", copy: "Today's tasks: make a piece of a game, or as many pieces as you can." },
+  { slug: "race", title: "The Race", short: "The Race", copy: "A board game about racing to superintelligence: the board and the five player screens, with the full rules.", route: true },
   { slug: "countdown", title: "Your game", short: "Countdown", copy: "The game you design today is being built. It opens Monday, November 30, at 12:45." },
   { slug: "cna-game", title: "CNA game", short: "CNA game", copy: "Our game about AI and infrastructure, piece by piece.", route: true },
 ];

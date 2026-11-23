@@ -24,6 +24,7 @@ const SHOW = { both: "Both", accidents: "Accidents only", predictions: "Predicti
 const utc = (iso) => new Date(`${iso}T12:00:00Z`);
 const longDate = (iso) => utc(iso).toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
 const shortDate = (iso) => utc(iso).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" });
+const monthDay = (iso) => utc(iso).toLocaleDateString("en-US", { month: "long", day: "numeric", timeZone: "UTC" });
 const monthYear = (iso) => utc(iso).toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
 const host = (url) => {
   try {
@@ -127,7 +128,6 @@ export default async function TimelinePage({ searchParams }) {
   const showPredictions = show !== "accidents" && predictions.length > 0;
   const counts = { both: past.length + predictions.length, accidents: past.length, predictions: predictions.length };
   const first = past[0]?.date;
-  const firstAccident = accidents[0]?.date;
   const last = predictions.at(-1)?.date;
 
   return (
@@ -163,7 +163,7 @@ export default async function TimelinePage({ searchParams }) {
 
         {showAccidents && (
           <section className={styles.part} aria-labelledby="accidents">
-            <h2 id="accidents"><span>Accidents</span> What broke, {firstAccident ? `${shortDate(firstAccident)} to ` : ""}{shortDate(TODAY)}</h2>
+            <h2 id="accidents"><span>Accidents</span> What broke, and the course so far: {first ? `${monthDay(first)} to today` : "to today"}</h2>
             <p className={styles.partNote}>Real events, each with its date and sources. Times are US Eastern unless given otherwise. The class meetings of SOC-STD 98to are in among them, outlined in green.</p>
             <ol className={styles.days}>
               {groupBy(past, (entry) => entry.date).map((group) => (

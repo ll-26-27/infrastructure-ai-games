@@ -1,5 +1,5 @@
 ---
-title: The Race, rules
+title: Rules
 description: The full rules of The Race, a board game about racing to superintelligence, for three to five players.
 ---
 

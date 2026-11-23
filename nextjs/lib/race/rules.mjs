@@ -1,5 +1,5 @@
 // The Race: every number in the game. Change one here and the board and the player screens follow.
-// The full rules, in words, are content/race-rules/README.md (the page /race-rules).
+// The full rules, in words, are content/race/rules.md (the page /race/rules).
 
 export const SIZES = [16, 12, 8]; // spaces in the outer, middle and inner rings
 export const RING_NAMES = ["Outer ring: chatbots", "Middle ring: agents", "Inner ring: automated research"];

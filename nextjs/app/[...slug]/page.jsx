@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getEntry } from "../../lib/content.mjs";
 import { SiteFooter, SiteHeader } from "../components/Chrome.jsx";
 import Markdown from "../components/Markdown.jsx";
+import SectionTop from "../components/visuals/SectionTop.jsx";
 
 // Content is edited while the app runs; always read the current files.
 export const dynamic = "force-dynamic";
@@ -80,12 +81,14 @@ export default async function EntryPage({ params }) {
     <>
       <SiteHeader current={slug[0]} />
       <main id="main" className="article-shell">
-        <Breadcrumbs trail={trail} title={entry.title} />
-        <header className="article-heading">
-          <h1>{entry.title}</h1>
-          {entry.description && <p className="lede">{entry.description}</p>}
-          <p className="updated"><Link className="print-link" href={`/print${entry.href}`}>Print this page</Link></p>
-        </header>
+        <SectionTop section={slug.length === 1 ? slug[0] : null}>
+          <Breadcrumbs trail={trail} title={entry.title} />
+          <header className="article-heading">
+            <h1>{entry.title}</h1>
+            {entry.description && <p className="lede">{entry.description}</p>}
+            <p className="updated"><Link className="print-link" href={`/print${entry.href}`}>Print this page</Link></p>
+          </header>
+        </SectionTop>
         {entry.kind === "folder" ? (
           <>
             {entry.tools.length > 0 && (

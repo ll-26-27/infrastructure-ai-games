@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components/Chrome.jsx";
+import SectionTop from "../components/visuals/SectionTop.jsx";
 import "./graphs.css";
 
 // The frame every /graphs page shares: the site header, a breadcrumb back to /graphs, the heading.
-export default function Shell({ title, lede, eyebrow = "Graphs and cards", wide = false, children }) {
+export default function Shell({ title, lede, eyebrow = "Graphs and cards", wide = false, section = null, children }) {
   return (
     <>
       <SiteHeader current="graphs" />
       <main id="main" className={wide ? "graphs-shell is-wide" : "graphs-shell"}>
+        <SectionTop section={section}>
         <nav className="breadcrumbs" aria-label="Breadcrumb">
           <Link href="/">Home</Link>
           {title !== "Graphs and cards" && <span className="breadcrumb-step"><span>/</span><Link href="/graphs">Graphs and cards</Link></span>}
@@ -18,6 +20,7 @@ export default function Shell({ title, lede, eyebrow = "Graphs and cards", wide 
           <h1>{title}</h1>
           {lede && <p className="lede">{lede}</p>}
         </header>
+        </SectionTop>
         {children}
       </main>
       <SiteFooter />

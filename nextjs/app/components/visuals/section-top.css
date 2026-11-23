@@ -1,0 +1,44 @@
+/* The band at the top of a section: full width, the picture behind, the page's own heading on top. */
+html:has(.section-top) { overflow-x: clip; }
+.section-top {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: clamp(320px, 54vh, 580px);
+  margin: calc(-1 * var(--pull, 40px)) calc(50% - 50vw) 40px;
+  padding: calc(var(--pull, 40px) + 4px) calc(50vw - 50%) 34px;
+}
+.section-top > .breadcrumbs { margin-bottom: auto; padding-bottom: 32px; }
+.section-top > :last-child { margin-bottom: 0; }
+.section-top-media { position: absolute; inset: 0; z-index: -2; overflow: hidden; background: #0b0d0c; }
+.section-top-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.section-top-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(10, 11, 10, .86) 0%, rgba(10, 11, 10, .58) 45%, rgba(10, 11, 10, .12) 78%),
+    linear-gradient(0deg, var(--paper) 0%, rgba(18, 20, 18, 0) 38%),
+    linear-gradient(180deg, rgba(10, 11, 10, .55) 0%, rgba(10, 11, 10, 0) 22%);
+}
+.section-top h1 { text-shadow: 0 2px 22px rgba(0, 0, 0, .55); }
+.section-top .lede, .section-top header p { color: #d8dad2; text-shadow: 0 1px 12px rgba(0, 0, 0, .6); }
+.section-top .breadcrumbs { color: #c9ccc4; }
+
+@media (max-width: 640px) {
+  .section-top { min-height: clamp(280px, 46vh, 420px); }
+  .section-top-scrim { background: linear-gradient(0deg, var(--paper) 0%, rgba(10, 11, 10, .72) 55%, rgba(10, 11, 10, .5) 100%); }
+}
+
+/* Printed from the browser: no picture, just the heading. */
+@media print {
+  .section-top-media, .section-top-scrim { display: none; }
+  .section-top { min-height: 0; margin: 0 0 24px; padding: 0; }
+  .section-top h1, .section-top .lede, .section-top header p, .section-top .breadcrumbs { color: inherit; text-shadow: none; }
+  .section-top .lede, .section-top header p, .section-top header p:last-child { color: #555a54; }
+}
+
+.visuals-note { max-width: 680px; margin: 40px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.5; }

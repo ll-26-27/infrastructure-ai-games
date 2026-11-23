@@ -2,6 +2,7 @@ import Link from "next/link";
 import { rules } from "../../lib/game/rules.mjs";
 import { toys } from "../../lib/game/toys.mjs";
 import { SiteFooter, SiteHeader } from "../components/Chrome.jsx";
+import SectionTop from "../components/visuals/SectionTop.jsx";
 import Game from "./Game.jsx";
 import "./game.css";
 
@@ -15,11 +16,13 @@ export default function GamePage() {
     <>
       <SiteHeader current="game" />
       <main id="main" className="ig-page">
+        <SectionTop section="game">
         <header className="ig-intro">
           <p className="eyebrow">The game</p>
           <h1>Mechanics to play, then to put together</h1>
           <p>Hackers just want to hack. IT people just want to update. An assistant is happy to help both. Each mechanic below is a toy you can play in thirty seconds, and a file you can change.</p>
         </header>
+        </SectionTop>
 
         <ul className="ig-cards">
           {toys.map((mechanic) => (

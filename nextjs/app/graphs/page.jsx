@@ -20,7 +20,7 @@ export default async function Graphs() {
     { href: "/graphs/cards/print", title: "Print the cards", copy: "The idea cards on 11 x 17, two columns, ready to cut." },
   ];
   return (
-    <Shell title="Graphs and cards" lede={intro?.description}>
+    <Shell title="Graphs and cards" lede={intro?.description} section="graphs">
       <nav className="tiles graphs-tiles" aria-label="Views">
         {tiles.map((t, i) => (
           <Link className="tile" href={t.href} key={t.href}>

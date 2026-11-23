@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SectionTop from "../components/visuals/SectionTop.jsx";
 import { notFound } from "next/navigation";
 import { SiteFooter, SiteHeader } from "../components/Chrome.jsx";
 import Markdown from "../components/Markdown.jsx";
@@ -38,6 +39,7 @@ export default async function GalleryPage() {
     <>
       <SiteHeader current="gallery" />
       <main id="main" className={styles.shell}>
+        <SectionTop section="gallery">
         <nav className="breadcrumbs" aria-label="Breadcrumb">
           <Link href="/">Home</Link><span>/</span><span>{folder.title}</span>
         </nav>
@@ -46,6 +48,7 @@ export default async function GalleryPage() {
           {folder.description && <p className="lede">{folder.description}</p>}
           <p className="updated">{games.length} games · <Link className="print-link" href="/print/gallery">Print the gallery</Link></p>
         </header>
+        </SectionTop>
         {folder.content.trim() && <article className="prose folder-intro"><Markdown doc={folder} /></article>}
         <nav className={styles.jump} aria-label="Shelves">
           {shelves.map((shelf) => <a key={shelf.slug} href={`#${shelf.slug}`}>{shelf.title} <span>{shelf.games.length}</span></a>)}

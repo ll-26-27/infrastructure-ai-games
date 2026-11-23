@@ -8,7 +8,7 @@ import { getRoot, site } from "../../lib/content.mjs";
 export const sections = [
   { slug: "database", title: "Database", short: "Database", copy: "Your cards from September 28 as a database, with the course and the world of AI and its infrastructure beside them." },
   { slug: "mechanics", title: "Mechanics", short: "Mechanics", copy: "Game mechanics, grouped by kind: the name of each and what it is." },
-  { slug: "cards", title: "Ideas", short: "Ideas", copy: "Thinkers from the course and from game studies: a quotation and a short summary of each idea." },
+  { slug: "inspirations", title: "Inspirations", short: "Inspirations", copy: "Ideas from thinkers, the history of war, conquest and building games, and visions of AI taking over." },
   { slug: "timeline", title: "Timeline", short: "Timeline", copy: "Real breakdowns up to today, then what people have predicted AI will do." },
   { slug: "countdown", title: "Your game", short: "Countdown", copy: "The game you design today is being built. It opens Monday, November 30, at 12:45." },
 ];
@@ -31,7 +31,11 @@ export async function readySections() {
   return ready;
 }
 
+// Pages that live under a section without being its own slug: Ideas, games history and Takeover are in Inspirations.
+const parent = { cards: "inspirations", "games-history": "inspirations", takeover: "inspirations" };
+
 export async function SiteHeader({ current = "" }) {
+  current = parent[current] || current;
   const ready = await readySections();
   return (
     <header className="site-header">

@@ -12,4 +12,7 @@ export const sectionVisuals = {
   cards: { image: "/visuals/a03-particle-field.webp", focus: "right center" },
   game: { image: "/visuals/c05-server-aisle.webp", focus: "center" },
   timeline: { live: "FailingNetwork" },
+  inspirations: { image: "/visuals/a01-data-flows.webp", focus: "right center" },
+  database: { image: "/visuals/a08-layers.webp", focus: "right center" },
+  countdown: { image: "/visuals/c11-buildout.webp", focus: "center 60%" },
 };
